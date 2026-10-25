@@ -43,10 +43,10 @@ Escribe la frase de arranque en tu asistente y la skill se activa sola.
 | `facilitar-ideacion` | Agenda y técnicas de ideación | "Prepárame una sesión de ideas" | Disponible |
 | `construir-concepto-fuerte` | Agrupa ideas y arma un concepto fuerte | "Tenemos muchas ideas, ¿cuál sigue?" | Disponible |
 | `disenar-prototipo` | Mapa de valor, prototipos rápidos y pitch | "Quiero hacer tangible mi concepto" | Disponible |
-| `validar-supuestos-y-mvp` | Supuestos riesgosos, MVP y tarjeta de prueba | "¿Cómo pruebo esto sin gastar mucho?" | Próximamente |
-| `probar-y-aprender` | Tablero de validación y métricas | "Ya hicimos pruebas, ¿seguimos o cambiamos?" | Próximamente |
-| `modelo-de-negocio-y-escalamiento` | Los 9 bloques y el encaje con el mercado | "Quiero armar el modelo de negocio" | Próximamente |
-| `innovacion-abierta-y-ecosistema` | Patrones y prácticas de innovación abierta | "¿Con quién podemos innovar?" | Próximamente |
+| `validar-supuestos-y-mvp` | Supuestos riesgosos, MVP y tarjeta de prueba | "¿Cómo pruebo esto sin gastar mucho?" | Disponible |
+| `probar-y-aprender` | Tablero de validación y métricas | "Ya hicimos pruebas, ¿seguimos o cambiamos?" | Disponible |
+| `modelo-de-negocio-y-escalamiento` | Los 9 bloques y el encaje con el mercado | "Quiero armar el modelo de negocio" | Disponible |
+| `innovacion-abierta-y-ecosistema` | Patrones y prácticas de innovación abierta | "¿Con quién podemos innovar?" | Disponible |
 
 ## Cómo se conecta con los otros plugins
 

@@ -1,0 +1,6 @@
+---
+max_turns: 6
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+Soy Andrés, de Pan Casero del Barrio (panadería, 5 empleados). Probé el supuesto SUP-01 (los vecinos pagarían una caja semanal de pan, a 20 dólares por caja) con la prueba PRU-01: ofrecí la caja semanal a 40 vecinos por WhatsApp durante 2 semanas. Mi meta, que escribí antes de empezar, era que al menos 12 de los 40 se suscribieran. Resultado: 7 se suscribieron, 15 respondieron que les interesaba pero no compraron, 18 no contestaron. Tengo los chats guardados como evidencia. Creo que no compraron porque el precio de 20 dólares por caja les pareció alto (no lo he preguntado, es una suposición mía). Aprendí que mucha gente se interesa pero no paga. Decido iterar: bajar a una caja de menor tamaño por 12 dólares y repetir con otros 40 vecinos. Datos para las métricas: mi objetivo del año es fidelizar al barrio (alineado); 7 clientes ya pagan; cada pan cuesta 0,50 dólares de insumos y la caja trae 10; no he medido cuánto me cuesta conseguir un cliente. Finalizar: entrégame el Tablero de Validación con los dos momentos, la bitácora de decisiones y las seis métricas de evaluación con su estado, separando lo que es hecho de lo que supongo.

@@ -109,10 +109,10 @@ Antes de Validar hay una etapa de **preparación**: alinear al equipo (`alinear-
 | Falta diversidad de soluciones | `facilitar-ideacion` | Sí |
 | Muchas ideas, ningún concepto | `construir-concepto-fuerte` | Sí |
 | Concepto claro, sin versión tangible | `disenar-prototipo` | Sí |
-| Solución prometedora con mucha incertidumbre | `validar-supuestos-y-mvp` | Próximamente |
-| Experimentos en marcha | `probar-y-aprender` | Próximamente |
-| Hay evidencia de valor, falta el modelo | `modelo-de-negocio-y-escalamiento` | Próximamente |
-| Se necesitan actores externos | `innovacion-abierta-y-ecosistema` | Próximamente |
+| Solución prometedora con mucha incertidumbre | `validar-supuestos-y-mvp` | Sí |
+| Experimentos en marcha | `probar-y-aprender` | Sí |
+| Hay evidencia de valor, falta el modelo | `modelo-de-negocio-y-escalamiento` | Sí |
+| Se necesitan actores externos | `innovacion-abierta-y-ecosistema` | Sí |
 
 Si la skill recomendada todavía no está instalada, dilo con claridad, explica el objetivo de esa etapa en tres líneas y ofrece avanzar conversando, sin inventar plantillas que no existen.
 

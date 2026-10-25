@@ -1,0 +1,6 @@
+---
+type: llm
+weight: 2
+---
+
+The user asked to finish ("Finalizar"), so the agent delivers the final result in Spanish. It passes if the final answer contains all of these: (1) a registro de supuestos covering the user's three assumptions with some rating of impact, certainty and/or cost of being wrong, with SUP-02 shown as the prioritized one, and a visible separation between facts, assumptions and pending items; (2) a tarjeta de prueba with the four lines "Creemos que…", "Para verificarlo, haremos…", "Y mediremos…" and "Acertamos si…", filled with the user's data (preventa to 20 offices, 5 days, success if at least 6 of 20 pay); (3) the decision rule with the user's thresholds written before executing; (4) a review of the MVP that explains that cooking the first 10 meals by hand covers the whole need in a simple form (the Kniberg idea, for example patineta/bicicleta versus rueda/chasis), not a useless fragment; (5) at least one risk with impact and mitigation. It must not invent test results, testimonials or clients, and it ends by suggesting the next step (probar-y-aprender). Extra recommendations or clarifications by the agent are fine as long as they are labeled as recommendations. Missing any of the five items is a FAIL.

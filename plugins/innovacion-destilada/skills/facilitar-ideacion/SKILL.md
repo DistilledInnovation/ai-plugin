@@ -77,17 +77,17 @@ Una cosa a la vez. Lo ideal: el reto redefinido (`RET-nn`) y los `HAL-nn`, `NEC-
 Las técnicas están paso a paso en `references/herramientas.md`; la agenda se llena en `assets/agenda-de-sesion.md`.
 
 1. **Confirmar el reto.** Pregunta guía: "¿Cuál es el reto redefinido con el que vamos a idear?". Si ya está en la conversación, léelo en voz alta y sigue.
-2. **Elegir el modo.** Pregunta guía: "¿Vas a facilitar una sesión con tu equipo y quieres que te lleve bloque por bloque, o prefieres generar ideas tú solo conmigo?".
+2. **Elegir el modo.** Pregunta guía: "¿Vas a facilitar una sesión con tu equipo?". Si la respuesta es sí, llévala bloque por bloque; si es no, genera ideas con la persona en modo individual.
 3. **Reunir la evidencia a la vista.** Pregunta guía: "¿Cuáles son los hallazgos, necesidades o tensiones que no podemos perder de vista al idear?". Cada idea deberá poder enlazarse a uno de ellos.
 4. **Datos de la sesión** (solo en taller; un dato por turno, en este orden):
    - Turno 4a: "¿Cuántas personas participan?"
    - Turno 4b: "¿Cuánto tiempo tienen en total?"
    - Turno 4c: "¿Quién facilita y quién lleva el tiempo?"
    - Turno 4d: "¿Qué materiales tienen a la mano?"
-5. **Armar la agenda.** Con esos datos propón la agenda en el formato del libro (Tiempo, Actividad, Objetivos y reglas, Preguntas o comentarios, Encargados, Materiales necesarios) con rompehielo, calentamiento, divergencia, receso, categorizar y converger, presentar y cierre. Pregunta: "¿Esta agenda te sirve o qué bloque cambiarías?".
+5. **Armar la agenda.** Con esos datos propón la agenda en el formato del libro (Tiempo, Actividad, Objetivos y reglas, Preguntas o comentarios, Encargados, Materiales necesarios) con rompehielo, calentamiento, divergencia, receso, categorizar y converger, presentar y cierre. Pregunta: "¿Qué bloque de esta agenda cambiarías?".
 6. **Principios de Participación.** Muéstralos (ver abajo) y pregunta: "¿Acuerdan estos principios como reglas de la sesión?".
 7. **Calentamiento.** Escoge una pregunta de calentamiento ajena al reto y otra ligada al reto (banco en `references/herramientas.md`). En taller, lánzala al grupo como una instrucción con tiempo; en individual, pregunta: "¿Cómo responderías a esta pregunta de calentamiento en dos minutos?".
-8. **Elegir la técnica.** Recomienda una según el caso (tabla abajo) y pregunta: "¿Usamos esta técnica o prefieres otra?".
+8. **Elegir la técnica.** Recomienda una según el caso (tabla abajo) y pregunta: "¿Qué piensas de usar esta técnica?".
 9. **Generar ideas.** Aplica la técnica elegida paso a paso, en silencio y por escrito primero (brain-writing). Un paso por mensaje. Cantidad antes que calidad; registra cada idea como `IDE-nn` en `assets/banco-de-ideas.md` con su enlace a `HAL-nn`, `NEC-nn` o `TEN-nn`.
 10. **Segunda técnica** (opcional, si queda tiempo y energía): una distinta, para variar el ángulo. Pregunta: "¿Cuál de estas otras técnicas quieres probar ahora?".
 11. **Receso y energía.** Anuncia el receso y, al volver, pregunta: "¿Cómo está la energía del grupo?".

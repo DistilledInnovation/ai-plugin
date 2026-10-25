@@ -6,9 +6,9 @@ Entrada: `RET-03` "¿Cómo podemos mitigar la incertidumbre sobre si se cortó e
 
 ## Turno 1: reunir
 
-**Facilitador:** Tengo el banco de la sesión con 114 ideas y 5 grupos preliminares. Primera pregunta: ¿esos grupos y votos que hicieron en la sesión son los que quieres usar o prefieres agrupar de nuevo?
+**Facilitador:** Tengo el banco de la sesión con 114 ideas y 5 grupos preliminares. Primera pregunta: ¿quieres usar los grupos y votos que hicieron en la sesión?
 
-**Usuaria (Paula, gerente comercial):** Usemos los de la sesión, pero revisemos los nombres.
+**Usuaria (Paula, gerente comercial):** Sí, usemos los de la sesión, pero revisemos los nombres.
 
 ## Turno 2: agrupar y nombrar
 
@@ -52,7 +52,11 @@ Entrada: `RET-03` "¿Cómo podemos mitigar la incertidumbre sobre si se cortó e
 
 **Usuaria:** Que el cliente pueda ver la temperatura de su carga sin llamar a nadie.
 
-**Facilitador:** Se complementan: el aviso resuelve el momento crítico y la vista resuelve la tranquilidad de fondo. Las dos juntas forman un solo concepto. Los dos puntos contradictorios (aviso constante frente a aviso solo si falla) los resolví a favor de "solo si falla" por tu respuesta; el aviso constante queda como alternativa.
+**Facilitador:** Se complementan: el aviso resuelve el momento crítico y la vista resuelve la tranquilidad de fondo. Las dos juntas forman un solo concepto. Veo un punto que choca: dentro de `CLU-01` hay ideas de aviso constante e ideas de aviso solo cuando algo falla. ¿Qué tipo de aviso quieres que lleve el concepto?
+
+**Usuaria:** Solo cuando falla; si avisamos todo el tiempo, el cliente deja de leer.
+
+**Facilitador:** Registrado como `DEC-05`: el concepto lleva aviso solo cuando falla, decidido por Paula; las ideas de aviso constante quedan guardadas como alternativa.
 
 ## Turno 6: redactar (un campo por turno, resumen)
 
@@ -68,7 +72,7 @@ Entrada: `RET-03` "¿Cómo podemos mitigar la incertidumbre sobre si se cortó e
 
 **Usuaria:** Que a los clientes les basta un aviso. Y que de verdad vamos a poder medir el frío durante todo el viaje.
 
-**Facilitador:** Anoto `SUP-04` y `SUP-05`, ambos Pendientes por validar.
+**Facilitador:** Anoto `SUP-05` y `SUP-06`, ambos Pendientes por validar.
 
 ## Entregable final
 
@@ -95,14 +99,14 @@ Proyecto: Marea Azul, 2026-10-25, borrador 1. ID `CON-01`. Reto `RET-03`. Ideas 
 
 | ID | Supuesto | Estado | Cómo se prueba |
 |---|---|---|---|
-| SUP-04 | A los clientes les basta un aviso temprano | Pendiente por validar | Simular el aviso a mano con tres clientes |
-| SUP-05 | Se puede medir el frío durante todo el viaje | Pendiente por validar | Prueba de medición en una ruta |
+| SUP-05 | A los clientes les basta un aviso temprano | Pendiente por validar | Simular el aviso a mano con tres clientes |
+| SUP-06 | Se puede medir el frío durante todo el viaje | Pendiente por validar | Prueba de medición en una ruta |
 
 | ID | Riesgo | Impacto | Mitigación |
 |---|---|---|---|
 | RIE-02 | Demasiados avisos y el cliente los ignora | El aviso pierde valor | Probar el umbral con tres clientes |
 
-Decisión `DEC-03` (grupos que se fortalecen) y `DEC-04` (alcance): tomadas por Paula. Alternativas guardadas: `CLU-03`, `CLU-04` y `CLU-05`.
+Decisiones `DEC-03` (grupos que se fortalecen), `DEC-04` (alcance) y `DEC-05` (aviso solo cuando falla): tomadas por Paula. Alternativas guardadas: `CLU-03`, `CLU-04` y `CLU-05`.
 
 Siguiente paso sugerido: `disenar-prototipo`, para contrastar el concepto con el Perfil del Cliente y simular el aviso con una maqueta barata. Si esa skill aún no está disponible, volver al facilitador para actualizar el estado.
 

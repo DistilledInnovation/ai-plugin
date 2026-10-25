@@ -122,4 +122,4 @@ Hay un Mapa de Valor con elementos enlazados al Perfil del Cliente, un encaje de
 
 ## Siguiente paso sugerido
 
-`validar-supuestos-y-mvp`: con el prototipo y el guion de prueba, se elige el experimento que valida el supuesto más riesgoso y se define el Mínimo Producto Viable. Si esa skill aún no está disponible, vuelve al `facilitador-innovacion-destilada` para actualizar el estado del proyecto.
+`validar-supuestos-y-mvp`: con el prototipo y el guion de prueba, se elige el experimento que valida el supuesto más riesgoso y se define el Mínimo Producto Viable.

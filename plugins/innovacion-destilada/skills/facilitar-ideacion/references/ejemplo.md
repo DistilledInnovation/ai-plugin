@@ -6,13 +6,13 @@ Entrada: `RET-03` "¿Cómo podemos mitigar la incertidumbre sobre si se cortó e
 
 ## Turno 1: reto y modo
 
-**Facilitador:** Tengo el reto redefinido `RET-03` y la evidencia de la síntesis. Primera pregunta: ¿vas a facilitar una sesión con tu equipo y quieres que te lleve bloque por bloque, o prefieres generar ideas tú sola conmigo?
+**Facilitador:** Tengo el reto redefinido `RET-03` y la evidencia de la síntesis. Primera pregunta: ¿vas a facilitar una sesión con tu equipo?
 
-**Usuaria (Paula, gerente comercial):** Con el equipo, el jueves. Somos seis y siempre se quedan callados.
+**Usuaria (Paula, gerente comercial):** Sí, con el equipo, el jueves. Somos seis y siempre se quedan callados.
 
 ## Turno 2: datos de la sesión (un dato por turno)
 
-**Facilitador:** Entonces el silencio es el riesgo principal y arrancaremos con escritura individual. Siguiente pregunta: ¿cuánto tiempo tienen en total?
+**Facilitador:** Entonces te llevo bloque por bloque durante la sesión; ya dijiste que son seis personas. Como el silencio es el riesgo principal, arrancaremos con escritura individual. Siguiente pregunta: ¿cuánto tiempo tienen en total?
 
 **Usuaria:** Hora y media.
 
@@ -28,19 +28,19 @@ Entrada: `RET-03` "¿Cómo podemos mitigar la incertidumbre sobre si se cortó e
 
 **Facilitador:** Con eso armé esta agenda en el formato del libro (resumen):
 
-| Tiempo | Actividad | Objetivos y reglas | Encargados | Materiales |
-|---|---|---|---|---|
-| 10 min | Bienvenida y principios | Reglas y evidencia a la vista | Paula | Hallazgos impresos |
-| 10 min | Calentamiento "¿Cómo podríamos…?" | Soltar la hoja en blanco | Paula | Hojas |
-| 20 min | 6-5-3 | Cantidad, cero censura | Julio (tiempo) | Hojas de 6-5-3 |
-| 10 min | Receso | Medir energía | Paula | |
-| 15 min | SCAMPER sobre "avisar" | Otro ángulo | Paula | Notas |
-| 15 min | Categorizar y votar | Agrupar y priorizar | Paula | Pared, puntos |
-| 10 min | Cierre | Conclusiones | Paula | |
+| Tiempo | Actividad | Objetivos y reglas | Preguntas o comentarios | Encargados | Materiales necesarios |
+|---|---|---|---|---|---|
+| 10 min | Bienvenida y principios | Reglas y evidencia a la vista | Definir cómo se sientan | Paula | Hallazgos impresos |
+| 10 min | Calentamiento "¿Cómo podríamos…?" | Soltar la hoja en blanco | | Paula | Hojas |
+| 20 min | 6-5-3 | Cantidad, cero censura | | Julio (tiempo) | Hojas de 6-5-3 |
+| 10 min | Receso | Medir energía | Nadie habla del tema | Paula | |
+| 15 min | SCAMPER sobre "avisar" | Otro ángulo | Se activa si la energía baja | Paula | Notas |
+| 15 min | Categorizar y votar | Agrupar y priorizar | | Paula | Pared, puntos |
+| 10 min | Cierre | Conclusiones | Plan de acción | Paula | |
 
-¿Esta agenda te sirve o qué bloque cambiarías?
+¿Qué bloque de esta agenda cambiarías?
 
-**Usuaria:** Está bien así.
+**Usuaria:** Ninguno, está bien así.
 
 ## Turno 4: principios
 
@@ -50,7 +50,11 @@ Entrada: `RET-03` "¿Cómo podemos mitigar la incertidumbre sobre si se cortó e
 
 ## Turno 5 en adelante: el taller en vivo (jueves)
 
-**Facilitador (bloque 1):** Bloque 1, bienvenida, 10 minutos. Instrucción: lee los principios en voz alta y deja a la vista `TEN-01` y `NEC-01`. Escribe "listo" cuando termines.
+**Facilitador (bloque 1):** Bloque 1, bienvenida, 10 minutos. Instrucción: lee los principios en voz alta al grupo. Escribe "listo" cuando termines.
+
+**Paula:** Listo.
+
+**Facilitador:** Instrucción: coloca la evidencia a la vista, `TEN-01` y `NEC-01`, en la pared. Escribe "listo" cuando esté puesta.
 
 **Paula:** Listo.
 
@@ -66,9 +70,19 @@ Entrada: `RET-03` "¿Cómo podemos mitigar la incertidumbre sobre si se cortó e
 
 **Paula:** Tiempo.
 
-**Facilitador:** Instrucción: pasen la hoja a la persona de la derecha. Cada una lee las ideas que recibió y escribe 5 más, construyendo sobre ellas. Repetirán hasta dar la vuelta completa y escribes "tiempo" en cada ronda.
+**Facilitador:** Instrucción: pasen la hoja a la persona de la derecha. Escribe "listo" cuando todas la hayan pasado.
 
-*(Se repite por seis rondas. Al final, el equipo lee todas las hojas en voz alta.)*
+**Paula:** Listo.
+
+**Facilitador:** Instrucción: cada persona lee en silencio las ideas que recibió. Escribe "listo" cuando todas hayan leído.
+
+**Paula:** Listo.
+
+**Facilitador:** Instrucción: cada persona escribe 5 ideas más, construyendo sobre las que leyó, durante 3 minutos. Escribe "tiempo" cuando Julio marque el final.
+
+**Paula:** Tiempo.
+
+*(Se repite el ciclo de pasar, leer y escribir hasta dar la vuelta completa, un mensaje por instrucción. Al final, el equipo lee todas las hojas en voz alta.)*
 
 **Facilitador:** Instrucción: pásame las ideas tal cual, hoja por hoja, y yo las ordeno en el banco. Si algo es ilegible, dime cuál.
 
@@ -82,13 +96,21 @@ Entrada: `RET-03` "¿Cómo podemos mitigar la incertidumbre sobre si se cortó e
 
 **Paula:** Un poco baja, están cansados de escribir.
 
-**Facilitador (cambio de reglas):** Entonces cambiamos las reglas. Instrucción: pónganse de pie y reparten entre las 6 personas los 7 verbos SCAMPER (uno para cada una y uno de reserva); cada persona escribe ideas en notas adhesivas para su verbo durante 3 minutos, sobre la característica "cómo avisamos al cliente". Escribe "tiempo" al terminar.
+**Facilitador (cambio de reglas):** Entonces cambiamos las reglas. Instrucción: pónganse de pie y reparten entre las 6 personas los 7 verbos SCAMPER (uno para cada una y uno de reserva). Escribe "listo" cuando estén repartidos.
+
+**Paula:** Listo.
+
+**Facilitador:** Instrucción: cada persona escribe ideas en notas adhesivas para su verbo durante 3 minutos, sobre la característica "cómo avisamos al cliente". Escribe "tiempo" al terminar.
 
 *(El asistente solo ofrece provocaciones cuando el grupo se atasca, por ejemplo para Eliminar: "¿qué pasa si el cliente nunca tuviera que preguntar?". No propone ideas terminadas.)*
 
 **Paula:** Tiempo. Salieron 31 notas más.
 
-**Facilitador:** Registrado: `IDE-84` a `IDE-114`. Instrucción: peguen todas las notas en la pared y agrúpenlas por la naturaleza de cada idea; yo propongo los nombres cuando terminen. Escribe "listo" al terminar.
+**Facilitador:** Registrado: `IDE-84` a `IDE-114`. Instrucción: peguen todas las notas en la pared. Escribe "listo" al terminar.
+
+**Paula:** Listo.
+
+**Facilitador:** Instrucción: agrúpenlas por la naturaleza de cada idea; yo propongo los nombres cuando terminen. Escribe "listo" al terminar.
 
 **Paula:** Listo. Quedaron cinco grupos.
 

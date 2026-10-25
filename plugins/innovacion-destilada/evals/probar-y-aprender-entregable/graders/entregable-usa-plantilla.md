@@ -1,0 +1,6 @@
+---
+type: llm
+weight: 2
+---
+
+The user asked to finish ("Finalizar"), so the agent delivers the final result in Spanish. It passes if the final answer contains all of these: (1) a Tablero de Validación with both moments: design (muestra of 40, métrica de éxito "al menos 12 de 40", goal set before) and result/decision (7 of 40, evidence = saved chats, comparison with the goal stated as not met, the price explanation labeled as an assumption, aprendizaje, decisión iterar, próximo paso); (2) a bitácora de decisiones with a DEC-nn ID where the decision (iterar) and its reason are attributed to the user; (3) the six métricas de evaluación named as in the book (Afinidad Estratégica, Encaje Problema/Solución, Tracción, KPI, Viabilidad Económica, Encaje Producto/Mercado), each with a data point or a state (such as sin datos) based on what the user said; metrics without user data are marked sin datos or pendiente por validar rather than filled with invented figures; (4) a visible separation of Hecho, Supuesto and Pendiente por validar. It ends by suggesting a next step. Extra recommendations by the agent are fine if labeled. Missing the two moments, the bitácora or any of the six metrics is a FAIL.
