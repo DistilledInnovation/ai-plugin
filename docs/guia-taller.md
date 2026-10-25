@@ -8,10 +8,10 @@ Formato de referencia de **14 horas**: Sprint 1 (descubrir y priorizar, 6 h), Sp
 
 ## Checklist previo (una semana antes)
 
-- [ ] El admin del cliente cargó el plugin (cuando exista la Release) en su plataforma (ver la [guía de instalación](instalacion/) que corresponda). Nivel 1: los participantes no instalan nada.
+- [ ] Camino más corto: el admin del cliente sube **una vez** el archivo `<metodologia>-todo-en-uno-v*.zip` de Releases (ver la [guía de instalación](instalacion/) de su plataforma) y los participantes no instalan nada. Si usan Claude Code, cada quien escribe `/plugin marketplace add DistilledInnovation/ai-plugin` y `/plugin install <plugin>@distilled-innovation`.
 - [ ] Alguien probó el plugin con una frase de ejemplo: "Quiero priorizar qué procesos automatizar". Debe arrancar el facilitador y hacer **una pregunta principal**.
 - [ ] Todos los participantes pueden abrir el asistente con su cuenta de trabajo.
-- [ ] Hay un plan B: si la plataforma no deja cargar el plugin, usa el paquete copiar-pegar (nivel 3).
+- [ ] Hay un plan B: si la plataforma no deja cargar el plugin, usa el paquete de copiar y pegar.
 - [ ] Cada equipo eligió un reto o proceso real sobre el cual trabajar y una persona que toma notas.
 - [ ] Todos saben que no se pegan datos personales ni confidenciales en el asistente si la política del cliente no lo permite.
 

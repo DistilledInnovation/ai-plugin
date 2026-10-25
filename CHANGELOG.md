@@ -4,6 +4,11 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 
 ## [Sin publicar]
 
+### Instalación simplificada
+- `scripts/empaquetar.py` genera un paquete `<plugin>-todo-en-uno-v<version>.zip` por metodología: una sola skill con tabla de rutas y las guías de cada etapa en `references/`. Es el camino principal para Claude.ai, ChatGPT, Microsoft 365 Copilot y Amazon Quick. Los paquetes de copiar y pegar y los zips por skill se mantienen como respaldo y para administradores.
+- README: sección "Instalar (elige UNA línea)" con los comandos de Claude Code y Cowork (`/plugin`), `npx skills add DistilledInnovation/ai-plugin` para otros agentes de código, el zip todo en uno para aplicaciones web y copiar y pegar para Gems, Projects y Grok. Se reemplaza la tabla de siete guías y se agrega "¿Y cómo sé que funcionó?".
+- Guías de `docs/instalacion/` recortadas a lo esencial y guía de taller actualizada. Sin cambios de versión en los plugins.
+
 ### Agregado
 - Estructura del repositorio: marketplace de Claude con cuatro plugins (Innovación Destilada, Automatización con IA, Implementación Empresarial y Aceleración Comercial).
 - Scripts de sincronización de bloques compartidos, validación y empaquetado (zips por skill, `.plugin` por plugin y paquetes copiar-pegar).

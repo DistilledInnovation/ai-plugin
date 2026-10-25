@@ -1,32 +1,28 @@
 # Instalar en ChatGPT
 
 <!-- estado:en-construccion -->
-> **Estado: en construcción.** La primera Release (v1.0.0) aún no está publicada; las skills descritas son el catálogo objetivo. Los nombres de archivos y frases de ejemplo de esta página muestran cómo será la instalación cuando la Release exista.
+> **Estado:** las instalaciones por línea de comandos funcionan hoy. Los archivos descargables aparecerán en **Releases** cuando se publique la primera Release (v1.0.0).
 <!-- /estado:en-construccion -->
 
 Verificado: 2026-10-25
 
-No usamos GPTs personalizados: según fuentes secundarias están en retiro (verificar). Usa Skills; si no están disponibles en tu plan, usa un Proyecto.
+## La forma más corta
 
-## Opción 1. Skills del espacio de trabajo (nivel 1 y 2)
+No usamos GPTs personalizados: según fuentes secundarias están en retiro (verificar). Descarga desde **Releases** el archivo `<metodologia>-todo-en-uno-v*.zip` (uno por metodología; son 4 en total). Trae la metodología completa en una sola skill: el asistente lee la guía de cada etapa cuando la necesita.
 
-Disponibles en planes Business, Enterprise y Edu. En planes personales las fuentes se contradicen (verificar).
+1. En ChatGPT busca **Skills > Create > Upload from computer** (reportado) (verificar) y elige el zip.
+2. Espera el análisis: las cargas pueden quedar **"Needs Review"** o **"Blocked"** (reportado); en ese caso avisa a tu admin.
+3. Prueba con: "Quiero priorizar qué procesos automatizar".
 
-Para participantes o admins que suben la skill:
+Skills está disponible en Business, Enterprise y Edu. En planes personales las fuentes se contradicen (verificar).
 
-1. Descarga desde **Releases** el zip de la skill (por ejemplo `priorizar-flujos-v0.1.0.zip`). La carpeta de la skill debe estar en la raíz del zip.
-2. En ChatGPT busca la sección de Skills y la opción de crear una skill subiéndola desde tu computadora (reportado como **Skills > Create > Upload from computer**) y elige la carpeta o el zip (verificar).
-3. Espera el resultado del análisis. Según lo reportado, las cargas se escanean y pueden quedar **"Needs Review"** (pendiente de revisión) o **"Blocked"** (bloqueada); en ese caso avisa a tu admin.
-4. Prueba con una frase de ejemplo.
+## El admin lo sube una vez para todos
 
-Para administradores: el admin controla las Skills del espacio de trabajo. Carga las skills una vez, aprueba las que queden en revisión y confirma que quedan disponibles para el equipo.
+El admin controla las Skills del espacio de trabajo: sube el zip, aprueba lo que quede en revisión y confirma que el equipo lo ve disponible.
 
-## Opción 2. Proyecto con copiar y pegar (nivel 3, respaldo)
+## Respaldo: Proyecto con copiar y pegar
 
-1. Descarga desde **Releases** el paquete `<metodologia>-copiar-pegar-vX.Y.Z.zip` y descomprímelo.
-2. Crea un **Proyecto** en ChatGPT.
-3. En las instrucciones del proyecto, pega el contenido de `INSTRUCCIONES.md`.
-4. Sube como archivos del proyecto los archivos `01-*.md`, `02-*.md`, etc.
-5. Abre un chat dentro del proyecto y escribe tu frase de ejemplo.
+1. Descarga y descomprime `<metodologia>-copiar-pegar-v*.zip` de **Releases**.
+2. Crea un **Proyecto**, pega `INSTRUCCIONES.md` en sus instrucciones y sube los archivos `01-*.md`, `02-*.md`, etc.
 
-Este camino tiene menor calidad y se actualiza a mano: cuando salga una versión nueva, repite los pasos 1 a 4.
+Se actualiza a mano con cada versión nueva.

@@ -1,32 +1,50 @@
 # Metodologías Distilled Innovation para tu asistente de IA
 
 <!-- estado:en-construccion -->
-> **Estado: en construcción.** La primera Release (v1.0.0) aún no está publicada; las skills descritas son el catálogo objetivo. Los nombres de archivos y frases de ejemplo de esta página muestran cómo será la instalación cuando la Release exista.
+> **Estado:** las instalaciones por línea de comandos (Claude Code, Cowork y `npx skills`) funcionan hoy. Los archivos descargables (los `.zip` "todo en uno" y de copiar y pegar) aparecerán en **Releases** cuando se publique la primera Release (v1.0.0).
 <!-- /estado:en-construccion -->
 
-Este proyecto convierte (en cuanto salga la primera Release) las metodologías de **Distilled Innovation** en ayudantes que viven dentro del asistente de IA que tu equipo ya usa (Claude, ChatGPT, Copilot, Gemini y otros).
+Este proyecto convierte las metodologías de **Distilled Innovation** en ayudantes que viven dentro del asistente de IA que tu equipo ya usa (Claude, ChatGPT, Copilot, Gemini y otros).
 
 Tú escribes con tus palabras lo que quieres lograr. El ayudante te hace **una pregunta a la vez**, separa lo que sabes de lo que estás suponiendo y te entrega lienzos, mapas y tableros listos para usar en tu equipo.
 
 Primero lo usas con nosotros en el taller. Después lo repites tú solo con otro reto, sin depender de nadie.
 
-## ¿Qué asistente usas?
+## Instalar (elige UNA línea)
 
-Busca tu asistente y sigue la guía. En la mayoría de los casos **no tienes que instalar nada**: el administrador de tu empresa lo carga una vez para todos.
+Hay cuatro metodologías (abajo las explicamos). Elige tu caso y copia lo que dice.
 
-| Tu asistente | Guía | Nivel | Qué haces |
-|---|---|---|---|
-| Claude (Claude.ai, Cowork o Claude Code) | [Claude](docs/instalacion/claude.md) | 1, 1b y 2 | El admin lo carga para todos, o agregas el catálogo con un clic, o subes un zip |
-| ChatGPT | [ChatGPT](docs/instalacion/chatgpt.md) | 1, 2 y 3 | Skills del espacio de trabajo (Business/Enterprise) o un Proyecto con copiar y pegar |
-| Microsoft 365 Copilot | [Microsoft 365 Copilot](docs/instalacion/microsoft-365-copilot.md) | 2 | Un agente con hasta 8 skills, publicado por el admin |
-| Amazon Quick | [Amazon Quick](docs/instalacion/amazon-quick.md) | 1 y 2 | Importas la skill y la compartes con tu equipo |
-| Gemini | [Gemini](docs/instalacion/gemini.md) | 3 | Un Gem con instrucciones y archivos de conocimiento (Gemini CLI: desarrolladores) |
-| Grok | [Grok](docs/instalacion/grok.md) | 3 | Copiar y pegar (Grok Build: desarrolladores) |
-| OpenWork / opencode | [OpenWork y opencode](docs/instalacion/openwork-opencode.md) | 1b | Copias las carpetas o agregas el catálogo |
+**Claude Code o Claude Cowork** (escribe esto en el chat):
 
-**Niveles:** 1 = sin instalar (lo carga tu admin) · 1b = un clic · 2 = subir un zip · 3 = copiar y pegar (respaldo, con menos calidad y actualización manual).
+```
+/plugin marketplace add DistilledInnovation/ai-plugin
+/plugin install innovacion-destilada@distilled-innovation
+/plugin install automatizacion-con-ia@distilled-innovation
+/plugin install implementacion-empresarial@distilled-innovation
+/plugin install aceleracion-comercial@distilled-innovation
+```
 
-Las descargas estarán en la sección **Releases** de este repositorio cuando se publique la primera. ¿Vas a usarlo en un taller? Revisa la [guía de taller](docs/guia-taller.md).
+Puedes instalar solo las metodologías que necesites. Más detalle en la [guía de Claude](docs/instalacion/claude.md).
+
+**Codex, opencode/OpenWork, Gemini CLI, GitHub Copilot, Cursor y otros agentes de código** (necesitas [Node.js](https://nodejs.org)):
+
+```
+npx skills add DistilledInnovation/ai-plugin
+```
+
+Te muestra una lista para que elijas las skills y el agente donde instalarlas. Si ya sabes cuál quieres: `npx skills add DistilledInnovation/ai-plugin --skill priorizar-flujos` (agrega `-g` para instalarla en tu usuario y no solo en el proyecto). Guía: [OpenWork y opencode](docs/instalacion/openwork-opencode.md).
+
+**Aplicaciones web y de empresa sin terminal (Claude.ai, ChatGPT, Microsoft 365 Copilot, Amazon Quick):** sube **un solo archivo por metodología**. En **Releases** descarga el `<metodologia>-todo-en-uno-v*.zip` (son 4 archivos en total): una sola carga, la metodología completa adentro, y el asistente lee la guía de cada etapa cuando la necesita. Lo ideal es que el administrador de tu empresa lo suba una vez para todos. Los clics exactos están en la guía de tu plataforma: [Claude](docs/instalacion/claude.md), [ChatGPT](docs/instalacion/chatgpt.md), [Microsoft 365 Copilot](docs/instalacion/microsoft-365-copilot.md), [Amazon Quick](docs/instalacion/amazon-quick.md).
+
+**Gemini (Gems), ChatGPT Projects, Grok y cualquier chat:** usa el paquete de copiar y pegar de la metodología (`<metodologia>-copiar-pegar-v*.zip`): pegas un archivo de instrucciones y subes los archivos de conocimiento. Guías: [Gemini](docs/instalacion/gemini.md), [Grok](docs/instalacion/grok.md), [ChatGPT](docs/instalacion/chatgpt.md).
+
+Las rutas de menú de las aplicaciones web cambian seguido: las que no pudimos confirmar están marcadas con "(verificar)". Verificado: 2026-10-25. ¿Vas a usarlo en un taller? Revisa la [guía de taller](docs/guia-taller.md).
+
+## ¿Y cómo sé que funcionó?
+
+Escribe: "Quiero priorizar qué procesos de mi área conviene automatizar."
+El facilitador debe contestarte con **una sola pregunta**, no con una lista ni un cuestionario.
+Si te responde con un texto largo sin preguntarte nada, revisa que el archivo o plugin quedó activado.
 
 ## Las cuatro metodologías
 

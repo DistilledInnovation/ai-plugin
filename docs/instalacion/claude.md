@@ -1,49 +1,36 @@
 # Instalar en Claude
 
 <!-- estado:en-construccion -->
-> **Estado: en construcción.** La primera Release (v1.0.0) aún no está publicada; las skills descritas son el catálogo objetivo. Los nombres de archivos y frases de ejemplo de esta página muestran cómo será la instalación cuando la Release exista.
+> **Estado:** las instalaciones por línea de comandos funcionan hoy. Los archivos descargables aparecerán en **Releases** cuando se publique la primera Release (v1.0.0).
 <!-- /estado:en-construccion -->
 
 Verificado: 2026-10-25
 
-Hay tres caminos. Si tu empresa tiene Claude Team o Enterprise, usa el primero: los participantes no hacen nada.
+## La forma más corta
 
-## Opción 1. El admin lo carga para toda la organización (nivel 1, recomendado)
+Claude Code o Cowork, en el chat:
 
-Para administradores:
-
-1. Descarga desde **Releases** el archivo `.plugin` de la metodología (por ejemplo `innovacion-destilada-v0.1.0.plugin`).
-2. Entra a la configuración de la organización y busca la sección de plugins y skills (según la investigación: **Organization settings > Plugins & skills**) (verificar).
-3. Busca la opción para agregar y subir una skill o plugin (reportado como **Add > Upload a skill or plugin**) y sube el archivo (`.zip` o `.plugin`, hasta 200 MB, solo archivos de texto) (verificar).
-4. Elige a quién se lo provisionas: a todos o, en Enterprise, a grupos.
-5. Prueba con una frase de ejemplo: "Quiero priorizar qué procesos automatizar".
-
-Para participantes: el plugin aparece ya instalado. Según lo reportado, pueden activarlo o desactivarlo, pero no borrarlo (verificar).
-
-## Opción 2. Agregar el catálogo con un clic (nivel 1b)
-
-Para Claude Cowork:
-
-1. Abre la personalización y busca la exploración de plugins, en la sección personal (reportado como **Customize > Browse plugins > Personal**) (verificar).
-2. Pulsa el botón "+" y elige agregar un marketplace desde GitHub (verificar).
-3. Escribe `DistilledInnovation/ai-plugin`.
-4. Instala las metodologías que necesites.
-
-Para Claude Code (equipos técnicos):
-
-```bash
-claude plugin marketplace add DistilledInnovation/ai-plugin
-claude plugin install innovacion-destilada@distilled-innovation
+```
+/plugin marketplace add DistilledInnovation/ai-plugin
+/plugin install innovacion-destilada@distilled-innovation
 ```
 
-## Opción 3. Subir un zip de una skill (nivel 2)
+Repite el segundo comando con `automatizacion-con-ia`, `implementacion-empresarial` y `aceleracion-comercial` si los necesitas. En Cowork también puedes usar la exploración de plugins personales y agregar `DistilledInnovation/ai-plugin` como marketplace de GitHub (verificar la ruta exacta del menú).
 
-1. Descarga desde **Releases** el zip de la skill (por ejemplo `priorizar-flujos-v0.1.0.zip`). Dentro del zip, la carpeta de la skill debe quedar en la raíz.
-2. En Claude.ai busca la opción de Skills en la configuración (reportado como **Settings > Skills**) (verificar).
-3. Sube el zip.
-4. Activa la skill y pruébala con una frase de ejemplo.
+Claude.ai (sin terminal): Descarga desde **Releases** el archivo `<metodologia>-todo-en-uno-v*.zip` (uno por metodología; son 4 en total). Trae la metodología completa en una sola skill: el asistente lee la guía de cada etapa cuando la necesita.
 
-## Si algo falla
+1. En Claude.ai busca **Settings > Skills** (reportado) (verificar) y sube el zip.
+2. Actívala y escribe: "Quiero priorizar qué procesos automatizar".
 
-- El zip se rechaza: confirma que lo descargaste de Releases sin descomprimirlo ni volver a comprimirlo.
-- La skill no se activa: escribe una frase más parecida a las del ejemplo, o menciona el nombre de la skill.
+## El admin lo sube una vez para todos
+
+1. Entra a **Organization settings > Plugins & skills** (reportado) (verificar).
+2. Elige **Add > Upload a skill or plugin** (reportado) (verificar) y sube el zip todo en uno (`.zip` o `.plugin`, hasta 200 MB, solo texto).
+3. Elige a quién se lo provisionas: a todos o, en Enterprise, a grupos.
+
+Los participantes lo ven ya instalado; según lo reportado pueden activarlo o desactivarlo, pero no borrarlo (verificar).
+
+## Respaldo
+
+- Un zip por skill (para administradores): `<skill>-v*.zip` en Releases, con la carpeta de la skill en la raíz.
+- Si el zip se rechaza, descárgalo de nuevo sin descomprimirlo ni volver a comprimirlo.

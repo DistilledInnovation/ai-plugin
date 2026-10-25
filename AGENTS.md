@@ -62,6 +62,7 @@ Cada skill incluye un bloque `etiquetas-y-trazabilidad` (también sincronizado),
 - Los bloques comunes solo se editan en `compartido/`; dentro de las skills van entre `<!-- inicio:NOMBRE -->` y `<!-- fin:NOMBRE -->`. Los archivos compartidos solo se editan en `compartido/archivos/` y se declaran en `compartido/archivos-compartidos.json`.
 - Todo `.json` dentro de `plugins/` es JSON válido.
 - Implementación Empresarial nunca afirma conversión automática entre plataformas ni incluye credenciales, endpoints reales o datos personales.
+- Paquete todo-en-uno (`<plugin>-todo-en-uno-v*.zip`): una sola skill `<plugin>/` con `SKILL.md` de 20.000 caracteres o menos (descripción de 1.024 o menos) y `references/<skill>/`; es el camino principal de instalación para interfaces web.
 - Paquete copiar-pegar: 10 archivos o menos e `INSTRUCCIONES.md` de 8.000 caracteres o menos.
 - Licencia: contenido CC BY 4.0 (atribución "Distilled Innovation"); `scripts/` MIT.
 - Commits con `aleriospresidente@gmail.com` (revisar `git config user.email` antes de cada commit). Nunca confirmar `.terminos-prohibidos.txt`, `.fuentes-locales.md`, `.superpowers/` ni `dist/`.
