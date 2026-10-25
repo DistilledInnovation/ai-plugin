@@ -10,5 +10,7 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 - Flujos de GitHub Actions para validar en cada cambio y publicar en cada tag `v*`.
 - README, `AGENTS.md`, guías de instalación por plataforma y guía de taller.
 
+- Innovación Destilada 0.3.0: skills `facilitador-innovacion-destilada`, `alinear-equipo` e `identificar-reto` con plantillas, ejemplos ficticios, evals y README del plugin.
+
 ### Seguridad
 - La publicación falla si el secreto `TERMINOS_PROHIBIDOS` está vacío o si la versión del tag no coincide con los manifiestos.

@@ -1,0 +1,6 @@
+---
+type: llm
+weight: 2
+---
+
+The user asked to finish ("Finalizar"), so the agent delivers the final result in Spanish using this structure: la ficha de reto (reto priorizado formulado como '¿Cómo podemos...?', lista de retos, actores, evidencias, supuestos, preguntas de investigación, alcance preliminar), treating the reto as a hypothesis to validate. It must clearly separate facts (Hecho, backed by what the user said or evidence) from assumptions (Supuesto) and pending items (Pendiente por validar), tag claims with their origin, use stable IDs (for example HAL-01, SUP-01, DEC-01), and not invent data the user did not provide: missing information shows up as a gap or a provisional draft marked as such. If it includes a Mermaid diagram it must also include an equivalent table. The ficha must contain these named sections: Reto priorizado (one '¿Cómo podemos...?' question marked as hypothesis, id RET-01), Lista de retos considerados (with interés/urgencia/potencial/evidencia), Actores, Evidencias (Hecho), Supuestos (id SUP-xx with a 'Pendiente por validar' test), Preguntas de investigación, Alcance preliminar, Riesgos (riesgo, impacto, mitigación; id RIE-xx) and Pendientes por validar. Missing two or more of these sections is a FAIL. It ends by suggesting the next skill with a one-line reason: investigar-y-empatizar.
