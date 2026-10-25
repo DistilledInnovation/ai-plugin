@@ -10,7 +10,7 @@ Nota: patrón genérico de solución, escrito sin relación con ninguna organiza
 | Lo relevante se puede describir con criterios (temas, alcance, umbrales) | Se espera que el sistema actúe solo sobre lo que encuentra |
 | Una persona responsable revisa lo que se genera antes de que tenga efectos | No hay nadie que pueda revisar |
 
-El resultado del patrón es una **alerta investigable** para una persona; nunca una acción externa automática (sanciones, mensajes a terceros, cambios en sistemas).
+El resultado del patrón es una **alerta investigable** para una persona; nunca una acción externa automática (mensajes a terceros, cambios en sistemas).
 
 ## Pipeline
 

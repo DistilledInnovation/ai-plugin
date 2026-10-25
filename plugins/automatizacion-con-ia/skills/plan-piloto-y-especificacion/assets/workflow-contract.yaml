@@ -34,6 +34,7 @@ states:
   - {state_id: ST-08, kind: success, description: Cita registrada y confirmada}
   - {state_id: ST-09, kind: failure, description: "En cola de revisión de recepción (variantes fuera del piloto, baja certeza o falla)"}
   - {state_id: ST-10, kind: success, description: Derivada como urgencia; se atiende fuera de este flujo}
+  - {state_id: ST-11, kind: waiting, description: "Coincidencia dudosa; espera que recepción la resuelva"}
 
 steps:
   - step_id: FUT-01
@@ -80,12 +81,16 @@ steps:
     failure_state: ST-09
     idempotency: {strategy: not_applicable, notes: "Paso de solo lectura."}
     evidence: [EVD-02]
+    extensions:
+      branches:
+        - {condition: "Coincidencia exacta y sin solicitud abierta", next_state: ST-03, next_step: FUT-04}
+        - {condition: "Coincidencia dudosa o paciente sin ficha", next_state: ST-11, next_step: FUT-03}
 
   - step_id: FUT-03
     name: Resolver coincidencias dudosas
     kind: human_task
     actor: ACT-01
-    trigger: {type: previous_step, description: "Solo si la coincidencia es dudosa.", after_step: FUT-02}
+    trigger: {type: previous_step, description: "Solo si FUT-02 deja una coincidencia dudosa (ST-11).", after_step: FUT-02}
     inputs:
       - {name: patient_match, description: "Coincidencia dudosa a resolver.", type: record, required: true, sensitivity: sensitive}
     outputs:
@@ -101,7 +106,7 @@ steps:
     name: Marcar posible urgencia
     kind: ai_assisted
     actor: ACT-04
-    trigger: {type: previous_step, description: "Paciente identificado.", after_step: FUT-03}
+    trigger: {type: event, description: "El flujo llega a ST-03 (paciente identificado): directo desde FUT-02 con coincidencia exacta, o desde FUT-03 cuando recepción resuelve la duda."}
     inputs:
       - {name: extracted_data, description: "Motivo de la consulta leído de la solicitud.", type: record, required: true, sensitivity: sensitive}
     outputs:
@@ -116,6 +121,8 @@ steps:
     failure_state: ST-09
     idempotency: {strategy: not_applicable, notes: "Solo produce una marca; no modifica nada fuera del flujo."}
     evidence: [EVD-03]
+    extensions:
+      entry_from: [FUT-02, FUT-03]
 
   - step_id: FUT-05
     name: Decidir si es urgencia

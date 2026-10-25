@@ -161,7 +161,7 @@ approval_policies:
     condition: "Siempre, mientras dure el piloto, antes de enviar la propuesta."
 ```
 
-(El archivo completo trae los ocho pasos `FUT-01` a `FUT-08`, seis actores, diez estados, cuatro políticas de aprobación, seis evidencias, cuatro métricas y seis pruebas de aceptación.)
+(El archivo completo trae los ocho pasos `FUT-01` a `FUT-08`, seis actores, once estados (`ST-11` es la espera de una coincidencia dudosa), cuatro políticas de aprobación, seis evidencias, cuatro métricas y seis pruebas de aceptación.)
 
 | Requisito del esquema | Cómo cumple el ejemplo |
 |---|---|
