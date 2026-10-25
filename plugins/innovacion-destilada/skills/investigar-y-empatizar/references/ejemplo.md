@@ -98,7 +98,7 @@ Siguiente paso sugerido: `sintetizar-y-redefinir-reto`, para clasificar esto en 
 
 ## Lo que se ve en este ejemplo
 
-- Una sola pregunta por turno.
+- Una pregunta principal por turno (con, a lo sumo, dos seguimientos cortos del mismo punto).
 - La escalera de profundidad decide la técnica (entrevistas más observación) y deja la profundidad como opcional.
 - El dato observado se separa de lo que la persona dijo, y la contradicción dicen/hacen queda registrada.
 - La interpretación está marcada como inferencia, no como hecho.

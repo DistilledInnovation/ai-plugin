@@ -39,7 +39,7 @@ El mapa da una posición provisional; la cubeta final sale del orden de decisió
 
 ## 4. Cubetas
 
-Orden de decisión (detente en el primer "sí"): 1) ¿valor ≤ 2, trabajo fundamentalmente humano o riesgo y control = 1 sin control? No automatizar. 2) ¿juicio humano esencial, o riesgo y control ≤ 2 con valor ≥ 3? Asistir no automatizar. 3) ¿preparación ≤ 2? Requiere bases. 4) ¿valor, factibilidad y riesgo y control ≥ 3? Victorias rápidas. 5) ¿valor ≥ 3 y factibilidad < 3 por falta de evidencia o capacidades? Pilotos estratégicos.
+Orden de decisión (detente en el primer "sí"): 1) ¿valor ≤ 2, trabajo fundamentalmente humano o riesgo y control = 1 sin control? No automatizar. 2) ¿juicio humano esencial, o riesgo y control ≤ 2 con valor ≥ 3? Asistir no automatizar. 3) ¿preparación ≤ 2 (falta algo básico: datos, proceso estable, acceso o dueño)? Requiere bases. 4) ¿valor, factibilidad y riesgo y control ≥ 3? Victorias rápidas. 5) ¿valor ≥ 3 y factibilidad < 3 por falta de evidencia o capacidades? Pilotos estratégicos.
 
 | Cubeta | Definición | Flujos | Por qué | Qué sigue |
 |---|---|---|---|---|

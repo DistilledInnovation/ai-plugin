@@ -29,7 +29,7 @@ Formato corto para que cualquier persona reporte un problema sin necesidad de en
 
 ## 3. Agrupar señales del mismo problema
 
-Dos fichas de áreas distintas pueden describir el mismo problema con palabras diferentes ("los clientes llaman a preguntar por su pedido" y "pasamos el día contestando consultas de estado").
+Dos fichas de áreas distintas pueden describir el mismo problema con palabras diferentes ("los pacientes llaman a preguntar si su cita sigue en pie" y "pasamos el día contestando consultas de confirmación").
 
 **Cómo aplicarlo:**
 1. Lee todas las fichas y ordénalas por proceso o tarea.
@@ -43,7 +43,7 @@ Si dos fichas se parecen pero el resultado que falla es distinto, déjalas separ
 ## 4. Señales internas y fuerzas externas
 
 - **Señales internas** (zoom in): lo que viven las personas en su trabajo (fichas de señal, entrevistas, observación).
-- **Fuerzas externas** (zoom out): lo que cambia afuera y presiona al proceso (clientes que esperan respuestas más rápidas, regulaciones, competidores).
+- **Fuerzas externas** (zoom out): lo que cambia afuera y presiona al proceso (pacientes que esperan respuestas más rápidas, regulaciones, competidores).
 
 Una oportunidad con respaldo en ambas (algo duele adentro y el entorno lo vuelve más urgente) suele merecer más atención. Anota la fuente de cada una y no inventes tendencias: si no hay dato, es **Supuesto**.
 

@@ -21,7 +21,7 @@ Acuerda los rangos de E1 antes de puntuar y anótalos aquí: ___
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | FLU-01 | | RET-__ | | | | | | | | | Propuesta de la IA / Acordado por el equipo | |
 
-Impacto = 0,6 × I1 + 0,4 × I2. Esfuerzo = 0,4 × E1 + 0,6 × E2. Índice = Impacto / Esfuerzo. Umbral = 3 (≥ 3 es alto; < 3 es bajo).
+Impacto = 0,6 × I1 + 0,4 × I2. Esfuerzo = 0,4 × E1 + 0,6 × E2. Índice = Impacto / Esfuerzo. Umbral = 3, y se aplica a **Impacto** y **Esfuerzo** (≥ 3 es alto; < 3 es bajo). El Índice no tiene umbral: solo ordena la lista (más alto = más rendimiento).
 
 ## 3. Cuadrantes
 

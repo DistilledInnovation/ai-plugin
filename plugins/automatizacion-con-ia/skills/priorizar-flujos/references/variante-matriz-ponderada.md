@@ -53,11 +53,11 @@ Puntajes propuestos (pendientes de confirmar por el equipo):
 
 | ID | Flujo | I1 | I2 | E1 | E2 | Impacto | Esfuerzo | Índice | Cuadrante |
 |---|---|---|---|---|---|---|---|---|---|
-| FLU-01 | Registrar pedidos | 5 | 3 | 1 | 3 | 4,2 | 2,2 | 1,9 | Victoria rápida |
-| FLU-02 | Informar el estado de pedidos | 3 | 3 | 3 | 5 | 3,0 | 4,2 | 0,7 | Gran apuesta |
-| FLU-04 | Cotizaciones a medida | 3 | 1 | 3 | 3 | 2,2 | 3,0 | 0,7 | Reconsiderar |
+| FLU-01 | Agendar citas | 5 | 3 | 1 | 3 | 4,2 | 2,2 | 1,9 | Victoria rápida |
+| FLU-02 | Recordatorios y confirmaciones | 3 | 3 | 3 | 5 | 3,0 | 4,2 | 0,7 | Gran apuesta |
+| FLU-04 | Cotización de planes de tratamiento | 3 | 1 | 3 | 3 | 2,2 | 3,0 | 0,7 | Reconsiderar |
 
-Lectura: el índice por sí solo no dice qué hacer con `FLU-02`: es una Gran apuesta porque requiere resolver antes dónde vive el estado del pedido (algo que las cubetas llaman Requiere bases). Por eso, cuando importa el riesgo o el juicio humano, conviene la clasificación en cinco cubetas.
+Lectura: el índice por sí solo no dice qué hacer con `FLU-02`: es una Gran apuesta porque requiere resolver antes completar y centralizar los datos de contacto de los pacientes (algo que las cubetas llaman Requiere bases). Por eso, cuando importa el riesgo o el juicio humano, conviene la clasificación en cinco cubetas.
 
 ## Cómo conversarlo
 

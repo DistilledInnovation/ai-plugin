@@ -97,7 +97,7 @@ Siguiente paso sugerido: ideación (`facilitar-ideacion`), con `RET-03` como ret
 
 ## Lo que se ve en este ejemplo
 
-- Una sola pregunta por turno.
+- Una pregunta principal por turno (con, a lo sumo, dos seguimientos cortos del mismo punto).
 - Las necesidades y tensiones citan los `HAL-nn` que las respaldan; lo que dijo una sola persona queda como pendiente.
 - El reto nuevo usa el patrón textual del libro, nombra el dolor y no trae solución embebida.
 - La comparación con el reto inicial muestra que se ajustó, y por qué.

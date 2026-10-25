@@ -28,7 +28,7 @@ Cuenta lo que pasó, con un caso concreto (cuándo, qué ocurrió, qué consecue
 
 ## 4. Intención
 
-Qué te gustaría que fuera distinto, dicho como resultado y no como herramienta ("que los pedidos queden registrados sin errores", no "una aplicación").
+Qué te gustaría que fuera distinto, dicho como resultado y no como herramienta ("que las citas queden registradas sin errores", no "una aplicación").
 
 > ___
 

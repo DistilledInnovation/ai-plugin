@@ -8,11 +8,11 @@ Describe el trabajo antes de puntuarlo: la descripción pesa más que el puntaje
 
 | Columna | Qué se anota | Ayuda |
 |---|---|---|
-| Flujo | Nombre corto del proceso | Verbo + objeto: "Registrar pedidos" |
+| Flujo | Nombre corto del proceso | Verbo + objeto: "Agendar citas" |
 | Disparadores | Qué inicia el flujo | Llega un correo, vence un plazo, un cliente pregunta |
 | Pasos | Secuencia de alto nivel (5 a 8) | Sin entrar al detalle de pantallas |
 | Decisiones | Puntos donde alguien decide algo | Quién decide y con qué criterio |
-| Resultado | Qué queda al terminar | Pedido registrado, factura conciliada |
+| Resultado | Qué queda al terminar | Cita registrada, preautorización aprobada |
 | Dueño | Quién responde por el resultado | Una persona o un rol |
 | Frecuencia | Veces por día, semana o mes | Con dato o "No sé" |
 | Esfuerzo (h/ejecución) | Horas-persona por vez | Con dato o "No sé" |
@@ -64,8 +64,8 @@ El mapa **no** decide la cubeta: muestra una posición provisional. Dos flujos e
 | Cubeta | Señales típicas | Ejemplo genérico |
 |---|---|---|
 | Victorias rápidas | Valor alto, todo listo, error acotado | Clasificar correos entrantes por tema |
-| Pilotos estratégicos | Valor alto, pero no se sabe si funcionará o se necesita una capacidad nueva | Resolver excepciones frecuentes de conciliación |
-| Requiere bases | La información vive en varios lugares, el proceso cambia cada vez o nadie es dueño | Informar el estado de un pedido cuando el dato no está en un solo sistema |
+| Pilotos estratégicos | Valor alto, pero no se sabe si funcionará o se necesita una capacidad nueva | Resolver las excepciones frecuentes de preautorización |
+| Requiere bases | La información vive en varios lugares, el proceso cambia cada vez o nadie es dueño | Enviar recordatorios cuando los datos de contacto no están completos en un solo lugar |
 | Asistir no automatizar | Una persona decide con consecuencias, aunque la IA pueda preparar | Preparar el borrador de una oferta personalizada |
 | No automatizar | Poco valor, riesgo alto sin control o trabajo de relación | Decisiones sensibles con pocas repeticiones |
 

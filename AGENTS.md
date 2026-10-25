@@ -83,7 +83,7 @@ claude plugin eval plugins/<plugin>            # evals (agregar --case "<skill>*
 
 1. Crear `plugins/<plugin>/skills/<skill>/SKILL.md` con la anatomía de arriba (nombre en kebab-case, sin números) y los dos bloques compartidos vacíos entre sus marcadores.
 2. Escribir `assets/` (plantillas Markdown rellenables; diagramas como Mermaid más tabla equivalente) y `references/ejemplo.md` con una empresa ficticia.
-3. Crear `plugins/<plugin>/evals/<skill>/prompt.md` (mensaje de un novato con contexto ficticio) y `graders/` con tres criterios: activa la skill correcta, hace una sola pregunta principal en el primer turno, el entregable usa la plantilla y separa Hecho de Supuesto.
+3. Crear `plugins/<plugin>/evals/<skill>/prompt.md` (mensaje de un novato con contexto ficticio) y `graders/` con tres criterios: activa la skill correcta, hace una pregunta principal en el primer turno (a lo sumo, dos seguimientos cortos del mismo punto), el entregable usa la plantilla y separa Hecho de Supuesto.
 4. Ejecutar `python3 scripts/sincronizar_bloques.py` y luego `python3 scripts/validar.py`.
 5. Ejecutar `claude plugin validate .` y `claude plugin eval plugins/<plugin> --case "<skill>*"`; el brazo con plugin debe superar al brazo sin plugin.
 6. Actualizar el catálogo en `README.md`, `CHANGELOG.md` y, si cambia el comportamiento, la versión en `plugin.json` y `marketplace.json`.

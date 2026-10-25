@@ -59,7 +59,7 @@ Resumen en cinco puntos: (1) etapa preparar; (2) sin reto formulado; (3) una evi
 
 ## Lo que se ve en este ejemplo
 
-- Una sola pregunta por turno.
+- Una pregunta principal por turno (con, a lo sumo, dos seguimientos cortos del mismo punto).
 - El dato real (`HAL-01`) se separa de la idea de la app (`SUP-01`).
 - No se eligió tecnología: la app quedó como supuesto.
 - La recomendación incluye una línea de por qué.

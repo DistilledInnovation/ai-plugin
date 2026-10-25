@@ -17,9 +17,9 @@ Nota de fuente: el Scoping Canvas es un lienzo de seis preguntas para encuadrar 
 
 | Tipo | Ejemplo | Cómo se marca |
 |---|---|---|
-| Síntoma | "Los pedidos tardan en salir" | Hecho, si hay dato |
+| Síntoma | "Los pacientes esperan días por una cita" | Hecho, si hay dato |
 | Causa hipotética | "Se pierde tiempo tecleando" | Supuesto, hasta observarlo |
-| Evidencia | "En 20 pedidos medidos, el promedio fue de 6 minutos de captura" | Hecho (Evidencia) |
+| Evidencia | "En 20 solicitudes medidas, el promedio fue de 6 minutos para registrar la cita" | Hecho (Evidencia) |
 
 Pregunta de control: "¿Eso lo vimos o lo creemos?".
 
@@ -27,14 +27,14 @@ Pregunta de control: "¿Eso lo vimos o lo creemos?".
 
 1. Elige un indicador que se pueda medir con lo que ya hay (o con una medición barata).
 2. Anota la línea base y su procedencia. Sin línea base, la meta no es verificable: queda como Pendiente por validar.
-3. Fija la meta como cambio de magnitud realista ("de 6 a 3 minutos por pedido"), no como "lo mejor posible".
+3. Fija la meta como cambio de magnitud realista ("de 6 a 3 minutos por solicitud de cita"), no como "lo mejor posible".
 4. Pon fecha.
 5. No incluyas la solución en el objetivo ("con IA", "con un asistente").
 
 | Objetivo débil | Objetivo SMART |
 |---|---|
-| Mejorar la atención | Bajar de 6 a 3 minutos el tiempo promedio de registrar un pedido antes del cierre del trimestre |
-| Automatizar las cobranzas | Reducir de 25 a 10 por semana las facturas con diferencia sin conciliar en 60 días |
+| Mejorar la atención | Bajar de 6 a 3 minutos el tiempo promedio de registrar una solicitud de cita antes del cierre del trimestre |
+| Automatizar las preautorizaciones | Reducir de 25 a 10 por semana las solicitudes de preautorización devueltas por datos incompletos en 60 días |
 
 ## Reformular como "¿Cómo podríamos...?"
 
@@ -42,7 +42,7 @@ Fórmula: ¿Cómo podríamos [lograr el resultado] para [quién] de modo que [be
 
 | Con solución adentro | Abierta |
 |---|---|
-| ¿Cómo podríamos automatizar la captura de pedidos con IA? | ¿Cómo podríamos registrar los pedidos correctamente en menos tiempo para que Atención dedique su día a resolver casos difíciles? |
+| ¿Cómo podríamos automatizar el agendamiento de citas con IA? | ¿Cómo podríamos registrar las citas correctamente en menos tiempo para que recepción dedique su día a atender a los pacientes que llegan? |
 
 Prueba: si solo admite una respuesta, todavía trae la solución. Si no menciona a nadie, falta el actor. Si no se nota si se logró, falta el resultado.
 
@@ -50,7 +50,7 @@ Prueba: si solo admite una respuesta, todavía trae la solución. Si no menciona
 
 Usa la tabla del `SKILL.md` y estas pistas:
 
-- **Dividir**: hay "y" en el objetivo ("reducir el tiempo de captura **y** mejorar la conciliación"), dos dueños distintos, o resultados que no se miden con el mismo indicador.
+- **Dividir**: hay "y" en el objetivo ("reducir el tiempo de agendar **y** mejorar las preautorizaciones"), dos dueños distintos, o resultados que no se miden con el mismo indicador.
 - **Refinar**: falta una de estas cuatro cosas: línea base, dueño, evidencia de la causa o resultado esperado claro.
 - **Definir**: las cuatro están y los vacíos restantes se pueden cerrar durante el siguiente paso; anótalos como Pendiente por validar.
 

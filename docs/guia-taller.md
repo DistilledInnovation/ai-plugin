@@ -9,7 +9,7 @@ Formato de referencia de **14 horas**: Sprint 1 (descubrir y priorizar, 6 h), Sp
 ## Checklist previo (una semana antes)
 
 - [ ] El admin del cliente cargó el plugin (cuando exista la Release) en su plataforma (ver la [guía de instalación](instalacion/) que corresponda). Nivel 1: los participantes no instalan nada.
-- [ ] Alguien probó el plugin con una frase de ejemplo: "Quiero priorizar qué procesos automatizar". Debe arrancar el facilitador y hacer **una sola pregunta**.
+- [ ] Alguien probó el plugin con una frase de ejemplo: "Quiero priorizar qué procesos automatizar". Debe arrancar el facilitador y hacer **una pregunta principal**.
 - [ ] Todos los participantes pueden abrir el asistente con su cuenta de trabajo.
 - [ ] Hay un plan B: si la plataforma no deja cargar el plugin, usa el paquete copiar-pegar (nivel 3).
 - [ ] Cada equipo eligió un reto o proceso real sobre el cual trabajar y una persona que toma notas.
