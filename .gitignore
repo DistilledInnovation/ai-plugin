@@ -1,0 +1,7 @@
+dist/
+__pycache__/
+.terminos-prohibidos.txt
+.fuentes-locales.md
+.env
+evals/results/
+plugins/*/evals/results/

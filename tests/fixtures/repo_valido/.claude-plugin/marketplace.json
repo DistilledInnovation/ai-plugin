@@ -1,0 +1,6 @@
+{
+  "name": "demo-marketplace",
+  "plugins": [
+    {"name": "demo", "source": "./plugins/demo", "version": "0.1.0", "description": "Plugin de demostración"}
+  ]
+}
