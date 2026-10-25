@@ -1,0 +1,52 @@
+# Proceso actual (As-Is). Estructura simple; no es la fuente de verdad frente a proceso-actual.md.
+proceso:
+  id: FLU-00
+  nombre: ""
+  reto: RET-00
+  dueno: ""
+  version: "borrador 1"
+  fecha: ""
+  validado_por: ""            # vacío hasta que el dueño valide
+alcance:
+  inicio: ""
+  fin: ""
+  variantes: []
+  fuera_de_alcance: []
+  decision: DEC-00
+pasos:
+  - id: PAS-01
+    actividad: ""             # verbo + objeto
+    tipo: paso                # paso | decision | espera | retrabajo
+    quien: ""
+    donde: ""                 # con los nombres que usa la persona, sin recomendar tecnología
+    entra: ""
+    sale: ""
+    tiempo_trabajo_min: null  # número o null si No sé
+    espera: ""
+    procedencia: ""
+decisiones:
+  - id: D1
+    pregunta: ""
+    decide: ""
+    criterio: ""
+    rutas: []                 # cada ruta: condicion, destino
+excepciones:
+  - id: EXC-01
+    descripcion: ""
+    paso: PAS-01
+    manejo_actual: ""
+    frecuencia: ""            # con procedencia o "No sé"
+raci:
+  - paso: PAS-01
+    R: []
+    A: ""                     # exactamente uno; "vacio" si no está definido
+    C: []
+    I: []
+tiempos_y_volumenes:
+  tiempo_trabajo_total_min: null
+  volumen: []                 # cada ítem: variante, cantidad, periodo, medido_o_dicho
+dolores: []                   # cada ítem: id, descripcion, paso, procedencia
+controles_actuales: []        # cada ítem: control, quien, cuando, que_detecta
+contradicciones: []           # cada ítem: tema, version_a, version_b
+ideas_aparcadas: []
+desconocidos: []              # cada ítem: id, que_falta, como_medirlo

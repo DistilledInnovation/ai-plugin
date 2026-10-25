@@ -1,0 +1,69 @@
+# Canvas de Automatización con IA. Estructura simple; la fuente de verdad es canvas-de-automatizacion.md.
+encabezado:
+  flujo: ""            # nombre y ID (FLU-00)
+  equipo: ""
+  fecha: ""
+  version: "borrador 1"
+bloques:
+  1_disparador_y_contexto:
+    estado: pendiente  # completo | provisional | pendiente
+    contenido: ""
+    origen: []         # IDs de origen
+  2_flujo_actual:
+    estado: pendiente
+    contenido: ""
+    origen: []         # PAS, EXC
+  3_flujo_futuro:
+    estado: pendiente
+    contenido: ""
+    origen: []         # FUT
+  4_capacidades_y_herramientas_de_ia:
+    estado: pendiente
+    capacidades: []    # cada ítem: id (CAP), verbo, nivel_de_autoridad
+    herramientas: pendiente_hasta_el_mvp
+  5_patron_de_automatizacion:
+    estado: pendiente
+    determinista: false
+    flujo_con_ia: false
+    copiloto_asistente: false
+    agente_autonomo: false
+    hibrido: false
+    justificacion: ""
+    decision: DEC-00
+  6_responsables_humanos_y_controles:
+    estado: pendiente
+    contenido: ""
+    origen: []         # RACI, GRD
+  7_sistemas_datos_y_herramientas:
+    estado: pendiente
+    datos_y_sistemas_funcionales: []
+    herramientas_e_integraciones: pendiente_hasta_el_mvp
+  8_riesgos_y_mitigaciones:
+    estado: pendiente
+    riesgos: []        # cada ítem: id (RIE), riesgo, impacto, mitigacion
+  9_metricas_y_evaluacion:
+    estado: pendiente
+    metricas: []       # cada ítem: nombre, linea_base, procedencia, meta, como_se_mide
+  10_plan_piloto:
+    estado: pendiente
+    alcance: ""
+    usuarios: ""
+    duracion: ""
+    criterios_de_exito: ""
+    que_aprenderemos: ""
+  11_costo_y_esfuerzo_estimado:
+    estado: pendiente
+    esfuerzo_de_construccion: ""   # Bajo | Medio | Alto
+    costo_operativo: ""
+    mantenimiento: ""
+    factores: ""
+    roi_esperado: "No sé"
+    procedencia: supuesto
+  12_proximos_pasos:
+    estado: pendiente
+    acciones: []       # cada ítem: accion, responsable, fecha, dependencia
+pie:
+  aprobado_por: ""     # lo completa quien tiene autoridad; vacío = pendiente
+  fecha: ""
+  notas: ""
+vacios_y_pendientes: []

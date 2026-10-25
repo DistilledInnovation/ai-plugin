@@ -1,0 +1,6 @@
+---
+max_turns: 6
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+Soy Marina, jefa de operaciones de Distribuidora Pinares del Sur (40 empleados). Mi socio quiere un agente autónomo para los reclamos de clientes. Proceso futuro ya diseñado: el orden de los pasos es siempre el mismo (leer el reclamo, buscar el pedido, consultar a bodega, proponer una decisión, responder, anotar). Capacidades: CAP-01 clasificar el reclamo por tipo (llega en texto libre: producto dañado, faltante, cobro, otro); CAP-02 buscar el pedido por número (una regla); CAP-03 resumir el historial del cliente para quien decide; CAP-04 redactar un borrador de respuesta; CAP-05 decidir reembolso, reposición o rechazo (hoy lo decide la jefa de atención; sobre cierto monto lo aprueba el gerente comercial); CAP-06 anotar el reclamo en la hoja de reclamos (una regla). Se manejan datos personales de clientes y las respuestas salen al cliente con la firma de la empresa. Quiero saber qué patrón conviene, qué nivel de autonomía darle a cada capacidad y qué límites poner. Finalizar: entrégame la decisión de patrón con el árbol de decisión y su tabla equivalente, la escalera de autoridad con el nivel de cada capacidad, y los guardrails. No quiero elegir productos todavía.

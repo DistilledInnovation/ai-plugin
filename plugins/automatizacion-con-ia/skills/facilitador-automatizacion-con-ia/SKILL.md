@@ -78,10 +78,10 @@ flowchart LR
 | 1 | `descubrir-procesos` | A | Señales, grupos de señales e inventario de oportunidades | Disponible |
 | 2 | `definir-reto-de-automatizacion` | A | Scoping Canvas y reto con recomendación definir, refinar o dividir | Disponible |
 | 3 | `priorizar-flujos` | A | Inventario de flujos, mapa Valor × Factibilidad y cinco cubetas | Disponible |
-| 4 | `mapear-proceso-actual` | B | Proceso actual en tabla, diagrama y responsables | Próximamente |
-| 5 | `disenar-proceso-futuro` | B | Proceso futuro: eliminar, simplificar, asistir, automatizar o mantener humano | Próximamente |
-| 6 | `elegir-patron-y-autonomia` | B | Patrón de automatización y nivel de autonomía con guardrails | Próximamente |
-| 7 | `canvas-de-automatizacion` | B | Canvas de 12 bloques | Próximamente |
+| 4 | `mapear-proceso-actual` | B | Proceso actual en tabla, diagrama y responsables | Disponible |
+| 5 | `disenar-proceso-futuro` | B | Proceso futuro: eliminar, simplificar, asistir, automatizar o mantener humano | Disponible |
+| 6 | `elegir-patron-y-autonomia` | B | Patrón de automatización y nivel de autonomía con guardrails | Disponible |
+| 7 | `canvas-de-automatizacion` | B | Canvas de 12 bloques | Disponible |
 | 8 | `supuestos-y-riesgos` | B | Supuestos falsables y riesgos con mitigación | Próximamente |
 | 9 | `prototipos-y-tarjetas-de-prueba` | B | Tarjetas de prueba y decisión sobre el prototipo | Próximamente |
 | 10 | `plan-piloto-y-especificacion` | B a C | Plan piloto y especificación portable de la solución | Próximamente |
@@ -95,7 +95,7 @@ No todos empiezan en el mismo lugar. Identifica el punto con una pregunta sobre 
 | Situación | Punto de entrada | Primera skill | Si falta algo |
 |---|---|---|---|
 | No sabe qué automatizar o dónde está el valor | Descubrir y priorizar (A) | `descubrir-procesos` | Si ni siquiera hay un dolor claro: `identificar-reto` e `investigar-y-empatizar` (Innovación Destilada) |
-| Tiene un caso definido y necesita diseñarlo | Diseñar y validar (B) | `mapear-proceso-actual` (Próximamente) | Si el caso no tiene objetivo, dueño ni línea base: `definir-reto-de-automatizacion` |
+| Tiene un caso definido y necesita diseñarlo | Diseñar y validar (B) | `mapear-proceso-actual` | Si el caso no tiene objetivo, dueño ni línea base: `definir-reto-de-automatizacion` |
 | Tiene un prototipo y quiere llevarlo a producción | Implementar y transferir (C) | `plan-piloto-y-especificacion` (Próximamente), luego el plugin Implementación Empresarial | Si los supuestos del prototipo no se han probado: `supuestos-y-riesgos` (Próximamente) |
 | Ya opera automatizaciones y quiere escalar | Medir y mejorar (D) | Plugin Implementación Empresarial (Próximamente) | Para elegir qué procesos sumar: `priorizar-flujos` |
 
@@ -130,7 +130,7 @@ supuestos: []                 # cada ítem: id, afirmación, prueba o "pendiente
 siguiente_skill: ""
 ```
 
-Reglas: los IDs (`HAL`, `SUP`, `DEC`, `RIE`, `SEN`, `OPO`, `RET`, `FLU`, `PRU`) son estables; una afirmación sin evidencia va a `supuestos`, nunca a `evidencia`; si cambia la etapa, anota la decisión que lo justifica.
+Reglas: los IDs (`HAL`, `SUP`, `DEC`, `RIE`, `SEN`, `OPO`, `RET`, `FLU`, `PRU`, `PAS`, `EXC`, `FUT`, `CAP`, `GRD`) son estables; una afirmación sin evidencia va a `supuestos`, nunca a `evidencia`; si cambia la etapa, anota la decisión que lo justifica.
 
 ## Criterios del facilitador
 
@@ -155,4 +155,4 @@ La persona sabe en qué punto de entrada está, qué evidencia tiene, cuál es s
 
 ## Siguiente paso sugerido
 
-La skill que corresponda al punto de entrada. En quien no sabe qué automatizar suele ser `descubrir-procesos`; en quien ya tiene un caso, `definir-reto-de-automatizacion` si falta objetivo y dueño, o `mapear-proceso-actual` (Próximamente) si ya los tiene.
+La skill que corresponda al punto de entrada. En quien no sabe qué automatizar suele ser `descubrir-procesos`; en quien ya tiene un caso, `definir-reto-de-automatizacion` si falta objetivo y dueño, o `mapear-proceso-actual` si ya los tiene (después siguen `disenar-proceso-futuro`, `elegir-patron-y-autonomia` y `canvas-de-automatizacion`).

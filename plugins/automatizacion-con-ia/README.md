@@ -42,10 +42,10 @@ Escribe la frase de arranque en tu asistente y la skill se activa sola.
 | `descubrir-procesos` | Entrevista de proceso, fichas de señal e inventario de oportunidades | "Mi equipo se queja de que pierde tiempo, ayúdame a entender dónde" | Disponible |
 | `definir-reto-de-automatizacion` | Scoping Canvas de 6 preguntas y recomendación: definir, refinar o dividir | "Quiero definir bien el reto antes de automatizar" | Disponible |
 | `priorizar-flujos` | Inventario, mapa Valor × Factibilidad y cinco cubetas | "¿Qué procesos automatizo primero?" | Disponible |
-| `mapear-proceso-actual` | Cómo se hace hoy: tabla, diagrama y responsables | "Quiero documentar cómo hacemos este proceso hoy" | Próximamente |
-| `disenar-proceso-futuro` | Eliminar, simplificar, asistir, automatizar o mantener humano | "Quiero rediseñar este proceso" | Próximamente |
-| `elegir-patron-y-autonomia` | Patrón de automatización y nivel de autonomía con guardrails | "¿Necesito un agente o me alcanza un flujo fijo?" | Próximamente |
-| `canvas-de-automatizacion` | Canvas de 12 bloques conversacional | "Arma el canvas de este flujo" | Próximamente |
+| `mapear-proceso-actual` | Cómo se hace hoy: tabla, diagrama y responsables | "Quiero documentar cómo hacemos este proceso hoy" | Disponible |
+| `disenar-proceso-futuro` | Eliminar, simplificar, asistir, automatizar o mantener humano | "Quiero rediseñar este proceso" | Disponible |
+| `elegir-patron-y-autonomia` | Patrón de automatización y nivel de autonomía con guardrails | "¿Necesito un agente o me alcanza un flujo fijo?" | Disponible |
+| `canvas-de-automatizacion` | Canvas de 12 bloques conversacional | "Arma el canvas de este flujo" | Disponible |
 | `supuestos-y-riesgos` | Supuestos falsables y riesgos con mitigación | "¿Qué podría salir mal con esta automatización?" | Próximamente |
 | `prototipos-y-tarjetas-de-prueba` | Tarjetas de prueba y decisión sobre el prototipo | "¿Cómo pruebo esto sin gastar mucho?" | Próximamente |
 | `plan-piloto-y-especificacion` | Plan piloto y especificación portable de la solución | "Quiero un plan piloto para este flujo" | Próximamente |

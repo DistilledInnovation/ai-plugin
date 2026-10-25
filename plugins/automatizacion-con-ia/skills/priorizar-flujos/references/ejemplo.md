@@ -89,7 +89,7 @@ Con el orden de decisión (el mapa es provisional):
 
 **Decisión `DEC-01`** (decidió el equipo): `FLU-01` es el caso piloto candidato. **Línea base inicial** (`HAL-01`, medido en 20 solicitudes): unos 6 minutos por solicitud, unas 40 solicitudes al día, unas 88 horas por mes; citas con error, unas 4 de cada 100 (**Supuesto** `SUP-01`, pendiente de contar una semana).
 
-Sin elegir tecnología. **Siguiente paso sugerido:** `mapear-proceso-actual` (Próximamente) para documentar cómo se registra hoy una solicitud de cita, con pasos, decisiones y responsables. Mientras tanto, el facilitador puede acompañar esa conversación.
+Sin elegir tecnología. **Siguiente paso sugerido:** `mapear-proceso-actual` para documentar cómo se registra hoy una solicitud de cita, con pasos, decisiones y responsables.
 
 ## Lo que se ve en este ejemplo
 

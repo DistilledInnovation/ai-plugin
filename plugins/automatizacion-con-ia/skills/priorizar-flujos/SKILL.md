@@ -125,4 +125,4 @@ Hay un portafolio con cada flujo en una de las cinco cubetas, con puntajes justi
 
 ## Siguiente paso sugerido
 
-`mapear-proceso-actual` (Próximamente): con el flujo elegido, se documenta cómo se hace hoy, con pasos, decisiones y responsables. Mientras esa skill no esté disponible, vuelve al `facilitador-automatizacion-con-ia`, que ofrece avanzar conversando. Si algún flujo quedó en Requiere bases, la tarea previa es resolver esa base (datos, proceso, dueño).
+`mapear-proceso-actual`: con el flujo elegido, se documenta cómo se hace hoy, con pasos, decisiones y responsables. Si algún flujo quedó en Requiere bases, la tarea previa es resolver esa base (datos, proceso, dueño).
