@@ -5,7 +5,9 @@ Uso: python scripts/empaquetar.py [raiz]
 Valida el repo (aborta si hay errores) y escribe en `dist/`:
 - `<skill>-v<version>.zip` por skill (raiz `<skill>/SKILL.md`, para Claude.ai y ChatGPT),
 - `<plugin>-v<version>.plugin` por plugin (sin `evals/`),
-- `<plugin>-copiar-pegar-v<version>.zip` (INSTRUCCIONES.md + archivos de conocimiento).
+- `<plugin>-copiar-pegar-v<version>.zip` (INSTRUCCIONES.md + archivos de conocimiento),
+- `<plugin>-todo-en-uno-v<version>.zip`: UNA sola skill `<plugin>/` con tabla de rutas y
+  `references/<skill>/` (camino principal para interfaces web que suben un archivo).
 """
 from __future__ import annotations
 
@@ -22,6 +24,9 @@ import validar  # noqa: E402
 
 FECHA_FIJA = (1980, 1, 1, 0, 0, 0)
 MAX_INSTRUCCIONES = 8000
+MAX_SKILL_MD = 20000
+MAX_DESCRIPCION = 1024
+MAX_PROPOSITO = 200
 MAX_CONOCIMIENTO = 9  # + INSTRUCCIONES.md = 10 archivos
 
 PREFIJO_FACILITADOR = "facilitador-"
@@ -171,6 +176,80 @@ def paquete_copiar_pegar(plugin: Path, raiz: Path, destino: Path) -> Path:
     return _zip(Path(destino) / f"{plugin.name}-copiar-pegar-v{_version(plugin)}.zip", entradas)
 
 
+def _proposito(descripcion: str, maximo: int) -> str:
+    """Primera parte de la descripcion (antes de `Úsala cuando`), recortada."""
+    texto = re.split(r"\s*[ÚU]sala cuando", descripcion)[0].strip()
+    if len(texto) <= maximo:
+        return texto
+    corte = texto[: maximo - 1].rsplit(" ", 1)[0].rstrip(",;:.")
+    return corte + "…"
+
+
+def _skill_md_todo_en_uno(plugin: Path, raiz: Path, maximo_proposito: int = MAX_PROPOSITO) -> str:
+    skills = comun.encontrar_skills(plugin)
+    if not skills:
+        raise ValueError(f"{plugin.name} no tiene skills")
+    facilitador = next((s for s in skills if s.name.startswith(PREFIJO_FACILITADOR)), skills[0])
+    fm = comun.leer_frontmatter(_leer(facilitador / "SKILL.md"))
+    descripcion = " ".join(fm.get("description", "").split())
+    if "Úsala cuando" not in descripcion or len(descripcion) > MAX_DESCRIPCION:
+        raise ValueError(f"descripción inválida del facilitador de {plugin.name}")
+    titulo = plugin.name
+    readme = plugin / "README.md"
+    for linea in (_leer(readme).split("\n") if readme.is_file() else []):
+        if linea.startswith("# "):
+            titulo = linea[2:].strip()
+            break
+    bloques = sincronizar_bloques.cargar_bloques(raiz / "compartido")
+    proceso = re.sub(
+        r"`((?:assets|references)/)",
+        lambda m: f"`references/{facilitador.name}/{m.group(1)}",
+        _seccion_proceso(_leer(facilitador / "SKILL.md")),
+    )
+    filas = []
+    for s in [facilitador] + [x for x in skills if x != facilitador]:
+        desc = " ".join(comun.leer_frontmatter(_leer(s / "SKILL.md")).get("description", "").split())
+        proposito = _proposito(desc, maximo_proposito).replace("|", "/")
+        filas.append(f"| `{s.name}` | {proposito} | `references/{s.name}/SKILL.md` |")
+    partes = [
+        f"---\nname: {plugin.name}\ndescription: {descripcion}\n---",
+        f"# {titulo}: metodología completa en una sola skill\n\n"
+        "Eres el facilitador de esta metodología. Las guías detalladas de cada etapa están en la carpeta "
+        "`references/`: no las leas todas. Lee solo la que corresponda a lo que la persona necesita y sigue "
+        "sus instrucciones al pie de la letra; las rutas `assets/` o `references/` que mencione una guía son "
+        "relativas a la carpeta de esa guía. Si no sabes por dónde empezar, parte de "
+        f"`references/{facilitador.name}/SKILL.md`.",
+    ]
+    partes.extend(bloques[k].strip() for k in sorted(bloques))
+    if proceso:
+        partes.append("## Protocolo de apertura del facilitador\n\n" + proceso)
+    partes.append(
+        "## Qué guía usar y cuándo\n\nCuando la persona necesite una etapa, lee el archivo indicado y "
+        "sigue esa guía (también te dice qué archivos de plantillas o ejemplos de su carpeta abrir).\n\n"
+        "| Skill | Para qué sirve | Archivo |\n|---|---|---|\n" + "\n".join(filas)
+    )
+    return "\n\n".join(partes) + "\n"
+
+
+def paquete_todo_en_uno(plugin: Path, raiz: Path, destino: Path) -> Path:
+    plugin, raiz = Path(plugin), Path(raiz)
+    texto = _skill_md_todo_en_uno(plugin, raiz)
+    for maximo in (120, 80, 50):
+        if len(texto) <= MAX_SKILL_MD:
+            break
+        texto = _skill_md_todo_en_uno(plugin, raiz, maximo)
+    if len(texto) > MAX_SKILL_MD:
+        raise ValueError(f"SKILL.md todo-en-uno de {plugin.name} excede {MAX_SKILL_MD} caracteres ({len(texto)})")
+    entradas = [(f"{plugin.name}/SKILL.md", texto.encode("utf-8"))]
+    for skill in comun.encontrar_skills(plugin):
+        for p in _archivos(skill):
+            rel = p.relative_to(skill)
+            if rel.parts[0] == "evals":
+                continue
+            entradas.append((f"{plugin.name}/references/{skill.name}/{rel.as_posix()}", p.read_bytes()))
+    return _zip(Path(destino) / f"{plugin.name}-todo-en-uno-v{_version(plugin)}.zip", entradas)
+
+
 def main(argv: list[str]) -> int:
     raiz = Path(argv[1]).resolve() if len(argv) > 1 else Path(__file__).resolve().parent.parent
     errores = validar.validar_repo(raiz, comun.cargar_terminos(raiz))
@@ -186,6 +265,7 @@ def main(argv: list[str]) -> int:
         for plugin in comun.encontrar_plugins(raiz):
             version = _version(plugin)
             generados.append(zip_plugin(plugin, dist))
+            generados.append(paquete_todo_en_uno(plugin, raiz, dist))
             generados.append(paquete_copiar_pegar(plugin, raiz, dist))
             for skill in comun.encontrar_skills(plugin):
                 generados.append(zip_skill(skill, dist, version))

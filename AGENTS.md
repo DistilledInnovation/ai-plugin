@@ -73,7 +73,7 @@ python3 -m unittest discover -s tests          # pruebas
 python3 scripts/sincronizar_bloques.py         # copia compartido/ dentro de las skills
 python3 scripts/sincronizar_bloques.py --verificar
 python3 scripts/validar.py                     # reglas duras
-python3 scripts/empaquetar.py                  # genera dist/ (zips por skill, .plugin, copiar-pegar)
+python3 scripts/empaquetar.py                  # genera dist/ (todo-en-uno por metodología, zips por skill, .plugin, copiar-pegar)
 python3 scripts/verificar_version.py v0.1.0    # el tag coincide con los manifiestos
 claude plugin validate .                       # valida marketplace y plugins
 claude plugin eval plugins/<plugin>            # evals (agregar --case "<skill>*" para una skill)

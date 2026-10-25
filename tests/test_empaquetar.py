@@ -149,13 +149,100 @@ class PruebasCopiarPegar(Base):
             self.assertEqual(z.namelist(), ["INSTRUCCIONES.md"])
 
 
+class PruebasTodoEnUno(Base):
+    def preparar(self, n=3):
+        (self.raiz / "compartido").mkdir(exist_ok=True)
+        (self.raiz / "compartido" / "reglas.md").write_text("Una pregunta por turno.\n", encoding="utf-8")
+        (self.plugin / "README.md").write_text("# Demo Metodología\n\nTexto.\n", encoding="utf-8")
+        base = self.plugin / "skills"
+        nombres = ["facilitador-demo"] + [f"paso-{i:02d}" for i in range(n)]
+        for nombre in nombres:
+            carpeta = base / nombre
+            (carpeta / "references").mkdir(parents=True)
+            (carpeta / "assets").mkdir()
+            extra = "## Proceso\n\nPregunta una cosa a la vez.\n\n## Otra\n\nNo va.\n" if nombre.startswith("facilitador") else ""
+            (carpeta / "SKILL.md").write_text(
+                f"---\nname: {nombre}\ndescription: Sirve para {nombre}. Úsala cuando digas \"quiero {nombre}\".\n---\n\n# {nombre}\n\n{extra}",
+                encoding="utf-8",
+            )
+            (carpeta / "references" / "ejemplo.md").write_text(f"Ejemplo de {nombre}\n", encoding="utf-8")
+            (carpeta / "assets" / "plantilla.md").write_text(f"Plantilla de {nombre}\n", encoding="utf-8")
+        (self.plugin / "evals" / "x.json").write_text("{}", encoding="utf-8")
+        return nombres
+
+    def generar(self):
+        return empaquetar.paquete_todo_en_uno(self.plugin, self.raiz, self.destino)
+
+    def test_raiz_unica_con_skill_md(self):
+        self.preparar()
+        ruta = self.generar()
+        self.assertEqual(ruta, self.destino / "demo-todo-en-uno-v0.1.0.zip")
+        with zipfile.ZipFile(ruta) as z:
+            nombres = z.namelist()
+        self.assertTrue(all(n.startswith("demo/") for n in nombres), nombres)
+        self.assertIn("demo/SKILL.md", nombres)
+
+    def test_frontmatter_solo_name_y_description_y_limite(self):
+        self.preparar()
+        with zipfile.ZipFile(self.generar()) as z:
+            texto = z.read("demo/SKILL.md").decode("utf-8")
+        self.assertLessEqual(len(texto), 20000)
+        m = re.match(r"^---\n(.*?)\n---\n", texto, re.S)
+        claves = [l.split(":", 1)[0] for l in m.group(1).split("\n")]
+        self.assertEqual(claves, ["name", "description"])
+        self.assertIn("name: demo", m.group(1))
+        desc = m.group(1).split("description: ", 1)[1]
+        self.assertLessEqual(len(desc), 1024)
+        self.assertIn("Úsala cuando", desc)
+        self.assertIn("Una pregunta por turno.", texto)
+        self.assertIn("Pregunta una cosa a la vez.", texto)
+        self.assertNotIn("No va.", texto)
+
+    def test_todas_las_skills_en_tabla_y_en_references(self):
+        nombres = self.preparar(4)
+        with zipfile.ZipFile(self.generar()) as z:
+            texto = z.read("demo/SKILL.md").decode("utf-8")
+            archivos = z.namelist()
+        for n in nombres:
+            self.assertIn(f"| `{n}` |", texto)
+            self.assertIn(f"`references/{n}/SKILL.md`", texto)
+            for rel in ("SKILL.md", "references/ejemplo.md", "assets/plantilla.md"):
+                self.assertIn(f"demo/references/{n}/{rel}", archivos)
+        self.assertFalse([a for a in archivos if "evals" in a])
+
+    def test_recorta_descripciones_si_excede(self):
+        self.preparar(40)
+        for p in (self.plugin / "skills").glob("paso-*/SKILL.md"):
+            t = p.read_text(encoding="utf-8")
+            p.write_text(t.replace("Sirve para", "Sirve " + "para mucho " * 30 + "para"), encoding="utf-8")
+        with zipfile.ZipFile(self.generar()) as z:
+            self.assertLessEqual(len(z.read("demo/SKILL.md").decode("utf-8")), 20000)
+
+    def test_determinista_y_solo_texto(self):
+        self.preparar()
+        a = self.generar().read_bytes()
+        otro = self.destino / "otro"
+        otro.mkdir()
+        b = empaquetar.paquete_todo_en_uno(self.plugin, self.raiz, otro).read_bytes()
+        self.assertEqual(a, b)
+        with zipfile.ZipFile(self.generar()) as z:
+            for n in z.namelist():
+                z.read(n).decode("utf-8")
+                self.assertFalse(re.search(r"(^|/)(\.terminos-prohibidos\.txt|\.fuentes-locales\.md|dist)(/|$)", n))
+
+
 class PruebasCli(Base):
     def test_cli_escribe_dist(self):
         self.assertEqual(empaquetar.main(["x", str(self.raiz)]), 0)
         nombres = sorted(p.name for p in (self.raiz / "dist").iterdir())
         self.assertEqual(
             nombres,
-            ["demo-copiar-pegar-v0.1.0.zip", "demo-v0.1.0.plugin", "skill-demo-v0.1.0.zip"],
+            [
+                "demo-copiar-pegar-v0.1.0.zip",
+                "demo-todo-en-uno-v0.1.0.zip",
+                "demo-v0.1.0.plugin",
+                "skill-demo-v0.1.0.zip",
+            ],
         )
 
     def test_cli_aborta_si_no_valida(self):
