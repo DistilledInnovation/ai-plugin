@@ -1,0 +1,305 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distilled.example/schemas/capability-map-1.0.json",
+  "title": "capability-map 1.0",
+  "description": "Mapa de capacidades de plataforma: para cada requisito que sale del workflow-contract, qué opciones ofrece el perfil de plataforma elegido, qué se decidió, qué brecha queda, quién es dueño y si está aprobado. Cada mapeo es una decisión revisable, nunca una equivalencia supuesta. No hay conversión automática entre plataformas. Las claves van en inglés por ser un contrato técnico; las descripciones, en español.",
+  "type": "object",
+  "required": [
+    "capability_map_id",
+    "version",
+    "workflow_ref",
+    "platform_profile",
+    "requirements"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "capability_map_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$",
+      "description": "Identificador estable del mapa (por ejemplo, MAP-FLU-01-MS)."
+    },
+    "version": {
+      "const": "1.0",
+      "description": "Versión del esquema del mapa. Debe ser exactamente \"1.0\"."
+    },
+    "workflow_ref": {
+      "type": "object",
+      "description": "Contrato del que salen los requisitos.",
+      "required": [
+        "workflow_id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "workflow_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$",
+          "description": "workflow_id del contrato (por ejemplo, FLU-01)."
+        },
+        "contract_maturity": {
+          "type": "string",
+          "enum": [
+            "design",
+            "prototype",
+            "pilot",
+            "production"
+          ],
+          "description": "Madurez del contrato cuando se hizo el mapa."
+        },
+        "contract_date": {
+          "type": "string",
+          "description": "Fecha o versión del documento del contrato usado como base."
+        }
+      }
+    },
+    "platform_profile": {
+      "type": "object",
+      "description": "Perfil de plataforma contra el que se mapea. Lo elige el cliente y queda registrado como decisión; el mapa no elige plataforma por defecto.",
+      "required": [
+        "profile_id",
+        "selected_by",
+        "decision_ref"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "profile_id": {
+          "type": "string",
+          "enum": [
+            "microsoft",
+            "aws",
+            "google",
+            "self_hosted",
+            "other"
+          ],
+          "description": "Perfil usado: Microsoft, AWS, Google, autoalojado u otro."
+        },
+        "description": {
+          "type": "string",
+          "description": "Componentes del perfil en palabras simples (sin direcciones, cuentas ni credenciales)."
+        },
+        "selected_by": {
+          "type": "string",
+          "description": "Rol que eligió la plataforma."
+        },
+        "decision_ref": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$",
+          "description": "ID de la decisión en el registro de decisiones (por ejemplo, DEC-12)."
+        },
+        "profile_verified_on": {
+          "type": "string",
+          "description": "Fecha de verificación del perfil de plataforma consultado."
+        }
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "description": "Requisitos que salen del contrato, cada uno con sus opciones, decisión, brecha, dueño y aprobación.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "description": "Un requisito del contrato mapeado contra el perfil de plataforma.",
+        "required": [
+          "requirement_id",
+          "options",
+          "decision",
+          "gap",
+          "owner",
+          "approval_status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "requirement_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$",
+            "description": "Identificador estable del requisito (por ejemplo, REQ-01). No se reutiliza ni se renumera."
+          },
+          "description": {
+            "type": "string",
+            "description": "Qué exige el contrato, en palabras del negocio."
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "orchestration",
+              "state",
+              "identity",
+              "secrets",
+              "approvals",
+              "observability",
+              "idempotency",
+              "ai_model",
+              "knowledge",
+              "integration",
+              "data_protection",
+              "acceptance_test"
+            ],
+            "description": "Tipo de requisito: orquestación, estado, identidad, secretos, aprobaciones, observabilidad, idempotencia, modelo de IA, conocimiento, integración, protección de datos o prueba de aceptación."
+          },
+          "source_refs": {
+            "type": "array",
+            "description": "IDs del contrato o del diseño de los que sale el requisito (pasos, políticas, evidencias, guardrails, componentes).",
+            "items": {
+              "type": "string"
+            }
+          },
+          "options": {
+            "type": "array",
+            "description": "Opciones que ofrece el perfil para cubrir el requisito. Una opción no es una equivalencia: declara su ajuste y si se verificó.",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "description": "Una opción candidata.",
+              "required": [
+                "option_id",
+                "description",
+                "fit",
+                "verification"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "option_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$",
+                  "description": "Identificador de la opción dentro del requisito (por ejemplo, OPC-A)."
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Qué es la opción y cómo cubriría el requisito."
+                },
+                "fit": {
+                  "type": "string",
+                  "enum": [
+                    "native",
+                    "configuration",
+                    "custom_build",
+                    "partial",
+                    "not_available",
+                    "unknown"
+                  ],
+                  "description": "Ajuste: nativo, con configuración, requiere construcción propia, parcial, no disponible o desconocido."
+                },
+                "verification": {
+                  "type": "string",
+                  "enum": [
+                    "verified",
+                    "to_verify"
+                  ],
+                  "description": "Si el comportamiento se confirmó en documentación oficial o en una prueba (verified) o queda por verificar (to_verify)."
+                },
+                "constraints": {
+                  "type": "string",
+                  "description": "Límites conocidos de la opción (tiempos máximos, licencias, cuotas), con su fuente o marcados por verificar."
+                }
+              }
+            }
+          },
+          "decision": {
+            "type": "object",
+            "description": "Qué se decidió para este requisito. Mientras no esté decidido, el mapeo no se implementa.",
+            "required": [
+              "status"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "proposed",
+                  "decided",
+                  "deferred"
+                ],
+                "description": "Estado de la decisión: propuesta, decidida o pospuesta."
+              },
+              "chosen_option": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$",
+                "description": "option_id elegido; debe existir en options."
+              },
+              "rationale": {
+                "type": "string",
+                "description": "Por qué se eligió, en una o dos frases."
+              },
+              "decision_ref": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$",
+                "description": "ID de la decisión en el registro de decisiones, si se registró allí."
+              }
+            }
+          },
+          "gap": {
+            "type": "object",
+            "description": "Lo que la opción elegida no cubre del contrato, y cómo se resuelve.",
+            "required": [
+              "exists"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "exists": {
+                "type": "boolean",
+                "description": "Verdadero si queda una brecha entre lo que pide el contrato y lo que da la opción."
+              },
+              "description": {
+                "type": "string",
+                "description": "Qué falta o qué se comporta distinto."
+              },
+              "severity": {
+                "type": "string",
+                "enum": [
+                  "none",
+                  "low",
+                  "medium",
+                  "high"
+                ],
+                "description": "Gravedad de la brecha: ninguna, baja, media o alta."
+              },
+              "mitigation": {
+                "type": "string",
+                "description": "Cómo se cierra o se acepta la brecha."
+              }
+            }
+          },
+          "owner": {
+            "type": "string",
+            "description": "Rol responsable de implementar y sostener el mapeo."
+          },
+          "approval_status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "approved",
+              "rejected",
+              "needs_changes"
+            ],
+            "description": "Estado de la aprobación del mapeo por quien tiene la autoridad: pendiente, aprobado, rechazado o con cambios pedidos."
+          },
+          "approved_by": {
+            "type": "string",
+            "description": "Rol que aprobó o rechazó."
+          },
+          "approval_date": {
+            "type": "string",
+            "description": "Fecha de la aprobación o del rechazo."
+          },
+          "acceptance_check": {
+            "type": "string",
+            "description": "Cómo se comprobará en la plataforma que el mapeo cumple el contrato (prueba de aceptación o evidencia)."
+          },
+          "extensions": {
+            "type": "object",
+            "description": "Información adicional libre propia del requisito; no altera el mapa.",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "portability_notice": {
+      "type": "string",
+      "description": "Aviso de que no hay conversión automática entre plataformas y de que cada mapeo es una decisión revisable."
+    },
+    "extensions": {
+      "type": "object",
+      "description": "Información adicional libre; no altera el mapa.",
+      "additionalProperties": true
+    }
+  }
+}

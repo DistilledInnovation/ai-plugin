@@ -21,7 +21,7 @@
       "name": "implementacion-empresarial",
       "source": "./plugins/implementacion-empresarial",
       "description": "Metodología de Implementación Empresarial: lleva un flujo de trabajo ya diseñado a operación real, con rutas, decisiones y controles claros.",
-      "version": "0.1.0"
+      "version": "0.5.0"
     },
     {
       "name": "aceleracion-comercial",

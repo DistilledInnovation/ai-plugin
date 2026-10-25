@@ -1,5 +1,9 @@
 {
   "workflow-contract.schema.json": [
-    "automatizacion-con-ia/plan-piloto-y-especificacion/assets"
+    "automatizacion-con-ia/plan-piloto-y-especificacion/assets",
+    "implementacion-empresarial/arquitectura-de-implementacion/assets"
+  ],
+  "capability-map.schema.json": [
+    "implementacion-empresarial/mapeo-de-capacidades-de-plataforma/assets"
   ]
 }

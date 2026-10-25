@@ -1,0 +1,6 @@
+---
+max_turns: 6
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+Soy Ignacio, líder técnico de la Escuela de Idiomas Mundo Abierto (30 empleados). La directora decidió el 19 de octubre de 2026 implementar en AWS, porque ya tienen allí la web; también miró hacerlo en un servidor propio. Nuestro plan de implementación del flujo FLU-02 (inscripción y nivelación de alumnos nuevos) tiene estos requisitos: REQ-01 orquestación durable de FUT-01 a FUT-06; REQ-02 espera del resultado del examen de nivel hasta 10 días (FUT-03); REQ-03 aprobación de la coordinadora académica antes de matricular (APR-01 en FUT-05); REQ-04 matricular en el sistema académico sin duplicados, clave alumno + grupo (FUT-05); REQ-05 secretos de conexión al sistema académico; REQ-06 evidencia de quién aprobó cada matrícula (EVD-02); REQ-07 identidad y permisos por rol; REQ-08 pruebas de aceptación AT-01 a AT-04 con datos ficticios. El sistema académico tiene una interfaz para crear y consultar matrículas, pero según su proveedor no acepta clave de idempotencia (no lo probamos). Las aprobaciones de los mapeos las da la directora. Finalizar: entrégame el capability-map.yaml según el esquema de la skill, con las brechas y lo que falta aprobar.

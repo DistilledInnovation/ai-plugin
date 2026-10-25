@@ -1,0 +1,216 @@
+# Mapa de capacidades, según assets/capability-map.schema.json (versión 1.0).
+# Las claves van en inglés porque es un contrato técnico; el contenido, en español.
+# Este ejemplo mapea FLU-01 (Clínica Dental Sonrisa Norte, ficticia) contra el perfil Microsoft,
+# que eligió la clínica (DEC-18). Para otro flujo, reemplaza los valores y conserva las claves.
+# Sin credenciales, cuentas, direcciones reales ni datos personales.
+# No hay conversión automática entre plataformas: cada mapeo es una decisión que alguien aprueba.
+
+capability_map_id: MAP-FLU-01-MS
+version: "1.0"
+
+workflow_ref:
+  workflow_id: FLU-01
+  contract_maturity: pilot
+  contract_date: "2026-11-03"
+
+platform_profile:
+  profile_id: microsoft
+  description: "Copilot Studio, Dataverse y Power Automate, según references/perfiles/microsoft.md."
+  selected_by: Valeria (directora)
+  decision_ref: DEC-18
+  profile_verified_on: "2026-10-25"
+
+portability_notice: "No hay conversión automática entre plataformas. Cada mapeo es una decisión revisable y aprobada; si la clínica cambia de plataforma, se hace un mapa nuevo."
+
+requirements:
+  - requirement_id: REQ-01
+    description: "Orquestación durable: orden fijo de FUT-01 a FUT-08, estado persistente y reanudación tras un reinicio."
+    category: orchestration
+    source_refs: [FUT-01, FUT-08, CMP-02, DEC-14]
+    options:
+      - {option_id: OPC-A, description: "Flujo de nube de Power Automate como orquestador; un paso del flujo por paso del contrato.", fit: configuration, verification: verified, constraints: "Una ejecución dura como máximo 30 días, contando los pasos pendientes (documentación oficial, 2026-10-25)."}
+      - {option_id: OPC-B, description: "Agente de Copilot Studio con orquestación generativa que elige herramientas.", fit: not_available, verification: verified, constraints: "Elige herramientas según descripciones y contexto; no garantiza orden, reanudación ni aprobación previa (DEC-14)."}
+    decision: {status: decided, chosen_option: OPC-A, rationale: "Cumple el orden y el estado del contrato; los casos de la variante A se resuelven en días.", decision_ref: DEC-14}
+    gap: {exists: true, description: "Un caso que siguiera abierto más de 30 días vencería.", severity: low, mitigation: "Antes del día 30 el caso pasa a la cola de revisión (ST-09)."}
+    owner: Proveedor de TI
+    approval_status: approved
+    approved_by: Valeria (directora)
+    approval_date: "2026-12-14"
+    acceptance_check: "AT-01 completo; un caso se retoma tras detener y reanudar el flujo en el entorno de prueba."
+
+  - requirement_id: REQ-02
+    description: "Esperas con tiempo máximo: respuesta del paciente (FUT-07) y aprobaciones pendientes (on_timeout)."
+    category: orchestration
+    source_refs: [FUT-07, APR-01, APR-02, DEC-11, DEC-16]
+    options:
+      - {option_id: OPC-A, description: "Espera dentro del flujo con tiempo máximo configurado y rama de vencimiento.", fit: configuration, verification: to_verify, constraints: "Dentro del límite de 30 días de la ejecución."}
+    decision: {status: proposed, chosen_option: OPC-A, rationale: "Depende del plazo de DEC-11 y de la hora del aviso de DEC-16, todavía pendientes."}
+    gap: {exists: true, description: "Plazo de espera y hora del aviso sin decidir.", severity: medium, mitigation: "La jefa de recepción decide DEC-11 y DEC-16; se configura con esos valores."}
+    owner: Proveedor de TI
+    approval_status: pending
+    acceptance_check: "Un caso sin respuesta vence en el plazo decidido y genera el aviso interno de FUT-07."
+
+  - requirement_id: REQ-03
+    description: "Estado del caso (ST-01 a ST-11) y cola de revisión."
+    category: state
+    source_refs: [ST-01, ST-11, CMP-03]
+    options:
+      - {option_id: OPC-A, description: "Tabla de casos en Dataverse con el estado del contrato y referencias a evidencias.", fit: configuration, verification: to_verify, constraints: "El historial de ejecuciones del flujo se conserva 30 días; no sirve como estado ni como evidencia."}
+    decision: {status: decided, chosen_option: OPC-A, rationale: "Estado consultable por recepción y desacoplado del historial del flujo."}
+    gap: {exists: false, severity: none}
+    owner: Proveedor de TI
+    approval_status: approved
+    approved_by: Valeria (directora)
+    approval_date: "2026-12-14"
+    acceptance_check: "Cada estado del contrato aparece en la tabla durante AT-01 y AT-05."
+
+  - requirement_id: REQ-04
+    description: "Llamada acotada a un modelo permitido, con salida estructurada, en FUT-01 y FUT-04."
+    category: ai_model
+    source_refs: [FUT-01, FUT-04, GRD-01, GRD-06, CMP-04, DEC-15]
+    options:
+      - {option_id: OPC-A, description: "Herramienta de prompt invocada desde el flujo, con instrucciones fijas y salida en campos.", fit: configuration, verification: to_verify}
+      - {option_id: OPC-B, description: "Servicio de modelos aprobado por la clínica, llamado por un conector desde el flujo.", fit: custom_build, verification: to_verify}
+    decision: {status: proposed, rationale: "Falta que la administradora decida qué modelos y regiones de procesamiento están permitidos (integracion-segura-y-aprobaciones)."}
+    gap: {exists: true, description: "Modelo permitido sin decidir; salida estructurada por verificar.", severity: medium, mitigation: "Decisión de la administradora y prueba con datos ficticios (AT-02, AT-03)."}
+    owner: Proveedor de TI
+    approval_status: pending
+    acceptance_check: "AT-02 (instrucción oculta) y AT-03 (urgencia) con datos ficticios."
+
+  - requirement_id: REQ-05
+    description: "Bandeja de aprobación con identidad del aprobador para APR-01 a APR-04."
+    category: approvals
+    source_refs: [APR-01, APR-02, APR-03, APR-04, CMP-06, DEC-13]
+    options:
+      - {option_id: OPC-A, description: "Acciones de aprobación de Power Automate dentro del flujo; cada aprobación queda con quien aprobó.", fit: native, verification: to_verify, constraints: "La espera cuenta para el límite de 30 días (verificado)."}
+    decision: {status: decided, chosen_option: OPC-A, rationale: "Las aprobaciones se resuelven en el día; no se acercan al límite."}
+    gap: {exists: true, description: "El rol aprobador de producción depende de DEC-13.", severity: low, mitigation: "Configurar el grupo 'Recepcionista de turno' cuando se apruebe DEC-13."}
+    owner: Jefa de recepción
+    approval_status: approved
+    approved_by: Valeria (directora)
+    approval_date: "2026-12-14"
+    acceptance_check: "AT-01 con las dos aprobaciones registradas con identidad y hora."
+
+  - requirement_id: REQ-06
+    description: "Identidad y permisos por rol (recepción, jefa, administradora) y por componente."
+    category: identity
+    source_refs: [ACT-01, ACT-02, CMP-07]
+    options:
+      - {option_id: OPC-A, description: "Microsoft Entra ID para personas; roles de seguridad de Dataverse; identidad de servicio propia para las conexiones del flujo.", fit: configuration, verification: to_verify}
+    decision: {status: decided, chosen_option: OPC-A, rationale: "La clínica ya administra sus cuentas en ese directorio (Dicho por participante)."}
+    gap: {exists: false, severity: none}
+    owner: Proveedor de TI
+    approval_status: approved
+    approved_by: Valeria (directora)
+    approval_date: "2026-12-14"
+    acceptance_check: "Una recepcionista no puede aprobar fuera de su rol; la identidad de servicio no puede borrar citas."
+
+  - requirement_id: REQ-07
+    description: "Secretos de conexión al sistema de gestión y a la mensajería, fuera de los artefactos."
+    category: secrets
+    source_refs: [CMP-07, CMP-08]
+    options:
+      - {option_id: OPC-A, description: "Variables de entorno de tipo secreto que referencian Azure Key Vault.", fit: configuration, verification: verified, constraints: "Único almacén soportado para variables de entorno; mismo inquilino (documentación oficial, 2026-10-25)."}
+    decision: {status: decided, chosen_option: OPC-A, rationale: "Ningún valor secreto queda en el flujo ni en exportaciones."}
+    gap: {exists: false, severity: none}
+    owner: Proveedor de TI
+    approval_status: approved
+    approved_by: Valeria (directora)
+    approval_date: "2026-12-14"
+    acceptance_check: "Una exportación del flujo no contiene ningún valor secreto."
+
+  - requirement_id: REQ-08
+    description: "Registrar la cita sin duplicados aunque FUT-08 se repita (clave patient_id + slot_id)."
+    category: idempotency
+    source_refs: [FUT-08, AT-06, RIE-07, CMP-07]
+    options:
+      - {option_id: OPC-A, description: "Registro de operaciones en Dataverse con clave única patient_id + slot_id, escrito antes de llamar al sistema de gestión, más consulta previa de la cita en ese sistema.", fit: custom_build, verification: to_verify, constraints: "El sistema de gestión no acepta clave de idempotencia (Dicho por participante, por confirmar con su proveedor)."}
+      - {option_id: OPC-B, description: "Dejar FUT-08 como tarea humana: recepción registra a mano tras la aprobación.", fit: native, verification: verified, constraints: "Pierde parte del ahorro de tiempo de RET-01."}
+    decision: {status: decided, chosen_option: OPC-A, rationale: "Conserva el ahorro de tiempo y evita duplicados; OPC-B queda como respaldo si la consulta previa no es posible.", decision_ref: DEC-19}
+    gap: {exists: true, description: "El sistema de destino no garantiza la idempotencia por sí mismo; una caída entre escribir la cita y registrar la constancia deja un caso dudoso.", severity: medium, mitigation: "Los casos dudosos van a revisión (ST-09) y se concilian con la consulta previa; diseño detallado en idempotencia-y-confiabilidad."}
+    owner: Proveedor de TI
+    approval_status: pending
+    acceptance_check: "AT-06: reintentar el registro no duplica la cita."
+
+  - requirement_id: REQ-09
+    description: "Enviar la propuesta sin duplicados (clave request_id + proposal_version)."
+    category: idempotency
+    source_refs: [FUT-06, CMP-08, DEC-17]
+    options:
+      - {option_id: OPC-A, description: "Constancia de envío en Dataverse con la clave antes de llamar a la mensajería; no se reenvía si ya existe.", fit: configuration, verification: to_verify}
+    decision: {status: proposed, chosen_option: OPC-A, rationale: "Depende de la mensajería institucional (DEC-17)."}
+    gap: {exists: true, description: "La mensajería de salida no está elegida.", severity: medium, mitigation: "Decidir DEC-17 y mapear su conector."}
+    owner: Proveedor de TI
+    approval_status: pending
+    acceptance_check: "Un reintento de FUT-06 no envía un segundo mensaje."
+
+  - requirement_id: REQ-10
+    description: "Evidencia y auditoría EVD-01 a EVD-06 con retención decidida."
+    category: observability
+    source_refs: [EVD-01, EVD-06, CMP-09, DEC-12]
+    options:
+      - {option_id: OPC-A, description: "Tabla de evidencias en Dataverse y auditoría de Dataverse activada en las tablas y columnas del flujo.", fit: configuration, verification: verified, constraints: "La auditoría se activa por tabla y columna y no cubre lecturas ni exportaciones (documentación oficial, 2026-10-25)."}
+    decision: {status: decided, chosen_option: OPC-A, rationale: "La evidencia no depende del historial del flujo (30 días)."}
+    gap: {exists: true, description: "Retención sin decidir.", severity: low, mitigation: "La administradora decide DEC-12."}
+    owner: Administradora
+    approval_status: approved
+    approved_by: Valeria (directora)
+    approval_date: "2026-12-14"
+    acceptance_check: "Tras AT-01 existen las constancias de EVD-01 a EVD-05 con quién y cuándo."
+
+  - requirement_id: REQ-11
+    description: "Modo manual: apagar la parte con IA y enviar todo a revisión (GRD-07)."
+    category: orchestration
+    source_refs: [GRD-07, CMP-10]
+    options:
+      - {option_id: OPC-A, description: "Interruptor en una tabla de configuración que el flujo consulta antes de FUT-01 y FUT-04; solo la jefa de recepción puede cambiarlo.", fit: configuration, verification: to_verify}
+    decision: {status: decided, chosen_option: OPC-A, rationale: "Apagado inmediato sin tocar el flujo."}
+    gap: {exists: false, severity: none}
+    owner: Jefa de recepción
+    approval_status: approved
+    approved_by: Valeria (directora)
+    approval_date: "2026-12-14"
+    acceptance_check: "Con el interruptor apagado, una solicitud llega a la cola de revisión sin pasar por el modelo."
+
+  - requirement_id: REQ-12
+    description: "Minimizar los datos que llegan al modelo (GRD-01, RIE-03)."
+    category: data_protection
+    source_refs: [GRD-01, RIE-03, CMP-02, CMP-04]
+    options:
+      - {option_id: OPC-A, description: "Paso determinístico del flujo que enmascara documento y teléfono antes del modelo.", fit: custom_build, verification: to_verify}
+    decision: {status: proposed, chosen_option: OPC-A, rationale: "Se decide en integracion-segura-y-aprobaciones."}
+    gap: {exists: true, description: "Nombres y motivos de consulta siguen en el texto libre.", severity: medium, mitigation: "Decisión de la administradora sobre el modelo permitido y el tratamiento de datos."}
+    owner: Administradora
+    approval_status: pending
+    acceptance_check: "Con datos ficticios, el registro de lo enviado al modelo no contiene documento ni teléfono."
+
+  - requirement_id: REQ-13
+    description: "Adaptador del sistema de gestión: leer fichas y horarios, crear citas; sin borrar."
+    category: integration
+    source_refs: [FUT-02, FUT-08, CMP-07]
+    options:
+      - {option_id: OPC-A, description: "Conector personalizado sobre la interfaz de programación del sistema de gestión, con solo las operaciones del contrato.", fit: custom_build, verification: to_verify, constraints: "Existencia y alcance de la interfaz: Dicho por participante, por confirmar con el proveedor del sistema."}
+    decision: {status: decided, chosen_option: OPC-A, rationale: "No hay conector existente para ese sistema (Dicho por participante)."}
+    gap: {exists: true, description: "Interfaz del proveedor sin confirmar.", severity: medium, mitigation: "El proveedor de TI la confirma; si no existe, REQ-08 pasa a OPC-B."}
+    owner: Proveedor de TI
+    approval_status: approved
+    approved_by: Valeria (directora)
+    approval_date: "2026-12-14"
+    acceptance_check: "FUT-02 lee una ficha de prueba; la identidad del conector no puede borrar."
+
+  - requirement_id: REQ-14
+    description: "Pruebas de aceptación AT-01 a AT-06 ejecutables con datos ficticios."
+    category: acceptance_test
+    source_refs: [AT-01, AT-02, AT-03, AT-04, AT-05, AT-06]
+    options:
+      - {option_id: OPC-A, description: "Entorno de prueba separado del de producción, con datos ficticios y un sistema de gestión de prueba.", fit: configuration, verification: to_verify}
+    decision: {status: decided, chosen_option: OPC-A, rationale: "Las pruebas negativas no pueden correr con datos reales."}
+    gap: {exists: true, description: "Falta saber si el proveedor del sistema de gestión ofrece un entorno de prueba.", severity: low, mitigation: "Si no, simular el adaptador para AT-04 y AT-06."}
+    owner: Proveedor de TI
+    approval_status: approved
+    approved_by: Valeria (directora)
+    approval_date: "2026-12-14"
+    acceptance_check: "AT-01 a AT-06 corren en el entorno de prueba."
+
+extensions:
+  validation_checklist_status: "Pasos 1 a 8 completos; paso 9 (aprobación del mapa completo) pendiente de REQ-02, REQ-04, REQ-08, REQ-09 y REQ-12."

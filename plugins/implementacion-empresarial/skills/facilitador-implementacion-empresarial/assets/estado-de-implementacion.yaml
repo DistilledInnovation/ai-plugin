@@ -1,0 +1,37 @@
+# Estado de la implementación. Mantenlo actualizado y muéstralo con "Muéstrame el avance".
+# Sin credenciales, direcciones reales ni datos personales.
+
+organizacion: ""
+actualizado: ""                 # AAAA-MM-DD
+flujo: ""                       # FLU-nn y nombre
+
+contrato:
+  existe: false                 # true | false
+  madurez: ""                   # design | prototype | pilot | production
+  revision: ""                  # pasa | pasa con observaciones | no pasa
+  observaciones: []             # qué falta, con el paso o la política afectada
+
+puerta_de_entrada:
+  resultado: ""                 # pasa | pasa con condiciones | no pasa todavía
+  decidio: ""                   # rol
+  decision: ""                  # DEC-nn
+  condiciones: []
+
+ruta: ""                        # volver al diseño | completa | completa con plataforma dada | revisión puntual | cambio controlado
+plataforma:
+  estado: ""                    # por decidir | decidida por el cliente
+  decision: ""                  # DEC-nn, si ya existe
+
+decisiones_abiertas: []         # cada ítem: id, tema, dueño, para cuándo
+valores_del_cliente_pendientes: []   # cada ítem: valor, dónde aparece, decisión DEC-nn
+
+skills:
+  arquitectura-de-implementacion: pendiente          # pendiente | en curso | lista
+  mapeo-de-capacidades-de-plataforma: pendiente
+  integracion-segura-y-aprobaciones: pendiente
+  idempotencia-y-confiabilidad: proximamente
+  pruebas-y-evaluacion: proximamente
+  release-y-transferencia: proximamente
+  operacion-y-aseguramiento-continuo: proximamente
+
+siguiente_skill: ""

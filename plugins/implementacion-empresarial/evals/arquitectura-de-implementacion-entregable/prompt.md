@@ -1,0 +1,6 @@
+---
+max_turns: 6
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+Soy Andrés, de TI de la Veterinaria Patitas del Valle (18 empleados). Nuestro workflow-contract.yaml de FLU-01 (recordatorio de vacunas, madurez pilot) tiene: FUT-01 cada lunes buscar mascotas con vacuna en los próximos 15 días en el software veterinario (reglas, disparador por horario); FUT-02 redactar el recordatorio personalizado (IA acotada, nivel 2, guardrail GRD-01: el texto no da consejos médicos); FUT-03 la recepcionista aprueba el lote de recordatorios (APR-01); FUT-04 enviar los recordatorios a los dueños (efecto externo, clave mascota + fecha de vacuna, evidencia EVD-02); FUT-05 esperar la respuesta del dueño hasta 3 días (espera); FUT-06 si el dueño confirma, registrar la cita en el software veterinario (efecto externo, APR-02 de la recepcionista, clave mascota + horario, evidencia EVD-03). Estados ST-01 a ST-07, ST-07 es la cola de revisión. Pruebas de aceptación AT-01 a AT-04. El software veterinario lo administra un proveedor externo; los mensajes hoy salen del celular de recepción. Mi socio insiste en un agente que lo haga todo. Las decisiones de arquitectura las aprueba la directora médica. La plataforma todavía no está elegida. Finalizar: entrégame el plan de implementación con la arquitectura lógica y la trazabilidad contrato → componentes.
