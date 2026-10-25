@@ -98,6 +98,16 @@ class PruebasCopiarPegar(Base):
             posiciones = [todo.index(f"# paso-{i:02d}\n") for i in range(12)]
             self.assertEqual(posiciones, sorted(posiciones))
 
+    def test_copiar_pegar_determinista_byte_a_byte(self):
+        self.crear_skills(5)
+        self.preparar_compartido()
+        a = empaquetar.paquete_copiar_pegar(self.plugin, self.raiz, self.destino).read_bytes()
+        (self.plugin / "skills" / "paso-00" / "SKILL.md").touch()
+        otro = self.destino.parent / "dist2"
+        otro.mkdir()
+        b = empaquetar.paquete_copiar_pegar(self.plugin, self.raiz, otro).read_bytes()
+        self.assertEqual(a, b)
+
     def test_incluye_proceso_del_facilitador(self):
         self.crear_skills(2)
         self.preparar_compartido()

@@ -14,11 +14,20 @@ jobs:
     env:
       TERMINOS_PROHIBIDOS: ${{ secrets.TERMINOS_PROHIBIDOS }}
       GH_TOKEN: ${{ github.token }}
+      TAG: ${{ github.ref_name }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Verificar secreto de términos prohibidos
+        run: |
+          if [ -z "$TERMINOS_PROHIBIDOS" ]; then
+            echo "::error::TERMINOS_PROHIBIDOS está vacío: no se publica sin la revisión de términos."
+            exit 1
+          fi
+      - name: Verificar que el tag coincide con las versiones
+        run: python scripts/verificar_version.py "$TAG"
       - name: Pruebas
         run: python -m unittest discover -s tests -v
       - name: Verificar bloques compartidos
@@ -28,4 +37,4 @@ jobs:
       - name: Empaquetar
         run: python scripts/empaquetar.py
       - name: Crear release
-        run: gh release create "${{ github.ref_name }}" dist/* --title "${{ github.ref_name }}" --generate-notes
+        run: gh release create "$TAG" dist/* --title "$TAG" --generate-notes

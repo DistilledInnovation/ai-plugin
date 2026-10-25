@@ -4,16 +4,30 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   validar:
     runs-on: ubuntu-latest
     env:
       TERMINOS_PROHIBIDOS: ${{ secrets.TERMINOS_PROHIBIDOS }}
+      EVENTO: ${{ github.event_name }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Verificar secreto de términos prohibidos
+        run: |
+          if [ -z "$TERMINOS_PROHIBIDOS" ]; then
+            if [ "$EVENTO" = "pull_request" ]; then
+              echo "::warning::TERMINOS_PROHIBIDOS está vacío (normal en PR desde un fork): la revisión de términos no se ejecutó."
+            else
+              echo "::error::TERMINOS_PROHIBIDOS está vacío: sin la lista no se puede garantizar que no haya datos de clientes."
+              exit 1
+            fi
+          fi
       - name: Pruebas
         run: python -m unittest discover -s tests -v
       - name: Verificar bloques compartidos
