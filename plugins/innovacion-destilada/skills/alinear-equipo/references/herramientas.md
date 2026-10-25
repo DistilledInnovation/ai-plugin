@@ -1,6 +1,6 @@
 # Herramientas para alinear al equipo
 
-Nota de fuente: el libro presenta estas herramientas en 3.1 y 3.2 y las detalla en el Anexo 10.1 a 10.3 con material descargable. Aquí se explican paso a paso con las definiciones del libro y los métodos publicados por sus autores originales. Adáptalas al tiempo disponible.
+Nota de fuente: el libro presenta estas herramientas en 3.1 y 3.2 y solo da, en el Anexo 10.1 a 10.3, el nombre y la definición de cada una (esas secciones del Anexo no traen texto de procedimiento, solo índice y material descargable). Los pasos que siguen son una **adaptación** de los métodos publicados por sus autores originales y no una transcripción del libro. Adáptalos al tiempo disponible.
 
 Regla general: usa la herramienta que reduzca la incertidumbre más importante de la etapa. En esta etapa, la incertidumbre es "¿para qué estamos juntos?".
 

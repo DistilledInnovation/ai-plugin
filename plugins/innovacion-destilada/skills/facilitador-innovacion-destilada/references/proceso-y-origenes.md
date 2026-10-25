@@ -20,7 +20,7 @@ La idea central del libro: en muchos proyectos se salta directo del problema a l
 
 ## Orígenes del Design Thinking
 
-El libro (cap. 2.1) cuenta que el estudio del diseño como proceso creativo se discute en la academia desde los años 1960, y que fue en la escuela de diseño de Stanford y en la agencia IDEO donde se empezó a hablar de su importancia para la innovación en los negocios con el término "Pensamiento de Diseño". Incluye una línea de tiempo adaptada de Hasso y Laakso (2011) con dos discursos: el académico y teórico, y el pragmático y aplicado.
+El libro (cap. 2.1) cuenta que el estudio del diseño como proceso creativo se discute en la academia desde los años 1960, y que fue en la escuela de diseño de Stanford y en la agencia IDEO donde se empezó a hablar de su importancia para la innovación en los negocios con el término "Pensamiento de Diseño". Incluye una línea de tiempo adaptada de "Hasso & Laaksi (2011)" (como la cita el libro; probablemente Hassi y Laakso) con dos discursos: el académico y teórico, y el pragmático y aplicado.
 
 ```mermaid
 timeline
@@ -50,6 +50,6 @@ timeline
 | 2006 | David Dunne y Roger Martin | Design Thinking and How It Will Change Management Education | Pragmático y aplicado |
 | 2008 | Tim Brown (IDEO) | Design Thinking | Pragmático y aplicado |
 
-**Nota de verificación (importante).** El texto del libro no enumera estos años ni estas obras: solo aparecen en la imagen de la línea de tiempo, que en el original tiene resolución muy baja. Lo que el libro sí afirma en texto es: discusión académica desde los años 1960, Stanford e IDEO como origen del término en los negocios, y la definición de Tim Brown. Los años y títulos de la tabla se reconstruyeron de la imagen y se cotejaron con las obras publicadas; trátalos como **Supuesto razonable** y recomienda verificarlos contra Hasso y Laakso (2011) antes de citarlos en un documento formal. Los años 2006 y 2008 son los más difíciles de leer en la imagen.
+**Nota de verificación (importante).** El texto del libro no enumera estos años ni estas obras: solo aparecen en la imagen de la línea de tiempo, que en el original tiene resolución muy baja. Lo que el libro sí afirma en texto es: discusión académica desde los años 1960, Stanford e IDEO como origen del término en los negocios, y la definición de Tim Brown. Los años y títulos de la tabla se reconstruyeron de la imagen y se cotejaron con las obras publicadas; trátalos como **Supuesto razonable** y recomienda verificarlos contra la fuente original (el libro cita "Hasso & Laaksi (2011)"; probablemente Hassi y Laakso) antes de citarlos en un documento formal. Los años 2006 y 2008 son los más difíciles de leer en la imagen.
 
 Además, el libro menciona: los cuatro órdenes del diseño de Buchanan (del diseño gráfico al industrial, la interacción y los sistemas complejos), la definición de Tim Brown ("la aplicación de las metodologías y aproximaciones del diseño y de los diseñadores a un conjunto más amplio de asuntos y problemas en los negocios y en la sociedad") y la extensión de IDEO.org hacia el Diseño Centrado en Humanos, que mezcla Design Thinking con co-creación e innovación social.

@@ -38,8 +38,17 @@ def _leer(ruta: Path) -> str:
     return ruta.read_text(encoding="utf-8-sig", errors="replace")
 
 
+def _es_resultado_de_eval(ruta: Path, carpeta: Path) -> bool:
+    """True si la ruta cae dentro de una carpeta `evals/results/` (salida local de los evals)."""
+    try:
+        partes = ruta.relative_to(carpeta).parts
+    except ValueError:
+        partes = ruta.parts
+    return any(a == "evals" and b == "results" for a, b in zip(partes, partes[1:]))
+
+
 def _archivos(carpeta: Path) -> list[Path]:
-    return sorted(p for p in carpeta.rglob("*") if p.is_file())
+    return sorted(p for p in carpeta.rglob("*") if p.is_file() and not _es_resultado_de_eval(p, carpeta))
 
 
 def _coincide_termino(texto_normalizado: str, termino: str) -> bool:

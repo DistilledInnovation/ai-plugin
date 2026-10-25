@@ -38,8 +38,8 @@ Escribe la frase de arranque en tu asistente y la skill se activa sola.
 | `facilitador-innovacion-destilada` | Punto de entrada: diagnostica tu etapa, guarda el estado del proyecto y te manda a la skill correcta | "Tengo una idea y no sé por dónde empezar" | Disponible |
 | `alinear-equipo` | Propósito común, valores, MEGA, perfiles y acuerdo de trabajo | "Quiero alinear a mi equipo antes de arrancar un proyecto de innovación" | Disponible |
 | `identificar-reto` | Convierte un problema u oportunidad en un reto "¿Cómo podemos...?" priorizado | "Tengo un problema, ayúdame a plantearlo como reto" | Disponible |
-| `investigar-y-empatizar` | Entrevistas, observación y perfil de usuario | "Quiero entender a mis clientes" | Próximamente |
-| `sintetizar-y-redefinir-reto` | Hallazgos, necesidades y tensiones; reto redefinido | "Tengo muchas notas de entrevistas, ¿qué hallamos?" | Próximamente |
+| `investigar-y-empatizar` | Entrevistas, observación y perfil de usuario | "Quiero entender a mis clientes" | Disponible |
+| `sintetizar-y-redefinir-reto` | Hallazgos, necesidades y tensiones; reto redefinido | "Tengo muchas notas de entrevistas, ¿qué hallamos?" | Disponible |
 | `facilitar-ideacion` | Agenda y técnicas de ideación | "Prepárame una sesión de ideas" | Próximamente |
 | `construir-concepto-fuerte` | Agrupa ideas y arma un concepto fuerte | "Tenemos muchas ideas, ¿cuál sigue?" | Próximamente |
 | `disenar-prototipo` | Mapa de valor, prototipos rápidos y pitch | "Quiero hacer tangible mi concepto" | Próximamente |

@@ -1,6 +1,6 @@
 # Herramientas para identificar el reto
 
-Nota de fuente: el libro (4.1.1) propone el Lienzo de Modelo de Negocio como herramienta práctica para analizar las fuentes de información, con zoom out hacia las Fuerzas del entorno y zoom in hacia el Canvas de Propuesta de Valor, y entrega 11 preguntas guía. El detalle de cada herramienta está en el Anexo (10.9, 10.12 y 10.13) con material descargable; aquí se explican con las definiciones del libro y el método publicado por sus autores originales (Osterwalder y Pigneur).
+Nota de fuente: el libro (4.1.1) propone el Lienzo de Modelo de Negocio como herramienta práctica para analizar las fuentes de información, con zoom out hacia las Fuerzas del entorno y zoom in hacia el Canvas de Propuesta de Valor, y entrega 11 preguntas guía (estas sí son textuales). Del Anexo (10.9, 10.12 y 10.13) el libro solo da los nombres y las definiciones: esas secciones no traen texto de procedimiento. Los pasos de cada herramienta son una **adaptación** del método publicado por sus autores originales (Osterwalder y Pigneur).
 
 ## Por qué reto, y de dónde sale
 

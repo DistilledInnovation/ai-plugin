@@ -104,8 +104,8 @@ Antes de Validar hay una etapa de **preparación**: alinear al equipo (`alinear-
 |---|---|---|
 | Equipo desalineado, sin propósito común | `alinear-equipo` | Sí |
 | Reto difuso o varias ideas sueltas | `identificar-reto` | Sí |
-| Falta evidencia de usuarios | `investigar-y-empatizar` | Próximamente |
-| Demasiada información sin orden | `sintetizar-y-redefinir-reto` | Próximamente |
+| Falta evidencia de usuarios | `investigar-y-empatizar` | Sí |
+| Demasiada información sin orden | `sintetizar-y-redefinir-reto` | Sí |
 | Falta diversidad de soluciones | `facilitar-ideacion` | Próximamente |
 | Muchas ideas, ningún concepto | `construir-concepto-fuerte` | Próximamente |
 | Concepto claro, sin versión tangible | `disenar-prototipo` | Próximamente |
@@ -129,7 +129,7 @@ supuestos: []          # cada ítem: id, afirmación, prueba asociada o "pendien
 siguiente_skill: ""    # nombre de la skill recomendada
 ```
 
-Reglas: los IDs (`HEC`, `SUP`, `DEC`) son estables; una afirmación sin evidencia va a `supuestos`, nunca a `evidencia`; si el estado cambia de etapa, anota la decisión que lo justifica.
+Reglas: los IDs (`HAL`, `SUP`, `DEC`) son estables; una afirmación sin evidencia va a `supuestos`, nunca a `evidencia`; si el estado cambia de etapa, anota la decisión que lo justifica.
 
 ## Criterios del facilitador
 

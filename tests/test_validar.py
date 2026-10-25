@@ -122,6 +122,13 @@ class PruebasValidarSkillsYRepo(BaseRepo):
         (self.raiz / "plugins/demo/evals/skill-demo/prompt.md").unlink()
         self.afirmar_error(self.errores(), "plugins/demo/evals/skill-demo/prompt.md", "eval")
 
+    def test_ignora_resultados_de_evals(self):
+        for base in (self.raiz / "plugins" / "demo" / "evals" / "results" / "corrida-1", self.raiz / "evals" / "results"):
+            base.mkdir(parents=True)
+            (base / "salida.html").write_text("<html></html>", encoding="utf-8")
+            (base / "roto.json").write_text("{no es json", encoding="utf-8")
+        self.assertEqual(self.errores(), [])
+
     def test_json_invalido(self):
         (self.skill / "assets").mkdir()
         (self.skill / "assets" / "x.json").write_text("{", encoding="utf-8")

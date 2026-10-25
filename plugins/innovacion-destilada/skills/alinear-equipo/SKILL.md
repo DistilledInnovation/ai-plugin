@@ -64,9 +64,9 @@ Pregunta también si quien conversa habla por sí misma o por todo el equipo. Si
 
 Cada paso termina con un borrador corto que la persona confirma o corrige. Las técnicas paso a paso están en `references/herramientas.md`.
 
-1. **Línea de Tiempo** (propósito personal, ver Anexo 10.1 del libro). Pregunta guía: "Recuerda cuando eras niño o niña: ¿qué te encantaba hacer y cuáles eran tus pasatiempos favoritos?". Luego: ¿en qué momentos de tu vida laboral te sentiste más feliz? Salida: 3 a 5 patrones.
+1. **Línea de Tiempo** (propósito personal, ver Anexo 10.1 del libro). Pregunta guía: "Recuerda cuando eras niño o niña: ¿qué te encantaba hacer y cuáles eran tus pasatiempos favoritos?". Luego (en turnos separados): ¿en qué momentos de tu vida laboral te sentiste más feliz? Salida: 3 a 5 patrones.
 2. **Modelo de Negocio Personal** (Tim Clark; Anexo 10.2). Pregunta guía: "¿A quién ayudas con lo que haces mejor y qué te dan a cambio (dinero, aprendizaje, reconocimiento)?". Salida: lienzo personal de 9 bloques, solo los que la persona quiera compartir.
-3. **Círculo Dorado** (Simon Sinek; 3.1.3). Pregunta guía: "¿Por qué estamos atacando este reto?" y luego "¿Cómo pensamos lograrlo?" y "¿Qué queremos lograr?". Completa con `assets/circulo-dorado.md`.
+3. **Círculo Dorado** (Simon Sinek; 3.1.3). Pregunta guía: "¿Por qué estamos atacando este reto?" y luego (en turnos separados) "¿Cómo pensamos lograrlo?" y "¿Qué queremos lograr?". Completa con `assets/circulo-dorado.md`.
 4. **Lenguaje común.** Pregunta guía: "¿Qué palabras usa el equipo que podrían significar cosas distintas para cada persona?". Salida: glosario de 5 a 10 términos.
 5. **Valores.** Pregunta guía: "¿Qué valores son no negociables al trabajar juntos?". Máximo cinco, cada uno con un comportamiento observable.
 6. **MEGA** (Meta Grande y Ambiciosa; Anexo 10.3). Pregunta guía: "Si en tres años pudiéramos mirar atrás con orgullo, ¿qué habríamos logrado y para quién?". Completa con `assets/mega.md`.

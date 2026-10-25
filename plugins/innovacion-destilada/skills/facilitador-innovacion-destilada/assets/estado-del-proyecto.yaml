@@ -8,7 +8,7 @@ actores:
   - nombre: ""               # persona o grupo
     rol: ""                  # afectado | decide | ejecuta | aliado
 evidencia:
-  - id: HEC-01
+  - id: HAL-01
     dato: ""
     procedencia: ""          # Dicho por participante | Evidencia | Observación del facilitador
 supuestos:

@@ -9,7 +9,7 @@
       "name": "innovacion-destilada",
       "source": "./plugins/innovacion-destilada",
       "description": "Metodología de Innovación Destilada: identifica retos, valida ideas y diseña soluciones con el apoyo de un facilitador de IA, paso a paso.",
-      "version": "0.3.0"
+      "version": "0.5.0"
     },
     {
       "name": "automatizacion-con-ia",

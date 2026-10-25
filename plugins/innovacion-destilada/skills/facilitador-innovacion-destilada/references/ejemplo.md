@@ -15,7 +15,7 @@ Empresa inventada: **Clínica Veterinaria Patitas del Valle** (3 sedes, 28 emple
 **Facilitador:** Perfecto, eso es un dato útil. Ya tengo suficiente para un primer diagnóstico.
 
 **Diagnóstico de etapa** (señales del `assets/diagnostico-de-etapa.md`)
-- Hecho (evidencia, agenda del último semestre): el 35 % de las citas de vacunación se cancela el mismo día. `HEC-01`
+- Hecho (evidencia, agenda del último semestre): el 35 % de las citas de vacunación se cancela el mismo día. `HAL-01`
 - Supuesto (dicho por la participante): a los clientes les serviría una app de citas. `SUP-01`, pendiente por validar.
 - Observación: hay ideas pero ningún reto formulado y no hay conversaciones con clientes. Etapa: **preparar**, con salto a Idear sin validar.
 - Incertidumbre principal: no sabemos por qué cancelan, solo que cancelan.
@@ -34,7 +34,7 @@ actores:
   - nombre: Recepción de las 3 sedes
     rol: ejecuta
 evidencia:
-  - id: HEC-01
+  - id: HAL-01
     dato: "35 % de las citas de vacunación se cancela el mismo día (último semestre)"
     procedencia: Evidencia
 supuestos:
@@ -60,6 +60,6 @@ Resumen en cinco puntos: (1) etapa preparar; (2) sin reto formulado; (3) una evi
 ## Lo que se ve en este ejemplo
 
 - Una sola pregunta por turno.
-- El dato real (`HEC-01`) se separa de la idea de la app (`SUP-01`).
+- El dato real (`HAL-01`) se separa de la idea de la app (`SUP-01`).
 - No se eligió tecnología: la app quedó como supuesto.
 - La recomendación incluye una línea de por qué.
