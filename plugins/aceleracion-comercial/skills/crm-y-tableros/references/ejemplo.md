@@ -16,7 +16,7 @@ Empresa inventada: **Brújula Contadores** (6 personas; 62 clientes activos; tic
 
 ## Turno 3: campos mínimos (`assets/campos-minimos-crm.md`)
 
-Núcleo de 13 campos (`CAM-01` a `CAM-13`): identificador, cuenta, segmento o ICP, origen, responsable, etapa, contacto y actor, último contacto, siguiente paso, fecha del siguiente paso, importe mensual, fecha estimada de decisión y resultado. Medición (`CAM-14` a `CAM-17`): fecha de creación, **fecha de reunión realizada** (`CAM-15`), fecha de cierre y motivo de pérdida. Calificación (`CAM-18` a `CAM-20`): necesidad, puntaje BANT y dolor. Opcionales: paquete (`OFE-nn`), referidor y notas MEDDICC.
+Núcleo de 13 campos (`CAM-01` a `CAM-13`): identificador, cuenta, segmento o ICP, origen, responsable, etapa, contacto y actor, último contacto, siguiente paso, fecha del siguiente paso, importe mensual, fecha estimada de decisión y resultado. Medición (`CAM-14` a `CAM-17`): fecha de creación, **fecha de reunión realizada** (`CAM-15`), fecha de cierre y motivo de pérdida. Calificación (`CAM-18` a `CAM-20`): necesidad, puntaje BANT y dolor. Opcionales: paquete (`OFE-nn`), referidor y notas (descuentos aprobados y MEDDICC).
 
 Por qué `CAM-15`: por `DEC-04`, los KPIs mantienen "reunión realizada" como definición de oportunidad; esa fecha permite calcular `KPI-04`, `KPI-05`, `KPI-06` y `KPI-07` de forma comparable, y las calificadas (`ETA-03`) se miden como indicador nuevo. Se quita del primer borrador el campo "tamaño de la empresa" porque ninguna decisión ni tablero lo usa todavía (**Recomendación**, la usuaria lo acepta).
 

@@ -30,7 +30,7 @@ Regla: cada campo responde a una decisión, una regla o un KPI. Si nadie lo usa,
 | CAM-20 | Dolor (frase del cliente) | Calificación | Mensajes y argumentario | ETA-03 |
 | CAM-21 | Paquete (`OFE-nn`) | Opcional | Análisis por oferta | ETA-05 |
 | CAM-22 | Referidor (`ACT-nn`) | Opcional | Agradecimiento y atribución | ETA-01 si hay |
-| CAM-23 | Notas MEDDICC | Opcional | Solo ventas complejas | Opcional |
+| CAM-23 | Notas (descuento aprobado y quién lo aprobó; notas MEDDICC) | Opcional | Regla de descuentos del kit; solo ventas complejas para MEDDICC | Opcional |
 
 Si el negocio usa una definición de "oportunidad" distinta de la etapa de la línea base, `CAM-15` guarda la fecha que permite comparar. Anota la decisión aquí: ___ (`DEC-nn`).
 

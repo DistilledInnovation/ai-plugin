@@ -19,7 +19,7 @@ Empresa inventada: **Brújula Contadores** (6 personas; 62 clientes activos; tic
 | `MSG-01` | `ETA-01` o `ETA-02` | `ACT-01` (socio gerente de una agencia) | Correo o mensaje | "Hola, soy de Brújula Contadores. Trabajamos con agencias y estudios creativos: entregamos el cierre contable el día 8 de cada mes y respondemos en un día hábil. ¿Te sirve una llamada de 20 minutos esta semana para ver cómo lo manejas hoy?" | 171 de 186 cierres a tiempo en tres meses (`HAL-08`) | **Hecho** (cierres); respuesta en un día hábil **Pendiente por validar** (no hay registro de consultas) |
 | `MSG-02` | `ETA-02` | `ACT-01` referido por un cliente (`ACT-05`) | Llamada | "Nos dio tu contacto [referidor]; dice que te interesa ordenar tus números. ¿Te cuento en dos minutos qué hacemos?" | Dicho por el referidor | **Supuesto** |
 
-Roles (de la etapa 3): la asistente administrativa lleva `ETA-01` a `ETA-02`, la contadora senior califica en `ETA-03`, la socia o el socio hacen el descubrimiento con la contadora, y los socios presentan y negocian. Regla de descuentos (`DEC-06`): solo un socio puede aprobar, hasta 10 % y a cambio de contrato de 12 meses; se anota en el registro (`CAM-17` en caso de pérdida).
+Roles (de la etapa 3): la asistente administrativa lleva `ETA-01` a `ETA-02`, la contadora senior califica en `ETA-03`, la socia o el socio hacen el descubrimiento con la contadora, y los socios presentan y negocian. Regla de descuentos (`DEC-06`): solo un socio puede aprobar, hasta 10 % y a cambio de contrato de 12 meses; se anota en el registro (`CAM-23`, campo de notas, con quién lo aprobó).
 
 ## Turno 4: guiones
 

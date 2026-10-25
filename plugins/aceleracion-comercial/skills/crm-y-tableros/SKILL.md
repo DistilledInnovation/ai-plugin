@@ -80,7 +80,7 @@ Punto de partida para adaptar. La hoja es una fila por oportunidad; los valores 
 | Núcleo (obligatorio según la etapa) | Importe mensual, último contacto, siguiente paso y su fecha, fecha estimada de decisión, resultado | Qué hacer hoy y cuánto vale (`KPI-07`, `KPI-09`, `KPI-12`) |
 | Medición | Fecha de creación, fecha de reunión realizada, fecha de cierre, motivo de pérdida | Conversión y ciclo (`KPI-04`, `KPI-05`, `KPI-06`) |
 | Calificación | Necesidad, puntaje BANT y dolor | Aplicar `REG-nn` y medir calificadas |
-| Opcional | Paquete (`OFE-nn`), referidor, notas MEDDICC | Análisis por oferta y por recomendación |
+| Opcional | Paquete (`OFE-nn`), referidor, notas (descuentos aprobados y MEDDICC) | Análisis por oferta y por recomendación |
 
 Equivalente en diagrama:
 
