@@ -1,6 +1,6 @@
 # Las ocho etapas de Aceleración Comercial
 
-Resumen de cada etapa para orientar a la persona y para avanzar de forma provisional en las que aún están en Próximamente. Todo lo que se produzca con esta guía en una etapa Próximamente se marca como borrador.
+Resumen de cada etapa para orientar a la persona y decidir a qué skill derivarla. Las ocho etapas tienen skill; esta guía solo resume, y los entregables se producen con la skill de cada etapa.
 
 ## Las seis áreas de trabajo y las etapas
 
@@ -31,19 +31,19 @@ Propósito: convertir las capacidades del negocio en una oferta sencilla, releva
 
 Propósito: convertir una venta artesanal en un flujo consistente y observable. Salidas: proceso to-be, definiciones por etapa con reglas de entrada y salida, reglas de calificación, responsables y manual corto. Criterio de salida: una persona nueva puede explicar cómo se vende y qué cuenta como avance real.
 
-## Etapa 4. CRM y tableros (Próximamente)
+## Etapa 4. CRM y tableros (Disponible)
 
 Propósito: hacer trazable el proceso y facilitar su adopción sin añadir burocracia. Sin elegir proveedor: se definen campos mínimos (cuenta, contacto, ICP, origen, responsable, etapa, importe, fecha estimada, último contacto, próximo paso y resultado), un diccionario de datos, tableros de actividad, eficiencia, pipeline y pronóstico, y reglas de higiene de datos. Un mínimo viable cabe en una hoja de cálculo con una fila por oportunidad. Criterio de salida: las oportunidades reales están registradas, actualizadas y tienen responsable, etapa y próximo paso.
 
-## Etapa 5. Kit comercial y entrenamiento (Próximamente)
+## Etapa 5. Kit comercial y entrenamiento (Disponible)
 
 Propósito: que el equipo ejecute la estrategia con mensajes consistentes y habilidades prácticas. Salidas: playbook, guiones de descubrimiento y cierre, cadencias de seguimiento, matriz de objeciones (precio, urgencia, autoridad, alternativas, riesgo) y plan de práctica con simulaciones y revisión de conversaciones reales autorizadas. Criterio de salida: el equipo sabe usar mensajes, herramientas y etapas, y puede demostrarlo en situaciones reales.
 
-## Etapa 6. Canales y generación de demanda (Próximamente)
+## Etapa 6. Canales y generación de demanda (Disponible)
 
 Propósito: alimentar de forma continua el pipeline con oportunidades relevantes. Salidas: plan de canales según el ICP y su comportamiento real de compra, calendario semanal, experimentos pequeños con hipótesis y métrica previa (con el Tablero de Validación de `probar-y-aprender`) y reglas de atribución. Criterio de salida: hay un mecanismo repetible para generar oportunidades, con responsable y datos de efectividad.
 
-## Etapa 7. Gobierno comercial y forecast (Próximamente)
+## Etapa 7. Gobierno comercial y forecast (Disponible)
 
 Propósito: convertir el sistema diseñado en una disciplina que mantenga resultados. Salidas: rituales de gestión, tablero semanal, forecast con supuestos explícitos, backlog de mejoras, KPIs con fórmulas y el manual del sistema comercial que el equipo mantiene sin consultor.
 

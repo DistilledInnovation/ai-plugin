@@ -44,7 +44,7 @@ Lista corta y cerrada (para poder contar): precio, no era el perfil, eligió a o
 
 ## 7. Mínimo viable en una hoja de cálculo
 
-Mientras no exista un registro más completo (etapa 4, `crm-y-tableros`, Próximamente), el proceso puede empezar en una hoja con una fila por oportunidad. No es una herramienta recomendada: es un formato.
+Mientras no exista un registro más completo (etapa 4, `crm-y-tableros`), el proceso puede empezar en una hoja con una fila por oportunidad. No es una herramienta recomendada: es un formato.
 
 | Columna | Qué guarda | Obligatoria desde la etapa |
 |---|---|---|

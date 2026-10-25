@@ -98,10 +98,10 @@ flowchart TD
 | 1 | `segmentacion-e-icp` | Matriz de segmentos, ficha ICP, mapa de actores de compra y lista de cuentas | Se sabe a quién vender, qué problema resuelve y quién participa en la compra | Disponible |
 | 2 | `oferta-y-propuesta-de-valor` | Matriz propuesta-ICP, oferta simplificada, argumentario y hoja comercial | Cada segmento prioritario tiene oferta, mensaje y razón de compra verificables | Disponible |
 | 3 | `proceso-de-ventas-y-pipeline` | Proceso to-be, definiciones por etapa, reglas de calificación y manual corto | Una persona nueva puede explicar cómo se vende y qué cuenta como avance real | Disponible |
-| 4 | `crm-y-tableros` | Campos mínimos, diccionario de datos, tableros e higiene de datos | Las oportunidades reales están registradas con responsable, etapa y próximo paso | Próximamente |
-| 5 | `kit-comercial-y-entrenamiento` | Playbook, guiones, cadencias, matriz de objeciones y plan de práctica | El equipo usa mensajes, herramientas y etapas en situaciones reales | Próximamente |
-| 6 | `canales-y-generacion-de-demanda` | Plan de canales, calendario y experimentos | Hay un mecanismo repetible para generar oportunidades, con responsable y datos | Próximamente |
-| 7 | `gobierno-comercial-y-forecast` | Rituales, tablero semanal, forecast con supuestos, backlog de mejoras y manual del sistema comercial | El equipo gestiona sus ventas sin depender del consultor para cada decisión | Próximamente |
+| 4 | `crm-y-tableros` | Campos mínimos, diccionario de datos, tableros e higiene de datos | Las oportunidades reales están registradas con responsable, etapa y próximo paso | Disponible |
+| 5 | `kit-comercial-y-entrenamiento` | Playbook, guiones, cadencias, matriz de objeciones y plan de práctica | El equipo usa mensajes, herramientas y etapas en situaciones reales | Disponible |
+| 6 | `canales-y-generacion-de-demanda` | Plan de canales, calendario y experimentos | Hay un mecanismo repetible para generar oportunidades, con responsable y datos | Disponible |
+| 7 | `gobierno-comercial-y-forecast` | Rituales, tablero semanal, forecast con supuestos, backlog de mejoras y manual del sistema comercial | El equipo gestiona sus ventas sin depender del consultor para cada decisión | Disponible |
 
 | Ciclo de retroalimentación | Qué lo dispara | Etapa que se reabre |
 |---|---|---|
@@ -109,7 +109,7 @@ flowchart TD
 | 7 a 3 | Fricción de proceso: oportunidades atascadas, etapas que no discriminan | `proceso-de-ventas-y-pipeline` |
 | 7 a 4 | Mejoras de herramientas: campos que faltan, reportes que nadie usa | `crm-y-tableros` |
 
-**Skills "Próximamente".** Todavía no están disponibles en este plugin. Si la persona necesita una de ellas, dilo con claridad, no inventes su plantilla ni finjas que existe, y ofrece avanzar conversando con la descripción de la etapa (`references/etapas-de-la-metodologia.md`), marcando lo que salga como borrador. Hasta que existan, lo mínimo viable de las etapas 3 en adelante puede vivir en una hoja de cálculo.
+**Las ocho etapas están disponibles.** Deriva a la skill de la etapa; si falta un dato de entrada, avanza con borradores marcados como tales y anota el vacío. El mínimo viable de las etapas 3 en adelante puede vivir en una hoja de cálculo.
 
 ## Proceso (una pregunta principal por turno)
 
@@ -135,10 +135,10 @@ flowchart TD
 | "Le vendemos a cualquiera que compre"; no hay perfil de cliente ideal | 1 | `segmentacion-e-icp` |
 | Cada vendedor explica la oferta distinto; se compite por precio; no hay razón clara de compra | 2 | `oferta-y-propuesta-de-valor` |
 | No hay etapas con criterios; "oportunidad" significa cosas distintas; propuestas sin siguiente paso | 3 | `proceso-de-ventas-y-pipeline` |
-| El proceso existe pero el seguimiento vive en cabezas, correos o una hoja sin dueño | 4 | `crm-y-tableros` (Próximamente) |
-| El equipo conoce el proceso pero cada quien conversa a su manera; se pierde por objeciones | 5 | `kit-comercial-y-entrenamiento` (Próximamente) |
-| Las oportunidades llegan solo por referidos o por azar; no hay rutina de prospección | 6 | `canales-y-generacion-de-demanda` (Próximamente) |
-| Todo funciona pero no hay rutina de revisión ni forecast; se depende del consultor | 7 | `gobierno-comercial-y-forecast` (Próximamente) |
+| El proceso existe pero el seguimiento vive en cabezas, correos o una hoja sin dueño | 4 | `crm-y-tableros` |
+| El equipo conoce el proceso pero cada quien conversa a su manera; se pierde por objeciones | 5 | `kit-comercial-y-entrenamiento` |
+| Las oportunidades llegan solo por referidos o por azar; no hay rutina de prospección | 6 | `canales-y-generacion-de-demanda` |
+| Todo funciona pero no hay rutina de revisión ni forecast; se depende del consultor | 7 | `gobierno-comercial-y-forecast` |
 
 Si hay varias señales, empieza por la de menor número: una etapa posterior sobre bases flojas se rehace (salvo una urgencia puntual, que se atiende dejando lo pendiente anotado).
 
@@ -201,7 +201,7 @@ Hay un recorrido completo con una empresa ficticia en `references/ejemplo.md`; l
 
 ## Criterio de salida
 
-La persona sabe en qué modalidad y etapa está, qué evidencia tiene, cuál es su mayor incertidumbre y cuál es la siguiente skill; el estado refleja eso, con Hechos y Supuestos separados, y quedó dicho si alguna skill recomendada todavía está en Próximamente.
+La persona sabe en qué modalidad y etapa está, qué evidencia tiene, cuál es su mayor incertidumbre y cuál es la siguiente skill; el estado refleja eso, con Hechos y Supuestos separados.
 
 ## Siguiente paso sugerido
 

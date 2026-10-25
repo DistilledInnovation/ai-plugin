@@ -59,7 +59,7 @@ El manual corto de dos páginas incluye ICP, oferta, las siete etapas, la regla 
 
 Decisión `DEC-03`: el equipo adopta las siete etapas, `REG-01` a `REG-03` y el umbral de 14 días. Datos pendientes: contar el valor de `KPI-07` y `KPI-12` a los 30 días de uso (**Pendiente por validar** que `OBJ-02` se alcance). Hasta que exista el registro de la etapa 4, se usa una hoja de cálculo con una fila por oportunidad y las columnas del manual.
 
-**Facilitador:** Siguiente paso (**Recomendación**): `crm-y-tableros` (etapa 4, Próximamente: todavía no está disponible). Mientras tanto, la hoja de cálculo mínima alcanza, y yo puedo ayudarte a construir los campos como borrador. ¿Empezamos con la hoja?
+**Facilitador:** Siguiente paso (**Recomendación**): `crm-y-tableros` (etapa 4): la hoja de cálculo mínima alcanza para empezar, y allí definimos los campos y las reglas de higiene. ¿Empezamos con los campos?
 
 ## Qué quedó claro del ejemplo
 
@@ -67,4 +67,4 @@ Decisión `DEC-03`: el equipo adopta las siete etapas, `REG-01` a `REG-03` y el 
 - La calificación BANT quedó escrita con una regla de decisión y MEDDICC solo se usa en ventas complejas.
 - La prueba con tres oportunidades reales mostró un ajuste (exclusiones en `ETA-01`).
 - La prueba de la persona nueva reveló una definición floja y se corrigió con ejemplos.
-- La siguiente etapa (CRM) está Próximamente, y el ejemplo lo dice con honestidad y propone un mínimo viable en una hoja.
+- La siguiente etapa (CRM) propone un mínimo viable en una hoja de cálculo.

@@ -58,6 +58,21 @@ Las 42 reuniones se reparten en 9 ganadas, 22 perdidas y 11 abiertas, así que h
 
 **Madurez (propuesta, a confirmar por el equipo):** segmentación 1, oferta 2, proceso 1, datos y herramientas 2, equipo 2, demanda 2, gestión 1.
 
+## Hallazgos de apoyo (`HAL-04` a `HAL-09`)
+
+Además de las cifras del embudo, la socia aporta datos que quedan registrados como hallazgos y que las etapas siguientes retoman:
+
+| ID | Hallazgo | Procedencia | Estado |
+|---|---|---|---|
+| `HAL-04` | De 12 propuestas perdidas: 7 no eran el perfil, 3 se perdieron por precio y 2 sin respuesta | Evidencia (motivos que dijo el cliente, anotados por la socia) | **Hecho** |
+| `HAL-05` | Solo 4 de 11 oportunidades abiertas tienen siguiente paso fechado | Evidencia (hoja de seguimiento) | **Hecho** |
+| `HAL-06` | Lo que desencadena el cambio de contador, según los 9 clientes nuevos: falta de respuesta, una multa tributaria, la quinta contratación o una solicitud de financiamiento | Dicho por participante (sin registro escrito) | **Hecho** como dicho; **Pendiente por validar** su frecuencia |
+| `HAL-07` | 6 de los 9 clientes nuevos dejaron a su contador por demoras o falta de respuesta | Evidencia (hoja de cierres de ventas, anotado al firmar) | **Hecho** |
+| `HAL-08` | 171 de 186 cierres mensuales de los últimos tres meses (92 %) se entregaron el día 8 o antes | Evidencia (bitácora de las contadoras) | **Hecho** |
+| `HAL-09` | No hay un único registro: el estado vive en la hoja, el correo y la memoria de la socia | Observación del facilitador | **Hecho** |
+
+`HAL-01` a `HAL-03` vienen del ejemplo de `facilitador-aceleracion-comercial`. `HAL-09` se detalla en el inventario siguiente.
+
 ## Inventario de herramientas y canales (`assets/inventario-de-herramientas.md`)
 
 | Canal o herramienta | Para qué se usa | Quién la usa | Qué dato guarda | ¿Se actualiza? |

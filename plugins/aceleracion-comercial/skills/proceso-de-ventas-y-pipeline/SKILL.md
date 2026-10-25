@@ -48,7 +48,7 @@ Referencia siempre los IDs al enlazar (por ejemplo: "`PRU-02` valida `SUP-01`").
 
 **Úsala** como etapa 3, después de `oferta-y-propuesta-de-valor`; cuando "oportunidad" significa cosas distintas para cada quien; cuando se mandan propuestas sin siguiente paso; o al reabrir la etapa por fricción de proceso (ciclo 7 a 3).
 
-**No la uses** si no hay ICP ni oferta (ve a `segmentacion-e-icp` y `oferta-y-propuesta-de-valor`): sin ellos, los criterios de calificación no tienen contra qué medirse. No la uses tampoco para elegir o configurar un sistema de registro: esa etapa (`crm-y-tableros`) todavía está Próximamente, y aquí solo se define qué se registra. No inventes etapas para "parecer completo": las que no discriminan se quitan.
+**No la uses** si no hay ICP ni oferta (ve a `segmentacion-e-icp` y `oferta-y-propuesta-de-valor`): sin ellos, los criterios de calificación no tienen contra qué medirse. No la uses tampoco para elegir o configurar un sistema de registro: esa etapa es `crm-y-tableros`, y aquí solo se define qué se registra. No inventes etapas para "parecer completo": las que no discriminan se quitan.
 
 ## Antes de empezar (qué pedir al usuario)
 
@@ -143,4 +143,4 @@ Una persona nueva puede explicar cómo se vende y qué cuenta como avance real: 
 
 ## Siguiente paso sugerido
 
-`crm-y-tableros` (etapa 4, Próximamente: todavía no está disponible). Mientras tanto, el proceso puede empezar a usarse en una hoja de cálculo con una fila por oportunidad (campos mínimos en `references/herramientas.md`); marca ese avance como borrador. Si el equipo ya tiene un registro que funciona, basta con alinearlo a las definiciones de etapa.
+`crm-y-tableros` (etapa 4): define los campos mínimos, el diccionario de datos y los tableros, con una hoja de cálculo como versión mínima viable. Si el equipo ya tiene un registro que funciona, basta con alinearlo a las definiciones de etapa.

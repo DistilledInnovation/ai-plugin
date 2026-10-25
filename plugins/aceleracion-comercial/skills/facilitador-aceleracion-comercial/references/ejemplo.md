@@ -63,4 +63,4 @@ siguiente_skill: diagnostico-comercial
 - La modalidad se decide por evidencia de ventas pagadas.
 - La etapa es la primera cuyo criterio de salida no se cumple.
 - Los supuestos se separan de los hechos desde el primer resumen; `SUP-01` abre una verificación en la etapa 0.
-- Las etapas 4 a 7 están Próximamente: si la persona las necesita antes de tiempo, se avanza con borradores marcados.
+- Las ocho etapas tienen skill: la persona se deriva a la de su etapa y, si falta un dato de entrada, se avanza con borradores marcados.

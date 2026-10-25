@@ -25,7 +25,7 @@ Modalidad diagnosticada: ___  Evidencia (**Hecho**): ___
 | 6 Canales y demanda | Hay un mecanismo repetible para generar oportunidades, con responsable y datos | | |
 | 7 Gobierno y forecast | El equipo gestiona sus ventas sin depender del consultor para cada decisión | | |
 
-Las etapas 4 a 7 están en estado Próximamente: si la etapa diagnosticada es una de ellas, dilo con claridad y avanza conversando con borradores marcados como tales.
+Las ocho etapas tienen skill: deriva a la de la etapa diagnosticada y, si falta un dato de entrada, avanza con borradores marcados como tales.
 
 ## 3. Resultado
 

@@ -10,7 +10,7 @@ Empresa inventada: **Brújula Contadores** (6 personas; 62 clientes activos; tic
 
 **Usuaria (socia fundadora):** Seis de los nueve nuevos clientes dejaron a su contador anterior porque tardaba en entregar el cierre del mes o no respondía. Lo anotamos en la hoja al firmar. Nosotros entregamos el cierre el día 8 de cada mes; revisé la bitácora de las contadoras de los últimos tres meses: 171 de 186 cierres salieron el día 8 o antes.
 
-**Facilitador:** Anoto `HAL-07` (6 de 9 cambiaron por demoras o falta de respuesta, **Hecho**, registro de la hoja de cierres de ventas) y `HAL-08` (171 de 186 cierres, 92 %, a tiempo, **Hecho**, bitácora). El Perfil del Cliente de `ICP-01` lo armamos con las conversaciones recientes y queda como **Supuesto** hasta hacer entrevistas más formales (se puede apoyar en `investigar-y-empatizar`):
+**Facilitador:** Retomo `HAL-07` (6 de 9 cambiaron por demoras o falta de respuesta, **Hecho**, registro de la hoja de cierres de ventas) y `HAL-08` (171 de 186 cierres, 92 %, a tiempo, **Hecho**, bitácora). El Perfil del Cliente de `ICP-01` lo armamos con las conversaciones recientes y queda como **Supuesto** hasta hacer entrevistas más formales (se puede apoyar en `investigar-y-empatizar`):
 
 | Orden | Tarea | Dolor | Beneficio |
 |---|---|---|---|

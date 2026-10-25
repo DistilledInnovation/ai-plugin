@@ -37,10 +37,10 @@ flowchart TD
 | 1 | `segmentacion-e-icp` | Segmentos, ficha ICP, actores de compra y lista de cuentas | Disponible |
 | 2 | `oferta-y-propuesta-de-valor` | Propuesta por segmento, oferta simplificada, argumentario y hoja comercial | Disponible |
 | 3 | `proceso-de-ventas-y-pipeline` | Proceso to-be, etapas con criterios, calificación y manual corto | Disponible |
-| 4 | `crm-y-tableros` | Campos mínimos, diccionario de datos, tableros e higiene de datos | Próximamente |
-| 5 | `kit-comercial-y-entrenamiento` | Playbook, guiones, cadencias, objeciones y plan de práctica | Próximamente |
-| 6 | `canales-y-generacion-de-demanda` | Plan de canales, calendario y experimentos | Próximamente |
-| 7 | `gobierno-comercial-y-forecast` | Rituales, tablero semanal, forecast con supuestos, KPIs y manual del sistema comercial | Próximamente |
+| 4 | `crm-y-tableros` | Campos mínimos, diccionario de datos, tableros e higiene de datos | Disponible |
+| 5 | `kit-comercial-y-entrenamiento` | Playbook, guiones, cadencias, objeciones y plan de práctica | Disponible |
+| 6 | `canales-y-generacion-de-demanda` | Plan de canales, calendario y experimentos | Disponible |
+| 7 | `gobierno-comercial-y-forecast` | Rituales, tablero semanal, forecast con supuestos, KPIs y manual del sistema comercial | Disponible |
 
 | Ciclo de retroalimentación | Qué lo dispara | Etapa que se reabre |
 |---|---|---|
@@ -69,12 +69,12 @@ Escribe la frase de arranque en tu asistente y la skill se activa sola.
 | `segmentacion-e-icp` | Matriz de segmentos, ficha ICP, actores de compra y cuentas objetivo | "No sé a quién venderle" | Disponible |
 | `oferta-y-propuesta-de-valor` | Propuesta por segmento, oferta simple, argumentario, pitch y hoja comercial | "Mi oferta es confusa y compito por precio" | Disponible |
 | `proceso-de-ventas-y-pipeline` | Etapas con criterios de entrada y salida, calificación (BANT) y manual corto | "Quiero ordenar mi pipeline" | Disponible |
-| `crm-y-tableros` | Campos, diccionario de datos y tableros sin elegir proveedor | "¿Qué debo registrar de cada oportunidad?" | Próximamente |
-| `kit-comercial-y-entrenamiento` | Playbook, guiones, objeciones y práctica | "Quiero que mi equipo venda con el mismo mensaje" | Próximamente |
-| `canales-y-generacion-de-demanda` | Plan de canales y experimentos | "¿Cómo consigo más oportunidades?" | Próximamente |
-| `gobierno-comercial-y-forecast` | Rituales, tablero semanal, forecast y manual del sistema comercial | "Quiero una rutina semanal de ventas" | Próximamente |
+| `crm-y-tableros` | Campos, diccionario de datos y tableros sin elegir proveedor | "¿Qué debo registrar de cada oportunidad?" | Disponible |
+| `kit-comercial-y-entrenamiento` | Playbook, guiones, objeciones y práctica | "Quiero que mi equipo venda con el mismo mensaje" | Disponible |
+| `canales-y-generacion-de-demanda` | Plan de canales y experimentos | "¿Cómo consigo más oportunidades?" | Disponible |
+| `gobierno-comercial-y-forecast` | Rituales, tablero semanal, forecast y manual del sistema comercial | "Quiero una rutina semanal de ventas" | Disponible |
 
-Si necesitas una skill Próximamente, el facilitador te lo dice con claridad y puede avanzar contigo en borrador, sin presentarlo como una plantilla terminada.
+Las nueve skills están disponibles: el facilitador te deriva a la de tu etapa y, si te falta algún dato de entrada, avanza contigo con borradores marcados como tales.
 
 ## Cómo se construye sobre Innovación Destilada
 
