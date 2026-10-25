@@ -15,7 +15,7 @@
       "name": "automatizacion-con-ia",
       "source": "./plugins/automatizacion-con-ia",
       "description": "Metodología de Automatización con IA: inventaría procesos, prioriza qué automatizar y diseña flujos de trabajo asistidos por IA.",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "name": "implementacion-empresarial",

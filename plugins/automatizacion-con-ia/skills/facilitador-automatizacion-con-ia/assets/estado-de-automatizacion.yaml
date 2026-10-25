@@ -1,0 +1,31 @@
+# Estado de la automatización con IA
+# Actualízalo en cada turno en que cambie algo. IDs estables; no los reutilices.
+organizacion: ""             # nombre corto
+actualizado: ""              # fecha AAAA-MM-DD
+punto_de_entrada: descubrir  # descubrir | disenar | desplegar | operar
+etapa: A                     # A | B | C | D
+reto: ""                     # "¿Cómo podríamos ...?" o "pendiente"
+procesos:
+  - id: FLU-01
+    nombre: ""
+    dueno: ""
+    procedencia: ""          # Dicho por participante | Evidencia | Observación del facilitador
+evidencia:
+  - id: HAL-01
+    dato: ""
+    procedencia: ""
+supuestos:
+  - id: SUP-01
+    afirmacion: ""
+    prueba: "pendiente por validar"   # o el ID de la prueba (PRU-01)
+decisiones:
+  - id: DEC-01
+    decision: ""
+    quien: ""
+riesgos:
+  - id: RIE-01
+    riesgo: ""
+    impacto: ""
+    mitigacion: ""
+pendientes_por_validar: []
+siguiente_skill: ""

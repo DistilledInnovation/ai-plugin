@@ -1,0 +1,6 @@
+---
+type: llm
+weight: 2
+---
+
+The user asked to finish ("Finalizar"), so the agent delivers in Spanish: (1) an inventory of the four flujos with the columns Flujo, Disparadores, Pasos, Decisiones, Resultado, Dueño, Frecuencia and Esfuerzo (h/ejecución), using only the data the user gave (no invented figures; missing data shows as No sé or Pendiente por validar), and optionally hours per month computed from the user's frequency and effort; (2) a scorecard with the four criteria on a 1 to 5 scale (valor de negocio, idoneidad para automatizar, preparación, riesgo y control) with a short justification per flow, where the scores are explicitly labeled as proposals by the AI (Inferencia de la IA) pending team consensus, extreme scores (1 or 5) have a justification, and the agent states the direction of the criterion Riesgo y control (higher means better controlled, 5 = bien controlado). It separates Hecho (what the user reported) from Supuesto and Pendiente por validar, tags claims with their origin, uses stable IDs (for example FLU-01, SUP-01, DEC-01), does not choose a technology, and states that the reto of each flujo was already defined. Missing the inventory columns, the four criteria or the labeling of the scores as proposals is a FAIL.

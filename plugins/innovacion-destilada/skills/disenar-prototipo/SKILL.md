@@ -42,7 +42,7 @@ Cada dato importante debe poder rastrearse hasta su origen. Indica la **proceden
 Referencia siempre los IDs al enlazar (por ejemplo: "`PRU-02` valida `SUP-01`"). Un supuesto sin prueba asociada queda como **Pendiente por validar**.
 <!-- fin:etiquetas-y-trazabilidad -->
 
-**Primer turno.** En tu primer mensaje no presentes todas las herramientas ni las plantillas: reconoce en una o dos líneas lo que contó la persona y haz una pregunta principal (con, a lo sumo, dos seguimientos breves del mismo punto y sin listas de preguntas) (la del paso 1, o la siguiente que falte si ya hay contexto: si el concepto ya viene en el mensaje, no lo pidas de nuevo). Si la persona pide ver el plan, muéstralo después.
+**Primer turno.** En tu primer mensaje no presentes todas las herramientas ni las plantillas: reconoce en una o dos líneas lo que contó la persona y haz una pregunta principal (con, a lo sumo, dos seguimientos breves del mismo punto y sin listas de preguntas) (la del paso 1, o la siguiente que falte si ya hay contexto: si el concepto ya viene en el mensaje, no lo pidas de nuevo). Si la persona pide ver el plan, muéstralo después. Formato: la pregunta va en una sola oración; como mucho, un seguimiento corto del mismo punto. Sin viñetas, sin listas de ejemplos y sin pedir otros datos "si los tienes": lo demás se pide en turnos siguientes.
 
 ## Cuándo usarla / cuándo no
 

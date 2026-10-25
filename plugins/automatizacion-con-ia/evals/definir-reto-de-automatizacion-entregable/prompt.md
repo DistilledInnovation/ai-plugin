@@ -1,0 +1,6 @@
+---
+max_turns: 6
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+Soy Marina, jefa de operaciones de Rutas Seguras del Sur (transporte escolar, 40 conductores, unas 900 familias). Te doy las seis respuestas. 1) Problema: en las mañanas los padres llaman a preguntar a qué hora llega el bus; la central tiene 2 personas y casi no pueden atender emergencias. Evidencia: en una semana de registro de llamadas contamos unas 150 llamadas diarias de ese tipo, unos 2 minutos cada una. Creo que la causa es que no hay forma de ver la ubicación del bus, pero no lo hemos comprobado. 2) Objetivo: reducir esas llamadas a la mitad (de 150 a 75 al día) en 60 días. 3) Antecedentes: al inicio del año mandamos una circular impresa con los horarios y no funcionó; hay un grupo informal de mensajes que armó un conductor, no sé cuántos padres lo usan. 4) Segmento: los padres, la central de 2 personas y los conductores; yo decido y soy la dueña del proceso. 5) Resultados esperados: menos llamadas y la central libre para emergencias; lo que no debe empeorar es que los avisos de incidentes sigan llegando a una persona. 6) No hay herramienta elegida. Finalizar: entrégame el Scoping Canvas y el reto definido con tu recomendación.

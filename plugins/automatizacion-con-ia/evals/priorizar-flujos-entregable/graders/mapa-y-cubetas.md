@@ -1,0 +1,6 @@
+---
+type: llm
+weight: 1
+---
+
+The user asked to finish ("Finalizar") a prioritization of four flujos. The agent delivers in Spanish: (1) a Valor × Factibilidad map as a Mermaid quadrantChart together with an equivalent table (valor on the vertical axis, factibilidad on the horizontal axis, positions consistent with the proposed scores); (2) the five buckets named in Spanish: Victorias rápidas, Pilotos estratégicos, Requiere bases, Asistir no automatizar, No automatizar, with each of the four flujos placed in exactly one bucket, with a reason, and with placements that are consistent with the scores the agent proposed (for example a flujo with human judgment or poorly controlled risk should not be a Victoria rápida) and a next step for each; not every bucket needs to have a flujo, and concluding that some flujos should be assisted or not automated is acceptable; (3) a pilot candidate with the initial línea base (frequency, time) built from the user's data, with the decision left to the team. It does not choose a technology and does not invent data. It ends by suggesting the next step `mapear-proceso-actual` labeled as Próximamente (not yet available) with a one-line reason and, since it is not available, offers to continue in conversation. Missing the map with its table, the five bucket names or the placement of every flujo is a FAIL.
