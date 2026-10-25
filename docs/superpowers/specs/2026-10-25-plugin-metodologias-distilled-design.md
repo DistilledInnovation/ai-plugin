@@ -235,7 +235,7 @@ flowchart LR
 | `release-y-transferencia` | Checklist de salida; prohíbe liberar sin dueños, aprobación y rollback; runbook y transferencia de propiedad |
 | `operacion-y-aseguramiento-continuo` | Observabilidad, alertas, KPIs de valor (prototipo vs. producción), control de cambios, recertificación periódica |
 
-Esquemas JSON (Draft 2020-12, con bloque `extensions`): `workflow-contract`, `capability-map`, `evaluation-plan`. Plantillas: plan de implementación, revisión de amenazas y aprobaciones, registro de idempotencia, registro de evidencia de pruebas, preparación de release, runbook. Ejemplo de punta a punta **ficticio** (radar de señales regulatorias de una empresa inventada) donde las recomendaciones de IA siempre pasan por un responsable antes de producir efectos externos. Los perfiles de plataforma llevan fecha de verificación y declaran explícitamente que no hay conversión automática.
+Esquemas JSON (Draft 2020-12, con bloque `extensions`): `workflow-contract`, `capability-map`, `evaluation-plan`. Plantillas: plan de implementación, revisión de amenazas y aprobaciones, registro de idempotencia, registro de evidencia de pruebas, preparación de release, runbook. Ejemplo de punta a punta **ficticio** (la clínica dental inventada del plugin de Automatización: continúa su `workflow-contract`; decisión de Claude para que ningún ejemplo evoque un caso real) donde las acciones con efecto externo siempre pasan por un responsable. Los perfiles de plataforma llevan fecha de verificación y declaran explícitamente que no hay conversión automática.
 
 ### 6.4 Aceleración Comercial (sobre Innovación Destilada)
 
