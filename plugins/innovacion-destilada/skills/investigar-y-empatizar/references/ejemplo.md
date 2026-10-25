@@ -14,11 +14,15 @@ Entrada: ficha de reto con `RET-01` (hipótesis): "¿Cómo podemos lograr que lo
 
 ## Turno 2
 
-**Facilitador:** ¿Quién vive este problema de cerca y a quién conviene escuchar primero?
+**Facilitador:** ¿Quién vive este problema de cerca?
 
-**Usuaria:** Los jefes de logística de los productores. Los dos que se fueron y tres de los que se quedaron. Quien recibe la carga en el muelle del cliente también, pero no lo conozco.
+**Usuaria:** Los jefes de logística de los productores, y quien recibe la carga en el muelle del cliente, aunque a esa persona no la conozco.
 
-**Facilitador:** Anoto el perfil: jefes de logística de productores de alimentos frescos (2 ex clientes y 3 actuales) más 1 a 2 personas de recepción en el muelle del cliente. Pendiente por validar: acceso a recepción. Un riesgo: entrevistar solo a los que se quedaron (`RIE-01`); por eso los dos ex clientes van primero.
+**Facilitador:** Anoto el perfil: jefes de logística de productores de alimentos frescos, más 1 a 2 personas de recepción en el muelle (Pendiente por validar: acceso a recepción). Siguiente pregunta: ¿a quién conviene escuchar primero?
+
+**Usuaria:** A los dos que se fueron, y luego a tres de los que se quedaron.
+
+**Facilitador:** Perfecto: 2 ex clientes y 3 actuales. Un riesgo: entrevistar solo a los que se quedaron (`RIE-01`); por eso los dos ex clientes van primero.
 
 ## Turno 3
 
@@ -36,11 +40,15 @@ Entrada: ficha de reto con `RET-01` (hipótesis): "¿Cómo podemos lograr que lo
 
 ## Turno 4
 
-**Facilitador:** ¿A cuántas personas puedes llegar en las próximas dos semanas y cómo las contactarías?
+**Facilitador:** ¿A cuántas personas puedes llegar en las próximas dos semanas?
 
-**Usuaria:** A las cinco por teléfono esta semana. La visita al muelle depende del cliente.
+**Usuaria:** A las cinco, y quizás a una visita al muelle.
 
-**Facilitador:** Plan: 5 entrevistas de 45 minutos en dos semanas (Paula coordina, otra persona del equipo toma notas, grabación solo con permiso) y 1 visita de observación. Para la entrevista, ¿cuándo fue la última vez que cada persona tuvo que saber dónde estaba su carga y qué quieres que te cuente de ese momento?
+**Facilitador:** Siguiente pregunta: ¿cómo las contactarías?
+
+**Usuaria:** Por teléfono esta semana. La visita al muelle depende del cliente.
+
+**Facilitador:** Plan: 5 entrevistas de 45 minutos en dos semanas (Paula coordina, otra persona del equipo toma notas, grabación solo con permiso) y 1 visita de observación. Para la guía de entrevista: ¿qué quieres que cada persona te cuente de la última vez que tuvo que saber dónde estaba su carga?
 
 *(Se arma `guia-de-entrevista.md` con preguntas abiertas: "Cuéntame la última vez que una carga tardó más de lo esperado", "¿Qué hiciste primero?", "¿Cómo te enteraste?", "¿Cómo te sentiste?", "¿Qué otras empresas has usado?".)*
 

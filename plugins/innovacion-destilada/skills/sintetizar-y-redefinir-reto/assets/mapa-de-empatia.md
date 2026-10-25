@@ -1,4 +1,4 @@
-# Mapa de Empatía
+# Mapa de Empatía (adaptación; el libro solo lo nombra)
 
 Perfil: ___ (a quién corresponde)  Fecha: ___  Versión: borrador 1
 Basado en: personas escuchadas ___ (de las `HAL-nn` que citan abajo)

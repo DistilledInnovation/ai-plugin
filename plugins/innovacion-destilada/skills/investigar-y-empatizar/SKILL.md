@@ -44,7 +44,7 @@ Cada dato importante debe poder rastrearse hasta su origen. Indica la **proceden
 Referencia siempre los IDs al enlazar (por ejemplo: "`PRU-02` valida `SUP-01`"). Un supuesto sin prueba asociada queda como **Pendiente por validar**.
 <!-- fin:etiquetas-y-trazabilidad -->
 
-**Primer turno.** En tu primer mensaje no presentes todas las técnicas ni el plan completo: reconoce en una o dos líneas lo que contó la persona y haz **una sola pregunta, sin sub-preguntas ni "y también..."** (la del paso 1, o la siguiente que falte si ya hay contexto). Si la persona pide ver el plan, muéstralo después.
+**Primer turno.** En tu primer mensaje no presentes todas las técnicas ni el plan completo: reconoce en una o dos líneas lo que contó la persona y haz **una sola pregunta, sin sub-preguntas ni "y también..."**: un solo signo de interrogación en todo el mensaje, sin listas de preguntas ni opciones numeradas (la del paso 1, o la siguiente que falte si ya hay contexto). Si la persona pide ver el plan, muéstralo después.
 
 ## Cuándo usarla / cuándo no
 
@@ -73,10 +73,10 @@ Regla práctica: empieza por entrevistas (barato y rápido), añade observación
 Las técnicas están explicadas paso a paso en `references/herramientas.md`.
 
 1. **Objetivo de la investigación.** Pregunta guía: "¿Qué necesitas entender de estas personas para saber si el reto es el correcto?". Salida: 1 a 3 preguntas de investigación (parten de los supuestos `SUP-xx`).
-2. **A quién escuchar (Perfil de Usuario).** Pregunta guía: "¿Quién vive este problema de cerca, y a quién conviene escuchar primero?". Completa `assets/perfil-de-usuario.md`. Incluye a quien ya no es cliente y a quien nunca lo fue, no solo a los fieles.
+2. **A quién escuchar (Perfil de Usuario).** Pregunta guía: "¿Quién vive este problema de cerca?" y luego, en otro turno, "¿a quién conviene escuchar primero?". Completa `assets/perfil-de-usuario.md`. Incluye a quien ya no es cliente y a quien nunca lo fue, no solo a los fieles.
 3. **Elegir la técnica con la escalera.** Pregunta guía: "¿Qué te interesa más saber: lo que las personas cuentan, lo que hacen en la práctica o lo que sienten y desean?". Recomienda una combinación (por ejemplo, entrevistas más observación) y explica en una línea por qué.
-4. **Plan.** Pregunta guía: "¿A cuántas personas puedes llegar en las próximas dos semanas y cómo las contactarías?". Completa `assets/plan-de-investigacion.md` (muestra, lugares, fechas, responsables, consentimiento).
-5. **Preparar el instrumento.** Pregunta guía: "¿Cuándo fue la última vez que esa persona vivió el problema y qué quieres que te cuente de ese momento?". Para entrevistas: `assets/guia-de-entrevista.md`. Para diario: `assets/diario-de-usuario.md`. Para sesión participativa, collage o mapa mental: guion en `references/herramientas.md`.
+4. **Plan.** Pregunta guía: "¿A cuántas personas puedes llegar en las próximas dos semanas?" y luego (en turno aparte) "¿cómo las contactarías?". Completa `assets/plan-de-investigacion.md` (muestra, lugares, fechas, responsables, consentimiento).
+5. **Preparar el instrumento.** Pregunta guía: "¿Qué quieres que cada persona te cuente de la última vez que vivió el problema?". Para entrevistas: `assets/guia-de-entrevista.md`. Para diario: `assets/diario-de-usuario.md`. Para sesión participativa, collage o mapa mental: guion en `references/herramientas.md`.
 6. **Ensayar.** Pregunta guía: "¿Quieres que hagamos una entrevista de práctica contigo respondiendo como si fueras uno de ellos?". Ajusta preguntas que guían la respuesta o que se contestan con sí o no.
 7. **Salir a campo (lo hace la persona).** Pídele que registre en el momento lo que vio y oyó, por separado de lo que interpreta. Pregunta guía al volver: "Cuéntame lo que más te sorprendió, tal como lo viviste".
 8. **Registrar la evidencia.** Cada dato queda como `HAL-nn` con su procedencia (Dicho por participante, Observación del facilitador o Evidencia), la persona o fuente, y si es observación o interpretación. Anota las contradicciones entre lo que la gente dice y lo que hace.

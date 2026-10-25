@@ -27,9 +27,13 @@ Entrada: `RET-01` (hipótesis) "¿Cómo podemos lograr que los productores de al
 
 ## Turno 3
 
-**Facilitador:** ¿Qué cosas repitieron varias personas, y en qué casos dijeron una cosa y hicieron otra?
+**Facilitador:** ¿Qué cosas repitieron varias personas?
 
-**Usuaria:** Lo del frío lo repitieron tres. El jefe de logística D decía que el rastreo en línea sería ideal, pero en la visita lo vi llamando al conductor y anotando en un cuaderno.
+**Usuaria:** Lo del frío lo repitieron tres.
+
+**Facilitador:** Siguiente pregunta: ¿en qué casos dijeron una cosa y hicieron otra?
+
+**Usuaria:** El jefe de logística D decía que el rastreo en línea sería ideal, pero en la visita lo vi llamando al conductor y anotando en un cuaderno.
 
 **Facilitador:** Anoto la contradicción `HAL-05`. Lectura posible (Inferencia de la IA): lo que pide ("rastreo") es una solución imaginada; lo que necesita es certeza sobre el frío y aviso temprano si algo falla. Pendiente por validar con más personas.
 
@@ -46,9 +50,13 @@ Perfil del Cliente (con la evidencia entre paréntesis):
 
 ## Turno 8: priorizar
 
-**Facilitador:** ¿Cuál es la tarea más importante para esta persona y cuál es el dolor que más le pesa?
+**Facilitador:** ¿Cuál es la tarea más importante para esta persona?
 
-**Usuaria:** Asegurar que la carga llegue fría. Y el no enterarse hasta que ya llegó tibia.
+**Usuaria:** Asegurar que la carga llegue fría.
+
+**Facilitador:** Siguiente pregunta: ¿cuál es el dolor que más le pesa?
+
+**Usuaria:** No enterarse hasta que ya llegó tibia.
 
 ## Turno 9: redefinir
 

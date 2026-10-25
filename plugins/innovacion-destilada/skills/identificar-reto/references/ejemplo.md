@@ -14,11 +14,11 @@ Empresa inventada: **Transportes Marea Azul** (carga refrigerada regional, 65 em
 
 **Usuaria:** Sí.
 
-**Facilitador:** Ahora el modelo de negocio. ¿A quién le vendes, qué le ofreces y cómo ganas dinero?
+**Facilitador:** Ahora el modelo de negocio, por partes. Primero: ¿a quién le vendes?
 
-**Usuaria:** A productores y distribuidores de alimentos frescos. Les ofrecemos transporte con frío garantizado. Cobramos por viaje y por kilo.
+**Usuaria:** A productores y distribuidores de alimentos frescos.
 
-(Se completan los 9 bloques en turnos siguientes; se marcan con tensión: propuesta de valor, relación con clientes, recursos. Se repasan las fuerzas del entorno: un competidor ofrece rastreo en línea y aumentan las exigencias de trazabilidad de los compradores. Se bosqueja el Perfil del Cliente como supuesto.)
+(En turnos siguientes, de a una pregunta, cuenta qué ofrece (transporte con frío garantizado) y cómo cobra (por viaje y por kilo); se completan los 9 bloques; se marcan con tensión: propuesta de valor, relación con clientes, recursos. Se repasan las fuerzas del entorno: un competidor ofrece rastreo en línea y aumentan las exigencias de trazabilidad de los compradores. Se bosqueja el Perfil del Cliente como supuesto.)
 
 ## Turno 3: alternativas y priorización
 
@@ -27,7 +27,7 @@ Empresa inventada: **Transportes Marea Azul** (carga refrigerada regional, 65 em
 - ¿A partir de qué activos con los que contamos podemos apoyarnos? (pregunta 7, capacidad ociosa)
 - ¿Cómo podemos generar una nueva propuesta de valor aprovechando las relaciones y canales existentes? (pregunta 9)
 
-¿Cuáles te generan más interés y cuáles son más urgentes?
+¿Cuáles te generan más interés?
 
 **Usuaria:** Me importa más lo de la confianza de los clientes. Lo de los retornos puede esperar.
 

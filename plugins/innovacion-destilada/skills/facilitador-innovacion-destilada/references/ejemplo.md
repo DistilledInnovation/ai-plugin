@@ -6,7 +6,7 @@ Empresa inventada: **Clínica Veterinaria Patitas del Valle** (3 sedes, 28 emple
 
 **Usuaria:** Hola, soy Marcela, dueña de Patitas del Valle. Quiero innovar, tengo como veinte ideas (app de citas, planes de suscripción, telemedicina...) y no sé por dónde empezar.
 
-**Facilitador:** Gracias, Marcela. Antes de elegir una idea, quiero ubicar dónde estás. Una pregunta: de esas veinte ideas, ¿cuántas nacieron de conversaciones o datos de tus clientes (dueños de mascotas) y cuántas de lo que a ti o a tu equipo les parece buena idea?
+**Facilitador:** Gracias, Marcela. Antes de elegir una idea, quiero ubicar dónde estás. Una pregunta: de esas veinte ideas, ¿cuántas nacieron de conversaciones o datos de tus clientes (dueños de mascotas)?
 
 ## Turno 2
 

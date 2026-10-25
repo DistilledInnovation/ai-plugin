@@ -4,7 +4,7 @@ Empresa inventada: **Cervecería Niebla Roja** (microcervecería, 14 empleados, 
 
 ## Turno 1
 
-**Facilitador:** Contexto recibido: vas a liderar un proyecto de innovación y quieres alinear al equipo antes. Primera pregunta, sobre ti: cuando eras niño, ¿qué te encantaba hacer y cuáles eran tus pasatiempos favoritos?
+**Facilitador:** Contexto recibido: vas a liderar un proyecto de innovación y quieres alinear al equipo antes. Primera pregunta, sobre ti: cuando eras niño, ¿qué te encantaba hacer?
 
 **Usuario (Joaquín, gerente de producción):** Armar radios viejos y cocinar con mi abuela. Siempre me gustó ver cómo algo se transforma.
 
@@ -20,7 +20,7 @@ Empresa inventada: **Cervecería Niebla Roja** (microcervecería, 14 empleados, 
 
 **Usuario:** Porque cada semana botamos más de 600 kg de grano gastado y creo que se puede aprovechar. Y me da rabia desperdiciar.
 
-**Facilitador:** Tengo Por qué (borrador): *creemos que lo que sobra de producir puede tener un segundo uso*. Siguiente pregunta, de Cómo: ¿cómo piensan trabajar que los distinga: con quién, con qué principios?
+**Facilitador:** Tengo Por qué (borrador): *creemos que lo que sobra de producir puede tener un segundo uso*. Siguiente pregunta, de Cómo: ¿cómo piensan trabajar para distinguirse?
 
 (Continúan los turnos de Cómo, Qué, glosario, valores, MEGA, perfiles y acuerdo; se resumen en el entregable.)
 

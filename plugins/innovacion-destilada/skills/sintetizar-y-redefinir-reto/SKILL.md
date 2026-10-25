@@ -42,7 +42,7 @@ Cada dato importante debe poder rastrearse hasta su origen. Indica la **proceden
 Referencia siempre los IDs al enlazar (por ejemplo: "`PRU-02` valida `SUP-01`"). Un supuesto sin prueba asociada queda como **Pendiente por validar**.
 <!-- fin:etiquetas-y-trazabilidad -->
 
-**Primer turno.** En tu primer mensaje no presentes todas las herramientas ni el plan completo: reconoce en una o dos líneas lo que contó la persona y haz **una sola pregunta, sin sub-preguntas ni "y también..."** (la del paso 1, o la siguiente que falte si ya hay contexto). Si la persona pide ver el plan, muéstralo después.
+**Primer turno.** En tu primer mensaje no presentes todas las herramientas ni el plan completo: reconoce en una o dos líneas lo que contó la persona y haz **una sola pregunta, sin sub-preguntas ni "y también..."**: un solo signo de interrogación en todo el mensaje, sin listas de preguntas ni opciones numeradas (la del paso 1, o la siguiente que falte si ya hay contexto). Si la persona pide ver el plan, muéstralo después.
 
 ## Cuándo usarla / cuándo no
 
@@ -59,13 +59,13 @@ Una cosa a la vez. Lo ideal: el reto inicial (`RET-01`), las notas o el registro
 Las herramientas están explicadas paso a paso en `references/herramientas.md`.
 
 1. **Reunir los insumos.** Pregunta guía: "¿Qué evidencia tienes de las conversaciones: notas, fotos, diarios? Cuéntame lo principal o pégamelo tal cual". Registra cada dato como `HAL-nn` con su fuente y procedencia.
-2. **Clasificar en hallazgos, necesidades y tensiones.** Pregunta guía: "¿Qué fue lo que más te sorprendió porque no lo sabías antes?". Luego propone la clasificación completa y pregunta una sola vez si refleja lo que vio la persona. Completa `assets/sintesis.md`. IDs: cada hallazgo sintetizado recibe el siguiente `HAL-nn` libre y cita los registros de evidencia que lo respaldan; las necesidades son `NEC-nn` y las tensiones `TEN-nn`, y cada una cita los `HAL-nn` que la respaldan.
-3. **Buscar patrones y contradicciones.** Pregunta guía: "¿Qué cosas repitieron varias personas, y en qué casos dijeron una cosa y hicieron otra?". Agrupa por temas y cuenta cuántas personas respaldan cada uno; lo que dijo una sola persona queda como **Pendiente por validar**.
-4. **Mapa de Empatía.** Pregunta guía: "Piensa en una persona concreta que escuchaste: ¿qué veía, qué decía y hacía, y qué parecía pensar y sentir cuando ocurrió el problema?". Completa `assets/mapa-de-empatia.md`. Si hay varios perfiles, un mapa por perfil.
+2. **Clasificar en hallazgos, necesidades y tensiones.** Pregunta guía: "¿Qué fue lo que más te sorprendió porque no lo sabías antes?". Con la respuesta, en el turno siguiente, propone la clasificación completa y haz una sola pregunta: si refleja lo que vio la persona. Completa `assets/sintesis.md`. IDs: cada hallazgo sintetizado recibe el siguiente `HAL-nn` libre y cita los registros de evidencia que lo respaldan; las necesidades son `NEC-nn` y las tensiones `TEN-nn`, y cada una cita los `HAL-nn` que la respaldan.
+3. **Buscar patrones y contradicciones.** Pregunta guía: "¿Qué cosas repitieron varias personas?" y luego, en otro turno, "¿en qué casos dijeron una cosa y hicieron otra?". Agrupa por temas y cuenta cuántas personas respaldan cada uno; lo que dijo una sola persona queda como **Pendiente por validar**.
+4. **Mapa de Empatía** (adaptación; el libro solo lo nombra). Pregunta guía: "Piensa en una persona concreta que escuchaste: ¿qué decía y hacía cuando ocurrió el problema?". Luego, en turnos separados: "¿qué veía y oía a su alrededor?" y "¿qué parecía pensar y sentir?". Completa `assets/mapa-de-empatia.md`. Si hay varios perfiles, un mapa por perfil.
 5. **Perfil del Cliente: tareas.** Pregunta guía: "¿Qué intenta lograr esta persona cuando enfrenta el reto?". Tareas funcionales, sociales y emocionales.
-6. **Perfil del Cliente: dolores.** Pregunta guía: "¿Qué le frustra, qué obstáculos encuentra o qué riesgos teme al hacerlo?".
+6. **Perfil del Cliente: dolores.** Pregunta guía: "¿Qué obstáculos o frustraciones encuentra al hacerlo?".
 7. **Perfil del Cliente: beneficios.** Pregunta guía: "¿Qué resultados desearía o le sorprenderían gratamente?". Completa `assets/perfil-del-cliente.md`.
-8. **Priorizar.** Pregunta guía: "¿Cuál es la tarea más importante para esta persona y cuál es el dolor que más le pesa?". Ordena tareas, dolores y beneficios por importancia con la evidencia que los respalda. La decisión es de la persona.
+8. **Priorizar.** Pregunta guía: "¿Cuál es la tarea más importante para esta persona?" y luego, en otro turno, "¿cuál es el dolor que más le pesa?". Ordena tareas, dolores y beneficios por importancia con la evidencia que los respalda. La decisión es de la persona.
 9. **Redefinir el reto.** Con la 1ra tarea y el 1er dolor, redacta los dos patrones del libro (abajo), uno o dos candidatos por patrón, y pregunta: "¿Cuál de estos retos refleja mejor lo que aprendimos?". Compara con `RET-01`: se confirma, se ajusta o se reemplaza, y por qué (`DEC-xx`). Completa `assets/reto-redefinido.md`.
 
 Atajo: si ya hay un Perfil del Cliente o un reto redefinido, evalúalo con la lista de calidad de `assets/reto-redefinido.md` en vez de rehacerlo.
