@@ -1,9 +1,5 @@
 # Instalar en OpenWork y opencode
 
-<!-- estado:en-construccion -->
-> **Estado:** las instalaciones por línea de comandos funcionan hoy. Los archivos descargables aparecerán en **Releases** cuando se publique la primera Release (v1.0.0).
-<!-- /estado:en-construccion -->
-
 Verificado: 2026-10-25
 
 ## La forma más corta

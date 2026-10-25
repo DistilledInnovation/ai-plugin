@@ -1,9 +1,5 @@
 # Metodologías Distilled Innovation para tu asistente de IA
 
-<!-- estado:en-construccion -->
-> **Estado:** las instalaciones por línea de comandos (Claude Code, Cowork y `npx skills`) funcionan hoy. Los archivos descargables (los `.zip` "todo en uno" y de copiar y pegar) aparecerán en **Releases** cuando se publique la primera Release (v1.0.0).
-<!-- /estado:en-construccion -->
-
 Este proyecto convierte las metodologías de **Distilled Innovation** en ayudantes que viven dentro del asistente de IA que tu equipo ya usa (Claude, ChatGPT, Copilot, Gemini y otros).
 
 Tú escribes con tus palabras lo que quieres lograr. El ayudante te hace **una pregunta a la vez**, separa lo que sabes de lo que estás suponiendo y te entrega lienzos, mapas y tableros listos para usar en tu equipo.

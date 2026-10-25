@@ -1,9 +1,5 @@
 # Guía de taller: usar el plugin en vivo
 
-<!-- estado:en-construccion -->
-> **Estado: en construcción.** La primera Release (v1.0.0) aún no está publicada; las skills descritas son el catálogo objetivo. Los nombres de archivos y frases de ejemplo de esta página muestran cómo será la instalación cuando la Release exista.
-<!-- /estado:en-construccion -->
-
 Formato de referencia de **14 horas**: Sprint 1 (descubrir y priorizar, 6 h), Sprint 2 (prototipar, 6 h) y cierre (2 h). La guía sirve para cualquier cliente; ajusta los tiempos a tu agenda.
 
 ## Checklist previo (una semana antes)

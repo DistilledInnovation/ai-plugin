@@ -2,7 +2,9 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y versionado semántico.
 
-## [Sin publicar]
+## [1.0.0] - 2026-10-25
+
+Primera Release pública: cuatro plugins (Innovación Destilada, Automatización con IA, Implementación Empresarial y Aceleración Comercial) con 41 skills en español, instalables con una línea (`/plugin` en Claude Code y Cowork, `npx skills add` en otros agentes de código) o con un solo archivo `todo-en-uno` por metodología para las aplicaciones web y de empresa.
 
 ### Instalación simplificada
 - `scripts/empaquetar.py` genera un paquete `<plugin>-todo-en-uno-v<version>.zip` por metodología: una sola skill con tabla de rutas y las guías de cada etapa en `references/`. Es el camino principal para Claude.ai, ChatGPT, Microsoft 365 Copilot y Amazon Quick. Los paquetes de copiar y pegar y los zips por skill se mantienen como respaldo y para administradores.
