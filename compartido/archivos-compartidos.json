@@ -5,5 +5,8 @@
   ],
   "capability-map.schema.json": [
     "implementacion-empresarial/mapeo-de-capacidades-de-plataforma/assets"
+  ],
+  "evaluation-plan.schema.json": [
+    "implementacion-empresarial/pruebas-y-evaluacion/assets"
   ]
 }

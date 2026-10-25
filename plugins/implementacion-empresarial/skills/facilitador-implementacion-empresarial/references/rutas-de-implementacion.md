@@ -45,7 +45,7 @@ La puerta la decide quien tiene autoridad (rol del cliente), no el facilitador n
 | Completa | Contrato listo; plataforma por decidir | Arquitectura → mapeo (el cliente elige plataforma) → seguridad e idempotencia → pruebas → release → operación | No se propone una plataforma "por defecto" |
 | Completa con plataforma dada | El cliente ya opera una plataforma o tiene una restricción | Igual que la completa; la elección se registra como decisión con dueño | La arquitectura no se dibuja con productos: sigue siendo lógica |
 | Revisión puntual | Hay una implementación y se pide revisar seguridad y aprobaciones | Reconstruir contrato y arquitectura mínima → `integracion-segura-y-aprobaciones` | No se aprueba una implementación sin contrato |
-| Cambio controlado | Un flujo en operación necesita un cambio | Cambio al contrato con su dueño → skills afectadas → pruebas | No se cambia la plataforma sin pasar por el contrato |
+| Cambio controlado | Un flujo en operación necesita un cambio | `operacion-y-aseguramiento-continuo` (bitácora y aprobación) → cambio al contrato con su dueño si toca el diseño → skills afectadas → pruebas | No se cambia la plataforma sin pasar por el contrato; los cambios de diseño vuelven a `disenar-proceso-futuro` |
 
 ## 5. Qué entra al registro de decisiones
 

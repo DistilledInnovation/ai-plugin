@@ -93,4 +93,4 @@ La plataforma está registrada como decisión del cliente; cada requisito tiene 
 
 ## Siguiente paso sugerido
 
-`integracion-segura-y-aprobaciones`: con los mapeos de identidad, secretos, aprobaciones y protección de datos, arma el modelo de amenazas y la matriz de aprobación. Los requisitos de idempotencia pasan a `idempotencia-y-confiabilidad` (Próximamente); mientras tanto, quedan como brechas con dueño.
+`integracion-segura-y-aprobaciones`: con los mapeos de identidad, secretos, aprobaciones y protección de datos, arma el modelo de amenazas y la matriz de aprobación. Los requisitos de idempotencia pasan a `idempotencia-y-confiabilidad`, que diseña claves, reintentos y recuperación.

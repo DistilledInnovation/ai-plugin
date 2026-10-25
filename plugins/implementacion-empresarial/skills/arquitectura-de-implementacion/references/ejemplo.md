@@ -85,7 +85,7 @@ flowchart LR
 | `CMP-03` | `CMP-02` | Estado guardado para retomar el caso (lectura) | `sensitive` | Al reanudar o tras un reinicio |
 | `CMP-02` | `CMP-04` | Texto minimizado de la solicitud | `sensitive` | Solo si la parte con IA está encendida (`CMP-10`) |
 | `CMP-04` | `CMP-02` | Datos extraídos o marca, en campos con tipo | `sensitive` | El orquestador valida la forma |
-| `CMP-02` | `CMP-05` | Datos del paciente confirmado y tipo de cita, para buscar, calcular horarios y armar la plantilla | `personal` | `FUT-02` y `FUT-06` |
+| `CMP-02` | `CMP-05` | En `FUT-02`, los datos leídos de la solicitud para buscar al paciente; en `FUT-06`, el paciente ya confirmado y el tipo de cita para calcular horarios y armar la plantilla | `personal` | `FUT-02` y `FUT-06` |
 | `CMP-02` | `CMP-06` | Lo que hay que aprobar o revisar | `sensitive` | `APR-01` a `APR-04`, `FUT-03`, `FUT-05`, casos en `ST-09` y `ST-11` |
 | `CMP-06` | `CMP-02` | Decisión de la persona (aprobó, rechazó, corrigió) con su identidad | `sensitive` | Cada aprobación o revisión |
 | `CMP-02` | `CMP-07` | Lectura de ficha y horarios | `personal` | Siempre de solo lectura (`FUT-02`, `FUT-06`) |

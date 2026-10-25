@@ -51,10 +51,10 @@ Escribe la frase de arranque en tu asistente y la skill se activa sola.
 | `arquitectura-de-implementacion` | Arquitectura lógica trazable al contrato, sin plataforma por defecto, con orquestador determinístico | "¿Qué componentes necesita este workflow-contract?" | Disponible |
 | `mapeo-de-capacidades-de-plataforma` | Mapa requisito → opciones → decisión → brecha → dueño → aprobación, con perfiles Microsoft, AWS, Google y autoalojado | "Mapea el contrato contra nuestra plataforma" | Disponible |
 | `integracion-segura-y-aprobaciones` | Amenazas, mínimo privilegio, secretos, datos hacia el modelo, matriz de aprobación y auditoría | "¿Quién tiene que aprobar qué antes de que el sistema actúe?" | Disponible |
-| `idempotencia-y-confiabilidad` | Claves idempotentes, reintentos, compensaciones, cola de errores y recuperación | "¿Qué pasa si este paso se ejecuta dos veces?" | Próximamente |
-| `pruebas-y-evaluacion` | Plan de evaluación con cuatro categorías y criterios de aceptación | "¿Cómo probamos esto antes de salir?" | Próximamente |
-| `release-y-transferencia` | Checklist de salida, rollback, runbook y transferencia de propiedad | "¿Qué necesitamos para salir a producción?" | Próximamente |
-| `operacion-y-aseguramiento-continuo` | Observabilidad, alertas, KPIs de valor, control de cambios y recertificación | "¿Cómo sabemos que sigue funcionando bien?" | Próximamente |
+| `idempotencia-y-confiabilidad` | Claves idempotentes, reintentos, compensaciones, cola de errores y recuperación | "¿Qué pasa si este paso se ejecuta dos veces?" | Disponible |
+| `pruebas-y-evaluacion` | `evaluation-plan.yaml` con cuatro categorías, casos positivos y negativos, métricas de calidad de IA y criterios de aceptación | "¿Cómo probamos esto antes de salir?" | Disponible |
+| `release-y-transferencia` | Preparación de release (nunca "listo" sin dueños, aprobación y rollback), runbook y transferencia de propiedad | "¿Qué necesitamos para salir a producción?" | Disponible |
+| `operacion-y-aseguramiento-continuo` | Observabilidad, alertas, KPIs de valor (piloto frente a producción), costo por caso, control de cambios y recertificación | "¿Cómo sabemos que sigue funcionando bien?" | Disponible |
 
 ## Para quién es
 
@@ -72,5 +72,6 @@ Para equipos de TI, de implementación y de arquitectura del cliente, y para con
 ## Cómo se conecta con los otros plugins
 
 - **Automatización con IA** (antes): diseña el flujo y entrega el `workflow-contract.yaml`. Implementación Empresarial usa el mismo esquema `workflow-contract.schema.json`.
+- **Automatización con IA** (después): las mejoras de operación que cambian el diseño (variantes nuevas, pasos, autonomía) vuelven a `disenar-proceso-futuro` y recorren la cadena hasta el contrato.
 
 Contenido bajo licencia CC BY 4.0 (atribución: Distilled Innovation).

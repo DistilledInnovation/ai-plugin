@@ -193,9 +193,7 @@ requirements:
     decision: {status: decided, chosen_option: OPC-A, rationale: "No hay conector existente para ese sistema (Dicho por participante)."}
     gap: {exists: true, description: "Interfaz del proveedor sin confirmar.", severity: medium, mitigation: "El proveedor de TI la confirma; si no existe, REQ-08 pasa a OPC-B."}
     owner: Proveedor de TI
-    approval_status: approved
-    approved_by: Valeria (directora)
-    approval_date: "2026-12-14"
+    approval_status: pending
     acceptance_check: "FUT-02 lee una ficha de prueba; la identidad del conector no puede borrar."
 
   - requirement_id: REQ-14
@@ -213,4 +211,4 @@ requirements:
     acceptance_check: "AT-01 a AT-06 corren en el entorno de prueba."
 
 extensions:
-  validation_checklist_status: "Pasos 1 a 8 completos; paso 9 (aprobación del mapa completo) pendiente de REQ-02, REQ-04, REQ-08, REQ-09 y REQ-12."
+  validation_checklist_status: "Pasos 1 a 8 completos; paso 9 (aprobación del mapa completo) pendiente de REQ-02, REQ-04, REQ-08, REQ-09, REQ-12 y REQ-13."

@@ -55,7 +55,7 @@ El mapa se entregó el 2026-12-11 con todos los requisitos en `pending`. **Actua
 | `REQ-10` Evidencia y auditoría | Tabla de evidencias + auditoría de Dataverse | configuration | verified | Baja: retención (`DEC-12`) | Administradora | Aprobado |
 | `REQ-11` Modo manual | Interruptor en tabla de configuración | configuration | to_verify | Baja: verificación pendiente en el entorno de prueba | Jefa de recepción | Aprobado |
 | `REQ-12` Minimizar datos al modelo | Enmascarar documento y teléfono antes del modelo | custom_build | to_verify | Media: se decide en seguridad | Administradora | Pendiente |
-| `REQ-13` Adaptador del sistema de gestión | Conector personalizado, solo operaciones del contrato | custom_build | to_verify | Media: interfaz sin confirmar | Proveedor de TI | Aprobado |
+| `REQ-13` Adaptador del sistema de gestión | Conector personalizado, solo operaciones del contrato | custom_build | to_verify | Media: interfaz sin confirmar | Proveedor de TI | Pendiente (hasta que el proveedor del sistema confirme la interfaz) |
 | `REQ-14` Pruebas de aceptación | Entorno de prueba separado con datos ficticios | configuration | to_verify | Baja | Proveedor de TI | Aprobado |
 
 ### La brecha de `REQ-08` en detalle
@@ -75,7 +75,7 @@ El mapa se entregó el 2026-12-11 con todos los requisitos en `pending`. **Actua
   acceptance_check: "AT-06: reintentar el registro no duplica la cita."
 ```
 
-Lo que **no** se escribió: "Power Automate garantiza que no se dupliquen citas". La garantía depende del sistema de destino, que no la ofrece; la opción reduce el riesgo y deja visible lo que no cubre. El diseño detallado de reintentos y conciliación queda para `idempotencia-y-confiabilidad` (Próximamente).
+Lo que **no** se escribió: "Power Automate garantiza que no se dupliquen citas". La garantía depende del sistema de destino, que no la ofrece; la opción reduce el riesgo y deja visible lo que no cubre. El diseño detallado de reintentos y conciliación queda para `idempotencia-y-confiabilidad`.
 
 ## Entregable: checklist de validación del perfil
 
@@ -87,9 +87,9 @@ Lo que **no** se escribió: "Power Automate garantiza que no se dupliquen citas"
 | 4 | Estado y evidencias en tablas, no en el historial de ejecuciones | Sí (`REQ-03`, `REQ-10`) |
 | 5 | Secretos solo en el almacén de secretos | Sí (`REQ-07`) |
 | 6 | Cada efecto externo con aprobación previa y clave de idempotencia | Sí en el diseño; `REQ-08` y `REQ-09` pendientes de aprobación |
-| 7 | Todo lo "(verificar)" verificado o como brecha con dueño | **No completo**: ninguna de las doce opciones `to_verify` está verificada todavía; cada una quedó registrada como brecha con dueño (el proveedor de TI), que las verifica en el entorno de prueba antes de construir. Las aprobadas lo están con esa brecha abierta |
+| 7 | Todo lo "(verificar)" verificado o como brecha con dueño | **No completo**: ninguna de las doce opciones `to_verify` está verificada todavía; cada una quedó registrada como brecha con el dueño de su requisito, y el proveedor de TI las verifica en el entorno de prueba antes de construir. Las aprobadas lo están con esa brecha abierta |
 | 8 | Pruebas de aceptación ejecutables con datos ficticios | Planeado (`REQ-14`) |
-| 9 | **Aprobación del mapa completo** | **Pendiente**: Valeria aprobó nueve requisitos el 2026-12-14; quedan `REQ-02`, `REQ-04`, `REQ-08`, `REQ-09` y `REQ-12` |
+| 9 | **Aprobación del mapa completo** | **Pendiente**: Valeria aprobó ocho requisitos el 2026-12-14; quedan `REQ-02`, `REQ-04`, `REQ-08`, `REQ-09`, `REQ-12` y `REQ-13` (este último, hasta que se confirme la interfaz del sistema de gestión) |
 
 **Siguiente paso sugerido:** `integracion-segura-y-aprobaciones`, porque `REQ-04` (modelo permitido) y `REQ-12` (minimizar datos) se deciden con el modelo de amenazas, y la matriz de aprobación cierra el rol aprobador de `REQ-05`.
 

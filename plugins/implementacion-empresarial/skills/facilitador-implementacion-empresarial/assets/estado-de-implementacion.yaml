@@ -29,9 +29,9 @@ skills:
   arquitectura-de-implementacion: pendiente          # pendiente | en curso | lista
   mapeo-de-capacidades-de-plataforma: pendiente
   integracion-segura-y-aprobaciones: pendiente
-  idempotencia-y-confiabilidad: proximamente
-  pruebas-y-evaluacion: proximamente
-  release-y-transferencia: proximamente
-  operacion-y-aseguramiento-continuo: proximamente
+  idempotencia-y-confiabilidad: pendiente
+  pruebas-y-evaluacion: pendiente
+  release-y-transferencia: pendiente
+  operacion-y-aseguramiento-continuo: pendiente
 
 siguiente_skill: ""

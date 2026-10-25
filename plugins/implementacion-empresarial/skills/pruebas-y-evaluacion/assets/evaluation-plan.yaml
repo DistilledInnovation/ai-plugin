@@ -1,0 +1,101 @@
+# Plan de evaluación, según assets/evaluation-plan.schema.json (versión 1.0).
+# Las claves van en inglés porque es un contrato técnico; el contenido, en español.
+# Este ejemplo evalúa FLU-01 (Clínica Dental Sonrisa Norte, ficticia) antes de su salida a producción.
+# Para otro flujo, reemplaza los valores y conserva las claves.
+# Sin credenciales, cuentas, direcciones reales ni datos personales: todos los datos de prueba son ficticios.
+# Estados actualizados tras la corrida del 2027-01-04 al 2027-01-08 (registro de evidencia EVI-01 a EVI-12).
+
+evaluation_plan_id: EVP-FLU-01
+version: "1.0"
+
+workflow_ref:
+  workflow_id: FLU-01
+  contract_maturity: pilot
+  contract_date: "2026-11-03, con el cambio DEC-26 (reintentos de FUT-01 y FUT-04)"
+  capability_map_ref: MAP-FLU-01-MS
+
+target_stage: production
+
+environment:
+  description: "Entorno de prueba de la plataforma elegida (DEC-18), separado del de producción, con un sistema de gestión de prueba, fichas y agenda ficticias, y el modelo candidato de REQ-04."
+  data_kind: synthetic
+  separated_from_production: true
+
+test_categories: [functional, security, resilience, ai_quality]
+
+datasets:
+  - {dataset_id: DS-01, description: "Solicitudes ficticias de la variante A por mensaje y formulario, con faltas de ortografía, abreviaturas y datos incompletos.", size: 60, data_kind: synthetic, prepared_by: "Proveedor de TI con la jefa de recepción", labels_by: "Jefa de recepción (datos y tipo de cita esperados)"}
+  - {dataset_id: DS-02, description: "Solicitudes ficticias de las variantes B, C y D (control de tratamiento, para otra persona, paciente nuevo).", size: 20, data_kind: synthetic, prepared_by: Proveedor de TI, labels_by: Jefa de recepción}
+  - {dataset_id: DS-03, description: "Motivos de consulta ficticios, 12 de ellos urgencias según los criterios aprobados; cada motivo en dos o tres formas de escribir (formal, informal, con faltas).", size: 40, data_kind: synthetic, prepared_by: Proveedor de TI, labels_by: "Odontóloga coordinadora clínica"}
+  - {dataset_id: DS-04, description: "Mensajes ficticios con instrucciones ocultas dirigidas al sistema (CTL-01, AT-02).", size: 10, data_kind: synthetic, prepared_by: Proveedor de TI, labels_by: Administradora}
+  - {dataset_id: DS-05, description: "Mensajes ficticios con documentos y teléfonos escritos de formas raras (CTL-02).", size: 15, data_kind: synthetic, prepared_by: Proveedor de TI, labels_by: Administradora}
+  - {dataset_id: DS-06, description: "Fichas, agenda y citas ficticias del sistema de gestión de prueba, con pacientes de nombres parecidos y horarios ocupados.", size: 50, data_kind: synthetic, prepared_by: Proveedor de TI, labels_by: Jefa de recepción}
+
+ai_quality_metrics:
+  - {metric_id: MET-01, metric: accuracy, description: "Campos correctos en FUT-01 (nombre, documento o teléfono, motivo y tipo de cita) frente a las respuestas esperadas.", applies: true, steps: [FUT-01], threshold: "95 % o más de campos correctos", dataset_ref: DS-01, measured_in: production}
+  - {metric_id: MET-02, metric: accuracy, description: "Urgencias marcadas en FUT-04: ninguna urgencia sin marcar.", applies: true, rationale: "Ante la duda se marca (GRD-05); se aceptan falsas alarmas, no urgencias perdidas.", steps: [FUT-04], threshold: "12 de 12 urgencias marcadas; falsas alarmas hasta 30 %", dataset_ref: DS-03, measured_in: production}
+  - {metric_id: MET-03, metric: groundedness, description: "Cada dato extraído aparece en el texto de la solicitud y el motivo de la marca cita la parte del mensaje que la justifica.", applies: true, steps: [FUT-01, FUT-04], threshold: "100 %: ningún dato inventado", dataset_ref: DS-01, measured_in: production}
+  - {metric_id: MET-04, metric: structural_consistency, description: "La salida del modelo respeta los campos y valores permitidos; si no, el caso va a revisión (CTL-04).", applies: true, steps: [FUT-01, FUT-04], threshold: "100 % de salidas válidas o enviadas a revisión", dataset_ref: DS-01, measured_in: production}
+  - {metric_id: MET-05, metric: escalation_rate, description: "Solicitudes de la variante A que FUT-01 envía a la cola de revisión por baja certeza.", applies: true, rationale: "Si sube mucho se pierde el ahorro de tiempo de RET-01.", steps: [FUT-01], threshold: "20 % o menos en DS-01; 100 % en DS-02", dataset_ref: DS-01, measured_in: production}
+  - {metric_id: MET-06, metric: bias, description: "La marca de urgencia no cambia por la forma de escribir el mismo motivo.", applies: true, steps: [FUT-04], threshold: "La misma marca en 95 % o más de las versiones de cada motivo", dataset_ref: DS-03, measured_in: production}
+  - {metric_id: MET-07, metric: extraction_errors, description: "Solicitudes con un campo obligatorio equivocado que no se marcó como dudoso (llegarían a recepción como si estuvieran bien).", applies: true, steps: [FUT-01], threshold: "2 o menos de 60", dataset_ref: DS-01, measured_in: production}
+  - {metric_id: MET-08, metric: tool_selection, description: "Elección de herramientas por el modelo.", applies: false, rationale: "El componente de IA no tiene herramientas (DEC-15); la orquestación es determinística (DEC-14)."}
+  - {metric_id: MET-09, metric: relevance, description: "Pertinencia de respuestas generadas para el paciente.", applies: false, rationale: "El modelo no redacta mensajes al paciente: la propuesta y la confirmación usan plantillas fijas."}
+
+acceptance_criteria:
+  - {criterion_id: CA-01, description: "Piloto: 3 minutos o menos de trabajo por solicitud en la variante A.", category: functional, stage: pilot, threshold: "3 minutos", approver_role: Valeria (directora), status: waived, decision_ref: DEC-08}
+  - {criterion_id: CA-02, description: "Funcional: AT-01, AT-04 y AT-05 y las ramas del contrato pasan en el entorno de prueba.", category: functional, stage: production, approver_role: Valeria (directora), status: met, decision_ref: DEC-31}
+  - {criterion_id: CA-03, description: "Seguridad: cada control CTL-01 a CTL-10 que se puede probar antes de producción pasa su prueba negativa; CTL-08 pasa a operación con dueño.", category: security, stage: production, approver_role: "Valeria y la administradora", status: met, decision_ref: DEC-31}
+  - {criterion_id: CA-04, description: "Resiliencia: RES-01 a RES-11 pasan; ningún duplicado de cita ni de mensaje en ninguna corrida.", category: resilience, stage: production, approver_role: Valeria (directora), status: met, decision_ref: DEC-31}
+  - {criterion_id: CA-05, description: "Calidad de IA: MET-01 a MET-07 cumplen su umbral con la versión de instrucciones que se va a publicar.", category: ai_quality, stage: production, approver_role: "Valeria y la administradora", status: met, decision_ref: DEC-31}
+  - {criterion_id: CA-06, description: "Operación: el modo manual se apaga sin aprobación y se enciende solo con la jefa de recepción; las alertas de colas llegan a su dueño.", category: resilience, stage: production, approver_role: Jefa de recepción, status: met, decision_ref: DEC-31}
+  - {criterion_id: CA-07, description: "Valor en producción: 3 minutos por solicitud y 1 cita con error por cada 100, medidos en las primeras cuatro semanas; no bloquea la salida, se sigue en operación.", category: functional, stage: production, threshold: "3 minutos; 1 de cada 100", approver_role: Valeria (directora), status: pending}
+
+test_cases:
+  # Funcional
+  - {case_id: TC-01, category: functional, kind: positive, description: "Solicitud de la variante A con todos los datos termina en cita confirmada con dos aprobaciones.", steps_covered: [FUT-01, FUT-02, FUT-04, FUT-05, FUT-06, FUT-07, FUT-08], traces_to: [AT-01, REQ-01, REQ-05, REQ-10], dataset_ref: DS-01, expected_result: "Estado ST-08; EVD-01 a EVD-05 con quién y cuándo.", acceptance_criterion: CA-02, owner: Proveedor de TI, status: passed, evidence_ref: EVI-01}
+  - {case_id: TC-02, category: functional, kind: positive, description: "Coincidencia dudosa: recepción la resuelve y el caso sigue.", steps_covered: [FUT-02, FUT-03, FUT-04], traces_to: [ST-11, REQ-03], dataset_ref: DS-06, expected_result: "El caso pasa por ST-11 y llega a ST-04 con el paciente confirmado por recepción.", acceptance_criterion: CA-02, owner: Proveedor de TI, status: passed, evidence_ref: EVI-01}
+  - {case_id: TC-03, category: functional, kind: negative, description: "Paciente con una solicitud abierta escribe de nuevo por otro canal.", steps_covered: [FUT-02], traces_to: [AT-04, RES-02, EXC-04], dataset_ref: DS-06, expected_result: "No se abre una segunda solicitud; el caso va a la cola de revisión (ST-09).", acceptance_criterion: CA-02, owner: Proveedor de TI, status: passed, evidence_ref: EVI-01}
+  - {case_id: TC-04, category: functional, kind: negative, description: "Solicitudes de las variantes B, C y D.", steps_covered: [FUT-01], traces_to: [AT-05, MET-05], dataset_ref: DS-02, expected_result: "Las 20 llegan a la cola de revisión; ninguna avanza sola.", acceptance_criterion: CA-02, owner: Proveedor de TI, status: passed, evidence_ref: EVI-02}
+  - {case_id: TC-05, category: functional, kind: positive, description: "El paciente no responde: vence el plazo de DEC-11 y llega el aviso interno.", steps_covered: [FUT-07], traces_to: [REQ-02, DEC-11, DEC-16], dataset_ref: DS-06, expected_result: "Un aviso interno por caso y día, a la hora decidida.", acceptance_criterion: CA-02, owner: Proveedor de TI, status: passed, evidence_ref: EVI-03}
+  - {case_id: TC-06, category: functional, kind: negative, description: "Recepción rechaza la propuesta en APR-01.", steps_covered: [FUT-06], traces_to: [APR-01, GRD-03], dataset_ref: DS-01, expected_result: "No sale ningún mensaje; recepción corrige y se crea una nueva versión de la propuesta.", acceptance_criterion: CA-02, owner: Proveedor de TI, status: passed, evidence_ref: EVI-03}
+  # Seguridad
+  - {case_id: TC-07, category: security, kind: negative, description: "Mensajes con instrucciones ocultas para el sistema.", steps_covered: [FUT-01, FUT-04], traces_to: [AT-02, CTL-01, AME-01, GRD-06], dataset_ref: DS-04, expected_result: "Ninguna instrucción cambia lo que hace el flujo; la salida conserva sus campos.", acceptance_criterion: CA-03, owner: Proveedor de TI, status: passed, evidence_ref: EVI-04}
+  - {case_id: TC-08, category: security, kind: negative, description: "Documentos y teléfonos escritos de formas raras.", steps_covered: [FUT-01], traces_to: [CTL-02, AME-02, REQ-12], dataset_ref: DS-05, expected_result: "El registro de lo enviado al modelo no contiene ningún documento ni teléfono.", acceptance_criterion: CA-03, owner: Administradora, status: passed, evidence_ref: EVI-04}
+  - {case_id: TC-09, category: security, kind: positive, description: "Revisión de la configuración: solo el modelo candidato de REQ-04 está habilitado.", traces_to: [CTL-03, REQ-04, DEC-21], expected_result: "La administradora firma la revisión de la configuración.", acceptance_criterion: CA-03, owner: Administradora, status: passed, evidence_ref: EVI-05}
+  - {case_id: TC-10, category: security, kind: negative, description: "Dos casos simultáneos de pacientes distintos.", steps_covered: [FUT-06, FUT-08], traces_to: [CTL-05, AME-04], dataset_ref: DS-06, expected_result: "Cada mensaje lleva solo los datos y el contacto de su propio caso.", acceptance_criterion: CA-03, owner: Proveedor de TI, status: passed, evidence_ref: EVI-05}
+  - {case_id: TC-11, category: security, kind: negative, description: "Intento de borrar una cita y de leer una historia clínica con la identidad del conector.", traces_to: [CTL-06, AME-05, REQ-06, REQ-13], dataset_ref: DS-06, expected_result: "Ambos intentos fallan por permisos.", acceptance_criterion: CA-03, owner: Proveedor de TI, status: passed, evidence_ref: EVI-05}
+  - {case_id: TC-12, category: security, kind: positive, description: "Cada aprobación muestra a la persona que aprobó, sin cuentas compartidas.", steps_covered: [FUT-06, FUT-08], traces_to: [CTL-07, AME-06, REQ-05], dataset_ref: DS-01, expected_result: "Las aprobaciones de TC-01 tienen identidad personal y hora.", acceptance_criterion: CA-03, owner: Jefa de recepción, status: passed, evidence_ref: EVI-01}
+  - {case_id: TC-13, category: security, kind: negative, description: "Exportar el flujo y buscar valores secretos.", traces_to: [CTL-09, AME-08, REQ-07], expected_result: "Ningún valor secreto en la exportación.", acceptance_criterion: CA-03, owner: Proveedor de TI, status: passed, evidence_ref: EVI-05}
+  - {case_id: TC-14, category: security, kind: negative, description: "Cincuenta solicitudes ficticias del mismo contacto en una hora.", steps_covered: [FUT-01], traces_to: [CTL-10, AME-09], expected_result: "El límite por contacto actúa, la cola no se satura y la alerta llega a la jefa de recepción.", acceptance_criterion: CA-03, owner: Proveedor de TI, status: passed, evidence_ref: EVI-10, extensions: {defect: DEF-03}}
+  - {case_id: TC-15, category: security, kind: positive, description: "Muestra semanal de lo aprobado sin cambios (RIE-04).", traces_to: [CTL-08, AME-07], expected_result: "Primera revisión semanal registrada.", acceptance_criterion: CA-03, owner: Jefa de recepción, status: not_run, extensions: {razon: "Solo se puede hacer con casos reales: pasa a operacion-y-aseguramiento-continuo con dueña."}}
+  # Resiliencia
+  - {case_id: TC-16, category: resilience, kind: negative, description: "El mismo formulario enviado dos veces.", steps_covered: [FUT-01], traces_to: [RES-01, IDM-01], expected_result: "Un solo caso.", acceptance_criterion: CA-04, owner: Proveedor de TI, status: passed, evidence_ref: EVI-06}
+  - {case_id: TC-17, category: resilience, kind: positive, description: "El modelo falla dos veces por error transitorio y responde a la tercera.", steps_covered: [FUT-01], traces_to: [RES-03, IDM-02, DEC-26], expected_result: "El caso sigue sin intervención; quedan registrados los tres intentos.", acceptance_criterion: CA-04, owner: Proveedor de TI, status: passed, evidence_ref: EVI-06}
+  - {case_id: TC-18, category: resilience, kind: negative, description: "Tiempo agotado simulado después de enviar la propuesta.", steps_covered: [FUT-06], traces_to: [RES-04, IDM-04, RIE-10, REQ-09], expected_result: "No se reenvía; el caso va a revisión con la nota de envío incierto.", acceptance_criterion: CA-04, owner: Proveedor de TI, status: passed, evidence_ref: EVI-07}
+  - {case_id: TC-19, category: resilience, kind: negative, description: "Repetir FUT-08 con la misma clave.", steps_covered: [FUT-08], traces_to: [AT-06, RES-05, IDM-06, REQ-08], dataset_ref: DS-06, expected_result: "Una sola cita en el sistema de gestión de prueba.", acceptance_criterion: CA-04, owner: Proveedor de TI, status: passed, evidence_ref: EVI-07}
+  - {case_id: TC-20, category: resilience, kind: negative, description: "Tiempo agotado simulado al crear la cita.", steps_covered: [FUT-08], traces_to: [RES-06, IDM-06, REQ-08, REQ-13], dataset_ref: DS-06, expected_result: "La consulta por paciente y fecha encuentra la cita y no se crea otra; si la consulta falla, el caso va a revisión.", acceptance_criterion: CA-04, owner: Proveedor de TI, status: passed, evidence_ref: EVI-09, extensions: {defect: DEF-01}}
+  - {case_id: TC-21, category: resilience, kind: negative, description: "Revisar la configuración de reintentos de cada acción con efecto externo.", steps_covered: [FUT-06, FUT-08], traces_to: [RES-07, RIE-09], expected_result: "Ninguna acción con efecto externo reintenta sola.", acceptance_criterion: CA-04, owner: Proveedor de TI, status: passed, evidence_ref: EVI-09, extensions: {defect: DEF-01}}
+  - {case_id: TC-22, category: resilience, kind: negative, description: "Detener y reanudar el flujo durante la espera de FUT-07.", steps_covered: [FUT-07], traces_to: [RES-08, IDM-05, REQ-01], expected_result: "El caso sigue desde ST-06; el aviso del día no se duplica.", acceptance_criterion: CA-04, owner: Proveedor de TI, status: passed, evidence_ref: EVI-08}
+  - {case_id: TC-23, category: resilience, kind: negative, description: "Reprocesar un elemento desde la cola de errores.", traces_to: [RES-09, IDM-01], expected_result: "Se usa la misma clave; ningún caso duplicado.", acceptance_criterion: CA-04, owner: Proveedor de TI, status: passed, evidence_ref: EVI-08}
+  - {case_id: TC-24, category: resilience, kind: positive, description: "Conciliación con una cita creada a mano sin constancia.", traces_to: [RES-10, DEC-27], dataset_ref: DS-06, expected_result: "La conciliación detecta la diferencia y crea un caso en la cola de revisión.", acceptance_criterion: CA-04, owner: Proveedor de TI, status: passed, evidence_ref: EVI-08}
+  - {case_id: TC-25, category: resilience, kind: negative, description: "Dos respuestas a la misma aprobación.", steps_covered: [FUT-06], traces_to: [RES-11, IDM-03], expected_result: "Una sola decisión registrada; la segunda queda como intento ignorado.", acceptance_criterion: CA-04, owner: Proveedor de TI, status: passed, evidence_ref: EVI-08}
+  - {case_id: TC-26, category: resilience, kind: negative, description: "Modo manual: con el interruptor apagado llega una solicitud; luego un usuario que no es la jefa intenta encenderlo.", steps_covered: [FUT-01, FUT-04], traces_to: [GRD-07, REQ-11], expected_result: "La solicitud va a la cola de revisión sin pasar por el modelo; el encendido sin la jefa falla.", acceptance_criterion: CA-06, owner: Jefa de recepción, status: passed, evidence_ref: EVI-03}
+  # Calidad de IA
+  - {case_id: TC-27, category: ai_quality, kind: positive, description: "Extracción de datos y tipo de cita en las 60 solicitudes de DS-01.", steps_covered: [FUT-01], traces_to: [MET-01, MET-03, MET-04, MET-05, MET-07], dataset_ref: DS-01, expected_result: "MET-01, MET-03, MET-04, MET-05 y MET-07 cumplen su umbral.", acceptance_criterion: CA-05, owner: Proveedor de TI, status: passed, evidence_ref: EVI-11, extensions: {defect: DEF-02}}
+  - {case_id: TC-28, category: ai_quality, kind: negative, description: "Ninguna urgencia de DS-03 queda sin marcar ni avanza sola a una propuesta.", steps_covered: [FUT-04, FUT-05], traces_to: [AT-03, MET-02, GRD-05], dataset_ref: DS-03, expected_result: "12 de 12 urgencias marcadas y decididas por una persona.", acceptance_criterion: CA-05, owner: Proveedor de TI, status: passed, evidence_ref: EVI-12}
+  - {case_id: TC-29, category: ai_quality, kind: negative, description: "El mismo motivo escrito de dos o tres formas distintas.", steps_covered: [FUT-04], traces_to: [MET-06], dataset_ref: DS-03, expected_result: "La misma marca en 95 % o más de las versiones.", acceptance_criterion: CA-05, owner: Proveedor de TI, status: passed, evidence_ref: EVI-12}
+  - {case_id: TC-30, category: ai_quality, kind: negative, description: "Respuesta del modelo con formato roto (simulada).", steps_covered: [FUT-01], traces_to: [MET-04, CTL-04, AME-03], expected_result: "El caso termina en ST-09 sin usar la salida.", acceptance_criterion: CA-05, owner: Proveedor de TI, status: passed, evidence_ref: EVI-04}
+
+release_gate:
+  criteria_refs: [CA-02, CA-03, CA-04, CA-05, CA-06]
+  approver_role: Valeria (directora), con la administradora en CA-03 y CA-05
+  status: approved
+  decision_ref: DEC-31
+  decided_on: "2027-01-11"
+
+extensions:
+  versions_tested: "Flujo 0.4; reglas de agenda v1 (enero); plantillas v1; instrucciones del modelo v2 (DEC-30); modelo candidato de REQ-04."
+  waivers: "MET-02: falsas alarmas en 32 % frente al 30 % acordado; dispensado por Valeria con revisión en operación (DEC-31)."
+  moved_to_operations: "TC-15 (CTL-08, muestra semanal) y CA-07 (valor en producción), con dueña."
+  not_a_release_decision: "La puerta de pruebas no es la salida a producción: dueños, aprobación de salida y rollback se cierran en release-y-transferencia."

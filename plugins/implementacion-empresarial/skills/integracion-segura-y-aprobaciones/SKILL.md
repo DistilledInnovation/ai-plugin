@@ -48,7 +48,7 @@ Referencia siempre los IDs al enlazar (por ejemplo: "`PRU-02` valida `SUP-01`").
 
 **Úsala** cuando hay un `workflow-contract` y una arquitectura lógica (idealmente también el mapa de capacidades), antes de construir o antes de conectar datos reales; y para revisar una implementación existente reconstruyendo su contrato y su arquitectura mínima.
 
-**No la uses** para diseñar el flujo (Automatización con IA), para elegir plataforma (`mapeo-de-capacidades-de-plataforma`) ni para el detalle de reintentos y duplicados (`idempotencia-y-confiabilidad`, Próximamente). No sustituye una auditoría legal o de cumplimiento: si el flujo maneja datos regulados, indica que hace falta esa revisión y quién debería hacerla.
+**No la uses** para diseñar el flujo (Automatización con IA), para elegir plataforma (`mapeo-de-capacidades-de-plataforma`) ni para el detalle de reintentos y duplicados (`idempotencia-y-confiabilidad`). No sustituye una auditoría legal o de cumplimiento: si el flujo maneja datos regulados, indica que hace falta esa revisión y quién debería hacerla.
 
 ## Antes de empezar (qué pedir al usuario)
 
@@ -66,7 +66,7 @@ Plantilla en `assets/revision-de-amenazas-y-aprobaciones.md`; catálogos en `ref
 6. **Matriz de aprobación humana.** Cada acción de impacto (enviar, registrar, modificar, borrar, cambiar reglas, cambiar el modelo o sus instrucciones, conceder accesos, encender la IA tras un apagado; apagarla no requiere aprobación previa, solo registro) con: quién la propone, quién aprueba (nunca el mismo componente que la produce), cuándo, qué pasa si nadie responde o si rechaza, y qué evidencia queda. Parte de las `approval_policies` del contrato y suma las acciones de operación que el contrato no cubre.
 7. **Auditoría.** Qué se registra en cada acción (quién, qué, cuándo, con qué versión de reglas e instrucciones, decisión del aprobador), dónde, por cuánto tiempo (decisión del cliente) y quién puede leerlo. Registra lo necesario, no copias completas de datos sensibles.
 8. **Registrar decisiones y riesgos residuales.** Cada control elegido, cada valor del cliente (retención, modelos permitidos, roles) y cada riesgo aceptado van al registro de decisiones con dueño, fecha y aprobación. Pregunta guía: "¿Quién acepta este riesgo residual?".
-9. **Definir cómo se prueba cada control** (prueba negativa incluida) para `pruebas-y-evaluacion` (Próximamente; mientras tanto, como lista en la revisión).
+9. **Definir cómo se prueba cada control** (prueba negativa incluida) para `pruebas-y-evaluacion`, que las convierte en casos del plan de evaluación.
 10. **Entregar** la revisión completa con sus pendientes.
 
 ## Reglas
@@ -93,4 +93,4 @@ Cada límite y flujo de datos tiene sus amenazas con control y riesgo residual; 
 
 ## Siguiente paso sugerido
 
-`idempotencia-y-confiabilidad` (Próximamente) para las claves, reintentos y recuperación, y luego `pruebas-y-evaluacion` (Próximamente) para ejecutar las pruebas de cada control. Mientras no estén disponibles, vuelve a `facilitador-implementacion-empresarial` para actualizar el estado y dejar esas tareas como pendientes con dueño.
+`idempotencia-y-confiabilidad` para las claves, reintentos y recuperación de cada operación repetible, y luego `pruebas-y-evaluacion` para convertir la prueba de cada control en casos del plan de evaluación.

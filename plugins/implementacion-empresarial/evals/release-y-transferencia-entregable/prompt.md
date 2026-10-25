@@ -1,0 +1,6 @@
+---
+max_turns: 6
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+Soy Gabriela, coordinadora de TI del Instituto de Idiomas Puentes (35 empleados). Flujo FLU-02 (inscripción y examen de nivel de alumnos nuevos): FUT-01 leer la solicitud (IA acotada), FUT-02 asignar examen de nivel con reglas, FUT-03 la coordinadora académica aprueba la matrícula (APR-01), FUT-04 matricular en el sistema académico (efecto externo, clave alumno + grupo), FUT-05 enviar la bienvenida (efecto externo). El plan de evaluación EVP-FLU-02 pasó sus cuatro categorías y el director lo aprobó el 2 de noviembre de 2026 (DEC-14). Lo que hay: se probó con las instrucciones del modelo v2, pero después la coordinadora pidió un ajuste de tono y hoy está la v3, que nadie volvió a probar; la cola de revisión la atiende la coordinadora académica, pero nadie quedó a cargo de la cola de errores técnicos; el rollback es "si falla, lo apagamos", nadie lo ensayó; la retención de los datos de los alumnos sigue pendiente con la directora administrativa (DEC-11); el soporte después de salir lo daría el técnico externo que lo construyó, sin acuerdo escrito. El director quiere salir el lunes 9 de noviembre y me pidió que yo apruebe la salida porque soy de TI. Finalizar: entrégame la preparación de release y dime si estamos listos.

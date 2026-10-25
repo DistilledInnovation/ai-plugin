@@ -110,14 +110,14 @@ skills:
   arquitectura-de-implementacion: pendiente
   mapeo-de-capacidades-de-plataforma: pendiente
   integracion-segura-y-aprobaciones: pendiente
-  idempotencia-y-confiabilidad: proximamente
-  pruebas-y-evaluacion: proximamente
-  release-y-transferencia: proximamente
-  operacion-y-aseguramiento-continuo: proximamente
+  idempotencia-y-confiabilidad: pendiente
+  pruebas-y-evaluacion: pendiente
+  release-y-transferencia: pendiente
+  operacion-y-aseguramiento-continuo: pendiente
 siguiente_skill: arquitectura-de-implementacion
 ```
 
-**Siguiente paso sugerido:** `arquitectura-de-implementacion`, porque convierte los ocho pasos del contrato en componentes lógicos con límites claros antes de mirar ninguna plataforma; los valores pendientes no la bloquean. `pruebas-y-evaluacion` está Próximamente: los criterios de aceptación de producción se dejan como pendiente con dueño.
+**Siguiente paso sugerido:** `arquitectura-de-implementacion`, porque convierte los ocho pasos del contrato en componentes lógicos con límites claros antes de mirar ninguna plataforma; los valores pendientes no la bloquean. Los criterios de aceptación de producción se definen en `pruebas-y-evaluacion`; hasta entonces quedan como pendiente con dueño.
 
 ## Lo que se ve en este ejemplo
 

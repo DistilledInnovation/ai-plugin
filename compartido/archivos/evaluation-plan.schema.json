@@ -1,0 +1,480 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://distilled.example/schemas/evaluation-plan-1.0.json",
+  "title": "evaluation-plan 1.0",
+  "description": "Plan de evaluación de un flujo antes de liberarlo: categorías de prueba obligatorias (funcional, seguridad, resiliencia y calidad de IA), conjuntos de datos, métricas de calidad de IA, criterios de aceptación por etapa y casos positivos y negativos trazables a los pasos y requisitos del contrato. Una liberación no se declara lista sin criterios aprobados. Las claves van en inglés por ser un contrato técnico; las descripciones, en español.",
+  "type": "object",
+  "required": [
+    "evaluation_plan_id",
+    "version",
+    "workflow_ref",
+    "target_stage",
+    "test_categories",
+    "acceptance_criteria",
+    "test_cases"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$",
+      "description": "Identificador estable: no se reutiliza ni se renumera."
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "prototype",
+        "pilot",
+        "production"
+      ],
+      "description": "Etapa: prototipo, piloto o producción."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "functional",
+        "security",
+        "resilience",
+        "ai_quality",
+        "performance",
+        "usability"
+      ],
+      "description": "Categoría de prueba: funcional, seguridad, resiliencia, calidad de IA, desempeño o usabilidad."
+    }
+  },
+  "properties": {
+    "evaluation_plan_id": {
+      "$ref": "#/$defs/id",
+      "description": "Identificador estable del plan (por ejemplo, EVP-FLU-01)."
+    },
+    "version": {
+      "const": "1.0",
+      "description": "Versión del esquema del plan. Debe ser exactamente \"1.0\"."
+    },
+    "workflow_ref": {
+      "type": "object",
+      "description": "Contrato que se evalúa.",
+      "required": [
+        "workflow_id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "workflow_id": {
+          "$ref": "#/$defs/id",
+          "description": "workflow_id del contrato (por ejemplo, FLU-01)."
+        },
+        "contract_maturity": {
+          "type": "string",
+          "enum": [
+            "design",
+            "prototype",
+            "pilot",
+            "production"
+          ],
+          "description": "Madurez del contrato cuando se hizo el plan."
+        },
+        "contract_date": {
+          "type": "string",
+          "description": "Fecha o versión del documento del contrato usado como base."
+        },
+        "capability_map_ref": {
+          "type": "string",
+          "description": "capability_map_id del mapa de capacidades, si existe."
+        }
+      }
+    },
+    "target_stage": {
+      "$ref": "#/$defs/stage",
+      "description": "Etapa que habilita el plan cuando sus criterios se cumplen y se aprueban."
+    },
+    "environment": {
+      "type": "object",
+      "description": "Dónde corren las pruebas. Las pruebas negativas no se corren con datos reales.",
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Entorno en palabras simples (sin direcciones, cuentas ni credenciales)."
+        },
+        "data_kind": {
+          "type": "string",
+          "enum": [
+            "synthetic",
+            "anonymized",
+            "real_authorized"
+          ],
+          "description": "Tipo de datos: ficticios, anonimizados o reales con autorización registrada."
+        },
+        "separated_from_production": {
+          "type": "boolean",
+          "description": "Verdadero si el entorno está separado del de producción."
+        },
+        "authorization_ref": {
+          "type": "string",
+          "description": "ID de la decisión que autoriza los datos usados, cuando no son ficticios."
+        }
+      }
+    },
+    "test_categories": {
+      "type": "array",
+      "description": "Categorías que cubre el plan. Siempre incluye functional, security, resilience y ai_quality.",
+      "items": {
+        "$ref": "#/$defs/category"
+      },
+      "uniqueItems": true,
+      "allOf": [
+        {
+          "contains": {
+            "const": "functional"
+          }
+        },
+        {
+          "contains": {
+            "const": "security"
+          }
+        },
+        {
+          "contains": {
+            "const": "resilience"
+          }
+        },
+        {
+          "contains": {
+            "const": "ai_quality"
+          }
+        }
+      ]
+    },
+    "datasets": {
+      "type": "array",
+      "description": "Conjuntos de casos de prueba. Sin datos personales reales salvo autorización registrada.",
+      "items": {
+        "type": "object",
+        "description": "Un conjunto de datos de prueba.",
+        "required": [
+          "dataset_id",
+          "description",
+          "data_kind"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "dataset_id": {
+            "$ref": "#/$defs/id",
+            "description": "Identificador del conjunto (por ejemplo, DS-01)."
+          },
+          "description": {
+            "type": "string",
+            "description": "Qué contiene y qué situaciones cubre."
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Cantidad de casos del conjunto."
+          },
+          "data_kind": {
+            "type": "string",
+            "enum": [
+              "synthetic",
+              "anonymized",
+              "real_authorized"
+            ],
+            "description": "Tipo de datos: ficticios, anonimizados o reales con autorización registrada."
+          },
+          "prepared_by": {
+            "type": "string",
+            "description": "Rol que preparó o revisó el conjunto."
+          },
+          "labels_by": {
+            "type": "string",
+            "description": "Rol que definió la respuesta esperada de cada caso (la referencia contra la que se mide)."
+          }
+        }
+      }
+    },
+    "ai_quality_metrics": {
+      "type": "array",
+      "description": "Métricas de calidad del componente de IA, con umbral y conjunto de datos. Una métrica que no aplica se declara con su razón.",
+      "items": {
+        "type": "object",
+        "description": "Una métrica de calidad de IA.",
+        "required": [
+          "metric_id",
+          "metric",
+          "description",
+          "applies"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "metric_id": {
+            "$ref": "#/$defs/id",
+            "description": "Identificador de la métrica (por ejemplo, MET-01)."
+          },
+          "metric": {
+            "type": "string",
+            "enum": [
+              "accuracy",
+              "relevance",
+              "groundedness",
+              "structural_consistency",
+              "tool_selection",
+              "escalation_rate",
+              "bias",
+              "extraction_errors"
+            ],
+            "description": "Tipo: exactitud, relevancia, fundamentación en la evidencia, consistencia estructural, selección correcta de herramientas, tasa de escalamiento, sesgo o errores de extracción."
+          },
+          "description": {
+            "type": "string",
+            "description": "Qué se mide y cómo, en palabras simples."
+          },
+          "applies": {
+            "type": "boolean",
+            "description": "Falso si la métrica no aplica a este flujo; en ese caso, rationale explica por qué."
+          },
+          "rationale": {
+            "type": "string",
+            "description": "Por qué no aplica o por qué se eligió este umbral."
+          },
+          "steps": {
+            "type": "array",
+            "description": "Pasos del contrato que mide (step_id).",
+            "items": {
+              "type": "string"
+            }
+          },
+          "threshold": {
+            "type": "string",
+            "description": "Umbral de aceptación, con su unidad (por ejemplo, \"95 % o más de campos correctos\")."
+          },
+          "dataset_ref": {
+            "type": "string",
+            "description": "dataset_id con el que se mide."
+          },
+          "measured_in": {
+            "$ref": "#/$defs/stage",
+            "description": "Etapa en la que se mide."
+          }
+        }
+      }
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "description": "Criterios definidos por adelantado: qué significa éxito en cada etapa y qué requisitos adicionales habilitan producción.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "description": "Un criterio de aceptación.",
+        "required": [
+          "criterion_id",
+          "description",
+          "stage",
+          "approver_role"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "criterion_id": {
+            "$ref": "#/$defs/id",
+            "description": "Identificador del criterio (por ejemplo, CA-01)."
+          },
+          "description": {
+            "type": "string",
+            "description": "Qué tiene que cumplirse, verificable por un tercero."
+          },
+          "category": {
+            "$ref": "#/$defs/category"
+          },
+          "stage": {
+            "$ref": "#/$defs/stage",
+            "description": "Etapa a la que aplica el criterio."
+          },
+          "threshold": {
+            "type": "string",
+            "description": "Umbral, si el criterio es una medida."
+          },
+          "approver_role": {
+            "type": "string",
+            "description": "Rol que aprueba que el criterio se cumplió."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "met",
+              "not_met",
+              "waived"
+            ],
+            "description": "Estado: pendiente, cumplido, no cumplido o dispensado (solo con decisión registrada)."
+          },
+          "decision_ref": {
+            "type": "string",
+            "description": "ID de la decisión que aprueba el cumplimiento o la dispensa."
+          }
+        }
+      }
+    },
+    "test_cases": {
+      "type": "array",
+      "description": "Casos de prueba. Debe haber al menos un caso positivo y uno negativo.",
+      "minItems": 2,
+      "allOf": [
+        {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "positive"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          }
+        },
+        {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "negative"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          }
+        }
+      ],
+      "items": {
+        "type": "object",
+        "description": "Un caso de prueba trazable al contrato.",
+        "required": [
+          "case_id",
+          "category",
+          "kind",
+          "description",
+          "traces_to",
+          "expected_result"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "case_id": {
+            "$ref": "#/$defs/id",
+            "description": "Identificador del caso (por ejemplo, TC-01)."
+          },
+          "category": {
+            "$ref": "#/$defs/category"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "positive",
+              "negative"
+            ],
+            "description": "Positivo (lo que debe ocurrir) o negativo (lo que nunca debe ocurrir, o cómo responde ante una falla o un abuso)."
+          },
+          "description": {
+            "type": "string",
+            "description": "Qué se prueba y cómo, en palabras simples."
+          },
+          "steps_covered": {
+            "type": "array",
+            "description": "Pasos del contrato que recorre (step_id).",
+            "items": {
+              "type": "string"
+            }
+          },
+          "traces_to": {
+            "type": "array",
+            "description": "IDs que el caso comprueba: pruebas de aceptación del contrato, requisitos, controles, guardrails, operaciones idempotentes o métricas.",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "dataset_ref": {
+            "type": "string",
+            "description": "dataset_id que usa, si aplica."
+          },
+          "expected_result": {
+            "type": "string",
+            "description": "Resultado esperado, verificable."
+          },
+          "acceptance_criterion": {
+            "type": "string",
+            "description": "criterion_id al que aporta evidencia."
+          },
+          "owner": {
+            "type": "string",
+            "description": "Rol que ejecuta el caso."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "planned",
+              "passed",
+              "failed",
+              "blocked",
+              "not_run"
+            ],
+            "description": "Estado: planeado, pasó, falló, bloqueado o no ejecutado."
+          },
+          "evidence_ref": {
+            "type": "string",
+            "description": "Dónde está la evidencia de la última ejecución (ID del registro de evidencia de pruebas)."
+          },
+          "extensions": {
+            "type": "object",
+            "description": "Información adicional libre propia del caso; no altera el plan.",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "release_gate": {
+      "type": "object",
+      "description": "Puerta de liberación: qué criterios deben cumplirse y quién aprueba.",
+      "required": [
+        "criteria_refs",
+        "approver_role",
+        "status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "criteria_refs": {
+          "type": "array",
+          "description": "criterion_id que deben estar cumplidos (o dispensados con decisión) para liberar.",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "approver_role": {
+          "type": "string",
+          "description": "Rol del cliente que aprueba la puerta."
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ],
+          "description": "Estado de la puerta: pendiente, aprobada o rechazada."
+        },
+        "decision_ref": {
+          "type": "string",
+          "description": "ID de la decisión en el registro de decisiones."
+        },
+        "decided_on": {
+          "type": "string",
+          "description": "Fecha de la decisión."
+        }
+      }
+    },
+    "extensions": {
+      "type": "object",
+      "description": "Información adicional libre; no altera el plan.",
+      "additionalProperties": true
+    }
+  }
+}

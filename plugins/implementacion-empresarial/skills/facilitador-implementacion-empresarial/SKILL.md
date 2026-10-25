@@ -66,7 +66,7 @@ Una cosa a la vez. Lo ideal, si existe:
 4. **Abrir el registro de decisiones** (`assets/registro-de-decisiones.md`). Cada decisión con: ID estable (`DEC-nn`, continuando la numeración del diseño), decisión, alternativas consideradas, dueño (rol que decide), fecha, estado de aprobación y quién aprueba, procedencia y los IDs del contrato que toca.
 5. **Hacer explícitos los valores del cliente.** Recorre el contrato buscando valores "por definir" o implícitos (plazos de espera, retención de evidencias, quién aprueba en ausencia de alguien, horarios, umbrales). Cada uno entra al registro como decisión, con dueño y fecha, aunque quede **Pendiente**. Nunca dejes un valor por defecto sin registrarlo. Pregunta guía: "¿Quién fija este valor y para cuándo?".
 6. **Actualizar el estado de la implementación** (`assets/estado-de-implementacion.yaml`): contrato, puerta, ruta, decisiones abiertas, siguiente skill.
-7. **Resumir en máximo cinco puntos** y **enrutar** a la siguiente skill con una línea de por qué. Si la skill está marcada "Próximamente", dilo y ofrece avanzar con las plantillas de las skills disponibles, sin inventar entregables.
+7. **Resumir en máximo cinco puntos** y **enrutar** a la siguiente skill con una línea de por qué.
 8. **Al volver** de otra skill, actualiza el estado y el registro (las decisiones nuevas de cada skill se suman al mismo registro) y vuelve a enrutar.
 
 ## Las etapas de Implementación Empresarial
@@ -87,10 +87,10 @@ flowchart LR
 | 1 | `arquitectura-de-implementacion` | Contrato | Arquitectura lógica trazable paso a paso, límites de componentes, plan de implementación | Disponible |
 | 2 | `mapeo-de-capacidades-de-plataforma` | Arquitectura y plataforma elegida por el cliente | `capability-map.yaml`: requisito, opciones, decisión, brecha, dueño y aprobación | Disponible |
 | 3 | `integracion-segura-y-aprobaciones` | Arquitectura y mapa | Modelo de amenazas, mínimo privilegio, secretos, matriz de aprobación y auditoría | Disponible |
-| 3 | `idempotencia-y-confiabilidad` | Arquitectura y mapa | Claves idempotentes, reintentos, compensaciones, cola de errores y recuperación | Próximamente |
-| 4 | `pruebas-y-evaluacion` | Controles y criterios | Plan de evaluación: funcional, seguridad, resiliencia y calidad de IA | Próximamente |
-| 5 | `release-y-transferencia` | Pruebas aprobadas | Checklist de salida, runbook y transferencia de propiedad | Próximamente |
-| 6 | `operacion-y-aseguramiento-continuo` | Solución en operación | Observabilidad, alertas, KPIs, control de cambios y recertificación | Próximamente |
+| 3 | `idempotencia-y-confiabilidad` | Arquitectura y mapa | Claves idempotentes, reintentos, compensaciones, cola de errores y recuperación | Disponible |
+| 4 | `pruebas-y-evaluacion` | Controles y criterios | Plan de evaluación (`evaluation-plan.yaml`): funcional, seguridad, resiliencia y calidad de IA | Disponible |
+| 5 | `release-y-transferencia` | Pruebas aprobadas | Preparación de release con dueños, aprobación y rollback; runbook y transferencia de propiedad | Disponible |
+| 6 | `operacion-y-aseguramiento-continuo` | Solución en operación | Observabilidad, alertas, KPIs de valor, costo por caso, control de cambios y recertificación | Disponible |
 
 Los cambios en operación vuelven al contrato: el contrato es la fuente de verdad y no se reinterpreta en silencio.
 
@@ -102,7 +102,7 @@ Los cambios en operación vuelven al contrato: el contrato es la fuente de verda
 | Contrato listo y plataforma por decidir | Completa | `arquitectura-de-implementacion` | La plataforma se decide en el mapeo, como decisión del cliente |
 | Contrato listo y plataforma ya decidida por el cliente | Completa con plataforma dada | `arquitectura-de-implementacion` | La elección se registra como decisión con su dueño; la arquitectura sigue siendo lógica |
 | Ya existe una implementación y se pide una revisión de seguridad | Revisión puntual | `integracion-segura-y-aprobaciones` | Necesita el contrato y la arquitectura, aunque sea reconstruida |
-| Cambio a un flujo que ya opera | Cambio controlado | Actualizar el contrato con su dueño, luego la skill afectada | `operacion-y-aseguramiento-continuo` está Próximamente |
+| Cambio a un flujo que ya opera | Cambio controlado | `operacion-y-aseguramiento-continuo` (control de cambios) | El cambio actualiza el contrato con su dueño y vuelve a la skill afectada; si cambia el diseño, a `disenar-proceso-futuro` |
 
 Detalle de las rutas, la lista de revisión del contrato y cómo leer la puerta de entrada: `references/rutas-de-implementacion.md`.
 
@@ -125,7 +125,7 @@ Recorrido completo con una empresa ficticia, que continúa el ejemplo de `plan-p
 
 ## Criterio de salida
 
-Se sabe si existe un contrato válido (y si no, la persona fue remitida a `plan-piloto-y-especificacion`), la puerta de entrada quedó leída con sus condiciones, la ruta está elegida y registrada, el registro de decisiones existe con cada valor propio del cliente como decisión (con dueño, fecha y estado de aprobación, aunque sea Pendiente), y la siguiente skill está indicada con su estado real (Disponible o Próximamente).
+Se sabe si existe un contrato válido (y si no, la persona fue remitida a `plan-piloto-y-especificacion`), la puerta de entrada quedó leída con sus condiciones, la ruta está elegida y registrada, el registro de decisiones existe con cada valor propio del cliente como decisión (con dueño, fecha y estado de aprobación, aunque sea Pendiente), y la siguiente skill está indicada con la razón en una línea.
 
 ## Siguiente paso sugerido
 

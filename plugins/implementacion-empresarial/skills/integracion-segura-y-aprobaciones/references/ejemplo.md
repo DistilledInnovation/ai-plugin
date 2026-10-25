@@ -1,6 +1,6 @@
 # Ejemplo: Integración segura y aprobaciones en una clínica dental ficticia
 
-Empresa inventada: **Clínica Dental Sonrisa Norte** (clínica privada pequeña: 3 consultorios, 14 empleados). Todo lo siguiente es ficticio. Continúa el ejemplo de `mapeo-de-capacidades-de-plataforma`: `FLU-01` (agendar citas) tiene arquitectura lógica (`CMP-01` a `CMP-10`), plataforma Microsoft elegida por la clínica (`DEC-18`) y un mapa con nueve requisitos aprobados y cinco pendientes, entre ellos `REQ-04` (modelo permitido) y `REQ-12` (minimizar datos hacia el modelo). Guardrails del diseño: `GRD-01` (datos sensibles), `GRD-06` (el mensaje es dato), `GRD-07` (modo manual). Riesgos: `RIE-01` a `RIE-08`. En esta sesión participan el líder técnico del proveedor de TI y la administradora, que responde por los datos.
+Empresa inventada: **Clínica Dental Sonrisa Norte** (clínica privada pequeña: 3 consultorios, 14 empleados). Todo lo siguiente es ficticio. Continúa el ejemplo de `mapeo-de-capacidades-de-plataforma`: `FLU-01` (agendar citas) tiene arquitectura lógica (`CMP-01` a `CMP-10`), plataforma Microsoft elegida por la clínica (`DEC-18`) y un mapa con ocho requisitos aprobados y seis pendientes, entre ellos `REQ-04` (modelo permitido) y `REQ-12` (minimizar datos hacia el modelo). Guardrails del diseño: `GRD-01` (datos sensibles), `GRD-06` (el mensaje es dato), `GRD-07` (modo manual). Riesgos: `RIE-01` a `RIE-08`. En esta sesión participan el líder técnico del proveedor de TI y la administradora, que responde por los datos.
 
 ## Turno 1
 
@@ -130,7 +130,7 @@ Apagar la IA no requiere aprobación: la jefa de recepción lo hace de inmediato
 | `CTL-09` | Secretos solo en el almacén | `AME-08` | Exportar el flujo y buscar valores secretos: ninguno | Diseñado |
 | `CTL-10` | Límite de solicitudes por contacto y modo manual | `AME-09` | Cincuenta solicitudes ficticias del mismo contacto no saturan la cola | Diseñado |
 
-Estas pruebas pasan a `pruebas-y-evaluacion` (Próximamente); mientras tanto, quedan como lista con dueño.
+Estas pruebas pasan a `pruebas-y-evaluacion` como casos de la categoría de seguridad.
 
 ### 9. Decisiones y riesgos residuales
 
@@ -153,7 +153,7 @@ Estas pruebas pasan a `pruebas-y-evaluacion` (Próximamente); mientras tanto, qu
 | Autorización de datos reales en producción (`DEC-08`) | Administradora | Por definir con la administradora | Salida a producción |
 | Rotación de secretos | Proveedor de TI | Por definir con el proveedor de TI | Salida a producción |
 
-**Siguiente paso sugerido:** `idempotencia-y-confiabilidad` (Próximamente) para `REQ-08` y `REQ-09`, y `pruebas-y-evaluacion` (Próximamente) para ejecutar `CTL-01` a `CTL-10`. Mientras tanto, volver a `facilitador-implementacion-empresarial` para actualizar el estado y el registro.
+**Siguiente paso sugerido:** `idempotencia-y-confiabilidad` para `REQ-08` y `REQ-09`, y luego `pruebas-y-evaluacion` para ejecutar `CTL-01` a `CTL-10`.
 
 ## Lo que se ve en este ejemplo
 
