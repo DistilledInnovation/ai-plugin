@@ -141,6 +141,7 @@ steps:
     trigger: {type: previous_step, description: "Urgencia descartada por una persona.", after_step: FUT-05}
     inputs:
       - {name: confirmed_patient, description: "Paciente confirmado: por coincidencia exacta en FUT-02 o por recepción en FUT-03.", type: record, required: true, sensitivity: sensitive}
+      - {name: appointment_type, description: "Tipo de cita pedido, leído en FUT-01 y revisado por recepción (APR-04).", type: text, required: true, sensitivity: internal}
     outputs:
       - {name: proposal_sent, description: "Mensaje con tres horarios libres.", type: text, required: true, sensitivity: personal}
     authority_level: 2

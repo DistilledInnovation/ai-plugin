@@ -68,6 +68,8 @@ Empresa inventada: **Clínica Dental Sonrisa Norte** (clínica privada pequeña:
 
 Se eliminan: el tecleo repetido de datos (`PAS-02` y `PAS-07`) y la revisión manual de duplicados al final del día.
 
+> **Nota: este es el diseño previo al piloto.** El `workflow-contract` del piloto (`plan-piloto-y-especificacion`) lo acota en dos puntos: una solicitud repetida (`EXC-04`) no pasa por `FUT-03`, sino directo a la cola de revisión de recepción (estado `ST-09`), y `FUT-03` queda solo para coincidencias dudosas; y el tipo de cita se lee en `FUT-01` junto con los demás datos de la solicitud (lo revisa recepción), de modo que `FUT-04` solo marca la posible urgencia. El diagrama y la tabla de abajo muestran el diseño tal como se aprobó en esta etapa.
+
 | ID | Capacidad (hipótesis) | Entra | Sale | Si falla o no está seguro |
 |---|---|---|---|---|
 | `CAP-01` | Extraer | Mensaje, formulario o nota de la llamada | Nombre, motivo y preferencia de horario | Marca el dato como faltante y lo pasa a recepción |
