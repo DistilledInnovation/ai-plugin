@@ -53,6 +53,8 @@ def _validar_archivo(ruta: Path, base: Path | None, terminos: list[str], revisar
     """Extension, JSON valido, terminos prohibidos y (opcional) rutas `../`."""
     errores: list[str] = []
     r = _rel(ruta, base)
+    if ruta.name == ".gitkeep" and ruta.stat().st_size == 0:
+        return errores  # marcador de carpeta vacia
     ext = ruta.suffix.lower()
     if ext not in EXTENSIONES_PERMITIDAS:
         errores.append(f"{r}: extensión no permitida '{ext or ruta.name}' (permitidas: {', '.join(sorted(EXTENSIONES_PERMITIDAS))})")

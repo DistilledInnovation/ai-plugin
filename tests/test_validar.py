@@ -81,6 +81,10 @@ class PruebasValidarSkillsYRepo(BaseRepo):
         (self.skill / "assets" / "logo.png").write_bytes(b"\x89PNG")
         self.afirmar_error(self.errores(), SKILL_REL + "/assets/logo.png", "extensión")
 
+    def test_gitkeep_vacio_permitido(self):
+        (self.raiz / "plugins" / "demo" / "skills" / ".gitkeep").write_text("", encoding="utf-8")
+        self.assertEqual(self.errores(), [])
+
     def test_extension_no_permitida_fuera_de_skills(self):
         (self.raiz / "plugins" / "demo" / "logo.png").write_bytes(b"\x89PNG")
         self.afirmar_error(self.errores(), "plugins/demo/logo.png", "extensión")

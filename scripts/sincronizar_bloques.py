@@ -52,6 +52,13 @@ def aplicar_bloques(texto: str, bloques: dict[str, str]) -> str:
     return "".join(salida)
 
 
+def _validar_destino(d: str) -> list[str]:
+    partes = d.split("/")
+    if len(partes) < 3 or any(p in ("", ".", "..") or "\\" in p or Path(p).name != p for p in partes):
+        raise ValueError(f"destino inválido '{d}' (use <plugin>/<skill>/<subcarpeta>)")
+    return partes
+
+
 def cargar_archivos_compartidos(raiz: Path) -> dict[str, list[str]]:
     raiz = Path(raiz)
     ruta = raiz / "compartido" / ARCHIVO_COMPARTIDOS
@@ -65,6 +72,8 @@ def cargar_archivos_compartidos(raiz: Path) -> dict[str, list[str]]:
             raise ValueError(f"archivo compartido inexistente: compartido/archivos/{origen}")
         if not isinstance(destinos, list) or not all(isinstance(d, str) for d in destinos):
             raise ValueError(f"destinos inválidos para '{origen}' (se espera una lista de textos)")
+        for d in destinos:
+            _validar_destino(d)
     return datos
 
 
@@ -73,9 +82,7 @@ def _destinos(raiz: Path):
     for origen, destinos in cargar_archivos_compartidos(raiz).items():
         fuente = Path(raiz) / "compartido" / "archivos" / origen
         for d in destinos:
-            partes = d.split("/")
-            if len(partes) < 3 or any(p in ("", ".", "..") for p in partes):
-                raise ValueError(f"destino inválido '{d}' (use <plugin>/<skill>/<subcarpeta>)")
+            partes = _validar_destino(d)
             plugin, skill, sub = partes[0], partes[1], "/".join(partes[2:])
             destino = Path(raiz) / "plugins" / plugin / "skills" / skill / sub / Path(origen).name
             yield fuente, destino
@@ -109,7 +116,7 @@ def aplicar_a_skills(raiz: Path) -> list[Path]:
     for md in _skill_mds(raiz):
         original = md.read_text(encoding="utf-8").replace("\r\n", "\n")
         nuevo = aplicar_bloques(original, bloques)
-        if nuevo != md.read_text(encoding="utf-8"):
+        if nuevo != original:
             md.write_text(nuevo, encoding="utf-8", newline="\n")
             cambiados.append(md)
     return cambiados

@@ -1,0 +1,33 @@
+{
+  "name": "distilled-innovation",
+  "owner": {
+    "name": "Distilled Innovation"
+  },
+  "description": "Metodologías de Distilled Innovation en forma de skills y plugins para asistentes de IA.",
+  "plugins": [
+    {
+      "name": "innovacion-destilada",
+      "source": "./plugins/innovacion-destilada",
+      "description": "Metodología de Innovación Destilada: identifica retos, valida ideas y diseña soluciones con el apoyo de un facilitador de IA, paso a paso.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "automatizacion-con-ia",
+      "source": "./plugins/automatizacion-con-ia",
+      "description": "Metodología de Automatización con IA: inventaría procesos, prioriza qué automatizar y diseña flujos de trabajo asistidos por IA.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "implementacion-empresarial",
+      "source": "./plugins/implementacion-empresarial",
+      "description": "Metodología de Implementación Empresarial: lleva un flujo de trabajo ya diseñado a operación real, con rutas, decisiones y controles claros.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "aceleracion-comercial",
+      "source": "./plugins/aceleracion-comercial",
+      "description": "Metodología de Aceleración Comercial: diagnostica la etapa de ventas y diseña ofertas, mensajes y acciones para crecer.",
+      "version": "0.1.0"
+    }
+  ]
+}

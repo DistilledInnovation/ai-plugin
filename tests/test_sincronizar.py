@@ -1,5 +1,6 @@
 import json
 import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -113,6 +114,44 @@ class PruebasArchivos(BaseRepo):
         )
         with self.assertRaises(ValueError):
             sb.cargar_archivos_compartidos(self.raiz)
+
+    def test_destinos_invalidos_se_rechazan(self):
+        invalidos = [
+            "../x/y", "./x/y", "demo//assets", "demo/skill-demo",
+            "demo/skill-demo/..", "demo\\x/skill-demo/assets", "demo/skill\\demo/assets",
+            "/demo/skill-demo/assets",
+        ]
+        for destino in invalidos:
+            with self.subTest(destino=destino):
+                self.declarar([destino])
+                with self.assertRaises(ValueError):
+                    sb.cargar_archivos_compartidos(self.raiz)
+                with self.assertRaises(ValueError):
+                    list(sb._destinos(self.raiz))
+
+    def test_destino_valido_se_acepta(self):
+        self.declarar(["demo/skill-demo/assets/sub"])
+        self.assertEqual(len(list(sb._destinos(self.raiz))), 1)
+
+
+class PruebasCrlfYCli(BaseRepo):
+    def test_aplicar_a_skills_no_cuenta_crlf_correcto_como_cambiado(self):
+        sb.sincronizar(self.raiz)
+        texto = self.skill_md.read_text(encoding="utf-8")
+        self.skill_md.write_bytes(texto.replace("\n", "\r\n").encode("utf-8"))
+        self.assertEqual(sb.aplicar_a_skills(self.raiz), [])
+        self.assertEqual(sb.verificar(self.raiz), [])
+
+    def ejecutar(self, *args):
+        cli = AQUI.parent / "scripts" / "sincronizar_bloques.py"
+        return subprocess.run([sys.executable, str(cli), *args], capture_output=True, text=True)
+
+    def test_cli_verificar_codigos_de_salida(self):
+        r = self.ejecutar("--verificar", str(self.raiz))
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        sb.sincronizar(self.raiz)
+        r = self.ejecutar("--verificar", str(self.raiz))
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
 
 
 if __name__ == "__main__":

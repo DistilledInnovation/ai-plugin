@@ -1,0 +1,16 @@
+{
+  "name": "implementacion-empresarial",
+  "version": "0.1.0",
+  "description": "Metodología de Implementación Empresarial: lleva un flujo de trabajo ya diseñado a operación real, con rutas, decisiones y controles claros.",
+  "author": {
+    "name": "Distilled Innovation"
+  },
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "implementacion",
+    "empresa",
+    "operacion",
+    "gobierno",
+    "flujos"
+  ]
+}

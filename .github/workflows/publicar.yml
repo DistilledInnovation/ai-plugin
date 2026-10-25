@@ -1,0 +1,31 @@
+name: Publicar
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    env:
+      TERMINOS_PROHIBIDOS: ${{ secrets.TERMINOS_PROHIBIDOS }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Pruebas
+        run: python -m unittest discover -s tests -v
+      - name: Verificar bloques compartidos
+        run: python scripts/sincronizar_bloques.py --verificar
+      - name: Validar skills y plugins
+        run: python scripts/validar.py
+      - name: Empaquetar
+        run: python scripts/empaquetar.py
+      - name: Crear release
+        run: gh release create "${{ github.ref_name }}" dist/* --title "${{ github.ref_name }}" --generate-notes
