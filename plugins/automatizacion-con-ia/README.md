@@ -6,7 +6,7 @@ Plugin de Distilled Innovation que te acompaña, con un facilitador de IA y paso
 
 Automatización con IA es una guía de referencia (no una camisa de fuerza) para pasar de "queremos usar IA" a un flujo de trabajo bien pensado, probado y listo para llevar a operación. Su idea central: **la función del facilitador no es convencerte de usar IA, es diseñar la mejor solución para el problema**, aunque la conclusión sea no automatizar, simplificar primero, usar reglas tradicionales, usar IA solo en algunos pasos, mantener el control humano o posponer hasta resolver problemas de datos o de proceso.
 
-Se organiza en cuatro etapas: **A** descubrir y priorizar, **B** diseñar y validar, **C** implementar y transferir, **D** medir y mejorar. Este plugin cubre A y B; C y D continúan en **Implementación Empresarial**.
+Se organiza en cuatro etapas: **A** descubrir y priorizar, **B** diseñar y validar, **C** implementar y transferir, **D** medir y mejorar. Este plugin cubre A y B; C y D continúan en **Implementación Empresarial**, que recibe la especificación `workflow-contract.yaml` que entrega `plan-piloto-y-especificacion`.
 
 ```mermaid
 flowchart LR
@@ -15,6 +15,7 @@ flowchart LR
   B3 --> B4[canvas-de-automatizacion]
   B4 --> B5[supuestos-y-riesgos] --> B6[prototipos-y-tarjetas-de-prueba] --> B7[plan-piloto-y-especificacion]
   B7 -.aprendizajes.-> B2
+  B7 -.una tarea propia.-> X1[crear-skill-de-flujo]
 ```
 
 | Orden | Skill | Etapa |
@@ -29,6 +30,7 @@ flowchart LR
 | 8 | `supuestos-y-riesgos` | B |
 | 9 | `prototipos-y-tarjetas-de-prueba` | B |
 | 10 | `plan-piloto-y-especificacion` | B a C |
+| 11 | `crear-skill-de-flujo` | Después del taller |
 
 Las flechas de aprendizaje indican que lo que se descubre en el piloto puede reabrir el diseño del proceso futuro.
 
@@ -46,9 +48,10 @@ Escribe la frase de arranque en tu asistente y la skill se activa sola.
 | `disenar-proceso-futuro` | Eliminar, simplificar, asistir, automatizar o mantener humano | "Quiero rediseñar este proceso" | Disponible |
 | `elegir-patron-y-autonomia` | Patrón de automatización y nivel de autonomía con guardrails | "¿Necesito un agente o me alcanza un flujo fijo?" | Disponible |
 | `canvas-de-automatizacion` | Canvas de 12 bloques conversacional | "Arma el canvas de este flujo" | Disponible |
-| `supuestos-y-riesgos` | Supuestos falsables y riesgos con mitigación | "¿Qué podría salir mal con esta automatización?" | Próximamente |
-| `prototipos-y-tarjetas-de-prueba` | Tarjetas de prueba y decisión sobre el prototipo | "¿Cómo pruebo esto sin gastar mucho?" | Próximamente |
-| `plan-piloto-y-especificacion` | Plan piloto y especificación portable de la solución | "Quiero un plan piloto para este flujo" | Próximamente |
+| `supuestos-y-riesgos` | Supuestos falsables y riesgos con mitigación | "¿Qué podría salir mal con esta automatización?" | Disponible |
+| `prototipos-y-tarjetas-de-prueba` | Tarjetas de prueba y decisión sobre el prototipo | "¿Cómo pruebo esto sin gastar mucho?" | Disponible |
+| `plan-piloto-y-especificacion` | Plan piloto y especificación portable (`workflow-contract.yaml`) | "Quiero un plan piloto para este flujo" | Disponible |
+| `crear-skill-de-flujo` | Convierte una tarea repetida y simple en tu propia skill, con aprobaciones y prueba segura | "Quiero convertir esta tarea en una skill" | Disponible |
 
 ## Cómo se conecta con los otros plugins
 

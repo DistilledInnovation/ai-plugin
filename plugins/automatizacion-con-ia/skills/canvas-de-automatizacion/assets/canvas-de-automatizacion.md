@@ -84,7 +84,7 @@ Explicación / Justificación: ___ (`DEC-__`)
 
 - Alcance: ___  Usuarios: ___  Duración: ___
 - Criterios de éxito: ___  Qué aprenderemos: ___
-- Estado: ___ (el plan completo se detalla en `plan-piloto-y-especificacion`, Próximamente)
+- Estado: ___ (el plan completo se detalla en `plan-piloto-y-especificacion`)
 
 ## 11. Costo y esfuerzo estimado
 ¿Qué esfuerzo de implementación y operación se requiere? ¿Cuál es el costo estimado y el ROI esperado?

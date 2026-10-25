@@ -118,4 +118,4 @@ Los 12 bloques están llenos o marcados Pendiente con su motivo; los bloques 4, 
 
 ## Siguiente paso sugerido
 
-`supuestos-y-riesgos` (Próximamente): con el canvas a la vista se convierten los supuestos en afirmaciones que se puedan probar y se ordenan los riesgos por impacto e incertidumbre. Mientras esa skill no esté disponible, vuelve al `facilitador-automatizacion-con-ia`, que ofrece avanzar conversando; lo que quedó "Pendiente hasta el MVP" se retoma en la etapa de prototipos y especificación.
+`supuestos-y-riesgos`: con el canvas a la vista se convierten los supuestos en afirmaciones que se puedan probar y se ordenan los riesgos por impacto e incertidumbre. Después, `prototipos-y-tarjetas-de-prueba` y `plan-piloto-y-especificacion`; lo que quedó "Pendiente hasta el MVP" se retoma en la especificación.

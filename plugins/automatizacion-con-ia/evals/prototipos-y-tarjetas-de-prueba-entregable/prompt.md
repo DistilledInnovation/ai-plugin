@@ -1,0 +1,6 @@
+---
+max_turns: 6
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+Soy Hernán, gerente del Club Deportivo Las Palmas (25 empleados). Flujo FLU-01: responder las consultas que los socios mandan por mensaje (unas 60 por día). Tengo dos supuestos prioritarios. SUP-01 (criticidad 20): al menos 6 de cada 10 consultas por mensaje piden horarios o cupos de clases (recepción cree que casi todas, nadie ha contado). SUP-02 (criticidad 16): los socios aceptan una respuesta estándar con el horario sin pedir hablar con una persona (no sé). Puedo dedicar una semana y a una persona de recepción; puedo revisar mensajes de la semana pasada si les quitamos los nombres y los teléfonos (los autoriza la administradora del club). No quiero construir nada todavía. Ya hice la primera prueba: revisamos a mano 40 mensajes anonimizados y solo 18 pedían horarios o cupos; 14 pedían pausar o cancelar la inscripción por un viaje o una lesión y 8 eran otras cosas (dos revisores coincidieron en 37 de los 40). Para SUP-02 todavía no hemos probado nada. Finalizar: entrégame las tarjetas de prueba de los dos supuestos, el registro de evidencia con lo que ya pasó y lo que no, y los tipos de prueba que usarías, y dime qué decido con el resultado de la primera prueba.

@@ -71,6 +71,7 @@ flowchart LR
   B3 --> B4[canvas-de-automatizacion]
   B4 --> B5[supuestos-y-riesgos] --> B6[prototipos-y-tarjetas-de-prueba] --> B7[plan-piloto-y-especificacion]
   B7 -.aprendizajes.-> B2
+  B7 -.una tarea propia.-> X1[crear-skill-de-flujo]
 ```
 
 | Orden | Skill | Etapa | Qué produce | Estado |
@@ -82,9 +83,10 @@ flowchart LR
 | 5 | `disenar-proceso-futuro` | B | Proceso futuro: eliminar, simplificar, asistir, automatizar o mantener humano | Disponible |
 | 6 | `elegir-patron-y-autonomia` | B | Patrón de automatización y nivel de autonomía con guardrails | Disponible |
 | 7 | `canvas-de-automatizacion` | B | Canvas de 12 bloques | Disponible |
-| 8 | `supuestos-y-riesgos` | B | Supuestos falsables y riesgos con mitigación | Próximamente |
-| 9 | `prototipos-y-tarjetas-de-prueba` | B | Tarjetas de prueba y decisión sobre el prototipo | Próximamente |
-| 10 | `plan-piloto-y-especificacion` | B a C | Plan piloto y especificación portable de la solución | Próximamente |
+| 8 | `supuestos-y-riesgos` | B | Supuestos falsables y riesgos con mitigación | Disponible |
+| 9 | `prototipos-y-tarjetas-de-prueba` | B | Tarjetas de prueba y decisión sobre el prototipo | Disponible |
+| 10 | `plan-piloto-y-especificacion` | B a C | Plan piloto y especificación portable de la solución (`workflow-contract.yaml`) | Disponible |
+| 11 | `crear-skill-de-flujo` | Después del taller | Una tarea repetida y simple convertida en una skill propia | Disponible |
 
 Más detalle de cada etapa en `references/etapas-de-la-oferta.md`.
 
@@ -96,10 +98,10 @@ No todos empiezan en el mismo lugar. Identifica el punto con una pregunta sobre 
 |---|---|---|---|
 | No sabe qué automatizar o dónde está el valor | Descubrir y priorizar (A) | `descubrir-procesos` | Si ni siquiera hay un dolor claro: `identificar-reto` e `investigar-y-empatizar` (Innovación Destilada) |
 | Tiene un caso definido y necesita diseñarlo | Diseñar y validar (B) | `mapear-proceso-actual` | Si el caso no tiene objetivo, dueño ni línea base: `definir-reto-de-automatizacion` |
-| Tiene un prototipo y quiere llevarlo a producción | Implementar y transferir (C) | `plan-piloto-y-especificacion` (Próximamente), luego el plugin Implementación Empresarial | Si los supuestos del prototipo no se han probado: `supuestos-y-riesgos` (Próximamente) |
-| Ya opera automatizaciones y quiere escalar | Medir y mejorar (D) | Plugin Implementación Empresarial (Próximamente) | Para elegir qué procesos sumar: `priorizar-flujos` |
+| Tiene un prototipo y quiere llevarlo a producción | Implementar y transferir (C) | `plan-piloto-y-especificacion`, luego el plugin Implementación Empresarial | Si los supuestos del prototipo no se han probado: `supuestos-y-riesgos` y `prototipos-y-tarjetas-de-prueba` |
+| Ya opera automatizaciones y quiere escalar | Medir y mejorar (D) | Plugin Implementación Empresarial | Para elegir qué procesos sumar: `priorizar-flujos` |
 
-Si la skill recomendada está marcada **Próximamente**, dilo con claridad: explica el objetivo de esa etapa en tres líneas y ofrece avanzar conversando, sin inventar plantillas que no existen. Los entregables de las etapas A en adelante ya traen todo lo necesario para retomarlos cuando la skill esté lista.
+Si la persona solo quiere convertir una tarea propia, repetida y simple en una skill reutilizable (no diseñar un flujo de negocio), la ruta es `crear-skill-de-flujo`. Si una skill no está disponible en el entorno de la persona, dilo con claridad y ofrece avanzar conversando con los entregables que ya existen, sin inventar plantillas.
 
 ## Proceso (una pregunta principal por turno)
 

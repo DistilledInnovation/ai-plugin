@@ -1,0 +1,6 @@
+---
+max_turns: 6
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+Soy Camila, coordinadora del Instituto Aula Abierta (escuela de idiomas, 15 empleados). Quiero convertir mi resumen semanal de asistencia en una skill. Resultado: cada viernes tengo un resumen por grupo (asistentes, ausentes y quién faltó dos veces seguidas) y se lo mando a los profesores por correo. Desencadenante: el viernes por la tarde o cuando yo diga "arma el resumen". Entrada: una hoja de asistencia con una fila por alumno y por clase (grupo, fecha, presente o ausente). Pasos: abro la hoja, cuento presentes y ausentes por grupo, marco a los alumnos con dos ausencias seguidas, armo el resumen y se lo envío a cada profesor de su grupo. Quiero que lo mande solo, aunque antes lo reviso yo. A veces faltan filas de una clase y a veces un alumno aparece escrito de dos formas. No hay datos sensibles más allá de nombres de alumnos y no quiero compartir mi contraseña del correo con nadie. Ya revisé el diseño con mi directora y lo apruebo tal como te lo conté: escribe la skill y pruébala con una hoja de ejemplo inventada, sin enviar nada. Finalizar: entrégame una tabla corta con la clase de cada paso, la skill como SKILL.md y el informe de la prueba.
