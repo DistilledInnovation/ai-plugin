@@ -11,7 +11,7 @@ import comun  # noqa: E402
 
 class PruebasComun(unittest.TestCase):
     def test_frontmatter_con_bom_y_crlf(self):
-        texto = "﻿---\r\nname: a\r\ndescription: b\r\n---\r\n# x"
+        texto = "\ufeff---\r\nname: a\r\ndescription: b\r\n---\r\n# x"
         self.assertEqual(comun.leer_frontmatter(texto), {"name": "a", "description": "b"})
 
     def test_frontmatter_ausente_lanza(self):

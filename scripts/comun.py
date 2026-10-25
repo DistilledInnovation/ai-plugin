@@ -17,7 +17,7 @@ def leer_frontmatter(texto: str) -> dict[str, str]:
     Soporta valores en una linea, entre comillas y bloques `>` / `|` o lineas
     de continuacion con sangria.
     """
-    texto = texto.lstrip("﻿").replace("\r\n", "\n").replace("\r", "\n")
+    texto = texto.lstrip("\ufeff").replace("\r\n", "\n").replace("\r", "\n")
     lineas = texto.split("\n")
     if not lineas or lineas[0].strip() != "---":
         raise ValueError("no hay bloque frontmatter (---) al inicio")

@@ -13,11 +13,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import comun  # noqa: E402
+import sincronizar_bloques  # noqa: E402
 
 REGEX_NOMBRE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 REGEX_SEMVER = re.compile(r"^\d+\.\d+\.\d+(-[0-9A-Za-z.\-]+)?(\+[0-9A-Za-z.\-]+)?$")
 EXTENSIONES_PERMITIDAS = {".md", ".txt", ".json", ".yaml", ".yml", ".csv"}
-EXTENSIONES_TEXTO = EXTENSIONES_PERMITIDAS
 MAX_DESCRIPTION = 1024
 MAX_SKILL = 20000
 FRASE_USO = "Úsala cuando"
@@ -123,7 +123,7 @@ def validar_skill(skill: Path, terminos: list[str]) -> list[str]:
     return _validar_skill(Path(skill), terminos, None)
 
 
-def _cargar_json(ruta: Path, base: Path, errores: list[str]):
+def _cargar_json(ruta: Path):
     try:
         return json.loads(_leer(ruta))
     except (json.JSONDecodeError, OSError):
@@ -134,7 +134,7 @@ def _validar_plugin(plugin: Path, raiz: Path) -> tuple[list[str], str | None]:
     errores: list[str] = []
     ruta = plugin / ".claude-plugin" / "plugin.json"
     r = _rel(ruta, raiz)
-    datos = _cargar_json(ruta, raiz, errores)
+    datos = _cargar_json(ruta)
     if not isinstance(datos, dict):
         errores.append(f"{r}: plugin.json debe ser un objeto JSON válido")
         return errores, None
@@ -156,7 +156,7 @@ def _validar_marketplace(raiz: Path, plugins: list[Path], versiones: dict[str, s
     r = _rel(ruta, raiz)
     if not ruta.is_file():
         return [f"{r}: falta marketplace.json"]
-    datos = _cargar_json(ruta, raiz, errores)
+    datos = _cargar_json(ruta)
     if not isinstance(datos, dict) or not isinstance(datos.get("plugins"), list):
         return [f"{r}: marketplace.json debe tener una lista 'plugins' (JSON válido)"]
     entradas = {e.get("name"): e for e in datos["plugins"] if isinstance(e, dict)}
@@ -172,14 +172,6 @@ def _validar_marketplace(raiz: Path, plugins: list[Path], versiones: dict[str, s
                 f"{r}: marketplace version '{e.get('version')}' de '{plugin.name}' distinta de plugin.json '{versiones[plugin.name]}'"
             )
     return errores
-
-
-def validar_bloques_hook(raiz: Path) -> list[str]:
-    """Punto de enlace para la verificacion de bloques comunes (Tarea 2).
-
-    Por ahora no hace nada; la Tarea 2 lo reemplaza por la comprobacion real.
-    """
-    return []
 
 
 def validar_repo(raiz: Path, terminos: list[str], avisos: list[str] | None = None) -> list[str]:
@@ -216,10 +208,10 @@ def validar_repo(raiz: Path, terminos: list[str], avisos: list[str] | None = Non
             errores.extend(_errores_terminos(_rel(destino, raiz), _leer(destino), terminos))
         elif destino.is_dir():
             for ruta in _archivos(destino):
-                if ruta.suffix.lower() in EXTENSIONES_TEXTO:
+                if ruta.suffix.lower() in EXTENSIONES_PERMITIDAS:
                     errores.extend(_errores_terminos(_rel(ruta, raiz), _leer(ruta), terminos))
 
-    errores.extend(validar_bloques_hook(raiz))
+    errores.extend(sincronizar_bloques.verificar(raiz))
     vistos: set[str] = set()
     return [e for e in errores if not (e in vistos or vistos.add(e))]
 

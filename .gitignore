@@ -5,3 +5,4 @@ __pycache__/
 .env
 evals/results/
 plugins/*/evals/results/
+.superpowers/

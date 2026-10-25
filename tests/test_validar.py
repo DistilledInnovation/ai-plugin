@@ -125,7 +125,7 @@ class PruebasValidarSkillsYRepo(BaseRepo):
 
     def test_skill_con_bom_y_crlf_es_valida(self):
         contenido = "---\nname: skill-demo\ndescription: Guía. Úsala cuando haga falta.\n---\n# Demo\n"
-        (self.skill / "SKILL.md").write_bytes(("﻿" + contenido.replace("\n", "\r\n")).encode("utf-8"))
+        (self.skill / "SKILL.md").write_bytes(("\ufeff" + contenido.replace("\n", "\r\n")).encode("utf-8"))
         self.assertEqual(self.errores(), [])
 
     def test_plugin_sin_skills_es_advertencia_no_error(self):
@@ -204,6 +204,18 @@ class PruebasCLI(BaseRepo):
         r = self.correr()
         self.assertEqual(r.returncode, 1)
         self.assertIn(SKILL_MD + ": ", r.stdout)
+
+
+class PruebasBloquesEnValidar(BaseRepo):
+    def test_validar_reporta_bloque_desincronizado(self):
+        (self.raiz / "compartido").mkdir()
+        (self.raiz / "compartido" / "reglas.md").write_text("Una pregunta por turno.\n", encoding="utf-8")
+        md = self.skill / "SKILL.md"
+        md.write_text(
+            md.read_text(encoding="utf-8") + "\n<!-- inicio:reglas -->\neditado a mano\n<!-- fin:reglas -->\n",
+            encoding="utf-8",
+        )
+        self.afirmar_error(self.errores(), SKILL_MD, "desincronizado")
 
 
 if __name__ == "__main__":
