@@ -1,0 +1,6 @@
+---
+max_turns: 6
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+Soy Diego, de Estudio Pétalo (6 personas). Reto (RET-01): ¿Cómo podemos ayudar a que las pequeñas tiendas puedan atender sus pedidos por internet sin perder clientes por demoras? Evidencia: 5 de 6 tiendas entrevistadas contestan pedidos tarde porque los mensajes llegan por varios canales (HAL-01); 4 de 6 llevan los pedidos en cuaderno (HAL-02); 3 de 6 han perdido clientes por demoras (HAL-03). Ideas de la sesión, agrupadas: Grupo A "Un solo lugar para los mensajes" (IDE-01 bandeja única, IDE-02 respuestas rápidas, IDE-03 aviso de mensaje sin responder), 7 votos; Grupo B "Pedidos ordenados" (IDE-04 formulario de pedido, IDE-05 tablero de pedidos en papel, IDE-06 resumen diario), 5 votos; Grupo C "Cliente informado" (IDE-07 aviso de estado al cliente, IDE-08 tiempo estimado), 2 votos. Votaron 6 personas con 3 votos cada una. Decidimos seguir con A y B. Supuesto: las tiendas pagarían por esto (no lo hemos preguntado). Finalizar: entrégame los grupos con votos, el concepto fuerte de solución con los campos mínimos del libro (título, problema u oportunidad, solución, alcance, valor agregado y diferenciación), los supuestos críticos y qué debemos aprender, separando lo que es hecho de lo que supongo.

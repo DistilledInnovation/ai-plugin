@@ -31,6 +31,10 @@ Empresa inventada: **Transportes Marea Azul** (carga refrigerada regional, 65 em
 
 **Usuaria:** Me importa más lo de la confianza de los clientes. Lo de los retornos puede esperar.
 
+**Facilitador:** Anotado: el interés más alto está en la confianza de los clientes. Siguiente pregunta: ¿cuáles de estos retos son más urgentes?
+
+**Usuaria:** La confianza, sin duda: ya perdimos dos clientes y puede venir un tercero. Los retornos vacíos duelen, pero no corre prisa.
+
 ## Entregable final
 
 # Ficha de reto: Visibilidad de la carga

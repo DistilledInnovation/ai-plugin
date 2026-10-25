@@ -1,0 +1,6 @@
+---
+max_turns: 6
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+Soy Rosa, de Taller Mil Puntadas (arreglos de ropa, 4 empleados). Concepto fuerte (CON-01): recogida y entrega de prendas a domicilio con aviso por mensaje cuando están listas. Perfil del Cliente (de 7 entrevistas): 1ra tarea, tener la ropa arreglada sin perder media tarde (6 de 7); 1er dolor, no tener tiempo de ir al taller en su horario (6 de 7); 2do dolor, no saber cuándo está lista la prenda (3 de 7); 1er beneficio, recibir la prenda lista sin salir de casa (5 de 7). Mapa de valor que imagino: servicio de recogida y entrega; aviso por mensaje cuando está lista; entrega en horario acordado. Supuesto más riesgoso: que los clientes paguen un recargo por la recogida (no lo hemos preguntado). Primer cliente de prueba: Marta, clienta frecuente. Pitch ante: una dueña de boutique aliada; quiero que acepte probar el servicio con sus clientas. Finalizar: entrégame el Mapa de Valor (productos y servicios, aliviadores, creadores de beneficios), el encaje contra el Perfil del Cliente con las brechas, el prototipo rápido de menor fidelidad con su guion de prueba y el pitch A.I.D.A., separando lo que es hecho de lo que supongo.

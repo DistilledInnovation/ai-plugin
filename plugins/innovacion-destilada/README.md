@@ -40,9 +40,9 @@ Escribe la frase de arranque en tu asistente y la skill se activa sola.
 | `identificar-reto` | Convierte un problema u oportunidad en un reto "¿Cómo podemos...?" priorizado | "Tengo un problema, ayúdame a plantearlo como reto" | Disponible |
 | `investigar-y-empatizar` | Entrevistas, observación y perfil de usuario | "Quiero entender a mis clientes" | Disponible |
 | `sintetizar-y-redefinir-reto` | Hallazgos, necesidades y tensiones; reto redefinido | "Tengo muchas notas de entrevistas, ¿qué hallamos?" | Disponible |
-| `facilitar-ideacion` | Agenda y técnicas de ideación | "Prepárame una sesión de ideas" | Próximamente |
-| `construir-concepto-fuerte` | Agrupa ideas y arma un concepto fuerte | "Tenemos muchas ideas, ¿cuál sigue?" | Próximamente |
-| `disenar-prototipo` | Mapa de valor, prototipos rápidos y pitch | "Quiero hacer tangible mi concepto" | Próximamente |
+| `facilitar-ideacion` | Agenda y técnicas de ideación | "Prepárame una sesión de ideas" | Disponible |
+| `construir-concepto-fuerte` | Agrupa ideas y arma un concepto fuerte | "Tenemos muchas ideas, ¿cuál sigue?" | Disponible |
+| `disenar-prototipo` | Mapa de valor, prototipos rápidos y pitch | "Quiero hacer tangible mi concepto" | Disponible |
 | `validar-supuestos-y-mvp` | Supuestos riesgosos, MVP y tarjeta de prueba | "¿Cómo pruebo esto sin gastar mucho?" | Próximamente |
 | `probar-y-aprender` | Tablero de validación y métricas | "Ya hicimos pruebas, ¿seguimos o cambiamos?" | Próximamente |
 | `modelo-de-negocio-y-escalamiento` | Los 9 bloques y el encaje con el mercado | "Quiero armar el modelo de negocio" | Próximamente |
