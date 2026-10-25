@@ -57,7 +57,7 @@ requirements:
     options:
       - {option_id: OPC-A, description: "Tabla de casos en Dataverse con el estado del contrato y referencias a evidencias.", fit: configuration, verification: to_verify, constraints: "El historial de ejecuciones del flujo se conserva 30 días; no sirve como estado ni como evidencia."}
     decision: {status: decided, chosen_option: OPC-A, rationale: "Estado consultable por recepción y desacoplado del historial del flujo."}
-    gap: {exists: false, severity: none}
+    gap: {exists: true, description: "La tabla de casos de Dataverse aún no se probó con los once estados del contrato.", severity: low, mitigation: "Verificación pendiente: la opción elegida está marcada to_verify; el proveedor de TI la comprueba en el entorno de prueba antes de construir (checklist, paso 7)."}
     owner: Proveedor de TI
     approval_status: approved
     approved_by: Valeria (directora)
@@ -84,7 +84,7 @@ requirements:
     options:
       - {option_id: OPC-A, description: "Acciones de aprobación de Power Automate dentro del flujo; cada aprobación queda con quien aprobó.", fit: native, verification: to_verify, constraints: "La espera cuenta para el límite de 30 días (verificado)."}
     decision: {status: decided, chosen_option: OPC-A, rationale: "Las aprobaciones se resuelven en el día; no se acercan al límite."}
-    gap: {exists: true, description: "El rol aprobador de producción depende de DEC-13.", severity: low, mitigation: "Configurar el grupo 'Recepcionista de turno' cuando se apruebe DEC-13."}
+    gap: {exists: true, description: "El rol aprobador de producción depende de DEC-13, y la acción de aprobación (registro de la identidad del aprobador) está por verificar.", severity: low, mitigation: "Configurar el grupo 'Recepcionista de turno' cuando se apruebe DEC-13; el proveedor de TI verifica la acción en el entorno de prueba."}
     owner: Jefa de recepción
     approval_status: approved
     approved_by: Valeria (directora)
@@ -98,7 +98,7 @@ requirements:
     options:
       - {option_id: OPC-A, description: "Microsoft Entra ID para personas; roles de seguridad de Dataverse; identidad de servicio propia para las conexiones del flujo.", fit: configuration, verification: to_verify}
     decision: {status: decided, chosen_option: OPC-A, rationale: "La clínica ya administra sus cuentas en ese directorio (Dicho por participante)."}
-    gap: {exists: false, severity: none}
+    gap: {exists: true, description: "Roles de Entra ID y de Dataverse, e identidad de servicio de las conexiones, sin probar.", severity: low, mitigation: "Verificación pendiente: la opción elegida está marcada to_verify; el proveedor de TI la comprueba en el entorno de prueba antes de construir (checklist, paso 7)."}
     owner: Proveedor de TI
     approval_status: approved
     approved_by: Valeria (directora)
@@ -139,7 +139,7 @@ requirements:
     options:
       - {option_id: OPC-A, description: "Constancia de envío en Dataverse con la clave antes de llamar a la mensajería; no se reenvía si ya existe.", fit: configuration, verification: to_verify}
     decision: {status: proposed, chosen_option: OPC-A, rationale: "Depende de la mensajería institucional (DEC-17)."}
-    gap: {exists: true, description: "La mensajería de salida no está elegida.", severity: medium, mitigation: "Decidir DEC-17 y mapear su conector."}
+    gap: {exists: true, description: "La mensajería de salida no está elegida; la constancia de envío está por verificar.", severity: medium, mitigation: "Decidir DEC-17 y mapear su conector."}
     owner: Proveedor de TI
     approval_status: pending
     acceptance_check: "Un reintento de FUT-06 no envía un segundo mensaje."
@@ -165,7 +165,7 @@ requirements:
     options:
       - {option_id: OPC-A, description: "Interruptor en una tabla de configuración que el flujo consulta antes de FUT-01 y FUT-04; solo la jefa de recepción puede cambiarlo.", fit: configuration, verification: to_verify}
     decision: {status: decided, chosen_option: OPC-A, rationale: "Apagado inmediato sin tocar el flujo."}
-    gap: {exists: false, severity: none}
+    gap: {exists: true, description: "Que el flujo consulte el interruptor antes de FUT-01 y FUT-04 y que solo la jefa pueda cambiarlo, sin probar.", severity: low, mitigation: "Verificación pendiente: la opción elegida está marcada to_verify; el proveedor de TI la comprueba en el entorno de prueba antes de construir (checklist, paso 7)."}
     owner: Jefa de recepción
     approval_status: approved
     approved_by: Valeria (directora)

@@ -140,7 +140,7 @@ steps:
     actor: ACT-05
     trigger: {type: previous_step, description: "Urgencia descartada por una persona.", after_step: FUT-05}
     inputs:
-      - {name: confirmed_patient, description: "Paciente confirmado.", type: record, required: true, sensitivity: sensitive}
+      - {name: confirmed_patient, description: "Paciente confirmado: por coincidencia exacta en FUT-02 o por recepción en FUT-03.", type: record, required: true, sensitivity: sensitive}
     outputs:
       - {name: proposal_sent, description: "Mensaje con tres horarios libres.", type: text, required: true, sensitivity: personal}
     authority_level: 2
@@ -161,7 +161,7 @@ approval_policies:
     condition: "Siempre, mientras dure el piloto, antes de enviar la propuesta."
 ```
 
-(El archivo completo trae los ocho pasos `FUT-01` a `FUT-08`, seis actores, once estados (`ST-11` es la espera de una coincidencia dudosa), cuatro políticas de aprobación, seis evidencias, cuatro métricas y seis pruebas de aceptación.)
+(El archivo completo trae los ocho pasos `FUT-01` a `FUT-08`, seis actores, once estados (`ST-11` es la espera de una coincidencia dudosa; un paciente sin ficha o con una solicitud abierta va a la cola de revisión `ST-09`), cuatro políticas de aprobación, seis evidencias, cuatro métricas y seis pruebas de aceptación.)
 
 | Requisito del esquema | Cómo cumple el ejemplo |
 |---|---|

@@ -69,7 +69,8 @@ flowchart LR
   O --> R[CMP-05 Reglas y plantillas]
   O --> B[CMP-06 Aprobaciones y revisión]
   B --> O
-  O -->|solo tras APR-02| AD[CMP-07 Adaptador del sistema de gestión]
+  O -->|lectura de fichas y horarios| AD[CMP-07 Adaptador del sistema de gestión]
+  O -->|crear cita: solo tras APR-02| AD
   O -->|solo tras APR-01 o APR-02| M[CMP-08 Mensajería de salida]
   M --> P
   O --> AU[CMP-09 Auditoría]
@@ -80,11 +81,17 @@ flowchart LR
 |---|---|---|---|---|
 | Paciente | `CMP-01` | Solicitud o respuesta | `sensitive` | — |
 | `CMP-01` | `CMP-02` | Caso nuevo o respuesta asociada | `sensitive` | — |
-| `CMP-02` | `CMP-04` | Texto minimizado de la solicitud | `sensitive` | Solo si el modo manual está apagado |
+| `CMP-02` | `CMP-03` | Estado del caso y evidencias (escritura) | `sensitive` | En cada cambio de estado |
+| `CMP-03` | `CMP-02` | Estado guardado para retomar el caso (lectura) | `sensitive` | Al reanudar o tras un reinicio |
+| `CMP-02` | `CMP-04` | Texto minimizado de la solicitud | `sensitive` | Solo si la parte con IA está encendida (`CMP-10`) |
 | `CMP-04` | `CMP-02` | Datos extraídos o marca, en campos con tipo | `sensitive` | El orquestador valida la forma |
-| `CMP-02` | `CMP-06` | Lo que hay que aprobar o revisar | `sensitive` | `APR-01` a `APR-04`, `FUT-03`, `FUT-05` |
-| `CMP-02` | `CMP-07` | Lectura de ficha y horarios; creación de cita | `personal` | Crear cita solo tras `APR-02` |
+| `CMP-02` | `CMP-05` | Datos del paciente confirmado y tipo de cita, para buscar, calcular horarios y armar la plantilla | `personal` | `FUT-02` y `FUT-06` |
+| `CMP-02` | `CMP-06` | Lo que hay que aprobar o revisar | `sensitive` | `APR-01` a `APR-04`, `FUT-03`, `FUT-05`, casos en `ST-09` y `ST-11` |
+| `CMP-06` | `CMP-02` | Decisión de la persona (aprobó, rechazó, corrigió) con su identidad | `sensitive` | Cada aprobación o revisión |
+| `CMP-02` | `CMP-07` | Lectura de ficha y horarios | `personal` | Siempre de solo lectura (`FUT-02`, `FUT-06`) |
+| `CMP-02` | `CMP-07` | Creación de cita | `personal` | Solo tras `APR-02` (`FUT-08`) |
 | `CMP-02` | `CMP-08` | Propuesta o confirmación con plantilla | `personal` | Solo tras `APR-01` (propuesta) o `APR-02` (confirmación) |
+| `CMP-08` | Paciente | Mensaje con la propuesta o la confirmación | `personal` | Al contacto de la ficha del paciente confirmado |
 | `CMP-02` | `CMP-09` | Quién, qué, cuándo, versión | `internal` | Siempre |
 | `CMP-10` | `CMP-02` | Encendido o apagado de la parte con IA | — | Jefa de recepción |
 
@@ -161,8 +168,8 @@ Detalle completo en la tabla de trazabilidad (abajo). Sin elementos del contrato
 | Paso | Tipo | Efecto externo | Ejecuta | Apoyo | Aprobación | Idempotencia | Evidencia | Éxito / falla |
 |---|---|---|---|---|---|---|---|---|
 | `FUT-01` | ai_assisted | No | `CMP-04` | `CMP-02`, `CMP-06` | `APR-04` | Clave natural `request_id` | `EVD-01` | `ST-02` / `ST-09` |
-| `FUT-02` | deterministic | No | `CMP-05` | `CMP-07` (lectura) | No aplica | No aplica | `EVD-02` | `ST-03` o `ST-11` / `ST-09` |
-| `FUT-03` | human_task | No | `CMP-06` | — | No aplica | No aplica | `EVD-02` | `ST-03` / `ST-09` |
+| `FUT-02` | deterministic | No | `CMP-05` | `CMP-07` (lectura) | No aplica | No aplica | `EVD-02` | `ST-03` (coincidencia exacta, emite `confirmed_patient`) o `ST-11` (dudosa) / `ST-09` (sin ficha, variante D; o solicitud abierta, `EXC-04`) |
+| `FUT-03` | human_task | No | `CMP-06` | — | No aplica | No aplica | `EVD-02` | `ST-03` (emite `confirmed_patient`) / `ST-09` |
 | `FUT-04` | ai_assisted | No | `CMP-04` | `CMP-02` | No aplica | No aplica | `EVD-03` | `ST-04` / `ST-09` |
 | `FUT-05` | decision | No | `CMP-06` | — | `APR-03` | No aplica | `EVD-03` | `ST-05` o `ST-10` / `ST-09` |
 | `FUT-06` | deterministic | Sí | `CMP-05`, `CMP-08` | `CMP-06` | `APR-01` | Clave `request_id` + `proposal_version` | `EVD-04` | `ST-06` / `ST-09` |

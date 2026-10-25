@@ -30,6 +30,8 @@ Empresa inventada: **Clínica Dental Sonrisa Norte** (clínica privada pequeña:
 
 Flujo: Agendar citas (`FLU-01`). Contrato: 2026-11-03. Plan: borrador 1. Mapa: `MAP-FLU-01-MS`. Fecha: 2026-12-16. Revisa: líder técnico del proveedor de TI. Aprueba: Valeria y la administradora. Estado: Borrador.
 
+> Esta revisión no sustituye una revisión legal y de cumplimiento: el flujo trata datos de salud, así que antes de conectar datos reales hace falta que un asesor legal en protección de datos personales y de salud revise la base legal, el consentimiento, el contrato con el proveedor del modelo y la retención (`DEC-24`, la encarga Valeria).
+
 ### 1. Activos y límites de confianza
 
 | Activo | Sensibilidad | Dónde vive | Quién responde | Cruza |
@@ -63,7 +65,7 @@ Flujo: Agendar citas (`FLU-01`). Contrato: 2026-11-03. Plan: borrador 1. Mapa: `
 | Jefa de recepción | Casos, excepciones, métricas | Reglas de agenda y plantillas (con versión) | Cambios de reglas; encender la IA | Interruptor de modo manual | Cambiar instrucciones del modelo |
 | Odontóloga coordinadora clínica | Marcas de urgencia | Criterios de urgencia | Cambios de criterios | — | Operar el flujo |
 | Administradora | Auditoría | — | Modelo y datos (con Valeria); exportaciones | Retención | Aprobar citas |
-| Proveedor de TI | Configuración y registros técnicos | Definiciones del flujo en el entorno de prueba | — | Entornos, conexiones, almacén de secretos | Aprobar acciones de negocio; leer secretos en producción sin registro |
+| Proveedor de TI | Configuración y registros técnicos | Definiciones del flujo en el entorno de prueba | — | Entornos y conexiones; administra el almacén de secretos (crea y rota secretos) sin leer sus valores en producción | Aprobar acciones de negocio; leer valores de secretos de producción |
 | Identidad de servicio del conector (`CMP-07`) | Fichas (datos de contacto) y horarios | Crear citas | — | — | Borrar o modificar citas; leer historias clínicas |
 | Componente de IA (`CMP-04`) | Solo el texto enmascarado que recibe | — | — | — | Llamar herramientas, escribir, enviar |
 | Mensajería (`CMP-08`) | Plantillas aprobadas | Enviar al contacto del paciente confirmado | — | — | Enviar texto libre o sin aprobación |
@@ -139,12 +141,14 @@ Estas pruebas pasan a `pruebas-y-evaluacion` (Próximamente); mientras tanto, qu
 | `DEC-22` | Matriz de aprobación de operación (sección 6) | Que el proveedor de TI apruebe los cambios técnicos | Valeria | 2026-12-16 | Aprobada por Valeria |
 | `DEC-23` | Revisión trimestral de permisos | Revisión anual | Administradora | Para 2026-12-23 | Pendiente |
 | Riesgo residual | Nombre y motivo de consulta llegan a un modelo autorizado (`AME-02`) | — | Administradora | — | Pendiente de aceptación con `DEC-20` |
+| `DEC-24` | Revisión legal y de cumplimiento sobre el tratamiento de datos de salud (base legal, consentimiento de los pacientes, contrato de tratamiento con el proveedor del modelo, retención) antes de conectar datos reales | Seguir sin esa revisión | Valeria, que la encarga a un asesor legal en protección de datos personales y de salud; la administradora coordina | Para 2026-12-23 | Pendiente |
 
 ### 10. Pendientes
 
 | Pendiente | Quién decide | Para cuándo | Bloquea |
 |---|---|---|---|
 | `DEC-20` y `DEC-21` | Administradora | 2026-12-23 | Conectar datos reales al modelo (`REQ-04`, `REQ-12`) |
+| `DEC-24` revisión legal y de cumplimiento (datos de salud) | Valeria, con un asesor legal en protección de datos | 2026-12-23 | Conectar datos reales y salir a producción |
 | `DEC-12` retención | Administradora | 2026-12-18 | Auditoría definitiva |
 | Autorización de datos reales en producción (`DEC-08`) | Administradora | Por definir con la administradora | Salida a producción |
 | Rotación de secretos | Proveedor de TI | Por definir con el proveedor de TI | Salida a producción |
@@ -154,6 +158,8 @@ Estas pruebas pasan a `pruebas-y-evaluacion` (Próximamente); mientras tanto, qu
 ## Lo que se ve en este ejemplo
 
 - La pregunta sobre los datos al modelo llevó a una decisión explícita de la administradora, no a una suposición técnica.
+- Como hay datos de salud, la revisión deja pedida una revisión legal y de cumplimiento con quién la hace (`DEC-24`); la revisión técnica no la sustituye.
+- El proveedor de TI administra el almacén de secretos pero no lee sus valores en producción; solo las identidades de servicio los leen.
 - Se enmascara lo que las reglas detectan bien; lo que no, queda sin anonimizar como decisión con riesgo residual, y `FUT-04` recibe solo el motivo.
 - La matriz suma las acciones de operación que el contrato no cubría, con aprobador distinto de quien propone; apagar la IA no requiere permiso.
 - Ningún secreto aparece en el documento: solo su función y dónde vive.

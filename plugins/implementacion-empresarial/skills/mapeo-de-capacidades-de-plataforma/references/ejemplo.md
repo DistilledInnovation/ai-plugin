@@ -39,19 +39,21 @@ Pendiente por validar: licencias para conectores premium, Dataverse y Copilot St
 
 Mapa `MAP-FLU-01-MS`, perfil Microsoft (`DEC-18`), perfil verificado el 2026-10-25. Archivo completo: `assets/capability-map.yaml`.
 
+El mapa se entregó el 2026-12-11 con todos los requisitos en `pending`. **Actualizado tras la revisión de Valeria del 2026-12-14:** la columna Aprobación refleja lo que ella aprobó ese día.
+
 | Requisito | Opción elegida | Ajuste | Verificación | Brecha | Dueño | Aprobación |
 |---|---|---|---|---|---|---|
 | `REQ-01` Orquestación durable | Flujo de nube de Power Automate (el agente con orquestación generativa se descartó: no es motor durable) | configuration | verified (límite de 30 días por ejecución) | Baja: casos de más de 30 días pasan a revisión antes de vencer | Proveedor de TI | Aprobado |
 | `REQ-02` Esperas con tiempo máximo | Espera con vencimiento dentro del flujo | configuration | to_verify | Media: plazo (`DEC-11`) y hora del aviso (`DEC-16`) sin decidir | Proveedor de TI | Pendiente |
-| `REQ-03` Estado del caso | Tabla de casos en Dataverse | configuration | to_verify | Ninguna | Proveedor de TI | Aprobado |
+| `REQ-03` Estado del caso | Tabla de casos en Dataverse | configuration | to_verify | Baja: verificación pendiente en el entorno de prueba | Proveedor de TI | Aprobado |
 | `REQ-04` Modelo acotado | Propuesta: herramienta de prompt o servicio aprobado | configuration / custom_build | to_verify | Media: modelo permitido sin decidir | Proveedor de TI | Pendiente |
-| `REQ-05` Aprobaciones | Acciones de aprobación del flujo | native | to_verify | Baja: rol aprobador depende de `DEC-13` | Jefa de recepción | Aprobado |
-| `REQ-06` Identidad | Entra ID, roles de Dataverse, identidad de servicio | configuration | to_verify | Ninguna | Proveedor de TI | Aprobado |
+| `REQ-05` Aprobaciones | Acciones de aprobación del flujo | native | to_verify | Baja: rol aprobador depende de `DEC-13`; verificación pendiente | Jefa de recepción | Aprobado |
+| `REQ-06` Identidad | Entra ID, roles de Dataverse, identidad de servicio | configuration | to_verify | Baja: verificación pendiente en el entorno de prueba | Proveedor de TI | Aprobado |
 | `REQ-07` Secretos | Variables de entorno de tipo secreto con Azure Key Vault | configuration | verified | Ninguna | Proveedor de TI | Aprobado |
 | `REQ-08` Cita sin duplicados | Constancia con clave única + consulta previa (`DEC-19`) | custom_build | to_verify | **Media** (ver abajo) | Proveedor de TI | Pendiente |
 | `REQ-09` Propuesta sin duplicados | Constancia de envío con clave | configuration | to_verify | Media: mensajería sin elegir (`DEC-17`) | Proveedor de TI | Pendiente |
 | `REQ-10` Evidencia y auditoría | Tabla de evidencias + auditoría de Dataverse | configuration | verified | Baja: retención (`DEC-12`) | Administradora | Aprobado |
-| `REQ-11` Modo manual | Interruptor en tabla de configuración | configuration | to_verify | Ninguna | Jefa de recepción | Aprobado |
+| `REQ-11` Modo manual | Interruptor en tabla de configuración | configuration | to_verify | Baja: verificación pendiente en el entorno de prueba | Jefa de recepción | Aprobado |
 | `REQ-12` Minimizar datos al modelo | Enmascarar documento y teléfono antes del modelo | custom_build | to_verify | Media: se decide en seguridad | Administradora | Pendiente |
 | `REQ-13` Adaptador del sistema de gestión | Conector personalizado, solo operaciones del contrato | custom_build | to_verify | Media: interfaz sin confirmar | Proveedor de TI | Aprobado |
 | `REQ-14` Pruebas de aceptación | Entorno de prueba separado con datos ficticios | configuration | to_verify | Baja | Proveedor de TI | Aprobado |
@@ -85,7 +87,7 @@ Lo que **no** se escribió: "Power Automate garantiza que no se dupliquen citas"
 | 4 | Estado y evidencias en tablas, no en el historial de ejecuciones | Sí (`REQ-03`, `REQ-10`) |
 | 5 | Secretos solo en el almacén de secretos | Sí (`REQ-07`) |
 | 6 | Cada efecto externo con aprobación previa y clave de idempotencia | Sí en el diseño; `REQ-08` y `REQ-09` pendientes de aprobación |
-| 7 | Todo lo "(verificar)" verificado o como brecha con dueño | Sí: doce opciones `to_verify`, cada una con dueño |
+| 7 | Todo lo "(verificar)" verificado o como brecha con dueño | **No completo**: ninguna de las doce opciones `to_verify` está verificada todavía; cada una quedó registrada como brecha con dueño (el proveedor de TI), que las verifica en el entorno de prueba antes de construir. Las aprobadas lo están con esa brecha abierta |
 | 8 | Pruebas de aceptación ejecutables con datos ficticios | Planeado (`REQ-14`) |
 | 9 | **Aprobación del mapa completo** | **Pendiente**: Valeria aprobó nueve requisitos el 2026-12-14; quedan `REQ-02`, `REQ-04`, `REQ-08`, `REQ-09` y `REQ-12` |
 

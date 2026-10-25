@@ -31,7 +31,7 @@ Resultados del cierre del piloto (Hecho, piloto; muestra pequeña, indicativos):
 
 **Líder técnico:** Valeria lo decidió el 4 de diciembre. Dijo que pasa, pero que la administradora todavía tiene que autorizar el uso de datos reales en producción y que las reglas de agenda de enero tienen que estar escritas antes de salir.
 
-**Facilitador:** Entonces la puerta **pasa con condiciones** (`DEC-08`). Las condiciones quedan en el registro con dueño y fecha; la autorización de datos bloquea cualquier conexión con datos reales hasta que exista. ¿La plataforma ya la decidió la clínica, o es una de las decisiones que tenemos que tomar?
+**Facilitador:** Entonces la puerta **pasa con condiciones** (`DEC-08`). Lo registro con lo que no se cumplió: el criterio de éxito era 3 minutos o menos y el piloto dio 3,4 (Hecho, piloto, muestra pequeña); Valeria lo aceptó y la meta de 3 minutos se vuelve a medir en producción. Las condiciones quedan en el registro con dueño y fecha; la autorización de datos bloquea cualquier conexión con datos reales hasta que exista. ¿La plataforma ya la decidió la clínica, o es una de las decisiones que tenemos que tomar?
 
 ## Turno 4
 
@@ -48,7 +48,7 @@ Resultados del cierre del piloto (Hecho, piloto; muestra pequeña, indicativos):
 ## Entregable: resumen de cinco puntos
 
 1. Hay un contrato válido de `FLU-01` con madurez `pilot`; pasa la revisión con tres valores por definir. (Evidencia)
-2. La puerta de entrada pasa con condiciones: autorización de datos para producción y reglas de agenda de enero (`DEC-08`, Decisión de Valeria).
+2. La puerta de entrada pasa con condiciones: autorización de datos para producción y reglas de agenda de enero; el tiempo por solicitud (3,4 minutos) no alcanzó el umbral de 3 minutos y Valeria lo aceptó (`DEC-08`, Decisión de Valeria).
 3. Ruta completa; la plataforma se decide en el mapeo de capacidades (`DEC-09`). Que la clínica use un proveedor de nube para correo es Dicho por participante, no una decisión.
 4. Hay un cambio al contrato: el aprobador de `APR-01` a `APR-04` pasa de "Recepcionista del piloto" a "Recepcionista de turno" (`DEC-13`, pendiente de la jefa de recepción como dueña del contrato).
 5. Incertidumbre principal: los valores del cliente (plazo de espera, retención) y la autorización de datos; ninguno bloquea la arquitectura lógica, todos bloquean la salida a producción.
@@ -59,7 +59,7 @@ Flujo: Agendar citas (`FLU-01`). Contrato: `workflow-contract.yaml` (madurez `pi
 
 | ID | Decisión | Alternativas consideradas | Dueño | Fecha | Aprobación | Procedencia | Toca |
 |---|---|---|---|---|---|---|---|
-| `DEC-08` | La puerta de entrada a la etapa C pasa con condiciones: autorización de datos para producción (`RIE-06`) y reglas de agenda de enero escritas antes de salir (`RIE-05`) | Pasar sin condiciones; repetir el piloto | Valeria | 2026-12-04 | Aprobada por Valeria | Decisión | `RET-01`, `RIE-05`, `RIE-06` |
+| `DEC-08` | La puerta de entrada a la etapa C pasa con condiciones: autorización de datos para producción (`RIE-06`) y reglas de agenda de enero escritas antes de salir (`RIE-05`). Criterio no cumplido y aceptado: 3,4 minutos por solicitud frente al umbral de 3 o menos (piloto, 20 solicitudes); la meta se mide de nuevo en producción | Pasar sin condiciones; repetir el piloto | Valeria | 2026-12-04 | Aprobada por Valeria | Decisión | `RET-01`, `RIE-05`, `RIE-06` |
 | `DEC-09` | Ruta completa; la plataforma se decide en el mapeo de capacidades | Elegir ya el proveedor que usan para correo | Valeria | 2026-12-07 | Aprobada por Valeria | Decisión | Todo el contrato |
 | `DEC-10` | Alcance inicial de producción: variante A, por mensaje y formulario; variantes B, C y D siguen en la cola de revisión | Ampliar a todas las variantes | Valeria | 2026-12-07 | Aprobada por Valeria | Decisión | `FUT-01`, `extensions.pilot_scope` |
 | `DEC-11` | Plazo de espera de la respuesta del paciente en `FUT-07` | 24 horas; 48 horas; hasta el día anterior a la cita | Jefa de recepción | Para 2026-12-11 | Pendiente | Pendiente por validar | `FUT-07` |
@@ -97,6 +97,7 @@ puerta_de_entrada:
   condiciones:
     - "Autorización de datos reales para producción (administradora, RIE-06)"
     - "Reglas de agenda de enero escritas antes de salir (jefa de recepción, RIE-05)"
+    - "Criterio de 3 minutos no alcanzado en el piloto (3,4); aceptado por Valeria y se vuelve a medir en producción"
 ruta: completa
 plataforma:
   estado: por decidir

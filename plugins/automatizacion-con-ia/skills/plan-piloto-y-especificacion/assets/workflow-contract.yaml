@@ -71,9 +71,11 @@ steps:
       - {name: extracted_data, description: "Datos leídos de la solicitud.", type: record, required: true, sensitivity: sensitive}
     outputs:
       - {name: patient_match, description: "Coincidencia exacta, dudosa o sin ficha, y si ya hay una solicitud abierta del mismo paciente.", type: record, required: true, sensitivity: sensitive}
+      - {name: confirmed_patient, description: "Paciente identificado por coincidencia exacta y sin solicitud abierta; solo existe en ese caso.", type: record, required: false, sensitivity: sensitive}
     business_rules:
       - "Buscar por documento y teléfono (SUP-05)."
-      - "Si ya hay una solicitud abierta del mismo paciente, no se abre otra (EXC-04)."
+      - "Si ya hay una solicitud abierta del mismo paciente, no se abre otra: el caso va a la cola de revisión (EXC-04)."
+      - "Un paciente sin ficha es la variante D, fuera del piloto: el caso va a la cola de revisión."
     authority_level: 3
     guardrails: [GRD-02]
     external_effect: false
@@ -83,8 +85,10 @@ steps:
     evidence: [EVD-02]
     extensions:
       branches:
-        - {condition: "Coincidencia exacta y sin solicitud abierta", next_state: ST-03, next_step: FUT-04}
-        - {condition: "Coincidencia dudosa o paciente sin ficha", next_state: ST-11, next_step: FUT-03}
+        - {condition: "Coincidencia exacta y sin solicitud abierta (emite confirmed_patient)", next_state: ST-03, next_step: FUT-04}
+        - {condition: "Coincidencia dudosa", next_state: ST-11, next_step: FUT-03}
+        - {condition: "Coincidencia exacta con una solicitud abierta del mismo paciente (EXC-04, AT-04)", next_state: ST-09}
+        - {condition: "Paciente sin ficha (variante D, fuera del piloto)", next_state: ST-09}
 
   - step_id: FUT-03
     name: Resolver coincidencias dudosas
@@ -94,7 +98,9 @@ steps:
     inputs:
       - {name: patient_match, description: "Coincidencia dudosa a resolver.", type: record, required: true, sensitivity: sensitive}
     outputs:
-      - {name: confirmed_patient, description: "Paciente confirmado por una persona.", type: record, required: true, sensitivity: sensitive}
+      - {name: confirmed_patient, description: "Paciente confirmado por una persona cuando la coincidencia era dudosa.", type: record, required: true, sensitivity: sensitive}
+    business_rules:
+      - "Si la persona concluye que el paciente no tiene ficha o que ya hay una solicitud abierta, el caso va a la cola de revisión (ST-09)."
     authority_level: 0
     external_effect: false
     success_state: ST-03
@@ -154,7 +160,7 @@ steps:
     actor: ACT-05
     trigger: {type: previous_step, description: "Urgencia descartada por una persona.", after_step: FUT-05}
     inputs:
-      - {name: confirmed_patient, description: "Paciente confirmado.", type: record, required: true, sensitivity: sensitive}
+      - {name: confirmed_patient, description: "Paciente confirmado: por coincidencia exacta en FUT-02 o por recepción en FUT-03.", type: record, required: true, sensitivity: sensitive}
       - {name: appointment_type, description: "Tipo de cita pedido.", type: text, required: true, sensitivity: internal}
     outputs:
       - {name: proposal_sent, description: "Mensaje con tres horarios libres según las reglas de agenda.", type: text, required: true, sensitivity: personal}
@@ -202,7 +208,7 @@ steps:
     trigger: {type: previous_step, description: "Horario aceptado por el paciente.", after_step: FUT-07}
     inputs:
       - {name: accepted_slot, description: "Horario aceptado.", type: record, required: true, sensitivity: personal}
-      - {name: confirmed_patient, description: "Paciente confirmado.", type: record, required: true, sensitivity: sensitive}
+      - {name: confirmed_patient, description: "Paciente confirmado: por coincidencia exacta en FUT-02 o por recepción en FUT-03.", type: record, required: true, sensitivity: sensitive}
     outputs:
       - {name: appointment_record, description: "Cita registrada en la agenda y confirmación enviada.", type: record, required: true, sensitivity: personal}
     business_rules:
