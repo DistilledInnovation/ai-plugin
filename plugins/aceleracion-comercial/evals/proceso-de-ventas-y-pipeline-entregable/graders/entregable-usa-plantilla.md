@@ -1,0 +1,6 @@
+---
+type: llm
+weight: 2
+---
+
+The user asked to finish ("Finalizar"), so the agent delivers in Spanish: (1) a to-be sales process as a Mermaid diagram with an equivalent table, from the first contact to the first service and the recurring agreement; (2) pipeline stages with stable IDs (ETA-01...), each with an objective entry rule (a verifiable fact, not a feeling), a mandatory data field, an exit, a responsible person among the three the user named and a maximum time, adapted to a short sales cycle of about 12 days (it may merge stages); (3) a qualification rule using simplified BANT (budget, authority, need, timing) with a written decision rule (qualify, nurture, discard) and a REG-nn id, treating MEDDICC as optional and not needed for this simple sale (it may say so); (4) rules such as a dated next step on every open opportunity, a mandatory loss reason and a stalled threshold; (5) a short sales manual that a newcomer could follow. It separates Hecho (what the user described) from Supuesto and Pendiente por validar, does not recommend or claim features of specific CRM or sales tools (a spreadsheet may be mentioned only as a format), says that `crm-y-tableros` is Próximamente if it mentions the next stage, and does not invent data. Missing the entry rules per stage, the BANT rule, the responsables or the manual is a FAIL.

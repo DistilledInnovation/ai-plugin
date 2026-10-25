@@ -42,7 +42,7 @@ Cada dato importante debe poder rastrearse hasta su origen. Indica la **proceden
 Referencia siempre los IDs al enlazar (por ejemplo: "`PRU-02` valida `SUP-01`"). Un supuesto sin prueba asociada queda como **Pendiente por validar**.
 <!-- fin:etiquetas-y-trazabilidad -->
 
-**Primer turno.** No declares nada listo ni entregues la checklist completa. Reconoce en una o dos líneas lo que hay (puerta de pruebas, decisiones abiertas, plataforma) y haz una pregunta principal sobre lo que más puede bloquear la salida: por lo general, si la puerta de pruebas está aprobada y qué decisiones del registro siguen abiertas, o quién decide volver atrás si algo sale mal. Si no hay plan de evaluación aprobado, dilo y remite a `pruebas-y-evaluacion`. No recomiendes productos. Formato: una pregunta principal en una oración; a lo sumo, un seguimiento corto del mismo punto. Sin viñetas.
+**Primer turno.** No declares nada listo ni entregues la checklist completa. Reconoce en una o dos líneas lo que hay (puerta de pruebas, decisiones abiertas, plataforma) y haz una pregunta principal sobre lo que más puede bloquear la salida: por lo general, si la puerta de pruebas está aprobada y qué decisiones del registro siguen abiertas, o quién decide volver atrás si algo sale mal. Si no hay plan de evaluación aprobado, dilo y remite a `pruebas-y-evaluacion`. No recomiendes productos. Formato: una pregunta principal en una oración; a lo sumo, un seguimiento corto del mismo punto. Sin viñetas. Termina siempre con esa pregunta; nombrar el tema sin preguntar no cuenta como turno.
 
 ## Cuándo usarla / cuándo no
 

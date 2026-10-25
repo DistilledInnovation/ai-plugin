@@ -1,0 +1,40 @@
+# Estado del proyecto comercial
+# Actualízalo en cada turno en que cambie algo. IDs estables; no los reutilices.
+organizacion: ""             # nombre corto
+actualizado: ""              # fecha AAAA-MM-DD
+modalidad: A                 # A estructurar | B validar y lanzar | C colectivo o sector
+etapa: 0                     # 0 a 7 (primera etapa sin criterio de salida cumplido)
+oferta_principal: ""         # qué se vende, o "pendiente"
+meta_comercial: ""           # línea base → meta con plazo, o "pendiente"
+segmentos:
+  - id: SEG-01
+    nombre: ""
+    prioridad: ""            # prioritario | explorar | descartado
+icp:
+  - id: ICP-01
+    segmento: SEG-01
+    estado: ""               # borrador | acordado
+evidencia:
+  - id: HAL-01
+    dato: ""
+    procedencia: ""          # Dicho por participante | Evidencia | Observación del facilitador
+supuestos:
+  - id: SUP-01
+    afirmacion: ""
+    prueba: "pendiente por validar"   # o el ID de la prueba (PRU-01)
+decisiones:
+  - id: DEC-01
+    decision: ""
+    quien: ""
+riesgos:
+  - id: RIE-01
+    riesgo: ""
+    impacto: ""
+    mitigacion: ""
+etapas_cerradas:
+  - etapa: 0
+    fecha: ""
+    criterio: ""             # evidencia de que se cumplió el criterio de salida
+ciclos_abiertos: []          # 7→1 aprendizaje de mercado | 7→3 fricción de proceso | 7→4 mejoras de herramientas
+pendientes_por_validar: []
+siguiente_skill: ""
