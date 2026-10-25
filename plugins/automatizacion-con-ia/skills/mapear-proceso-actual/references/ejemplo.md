@@ -81,7 +81,10 @@ Tiempo total de trabajo: 6 minutos, igual a la línea base `HAL-01` (medida en 2
 flowchart TD
   I([Llega una solicitud de cita]) --> P1[PAS-01 Recibir la solicitud]
   P1 --> P2[PAS-02 Identificar al paciente y buscar su ficha]
-  P2 --> P3{PAS-03 D1 ¿Parece una urgencia?}
+  P2 --> D0{¿Tiene ficha?}
+  D0 -- No, paciente nuevo --> E1[EXC-01 Crear la ficha en el momento]
+  E1 --> P3{PAS-03 D1 ¿Parece una urgencia?}
+  D0 -- Sí --> P3
   P3 -- Sí --> E2[EXC-02 Avisar al odontólogo de turno y llamar al paciente]
   E2 --> F2([Fin: se atiende como urgencia, fuera de este flujo])
   P3 -- No --> P4[PAS-04 Revisar disponibilidad del consultorio y del profesional]
@@ -99,7 +102,8 @@ flowchart TD
 |---|---|---|
 | Inicio | Llega una solicitud | `PAS-01` |
 | `PAS-01` | | `PAS-02` |
-| `PAS-02` | | `PAS-03` |
+| `PAS-02` | Ficha encontrada | `PAS-03` |
+| `PAS-02` | Paciente nuevo sin ficha | `EXC-01`, luego `PAS-03` |
 | `PAS-03` (`D1`) | Parece una urgencia | `EXC-02`, luego Fin (se atiende como urgencia) |
 | `PAS-03` (`D1`) | No parece urgencia | `PAS-04` |
 | `PAS-04` | | `PAS-05` |

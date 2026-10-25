@@ -125,7 +125,7 @@ Supuestos a probar: `SUP-04` (los mensajes y el formulario traen datos suficient
 | Tiempo de trabajo por solicitud | 6 min (`HAL-01`, medido en 20 solicitudes) | Meta del reto: 3 min | Medir 20 solicitudes con el flujo nuevo |
 | Espera del paciente | Minutos a horas por mensaje; promedio No sé | Hipótesis: baja porque recibe tres opciones en la primera respuesta | Medir el tiempo hasta la primera respuesta en 20 solicitudes |
 | Errores y duplicados | Unas 4 de cada 100 (`SUP-01`, Dicho por participante, sin contar) | Meta del reto: 1 de cada 100 | Contar una semana de citas corregidas antes y durante el piloto |
-| Experiencia del paciente | La confirmación llega el mismo día | No debe empeorar; hipótesis: mejora si recibe horarios en la primera respuesta | Revisar el tiempo hasta la confirmación |
+| Experiencia del paciente | La confirmación llega el mismo día (Dicho por participante, en `RET-01`) | No debe empeorar; hipótesis: mejora si recibe horarios en la primera respuesta | Revisar el tiempo hasta la confirmación |
 | Experiencia de recepción | Teclea cada solicitud dos veces y revisa duplicados al final del día | Hipótesis: dedica más tiempo a atender a quienes llegan | Preguntar a las dos recepcionistas tras el piloto |
 | Controles | La jefa mira la agenda "a veces" | Recepción aprueba envío y registro; casos dudosos a revisión | Contar cuántos casos pasan a revisión |
 | Esfuerzo de cambio | Ninguno | Medio: formato común, reglas de agenda por escrito, nuevo hábito de aprobar | Observar la primera semana |

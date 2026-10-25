@@ -19,6 +19,7 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 
 ### Cambiado
 - La regla de facilitación de preguntas se relaja: una pregunta principal por turno, con hasta dos seguimientos breves del mismo punto o una disyuntiva; nunca una lista de preguntas sin relación. Se ajustan los graders de primer turno, el eval `disenar-prototipo-entregable` (ahora el mensaje trae escenario, tarea y criterio de éxito) y se quitan las frases "si esa skill aún no está disponible" porque las 12 skills existen.
+- Automatización con IA: los evals de `mapear-proceso-actual`, `disenar-proceso-futuro`, `elegir-patron-y-autonomia` y `canvas-de-automatizacion` pasan de un dominio de pedidos y bodega a una veterinaria ficticia (aviso de resultados de laboratorio), y el resto de los evals evita flujos de pedido, bodega o cobro. Ajustes de ejemplos: el nivel de autoridad de `CAP-07` coincide entre el canvas y la decisión de patrón; la escalera distingue el nivel más alto concedido del nivel de referencia del piloto y se aplica por analogía a las capacidades de reglas; el nombre del equipo es el mismo en todo el canvas; la línea base de confirmación el mismo día lleva su procedencia; el diagrama del proceso actual incluye la rama `EXC-01`.
 
 ### Seguridad
 - La publicación falla si el secreto `TERMINOS_PROHIBIDOS` está vacío o si la versión del tag no coincide con los manifiestos.

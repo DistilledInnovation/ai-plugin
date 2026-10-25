@@ -21,7 +21,9 @@ Qué puede hacer la IA por sí sola y qué le corresponde a una persona. **Los p
 |---|---|---|---|---|
 | CAP-01 | FUT-__ | | | |
 
-Nivel del flujo en el piloto (el más alto que se concede): ___  Justificación: ___ (`DEC-__`)
+Nivel más alto concedido a una capacidad: ___  Nivel de referencia del piloto (el que rige todo lo que produce efectos externos, como mensajes o registros): ___  Justificación: ___ (`DEC-__`)
+
+La escalera se aplica por analogía a las capacidades de reglas que no usan IA: el nivel indica cuánto ejecuta el sistema sin que alguien lo apruebe.
 
 ## 3. Condiciones para subir de nivel
 

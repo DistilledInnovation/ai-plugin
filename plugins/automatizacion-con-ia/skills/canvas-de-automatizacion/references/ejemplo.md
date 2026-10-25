@@ -42,7 +42,7 @@ Empresa inventada: **Clínica Dental Sonrisa Norte** (clínica privada pequeña:
 
 | Flujo / Proceso | Equipo | Fecha | Versión |
 |---|---|---|---|
-| Agendar citas (`FLU-01`) | Recepción, jefa de recepción, administradora, odontóloga coordinadora clínica | 2026-10-25 | Borrador 1 |
+| Agendar citas (`FLU-01`) | Recepción, jefa de recepción, administración y coordinación clínica | 2026-10-25 | Borrador 1 |
 
 ## 1. Disparador y contexto
 ¿Qué inicia este flujo? ¿Quién o qué lo activa? ¿Cuál es el objetivo de negocio y el contexto?
@@ -73,7 +73,7 @@ Empresa inventada: **Clínica Dental Sonrisa Norte** (clínica privada pequeña:
 
 - Estado: Completo en capacidades; herramientas pendientes.
 - Con IA (flujo con IA): extraer datos del mensaje (`CAP-01`, nivel 2) y clasificar el motivo y marcar posible urgencia (`CAP-03`, nivel 1).
-- Con reglas: validar la ficha y las solicitudes repetidas (`CAP-02`, nivel 3); recomendar horarios (`CAP-04`), redactar la propuesta con una plantilla fija (`CAP-05`), registrar (`CAP-06`) y notificar (`CAP-07`), en nivel 2 durante el piloto.
+- Con reglas: validar la ficha y las solicitudes repetidas (`CAP-02`, nivel 3); recomendar horarios (`CAP-04`) y redactar la propuesta con una plantilla fija (`CAP-05`), en nivel 2; registrar (`CAP-06`), nivel 2 durante el piloto; notificar (`CAP-07`): nivel 2 la confirmación al paciente y nivel 3 el aviso interno. La escalera se aplica por analogía a las capacidades de reglas, que no usan IA.
 - Herramientas: **Pendiente hasta el MVP**.
 
 ## 5. Patrón de automatización
@@ -94,7 +94,7 @@ Explicación / Justificación: el orden de los pasos es fijo y solo dos capacida
 
 - Estado: Completo.
 - Recepción aprueba la propuesta y el registro, y decide si es urgencia (criterios y responsabilidad: odontóloga coordinadora clínica, `DEC-03`). La jefa de recepción responde por el proceso, revisa las excepciones y puede apagar la parte con IA y volver al modo manual. Valeria decide los cambios.
-- Autoridad: el piloto queda en el nivel 2; urgencias en el nivel 1. Guardrails `GRD-01` a `GRD-07`.
+- Autoridad: lo que toca al paciente o a la agenda queda en el nivel 2 durante el piloto; urgencias en el nivel 1; validar y el aviso interno, nivel 3 (sin efecto externo). Guardrails `GRD-01` a `GRD-07`.
 
 ## 7. Sistemas, datos y herramientas
 ¿Qué sistemas se usan? ¿Qué datos se necesitan? ¿Qué integraciones, APIs o conectores (MCPs)?
@@ -121,7 +121,7 @@ Explicación / Justificación: el orden de los pasos es fijo y solo dos capacida
 |---|---|---|---|
 | Tiempo de trabajo por solicitud | 6 min (`HAL-01`, medido en 20 solicitudes) | 3 min | Medir 20 solicitudes del piloto |
 | Citas con error | Unas 4 de cada 100 (`SUP-01`, Dicho por participante, sin contar) | 1 de cada 100 | Contar las citas corregidas una semana antes y durante el piloto |
-| Confirmación al paciente | El mismo día | No empeora | Revisar el tiempo hasta la confirmación |
+| Confirmación al paciente | El mismo día (Dicho por participante, en `RET-01`) | No empeora | Revisar el tiempo hasta la confirmación |
 | Casos que pasan a revisión | No sé | Sin meta todavía | Contarlos en el piloto |
 
 - Estado: Completo (la línea base de errores sigue Pendiente por validar).
@@ -153,7 +153,7 @@ ROI esperado: No sé. Capacidad liberada si se cumple la meta: de 88 a 44 horas 
 | Escribir las reglas de agenda | Jefa de recepción | Antes del piloto | Ninguna |
 | Definir los criterios de urgencia | Odontóloga coordinadora clínica | Antes del piloto | Ninguna |
 | Revisar 30 mensajes reales para `SUP-04` y probar la búsqueda de ficha (`SUP-05`) | Recepción | Antes del piloto | Reglas de agenda |
-| Convertir los supuestos en pruebas con `supuestos-y-riesgos` (Próximamente) | Facilitador y jefa de recepción | Próxima sesión | Canvas aprobado |
+| Convertir los supuestos en pruebas con `supuestos-y-riesgos` | Facilitador y jefa de recepción | Próxima sesión | Canvas aprobado |
 | Elegir herramientas y conexiones | Etapa del MVP | Pendiente hasta el MVP | Plan piloto confirmado |
 
 | Aprobado por | Fecha | Notas |
@@ -162,13 +162,13 @@ ROI esperado: No sé. Capacidad liberada si se cumple la meta: de 88 a 44 horas 
 
 ## Entregable: vista A3
 
-**Flujo / Proceso:** Agendar citas (`FLU-01`)  **Equipo:** Recepción y administración  **Fecha:** 2026-10-25  **Versión:** Borrador 1
+**Flujo / Proceso:** Agendar citas (`FLU-01`)  **Equipo:** Recepción, jefa de recepción, administración y coordinación clínica  **Fecha:** 2026-10-25  **Versión:** Borrador 1
 
 | 1. Disparador y contexto | 2. Flujo actual (As-Is) | 3. Flujo futuro (To-Be) | 4. Capacidades y herramientas de IA |
 |---|---|---|---|
 | Solicitud de cita por llamada, mensaje o formulario (~40 al día). Meta `RET-01`: 6 a 3 min, errores de 4 a 1 por 100. | Ocho pasos (`PAS-01` a `PAS-08`), 6 min. Dolores: doble tecleo, duplicados, esperas. | Lista única, ficha y duplicados automáticos, urgencia marcada y decidida por persona, tres horarios, aprobación (`FUT-01` a `FUT-08`). | Extraer y clasificar con IA; validar, recomendar, redactar, registrar y notificar con reglas. Herramientas: Pendiente hasta el MVP. |
 | **5. Patrón de automatización** | **6. Responsables humanos y controles** | **7. Sistemas, datos y herramientas** | **8. Riesgos y mitigaciones** |
-| [x] Determinística <br> [x] Flujo con IA <br> [ ] Copiloto / Asistente <br> [ ] Agente Autónomo <br> [x] Híbrido <br> Orden fijo; IA solo en dos capacidades. | Recepción aprueba y decide urgencia; jefa de recepción revisa y puede apagar; nivel 2 en el piloto, urgencias nivel 1. | Agenda y fichas; reglas de agenda y criterios de urgencia por escribir. Herramientas: Pendiente hasta el MVP. | `RIE-01` registro equivocado, `RIE-02` urgencia no detectada, `RIE-03` datos expuestos; `GRD-01` a `GRD-07`. |
+| [x] Determinística <br> [x] Flujo con IA <br> [ ] Copiloto / Asistente <br> [ ] Agente Autónomo <br> [x] Híbrido <br> Orden fijo; IA solo en dos capacidades. | Recepción aprueba y decide urgencia; jefa de recepción revisa y puede apagar; nivel 2 en el piloto (urgencias nivel 1; validar y aviso interno nivel 3). | Agenda y fichas; reglas de agenda y criterios de urgencia por escribir. Herramientas: Pendiente hasta el MVP. | `RIE-01` registro equivocado, `RIE-02` urgencia no detectada, `RIE-03` datos expuestos; `GRD-01` a `GRD-07`. |
 | **9. Métricas y evaluación** | **10. Plan piloto** | **11. Costo y esfuerzo estimado** | **12. Próximos pasos** |
 | 6 a 3 min; 4 a 1 error por 100; confirmación el mismo día sin empeorar. | Dos semanas, una recepcionista, mensajes y formulario (Provisional). | Construcción Medio; operación Bajo a Medio; mantenimiento Medio (Supuesto). | Contar errores, escribir reglas y criterios, revisar mensajes, `supuestos-y-riesgos`. |
 
@@ -179,7 +179,7 @@ ROI esperado: No sé. Capacidad liberada si se cumple la meta: de 88 a 44 horas 
 ```yaml
 encabezado:
   flujo: "Agendar citas (FLU-01)"
-  equipo: "Recepción y administración"
+  equipo: "Recepción, jefa de recepción, administración y coordinación clínica"
   fecha: "2026-10-25"
   version: "borrador 1"
 bloques:
@@ -219,7 +219,7 @@ vacios_y_pendientes: [SUP-01, SUP-03, SUP-04, SUP-05]
 
 (El YAML real incluye los 12 bloques completos, siguiendo `assets/canvas-de-automatizacion.yaml`.)
 
-**Siguiente paso sugerido:** `supuestos-y-riesgos` (Próximamente), para convertir `SUP-01`, `SUP-03`, `SUP-04` y `SUP-05` en pruebas. Mientras tanto, el facilitador puede acompañar esa conversación.
+**Siguiente paso sugerido:** `supuestos-y-riesgos`, para convertir `SUP-01`, `SUP-03`, `SUP-04` y `SUP-05` en supuestos falsables y ordenarlos por impacto e incertidumbre antes de probarlos.
 
 ## Lo que se ve en este ejemplo
 
