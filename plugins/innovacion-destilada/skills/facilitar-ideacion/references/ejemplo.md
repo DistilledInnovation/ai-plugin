@@ -152,7 +152,7 @@ Marea Azul, 6 personas, 90 minutos, técnicas: calentamiento, 6-5-3 y SCAMPER. T
 
 Observaciones (Observación del facilitador): el silencio inicial se rompió con la escritura individual; la energía bajó tras el 6-5-3 y se recuperó cambiando la dinámica a SCAMPER de pie. Pendientes por validar: qué cuenta como "frío cortado" para cada cliente (`SUP-04`); el alcance de `TEN-02` con solo una visita.
 
-Siguiente paso sugerido: `construir-concepto-fuerte` con `CLU-01` y `CLU-02`. Si esa skill aún no está disponible, volver al facilitador para actualizar el estado.
+Siguiente paso sugerido: `construir-concepto-fuerte` con `CLU-01` y `CLU-02`.
 
 ## Lo que se ve en este ejemplo
 

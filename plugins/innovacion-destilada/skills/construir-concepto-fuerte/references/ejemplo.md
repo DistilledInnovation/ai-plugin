@@ -108,7 +108,7 @@ Proyecto: Marea Azul, 2026-10-25, borrador 1. ID `CON-01`. Reto `RET-03`. Ideas 
 
 Decisiones `DEC-03` (grupos que se fortalecen), `DEC-04` (alcance) y `DEC-05` (aviso solo cuando falla): tomadas por Paula. Alternativas guardadas: `CLU-03`, `CLU-04` y `CLU-05`.
 
-Siguiente paso sugerido: `disenar-prototipo`, para contrastar el concepto con el Perfil del Cliente y simular el aviso con una maqueta barata. Si esa skill aún no está disponible, volver al facilitador para actualizar el estado.
+Siguiente paso sugerido: `disenar-prototipo`, para contrastar el concepto con el Perfil del Cliente y simular el aviso con una maqueta barata.
 
 ## Lo que se ve en este ejemplo
 

@@ -93,7 +93,7 @@ Lista de calidad: nombra al actor y el dolor; no lleva solución (no dice sensor
 
 Pendientes por validar: qué quiere saber exactamente la recepción en el muelle; qué es "aviso a tiempo" para cada cliente.
 
-Siguiente paso sugerido: ideación (`facilitar-ideacion`), con `RET-03` como reto. Si esa skill aún no está disponible, actualizar el estado del proyecto con el facilitador. No se eligió tecnología.
+Siguiente paso sugerido: ideación (`facilitar-ideacion`), con `RET-03` como reto.
 
 ## Lo que se ve en este ejemplo
 
