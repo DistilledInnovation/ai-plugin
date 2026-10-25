@@ -49,9 +49,9 @@ Meta de demanda (**Supuesto**): para pasar de 62 a 80 clientes (`OBJ-04`) hay qu
 | Jueves | Seguimiento de respuestas, agendar reuniones y registrar | `CAN-03` | Asistente administrativa | Todas las respuestas | 1 h |
 | Viernes | Revisión de números de la semana, borradores de la próxima y 2 llamadas de recomendación | `CAN-01` | Socia y asistente | 2 clientes | 2 h (1 h cada una) |
 
-Ritmo inicial: 5 contactos por semana (los lunes). Con 20 cuentas, `EXP-01` dura cuatro semanas. Si el umbral se cumple, se duplica el ritmo a 10 por semana sumando 5 contactos los martes, dentro de las mismas 6 horas.
+Ritmo inicial: 5 contactos por semana (los lunes). Con 20 cuentas, `EXP-01` dura cuatro semanas. Si el umbral se cumple, se duplica el ritmo a 10 por semana sumando 5 contactos los martes, dentro de las mismas 6 horas (salvo del día 5 al 8, por `RIE-05`).
 
-Riesgo `RIE-05`: la prospección compite con el cierre del día 8 (`RIE-02`); mitigación: del día 5 al 8 de cada mes se pausa el contacto directo y se mantiene solo el seguimiento de respuestas.
+Riesgo `RIE-05`: la prospección compite con el cierre del día 8 (`RIE-02`); mitigación: del día 5 al 8 de cada mes se pausa el contacto directo a cuentas (`CAN-03`) y se mantiene solo el seguimiento de respuestas. Un bloque de contactos que cae en esos días se corre al primer día hábil posterior al 8.
 
 ## Turno 5: experimentos (Tablero de Validación)
 
@@ -59,7 +59,7 @@ Cada experimento se registra en el Tablero de Validación de `probar-y-aprender`
 
 | Experimento | Prueba y supuesto | Hipótesis | Muestra y fechas | Métrica y umbral | Regla de decisión |
 |---|---|---|---|---|---|
-| `EXP-01` | `PRU-02`, `SUP-04` (las agencias y estudios responden a un mensaje directo con el dato del día 8) | `MSG-01` por correo y llamada a cuentas del `ICP-01` | 20 cuentas (`CUE-01` a `CUE-10` y diez más), a razón de 5 por semana, del 30 de noviembre al 21 de diciembre | Al menos 4 respuestas de 20 (20 %) y al menos 2 reuniones realizadas | Cumple: duplicar el ritmo de 5 a 10 contactos por semana. 1 reunión: ajustar el mensaje una vez. 0: detener |
+| `EXP-01` | `PRU-02`, `SUP-04` (las agencias y estudios responden a un mensaje directo con el dato del día 8) | `MSG-01` por correo y llamada a cuentas del `ICP-01` | 20 cuentas (`CUE-01` a `CUE-10` y diez más), a razón de 5 por semana (lunes 30 de noviembre, miércoles 9 de diciembre, lunes 14 y lunes 21 de diciembre; el bloque del lunes 7 se corre al miércoles 9 por la pausa de `RIE-05`) | Al menos 4 respuestas de 20 (20 %) y al menos 2 reuniones realizadas | Cumple: duplicar el ritmo de 5 a 10 contactos por semana. 1 reunión: ajustar el mensaje una vez. 0: detener |
 | `EXP-02` | `PRU-03`, `SUP-05` (si se pide una recomendación concreta, los clientes entregan un contacto) | Llamada breve a clientes activos del perfil con `MSG-02` | 20 clientes, del 30 de noviembre al 23 de diciembre | Al menos 6 de 20 (30 %) entregan un contacto | Cumple: dejarlo en la rutina. 3 a 5: ajustar el momento de la petición. Menos de 3: detener |
 | `EXP-03` | `PRU-04` (una alianza produce leads) | Conversaciones con 3 aliados (un estudio jurídico, una consultora de marketing y un asesor financiero) | 3 conversaciones en diciembre, revisión el 8 de enero | Al menos 1 lead recomendado en 6 semanas | Cumple: ampliar a 3 aliados más |
 
@@ -80,7 +80,7 @@ Caso real: la agencia de marketing de `OPO-05` entró por recomendación y luego
 
 | Experimento | Métrica y umbral (fijado antes) | Resultado | ¿Cumplió? | Esfuerzo | Decisión |
 |---|---|---|---|---|---|
-| `EXP-01` | 4 de 20 respuestas y 2 reuniones | 7 respuestas de 20 (35 %) y 3 reuniones realizadas | Sí (**Hecho**, hoja Prospección) | 12 horas de la asistente | `DEC-08`: duplicar el ritmo de 5 a 10 contactos por semana desde el lunes 4 de enero (el segundo bloque de 5 va los martes) |
+| `EXP-01` | 4 de 20 respuestas y 2 reuniones | 7 respuestas de 20 (35 %) y 3 reuniones realizadas | Sí (**Hecho**, hoja Prospección) | 12 horas de la asistente | `DEC-08`: duplicar el ritmo de 5 a 10 contactos por semana desde la semana del 4 de enero (el segundo bloque de 5 va los martes; el del martes 5 de enero cae en la pausa y se corre al lunes 11) |
 | `EXP-02` | 6 de 20 entregan un contacto | 5 de 20 (25 %) entregaron 7 contactos | No (por un cliente) | 5 horas de la socia | `DEC-09`: ajustar una vez: pedirlo en la lectura trimestral y no por llamada breve; repetir en enero |
 | `EXP-03` | 1 lead en 6 semanas | Pendiente (revisión el 8 de enero) | Pendiente por validar | 3 horas de la socia | Sin decisión todavía |
 

@@ -36,7 +36,7 @@ Esos tres (`KPI-07`, `KPI-02`, `KPI-12`) se leen cada semana; el resto, en la re
 |---|---|---|---|---|---|
 | `KPI-01` | Leads por canal | 84 en seis meses (unos 14 al mes): 54 recomendación, 18 página, 12 redes | 36 en el periodo (unos 15 al mes): 17 recomendación, 9 contacto directo, 6 página, 3 alianzas, 1 redes | Amarillo (meta 16 al mes) | Contada |
 | `KPI-02` | % de leads ICP | No medido | 75,0 % (27 de 36) | Verde (sin meta previa; se fija 70 %) | Contada |
-| `KPI-03` | Tasa de respuesta | No medido | 30,0 % (9 de 30 contactados: 20 de `EXP-01` a 5 por semana entre el 30 de noviembre y el 21 de diciembre, pausa de fin de año y 10 en la semana del 4 de enero, cuando el ritmo pasó a 10 por semana) | Verde | Contada |
+| `KPI-03` | Tasa de respuesta | No medido | 36,0 % (9 de 25 contactados: 20 de `EXP-01` a 5 por semana entre el 30 de noviembre y el 21 de diciembre, pausa de fin de año y 5 el lunes 4 de enero; el segundo bloque de esa semana, del martes 5, cayó en la pausa de `RIE-05` y se corrió al lunes 11) | Verde | Contada |
 | `KPI-04` | Lead a oportunidad (reunión realizada) | 50 % | 47,2 % (17 de 36) | Amarillo | Contada; los leads de las últimas tres semanas aún no tuvieron tiempo de llegar a reunión, se recalcula por cohorte en febrero |
 | `KPI-05` | Oportunidad a venta | 29,0 % (9 de 31) | 33,3 % (4 de 12 cerradas) | Verde, con muestra pequeña (n = 12) | Contada |
 | `KPI-06` | Duración del ciclo (reunión a firma) | 21 días | 15,5 días (mediana de 4 ganadas) | Verde, con muestra pequeña | Contada |
