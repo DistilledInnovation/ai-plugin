@@ -62,7 +62,7 @@ Las técnicas están en `references/herramientas.md`.
 2. **Fuentes y participantes.** Pregunta guía: "¿Dónde quedó registrado lo que pasó con las últimas oportunidades: una hoja, correos, notas, la memoria de alguien?". Define qué datos se van a revisar y quién los aporta.
 3. **Mapa as-is.** Reconstruye una venta reciente, de la primera señal a la activación del cliente. Pregunta guía: "¿Qué pasó primero, qué después y quién hizo cada cosa?". Usa `assets/mapa-as-is-comercial.md` con Mermaid y tabla; marca dónde se espera, se repite o se pierde información.
 4. **Embudo actual.** Con los conteos por etapa del periodo, calcula tasas y tiempos (`assets/embudo-actual.md`). Pregunta guía: "¿Cuántos contactos, reuniones, propuestas y ventas hubo en los últimos seis meses?". Marca qué tan confiable es cada cifra (contada, estimada, desconocida).
-5. **Herramientas y canales.** Inventario de dónde llegan las oportunidades y con qué se gestionan (sin recomendar nada). Pregunta guía: "¿Por qué canales llega la gente y dónde se anota?".
+5. **Herramientas y canales.** Inventario de dónde llegan las oportunidades y con qué se gestionan (sin recomendar nada, con `assets/inventario-de-herramientas.md`). Pregunta guía: "¿Por qué canales llega la gente y dónde se anota?".
 6. **Madurez comercial.** Siete dimensiones, escala de 1 a 4, cada puntaje con su evidencia (`assets/diagnostico-de-madurez.md`). Propón el puntaje y pide al equipo que lo ajuste. Pregunta guía: "¿Estás de acuerdo con este puntaje, o qué cambiarías y por qué?".
 7. **Línea base de KPIs.** Los 13 indicadores con fórmula, valor actual y calidad del dato; "No medido" es una respuesta válida (`assets/linea-base-kpis.md`).
 8. **Pérdidas y causas.** Dónde se cae el embudo y por qué: motivos de pérdida reales, no supuestos. Pregunta guía: "De las oportunidades que no se ganaron, ¿qué motivo tiene cada una, según lo que dijo el cliente?". Selecciona de dos a cuatro cuellos de botella con una hipótesis cada uno (`PRO-nn`).
@@ -86,7 +86,7 @@ Escala orientativa: se puntúa lo que se observa en el trabajo diario, no lo que
 ## Reglas del diagnóstico
 
 - **Medir antes de opinar**: toda cifra lleva su procedencia (contada, estimada, desconocida) y las desconocidas se listan como datos faltantes con quién y cuándo las consigue.
-- **Cohortes y definiciones**: anota qué significa "oportunidad" y con qué denominador se calcula cada tasa; compara periodos equivalentes.
+- **Cohortes y definiciones**: anota qué significa "oportunidad" y con qué denominador se calcula cada tasa; las abiertas no entran en las tasas de cierre; compara periodos equivalentes.
 - **Causas, no culpables**: el diagnóstico describe el sistema, no evalúa personas.
 - **Sin garantías**: no conviertas una meta en una promesa; las metas son hipótesis con plazo.
 - **Una persona o un canal dominante es un hallazgo**, no un defecto: se registra como riesgo (`RIE-nn`) con mitigación.
@@ -103,6 +103,7 @@ Siempre con revisión humana: los puntajes y las causas que propone la IA son **
 ## Entregables
 
 - `assets/diagnostico-de-madurez.md`: siete dimensiones con puntaje, evidencia y prioridad.
+- `assets/inventario-de-herramientas.md`: canales y herramientas actuales, qué guarda cada una y si se actualiza.
 - `assets/mapa-as-is-comercial.md`: proceso actual en Mermaid y tabla, con puntos de fricción.
 - `assets/embudo-actual.md`: conteos, tasas y tiempos por etapa, con la calidad del dato.
 - `assets/linea-base-kpis.md`: los 13 KPIs con fórmula, valor y calidad del dato, y la tabla de metas.

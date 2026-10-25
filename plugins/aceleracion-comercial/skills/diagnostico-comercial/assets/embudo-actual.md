@@ -13,9 +13,9 @@ Definiciones (escríbelas antes de contar): lead = ___; oportunidad = ___; propu
 | Propuestas | | | | |
 | Ganadas | | | | |
 | Perdidas | | | | |
-| Abiertas hoy | | n/a | | |
+| Abiertas hoy (dentro de las oportunidades) | | n/a (no entran en las tasas de cierre) | | |
 
-Lead a venta = ganadas / leads = ___ %. Ciclo = días entre la reunión (o calificación) y el cierre, con la misma definición en todo el periodo.
+Oportunidades cerradas = ganadas + perdidas = ___; tasa de cierre de oportunidades = ganadas / cerradas = ___ %. Lead a venta = ganadas / leads = ___ %. Ciclo = días entre la reunión (o calificación) y el cierre, con la misma definición en todo el periodo.
 
 ## 2. Origen de los leads
 

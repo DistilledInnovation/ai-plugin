@@ -10,7 +10,7 @@ Empresa inventada: **Brújula Contadores** (6 personas; 62 clientes activos; tic
 
 **Usuaria (socia fundadora):** Una agencia de contenidos de nueve personas, un estudio de diseño de doce, un centro de fisioterapia y un consultorio de nutrición. Pagan a tiempo, entregan los documentos completos y nos recomiendan. Los cuatro tienen entre 4 y 15 personas y dueños que no quieren ocuparse de la contabilidad.
 
-**Facilitador:** Revisé tu lista de los 9 clientes ganados en seis meses y las 7 propuestas perdidas por "no era el perfil" (`HAL-04`).
+**Facilitador:** Revisé tu lista de los 9 clientes ganados en seis meses y las 7 propuestas perdidas por "no era el perfil" (negocios muy pequeños o sin facturación formal, `HAL-04`).
 
 | Grupo | Ganados | Perdidos por no ser el perfil |
 |---|---|---|
@@ -76,13 +76,13 @@ Decisión `DEC-02`: foco en `SEG-03` y `SEG-02`; `SEG-01` descartado por ahora (
 
 | ID | Cuenta | Segmento | Nivel | Cómo se llega | Hipótesis (**Supuesto**) | Disparador | Entrada |
 |---|---|---|---|---|---|---|---|
-| `CUE-01` | Agencia de contenidos y redes (9 personas) | `SEG-03` | A | Recomendada por un cliente actual | Cierre mensual tardío con su contador actual | Quejas por demoras | `ACT-01` |
-| `CUE-02` | Estudio de diseño de producto (14 personas) | `SEG-03` | A | Recomendada por un asesor legal | Quiere ordenar números para un préstamo | Solicitud de financiamiento | `ACT-04` |
+| `CUE-01` | Agencia de branding (10 personas) | `SEG-03` | A | Recomendada por un cliente actual | Cierre mensual tardío con su contador actual | Quejas por demoras | `ACT-01` |
+| `CUE-02` | Productora audiovisual (14 personas) | `SEG-03` | A | Recomendada por un asesor legal | Quiere ordenar números para un préstamo | Solicitud de financiamiento | `ACT-04` |
 | `CUE-03` | Agencia de desarrollo web (11 personas) | `SEG-03` | A | Contacto directo de un socio | Sin cierre mensual ordenado | Contratación de la quinta persona | `ACT-01` |
-| `CUE-04` | Centro de fisioterapia (8 personas) | `SEG-02` | A | Recomendado por un colega | Manejo de honorarios y retenciones sin apoyo | Apertura de un segundo local | `ACT-01` |
+| `CUE-04` | Clínica de psicología (8 personas) | `SEG-02` | A | Recomendado por un colega | Manejo de honorarios y retenciones sin apoyo | Apertura de un segundo local | `ACT-01` |
 | `CUE-05` | Consultorio odontológico (6 personas) | `SEG-02` | B | Sin camino directo | Cambio de contador cercano | Obligación tributaria nueva | `ACT-01` |
 
-Hay cinco cuentas más en niveles B y C (`CUE-06` a `CUE-10`). Todas pendientes de contacto; ningún mensaje sale sin que una persona lo revise y lo envíe.
+Hay cinco cuentas más en niveles B y C (`CUE-06` a `CUE-10`). Ninguna es cliente ni oportunidad abierta: todas están sin contactar (los clientes actuales y las oportunidades abiertas no van en esta lista); ningún mensaje sale sin que una persona lo revise y lo envíe.
 
 **Mensajes clave (`ICP-01`, para `ACT-01`):** problema: "enterarte tarde de tus números y vivir con el temor de una multa"; resultado: "tu cierre mensual listo a tiempo y tus impuestos al día"; prueba hoy: cuatro clientes del segmento que renovaron, sin cifras de resultado todavía (**Pendiente por validar** la promesa de fecha de entrega, que se trabaja en `oferta-y-propuesta-de-valor`).
 

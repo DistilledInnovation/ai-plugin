@@ -96,6 +96,8 @@ Para ventas de ciclo corto se pueden fundir ETA-03 y ETA-04 o ETA-05 y ETA-06. C
 
 ## Calificación: BANT simplificado y MEDDICC opcional
 
+BANT (Budget, Authority, Need, Timing) y MEDDICC son marcos de calificación de ventas muy usados y de uso general, no una invención de esta metodología; aquí se adaptan en versión simplificada.
+
 | Criterio | Pregunta base | Sí (2) | Parcial (1) | No (0) |
 |---|---|---|---|---|
 | Presupuesto | ¿Tienen o pueden asignar un rango para esto? | Rango dicho o claramente disponible | Dudoso o por aprobar | No hay o es muy inferior al precio |
@@ -103,7 +105,7 @@ Para ventas de ciclo corto se pueden fundir ETA-03 y ETA-04 o ETA-05 y ETA-06. C
 | Necesidad | ¿Hay un problema concreto que nuestra oferta resuelve? | Dolor concreto y reconocido | Interés general | No hay dolor |
 | Tiempo | ¿Quieren resolverlo en un plazo cercano? | Fecha o motivo para actuar pronto | Sin fecha, con interés | Sin urgencia ni fecha |
 
-La regla de decisión la define el equipo (`REG-nn`) y debe escribirse. Ejemplo: calificada si Necesidad es Sí y el total llega a 5 de 8; nutrir con total de 3 o 4; descartar si Necesidad es No o el total es 2 o menos. Los umbrales son una guía: se ajustan con los resultados y el cambio se registra.
+La regla de decisión la define el equipo (`REG-nn`) y debe escribirse. Ejemplo completo (cubre todos los casos): calificada si Necesidad es Sí y el total llega a 5 de 8; nutrir si el total es 3 o 4, o si Necesidad es Parcial con total de 5 o más (hasta aclarar la necesidad); descartar si Necesidad es No o el total es 2 o menos. Los umbrales son una guía: se ajustan con los resultados y el cambio se registra.
 
 **Preguntas MEDDICC opcionales** (solo para ventas complejas B2B con varios decisores, ciclo largo o ticket alto): Métricas (¿qué resultado medirán?), Comprador económico (¿quién controla el presupuesto?), Criterios de decisión (¿con qué comparan?), Proceso de decisión (¿qué pasos y fechas hay?), Identificación del dolor (¿qué cuesta no resolverlo?), Campeón (¿quién dentro de la cuenta impulsa esto?) y Competencia (¿qué alternativas evalúan, incluida no hacer nada?). Se anotan como notas de la oportunidad; no reemplazan a BANT.
 
@@ -112,6 +114,7 @@ La regla de decisión la define el equipo (`REG-nn`) y debe escribirse. Ejemplo:
 - **Entrada objetiva**: la regla de una etapa se puede verificar con un dato anotado, no con una sensación.
 - **Siguiente paso con fecha**: toda oportunidad abierta tiene siguiente acción y fecha; si no, está estancada.
 - **Motivo de pérdida obligatorio**, con la frase del cliente; "sin respuesta" es un motivo válido.
+- **Definiciones que cambian se anotan**: si "oportunidad" significaba otra cosa en la línea base (por ejemplo, una reunión realizada), se conserva esa definición para comparar los KPIs (`KPI-04`, `KPI-05`, `KPI-07`) o se recalcula la línea base; nunca se mezclan en silencio.
 - **Una oportunidad, una etapa**: si cae en dos, las definiciones se ajustan.
 - **Retrocesos permitidos**: una oportunidad puede volver a una etapa anterior si cambia el contexto; se anota por qué.
 - **Agnóstico de herramientas**: se define qué se registra; dónde se registra es la etapa siguiente (una hoja de cálculo alcanza para empezar).

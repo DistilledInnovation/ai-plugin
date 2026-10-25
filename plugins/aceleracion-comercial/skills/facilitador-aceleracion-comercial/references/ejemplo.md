@@ -10,13 +10,13 @@ Empresa inventada: **Brújula Contadores**, firma pequeña de contabilidad y cum
 
 ## Turno 2
 
-**Usuaria:** Fue una agencia de contenidos de nueve personas. Su dueño me la recomendó un cliente, hablamos por videollamada, le mandé una propuesta por correo a los dos días y a la semana me dijo que sí. En los últimos seis meses cerramos 9 clientes nuevos y perdimos 5; tenemos 62 activos. Contamos los contactos en una hoja: unos 84 en el periodo, 54 por recomendación. Yo cerré 7 de los 9.
+**Usuaria:** Fue una agencia de contenidos de nueve personas, que firmó en septiembre. Su dueño me la recomendó un cliente, hablamos por videollamada, le mandé una propuesta por correo a los dos días y a la semana me dijo que sí. En los últimos seis meses cerramos 9 clientes nuevos y 5 clientes se dieron de baja; tenemos 62 activos. Contamos los contactos en una hoja: unos 84 en el periodo, 54 por recomendación. Yo cerré 7 de los 9.
 
 **Facilitador:** Con eso ya puedo ubicarte.
 
 **Resumen de apertura**
 1. Brújula vende servicios contables mensuales a pequeñas empresas; 62 clientes activos. (Dicho por participante)
-2. En seis meses: 84 contactos, 9 clientes ganados y 5 perdidos. `HAL-01`, **Hecho** (Evidencia: la hoja de contactos)
+2. En seis meses: 84 contactos, 9 clientes nuevos y 5 clientes dados de baja. `HAL-01`, **Hecho** (Evidencia: la hoja de contactos)
 3. El 64 % de los contactos (54 de 84) viene de recomendaciones. `HAL-02`, **Hecho** (Evidencia)
 4. La socia fundadora cierra 7 de 9 ventas; hoy la venta depende de ella. `HAL-03`, **Hecho** (Dicho por participante, sin registro)
 5. No se sabe en qué paso se pierden las oportunidades ni por qué. **Pendiente por validar**
@@ -36,7 +36,7 @@ segmentos: []
 icp: []
 evidencia:
   - id: HAL-01
-    dato: "84 contactos, 9 clientes ganados y 5 perdidos en seis meses; 62 clientes activos"
+    dato: "84 contactos, 9 clientes nuevos y 5 clientes dados de baja en seis meses; 62 clientes activos"
     procedencia: Evidencia
   - id: HAL-02
     dato: "54 de 84 contactos (64 %) vienen por recomendación"

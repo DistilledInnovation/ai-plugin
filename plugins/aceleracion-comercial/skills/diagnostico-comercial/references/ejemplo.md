@@ -10,7 +10,7 @@ Empresa inventada: **Brújula Contadores** (6 personas: 2 socios, 2 contadoras, 
 
 ## Turno 2
 
-**Usuaria:** Unas 42. De esas, a 24 les mandamos propuesta y se cerraron 9. Hoy hay 11 oportunidades abiertas. Lo saqué de mi hoja de seguimiento y de los correos.
+**Usuaria:** Unas 42. A 24 les mandamos propuesta y se firmaron 9. De las 42 reuniones, hoy 11 siguen abiertas (3 con propuesta y 8 sin propuesta todavía). Lo saqué de mi hoja de seguimiento y de los correos.
 
 **Facilitador:** Con esas cifras armo el embudo. Defino los términos para que todos cuenten lo mismo: lead es una persona o empresa que pide información; oportunidad es una reunión realizada; propuesta es un documento con precio enviado; ganada es un contrato firmado.
 
@@ -19,24 +19,25 @@ Empresa inventada: **Brújula Contadores** (6 personas: 2 socios, 2 contadoras, 
 | Leads | 84 | n/a | Contada |
 | Oportunidades (reunión realizada) | 42 | 50 % | Contada |
 | Propuestas | 24 | 57 % | Contada |
-| Ganadas | 9 | 37,5 % (de las propuestas) | Contada |
-| Abiertas hoy | 11 | n/a (aparte: no entran en las tasas, que usan solo oportunidades cerradas) | Contada; 4 tienen siguiente paso fechado |
+| Ganadas | 9 | 42,9 % de las propuestas cerradas (9 de 21) | Contada |
+| Perdidas | 22 (12 con propuesta y 10 sin propuesta) | n/a | Contada; motivo registrado solo en las 12 con propuesta |
+| Abiertas hoy (dentro de las 42) | 11 (3 con propuesta y 8 sin propuesta) | n/a (no entran en las tasas de cierre) | Contada; 4 tienen siguiente paso fechado |
 
-Lead a venta: 9 / 84 = 10,7 %. Ciclo mediano entre la reunión y la firma: 21 días (estimado de los correos, calidad Estimada). Canal de los leads: 54 recomendaciones, 18 formulario de la página y 12 redes sociales (`HAL-02`).
+Las 42 reuniones se reparten en 9 ganadas, 22 perdidas y 11 abiertas, así que hay 31 oportunidades cerradas y la tasa de cierre de oportunidades es 9 / 31 = 29,0 %. Lead a venta: 9 / 84 = 10,7 %. Ciclo mediano entre la reunión y la firma: 21 días (estimado de los correos, calidad Estimada). Canal de los leads: 54 recomendaciones, 18 formulario de la página y 12 redes sociales (`HAL-02`).
 
 ## Turno 3
 
-**Facilitador:** Faltan los motivos de pérdida. De las 15 propuestas que no se ganaron, ¿qué te dijo cada cliente?
+**Facilitador:** Faltan los motivos de pérdida. De las 12 propuestas que se perdieron, ¿qué te dijo cada cliente?
 
-**Usuaria:** Revisé: en 7 eran negocios muy pequeños, casi informales, que solo querían alguien que les firmara; en 5 eligieron a otro por precio; en 3 nunca respondieron después de la propuesta. Y de las 11 abiertas, solo en 4 quedó una fecha de seguimiento.
+**Usuaria:** Revisé: en 7 no eran el perfil (negocios muy pequeños o sin facturación formal, sobre todo comercios, que solo querían alguien que les firmara); en 3 eligieron a otro por precio; en 2 nunca respondieron después de la propuesta. De las 10 perdidas sin propuesta no anoté el motivo. Y de las 11 abiertas, solo en 4 quedó una fecha de seguimiento.
 
 **Facilitador:** Esto cambia `SUP-01`: el problema no parece ser la cantidad de contactos sino a quién se le manda propuesta y qué pasa después (**Hecho**: los motivos vienen de lo que dijo el cliente, registrados por la socia). Propongo estos problemas prioritarios; son hipótesis hasta que las verifiquemos.
 
 | ID | Problema | Evidencia | Hipótesis de causa (**Supuesto**) |
 |---|---|---|---|
-| `PRO-01` | Se envían propuestas a quien no es el perfil: 7 de 15 propuestas no ganadas | `HAL-04` | No hay criterio de calificación antes de la propuesta |
+| `PRO-01` | Se envían propuestas a quien no es el perfil: 7 de 12 propuestas perdidas | `HAL-04` | No hay criterio de calificación antes de la propuesta |
 | `PRO-02` | Dependencia de una persona y de un canal: 64 % de recomendaciones y 7 de 9 cierres por la socia fundadora | `HAL-02`, `HAL-03` | La venta no está escrita ni repartida |
-| `PRO-03` | Sin seguimiento sistemático: solo 4 de 11 oportunidades abiertas con siguiente paso fechado y 3 propuestas sin respuesta | `HAL-05` | No hay regla ni lugar para el seguimiento |
+| `PRO-03` | Sin seguimiento sistemático: solo 4 de 11 oportunidades abiertas con siguiente paso fechado y 2 propuestas perdidas sin respuesta | `HAL-05` | No hay regla ni lugar para el seguimiento |
 
 ## Turno 4
 
@@ -53,9 +54,21 @@ Lead a venta: 9 / 84 = 10,7 %. Ciclo mediano entre la reunión y la firma: 21 d�
 | `OBJ-03` | Ventas cerradas por alguien distinto de la socia fundadora | 22 % (2/9) | 50 % | 6 meses |
 | `OBJ-04` | Clientes activos | 62 | 80 | 12 meses |
 
-**Línea base de KPIs (resumen):** `KPI-01` 84 leads en 6 meses (54, 18 y 12 por canal); `KPI-02` No medido (no hay criterio de perfil); `KPI-03` No medido; `KPI-04` 50 %; `KPI-05` 21,4 % (9 ganadas de 42 reuniones cerradas); `KPI-06` 21 días (estimado); `KPI-07` 5 de 11 oportunidades abiertas sin avance en más de 14 días (45 %); `KPI-08` No medido; `KPI-09` USD 195 por mes (9 ganadas); `KPI-10` no existe forecast; `KPI-11` No medido; `KPI-12` 36 %; `KPI-13` ingresos recurrentes de unos USD 13.000 al mes, margen por segmento No medido.
+**Línea base de KPIs (resumen):** `KPI-01` 84 leads en 6 meses (54, 18 y 12 por canal); `KPI-02` No medido (no hay criterio de perfil); `KPI-03` No medido; `KPI-04` 50 %; `KPI-05` 29,0 % (9 ganadas de 31 oportunidades cerradas; las 11 abiertas no entran), con propuesta a ganada de 42,9 % (9 de 21 propuestas cerradas); `KPI-06` 21 días (estimado); `KPI-07` 5 de 11 oportunidades abiertas sin avance en más de 14 días (45 %; definición de oportunidad: reunión realizada); `KPI-08` No medido; `KPI-09` USD 195 por mes (9 ganadas); `KPI-10` no existe forecast; `KPI-11` No medido; `KPI-12` 36 %; `KPI-13` ingresos recurrentes de unos USD 13.000 al mes, margen por segmento No medido.
 
 **Madurez (propuesta, a confirmar por el equipo):** segmentación 1, oferta 2, proceso 1, datos y herramientas 2, equipo 2, demanda 2, gestión 1.
+
+## Inventario de herramientas y canales (`assets/inventario-de-herramientas.md`)
+
+| Canal o herramienta | Para qué se usa | Quién la usa | Qué dato guarda | ¿Se actualiza? |
+|---|---|---|---|---|
+| Hoja de seguimiento de contactos | Anotar contactos y propuestas | Asistente administrativa | Fecha, canal y estado | A veces |
+| Correo | Enviar propuestas y dar seguimiento | Socios | Texto de cada propuesta, sin estructura | Siempre, pero no se consulta como registro |
+| Agenda compartida | Reuniones | Socios y contadoras | Fecha y participantes | Siempre |
+| Formulario de la página | Recibir consultas | Asistente administrativa | Datos de contacto | Siempre |
+| Recomendaciones de clientes | Llegada de leads | Socia fundadora | Nada (de memoria) | Nunca |
+
+Hecho: no hay un único registro; el estado de cada oportunidad vive en la hoja, en el correo y en la memoria de la socia (`HAL-09`). No se evalúa ni se recomienda ningún producto.
 
 ## Turno 5: backlog
 

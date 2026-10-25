@@ -8,7 +8,7 @@ Empresa inventada: **Brújula Contadores** (6 personas; 62 clientes activos; tic
 
 ## Turno 2
 
-**Usuaria (socia fundadora):** La agencia de contenidos: un cliente nos recomendó, la asistente le contestó el mismo día, yo hice una reunión de 30 minutos, mandé propuesta a los dos días y a la semana firmó. La anterior fue un estudio de diseño: mandé propuesta, me dijeron que la veían y no volví a escribir.
+**Usuaria (socia fundadora):** La agencia de contenidos: un cliente nos recomendó, la asistente le contestó el mismo día, yo hice una reunión de 30 minutos, mandé propuesta a los dos días y a la semana firmó. La anterior fue una tienda de ropa: mandé propuesta, me dijeron que la veían y no volví a escribir.
 
 **Facilitador:** Con esos recorridos propongo siete etapas, con regla de entrada y dato obligatorio. Las reglas son verificables: lo que el cliente hizo, no lo que sentimos.
 
@@ -39,15 +39,17 @@ Umbral de estancamiento: 14 días sin avance (el mismo de la línea base, para c
 | Necesidad | ¿Hay un dolor concreto con su contador o impuestos? | Dolor reconocido (cierre tardío, multa, sin respuesta) | Interés general | Ninguno |
 | Tiempo | ¿Quiere empezar en uno o dos meses? | Fecha o motivo para actuar | Sin fecha | Sin urgencia |
 
-`REG-01` calificada (pasa a `ETA-03`): Necesidad en Sí y total de 5 o más sobre 8. `REG-02` nutrir: total de 3 o 4, con revisión en 30 a 60 días. `REG-03` descartar: Necesidad en No o total de 2 o menos, o cae en una exclusión de `ICP-01`. Preguntas MEDDICC opcionales (solo si hay varios socios decidiendo o un ticket mayor a USD 400 al mes): métricas, comprador económico, criterios de decisión, proceso de decisión, dolor, campeón y competencia.
+`REG-01` calificada (pasa a `ETA-03`): Necesidad en Sí y total de 5 o más sobre 8. `REG-02` nutrir: total de 3 o 4, o Necesidad en Parcial con total de 5 o más (por ejemplo 1+2+2+2 = 7: hay presupuesto, acceso y fecha, pero el dolor no está claro), con revisión en 30 a 60 días hasta aclarar la necesidad. `REG-03` descartar: Necesidad en No o total de 2 o menos, o cae en una exclusión de `ICP-01`. Preguntas MEDDICC opcionales (solo si hay varios socios decidiendo o un ticket mayor a USD 400 al mes): métricas, comprador económico, criterios de decisión, proceso de decisión, dolor, campeón y competencia.
 
 ## Turno 5: prueba con casos reales
 
 | Oportunidad | Resultado | Etapa | ¿Una sola etapa? | Ajuste |
 |---|---|---|---|---|
-| `OPO-01` Agencia de contenidos (9 personas, `CUE-01`) | Ganada, USD 240 al mes | `ETA-07` | Sí | Ninguno |
-| `OPO-02` Comercio minorista pequeño | Perdida: no era el perfil (exclusión de facturación formal) | `ETA-07` | Sí | Debió descartarse en `ETA-01` con `REG-03`; se agrega la revisión de exclusiones en `ETA-01` |
-| `OPO-03` Estudio de diseño (14 personas, `CUE-02`) | Abierta: propuesta presentada, siguiente acción una llamada el 30 de octubre | `ETA-05` | Sí | Ninguno |
+| `OPO-01` Agencia de contenidos (9 personas; firmó en septiembre, fuera de la lista de cuentas) | Ganada, USD 210 al mes (firmada antes de definir `OFE-01`) | `ETA-07` | Sí | Ninguno |
+| `OPO-02` Comercio minorista pequeño (una de las 7 perdidas por perfil) | Perdida: no era el perfil (exclusión de facturación formal) | `ETA-07` | Sí | Debió descartarse en `ETA-01` con `REG-03`; se agrega la revisión de exclusiones en `ETA-01` |
+| `OPO-03` Estudio de animación (12 personas; una de las 11 oportunidades abiertas, fuera de la lista de cuentas) | Abierta: propuesta presentada, siguiente acción una llamada el viernes 30 de octubre de 2026 | `ETA-05` | Sí | Ninguno |
+
+**Nota de definiciones.** En la línea base de la etapa 0, "oportunidad" es una reunión realizada; en este pipeline, "Oportunidad calificada" (`ETA-03`) se alcanza antes de la reunión. Para que `KPI-04`, `KPI-05` y `KPI-07` sigan siendo comparables, se conserva la definición de la línea base (reunión realizada, es decir `ETA-04` o posterior) y las calificadas se miden como un indicador nuevo. Decisión `DEC-04`.
 
 ## Turno 6: manual y prueba de la persona nueva
 

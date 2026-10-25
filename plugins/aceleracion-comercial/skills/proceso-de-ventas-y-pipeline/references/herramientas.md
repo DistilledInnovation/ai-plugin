@@ -29,7 +29,7 @@ Lista corta y cerrada (para poder contar): precio, no era el perfil, eligió a o
 
 ## 5. Calificación: cómo usar BANT y MEDDICC
 
-- **BANT simplificado**: se puntúa con lo que el cliente dijo, no con lo que se supone. Cada criterio en Sí (2), Parcial (1) o No (0). La regla de decisión escrita evita discutir caso por caso.
+- **BANT simplificado** (y MEDDICC después) son marcos de calificación de ventas muy usados y de uso general, no una invención de esta metodología. Se puntúa con lo que el cliente dijo, no con lo que se supone. Cada criterio en Sí (2), Parcial (1) o No (0). La regla de decisión escrita evita discutir caso por caso.
 - **Cuándo sumar MEDDICC**: ventas con varios decisores, ciclo mayor a unos dos meses o ticket alto. Se agregan como notas de la oportunidad: métricas, comprador económico, criterios de decisión, proceso de decisión, identificación del dolor, campeón y competencia (incluida la opción de no hacer nada).
 - **Revisión**: cada mes compara la tasa de cierre de calificadas contra no calificadas. Si no hay diferencia, la regla no discrimina.
 

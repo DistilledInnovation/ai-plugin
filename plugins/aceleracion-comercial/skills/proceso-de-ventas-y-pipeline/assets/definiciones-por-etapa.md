@@ -9,7 +9,7 @@ Una oportunidad está en una sola etapa. La regla de entrada se puede verificar 
 | Término | Definición (en una frase, verificable) |
 |---|---|
 | Lead | |
-| Oportunidad calificada | |
+| Oportunidad calificada (anota si difiere de "oportunidad" en la línea base y cómo se compararán los KPIs) | |
 | Propuesta | |
 | Ganada | |
 | Perdida | |
