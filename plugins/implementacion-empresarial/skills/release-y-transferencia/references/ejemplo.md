@@ -1,16 +1,16 @@
 # Ejemplo: Release y transferencia en una clínica dental ficticia
 
-Empresa inventada: **Clínica Dental Sonrisa Norte** (clínica privada pequeña: 3 consultorios, 14 empleados). Todo lo siguiente es ficticio. Continúa el ejemplo de `pruebas-y-evaluacion`: el plan `EVP-FLU-01` de `FLU-01` (agendar citas) tiene su puerta de pruebas aprobada por Valeria el 2027-01-11 (`DEC-31`), con las versiones flujo 0.4, reglas de agenda v1 (enero), plantillas v1 e instrucciones del modelo v2 (`DEC-30`). `TC-15` (muestra semanal de lo aprobado) y `CA-07` (valor en producción) pasaron a operación. Siguen abiertas, según el registro: `DEC-12` y `DEC-25` (retención), `DEC-20` y `DEC-21` (datos y modelo permitido), `DEC-24` (revisión legal), la autorización de datos reales (condición de `DEC-08`) y la rotación de secretos. La clínica no tiene equipo de TI: el proveedor de TI externo construyó el flujo. Participan el líder técnico del proveedor y, desde el turno 3, la jefa de recepción.
+Empresa inventada: **Clínica Dental Sonrisa Norte** (clínica privada pequeña: 3 consultorios, 14 empleados). Todo lo siguiente es ficticio. Continúa el ejemplo de `pruebas-y-evaluacion`: el plan `EVP-FLU-01` de `FLU-01` (agendar citas) tiene su puerta de pruebas aprobada por Valeria el 2027-01-11 (`DEC-31`), con las versiones flujo 0.4, reglas de agenda v1 (enero), plantillas v1 e instrucciones del modelo v2 (`DEC-30`). `TC-15` (muestra semanal de lo aprobado) y `CA-07` (valor en producción) pasaron a operación. Según el registro, la jefa de recepción cerró `DEC-27` (conciliación diaria al cierre de recepción y antigüedad máxima de 4 horas hábiles en la cola de revisión) y Valeria cerró `DEC-28` (objetivo de recuperación de 4 horas hábiles; después, modo manual), ambas el 2026-12-23. Siguen abiertas: `DEC-12` y `DEC-25` (retención), `DEC-20` y `DEC-21` (datos y modelo permitido), `DEC-24` (revisión legal), la autorización de datos reales (condición de `DEC-08`) y la rotación de secretos. La clínica no tiene equipo de TI: el proveedor de TI externo construyó el flujo. La sesión es el martes 2027-01-12; participan el líder técnico del proveedor y, desde el turno 3, la jefa de recepción.
 
 ## Turno 1
 
-**Líder técnico:** Valeria aprobó la puerta de pruebas el lunes. ¿Lo declaramos listo y salimos el lunes 18?
+**Líder técnico:** Valeria aprobó ayer la puerta de pruebas. ¿Lo declaramos listo y salimos el lunes 18?
 
 **Facilitador:** Todavía no: la puerta de pruebas dice que el flujo funciona en el entorno de prueba, no que se puede operar con datos reales. En el registro hay decisiones que bloquean la salida: modelo permitido y datos hacia él (`DEC-20`, `DEC-21`), revisión legal (`DEC-24`), retención (`DEC-12`, `DEC-25`), autorización de datos reales y rotación de secretos. ¿Cuáles de ellas ya se cerraron?
 
 ## Turno 2
 
-**Líder técnico:** El 12 la administradora aprobó el modelo con la evidencia del contrato con el proveedor de nube (`DEC-20` y `DEC-21`) y autorizó los datos reales. El asesor legal entregó su revisión el mismo día con dos condiciones: avisar a los pacientes cómo se tratan sus datos, en el formulario y en el primer mensaje, y guardar las evidencias dos años. La administradora fijó esa retención. La de las claves y la rotación de secretos las cerramos mañana.
+**Líder técnico:** Esta mañana la administradora aprobó el modelo con la evidencia del contrato con el proveedor de nube (`DEC-20` y `DEC-21`) y autorizó los datos reales. El asesor legal entregó su revisión también hoy con dos condiciones: avisar a los pacientes cómo se tratan sus datos, en el formulario y en el primer mensaje, y guardar las evidencias dos años. La administradora fijó esa retención. La de las claves y la rotación de secretos las cerramos mañana.
 
 **Facilitador:** Registrado. La condición legal cambia el formulario y la plantilla de la propuesta, así que lo que saldría ya no es lo que se probó: el cambio de plantilla lo propone el proveedor y lo aprueba la jefa de recepción (matriz de `DEC-22`), y se repiten `TC-01`, `TC-06` y `TC-10` antes de salir. Ahora el rollback: volver atrás de forma controlada si algo sale mal. Si el primer día algo sale mal, ¿quién decide volver atrás, y con qué señal?
 
@@ -18,7 +18,7 @@ Empresa inventada: **Clínica Dental Sonrisa Norte** (clínica privada pequeña:
 
 **Jefa de recepción:** Yo. Si veo una cita duplicada o un mensaje con datos de otro paciente, apago todo.
 
-**Facilitador:** "Apagar todo" tiene tres niveles y conviene usar el justo. Si falla la lectura o la marca de urgencia, nivel 1: apagas la parte con IA y todo va a tu cola. Si un cambio reciente de reglas, plantillas o instrucciones empeora las cosas, nivel 2: se restaura la versión anterior aprobada. Si sale algo equivocado hacia un paciente (una cita duplicada, datos de otra persona), nivel 3: se desactiva el flujo y recepción trabaja como antes del piloto, con los casos en curso en tu cola. Los niveles 1 y 3 los decides tú, sin pedir permiso. Un rollback que no se ensayó no cuenta. ¿Podemos ensayar los tres niveles el miércoles en el entorno de prueba, con tus dos recepcionistas?
+**Facilitador:** "Apagar todo" tiene tres niveles y conviene usar el justo. Si falla la lectura o la marca de urgencia, nivel 1: apagas la parte con IA y todo va a tu cola. Si un cambio reciente de reglas, plantillas o instrucciones empeora las cosas, nivel 2: se restaura la versión anterior aprobada. Si sale algo equivocado hacia un paciente (una cita duplicada, datos de otra persona), nivel 3: se desactiva el flujo y recepción trabaja como antes del piloto, con los casos en curso en tu cola. Los niveles 1 y 3 los decides tú, sin pedir permiso. Un rollback que no se ensayó no cuenta. ¿Podemos ensayar los tres niveles mañana miércoles en el entorno de prueba, con tus dos recepcionistas?
 
 ## Turno 4
 
@@ -36,7 +36,14 @@ Empresa inventada: **Clínica Dental Sonrisa Norte** (clínica privada pequeña:
 
 Flujo: Agendar citas (`FLU-01`). Release: `REL-01`. Plan de evaluación: `EVP-FLU-01`. Salida prevista: 2027-01-18. Prepara: líder técnico del proveedor de TI. Aprueba la salida: Valeria (directora).
 
-**Estado al 2027-01-11: No listo.** Falta: cerrar `DEC-25` y la rotación de secretos, probar la plantilla con el aviso legal, ensayar el rollback, firmar el acuerdo de soporte y la aprobación de salida.
+Historial de estado:
+
+| Fecha | Estado | Qué faltaba |
+|---|---|---|
+| 2027-01-12 (martes) | **No listo** | Cerrar `DEC-25` y la rotación de secretos; aprobar y probar la plantilla y el formulario con el aviso legal; ensayar el rollback; firmar el acuerdo de soporte; aprobación de salida |
+| 2027-01-15 (viernes) | **Aprobado** (`DEC-36`) | Nada: ver la checklist de salida |
+
+Las secciones 1 a 5 muestran la preparación tal como quedó en la revisión del viernes 2027-01-15.
 
 ### 1. Qué se libera
 
@@ -44,7 +51,7 @@ Flujo: Agendar citas (`FLU-01`). Release: `REL-01`. Plan de evaluación: `EVP-FL
 |---|---|---|---|---|
 | Definición del flujo | 0.4 | 0.4 | Sí | — |
 | Reglas de agenda | v1 (enero) | v1 | Sí | — |
-| Plantillas | **v2** (aviso de tratamiento de datos) | v1 | **No** | Jefa de recepción, 2027-01-13; regresión `EVI-13` |
+| Plantillas | **v2** (aviso de tratamiento de datos) | v1 | **No** | Jefa de recepción, 2027-01-13; regresión `EVI-14` |
 | Formulario de entrada | v2 (mismo aviso) | v1 | **No** | Idem; `TC-01` con el formulario nuevo |
 | Instrucciones del modelo | v2 | v2 | Sí | `DEC-30` |
 | Modelo | El aprobado en `DEC-21` | El candidato de `REQ-04` | Sí (es el mismo) | `DEC-21` |
@@ -58,7 +65,9 @@ Flujo: Agendar citas (`FLU-01`). Release: `REL-01`. Plan de evaluación: `EVP-FL
 | Datos y modelo permitido | Cerradas el 2027-01-12 | `DEC-20`, `DEC-21` (administradora) |
 | Revisión legal y de cumplimiento | Entregada el 2027-01-12, con dos condiciones | `DEC-24`; aviso: `DEC-32`; retención: `DEC-12` |
 | Retención de evidencias | Dos años (condición legal) | `DEC-12` (administradora, 2027-01-12) |
-| Retención de claves | Cerrada el 2027-01-13 | `DEC-25` (administradora) |
+| Retención de claves | Cerrada el 2027-01-13: casos y envíos, 90 días después del cierre; citas, 30 días después de la fecha de la cita | `DEC-25` (administradora) |
+| Conciliación diaria y antigüedad máxima de la cola de revisión (4 horas hábiles) | Cerrada el 2026-12-23 | `DEC-27` (jefa de recepción) |
+| Objetivo de recuperación: 4 horas hábiles; después, modo manual | Cerrada el 2026-12-23 | `DEC-28` (Valeria) |
 | Autorización de datos reales | Concedida el 2027-01-12 | Condición de `DEC-08` (administradora) |
 | Reglas de agenda de enero escritas | Sí | Condición de `DEC-08`; reglas v1 |
 | Rotación de secretos | Cada seis meses; la ejecuta el proveedor de TI | `DEC-33` (administradora, 2027-01-13) |
@@ -72,18 +81,20 @@ Flujo: Agendar citas (`FLU-01`). Release: `REL-01`. Plan de evaluación: `EVP-FL
 | Datos, retención y auditoría | Administradora | Valeria | Cliente |
 | Aprobaciones del día a día (`APR-01` a `APR-04`) | Recepcionista de turno (`DEC-13`) | Jefa de recepción | Cliente |
 | Cola de revisión | Jefa de recepción | Recepcionista de turno | Cliente |
-| Cola de errores y alertas técnicas | Proveedor de TI | — (según acuerdo) | Tercero, acuerdo `DEC-35` |
+| Cola de errores y alertas técnicas | Proveedor de TI (líder técnico) | Proveedor de TI (técnico de guardia, según el acuerdo) | Tercero, acuerdo `DEC-35` |
 | Interruptor de modo manual | Jefa de recepción | Valeria | Cliente |
 | Conciliación diaria (`DEC-27`) | Proveedor de TI la ejecuta; jefa de recepción resuelve | Recepcionista de turno | Ambos |
-| Soporte técnico | Proveedor de TI | — | Acuerdo `DEC-35` |
+| Soporte técnico | Proveedor de TI (líder técnico) | Proveedor de TI (técnico de guardia); del lado de la clínica lo coordina la jefa de recepción | Acuerdo `DEC-35` |
 
 ### 4. Rollback
 
 | Nivel | Qué hace | Disparadores verificables | Decide | Casos en curso | Tiempo objetivo | Ensayo |
 |---|---|---|---|---|---|---|
 | 1 | Apaga la IA (`CMP-10`); toda solicitud nueva va a la cola de revisión | Una urgencia sin marcar; una instrucción oculta obedecida; tasa de escalamiento por encima de 26 % en un día (el doble de la medida en pruebas) | Jefa de recepción, sin permiso previo | Siguen; los nuevos van a revisión | 1 minuto | 2027-01-13: 1 minuto (jefa de recepción) |
-| 2 | Restaura la versión anterior aprobada de reglas, plantillas o instrucciones | Un cambio publicado empeora una métrica del plan de evaluación | Jefa de recepción (reglas y plantillas); Valeria y administradora (instrucciones) | Siguen con la versión restaurada | 30 minutos | 2027-01-13: instrucciones v2 → v1 en 15 minutos (proveedor de TI); cómo se restaura una versión en la plataforma, verificado en el entorno de prueba |
+| 2 | Restaura la versión anterior aprobada de reglas, plantillas o instrucciones | Un cambio publicado en producción empeora una métrica del plan de evaluación | Jefa de recepción (reglas y plantillas); Valeria y administradora (instrucciones) | Siguen con la versión restaurada | 30 minutos | 2027-01-13: se publicó en el entorno de prueba unas instrucciones de ensayo v2.1 y se restauró la v2 en 15 minutos (proveedor de TI); cómo se restaura una versión en la plataforma, verificado en el entorno de prueba |
 | 3 | Desactiva el flujo; recepción agenda como antes del piloto, en el sistema de gestión y por la mensajería institucional | Una cita duplicada confirmada; un mensaje con datos de otro paciente; servicio caído más de 4 horas hábiles (`DEC-28`) | Jefa de recepción, sin permiso previo | Pasan a la cola de revisión con su estado; recepción los termina a mano | 15 minutos | 2027-01-13: 10 minutos; 4 casos en curso pasaron a la cola (jefa de recepción y proveedor de TI) |
+
+**El nivel 2 el día de la salida.** Al salir no hay una versión anterior aprobada a la que volver: las instrucciones v1 fallaron `MET-01` y las plantillas v1 no traen el aviso legal (`DEC-32`). Por eso, hasta el primer cambio publicado en producción, el nivel 2 no aplica y su disparador lleva al nivel 1 (modo manual) mientras se aprueba y se prueba una corrección. Desde el primer cambio, el nivel 2 restaura la versión vigente al salir (`REL-01`).
 
 Aviso de un rollback: la jefa de recepción avisa a Valeria y al proveedor de TI por el canal acordado en `DEC-35`; queda registrado como incidente (`INC-nn`). Plan de rollback: `DEC-34`.
 
@@ -96,16 +107,16 @@ Aviso de un rollback: la jefa de recepción avisa a Valeria y al proveedor de TI
 | Comunicación | Recepción avisa a los pacientes que pidan cita por teléfono que también pueden usar el formulario; aviso de tratamiento de datos en el formulario y el primer mensaje (`DEC-32`) |
 | Acompañamiento reforzado | Dos semanas: revisión diaria de colas, alertas e incidentes a las 17:30; soporte presente en horario de recepción. Cierre: diez días hábiles sin incidentes altos y colas dentro de su antigüedad máxima |
 
-## Actualización tras la revisión del viernes 2027-01-15
+## Revisión del viernes 2027-01-15
 
-**Estado: Aprobado.** `EVI-13` (2027-01-13): `TC-01`, `TC-06` y `TC-10` pasaron con plantillas y formulario v2. Rollback ensayado en sus tres niveles el 2027-01-13. Acuerdo de soporte firmado.
+**Estado: Aprobado.** Desde el martes: `DEC-25` y `DEC-33` cerradas el 2027-01-13; `EVI-14` (2027-01-13): `TC-01`, `TC-06` y `TC-10` pasaron con plantillas y formulario v2; rollback ensayado en sus tres niveles el 2027-01-13; acuerdo de soporte firmado.
 
 ### Checklist de salida
 
 | # | Comprobación | Resultado | Evidencia |
 |---|---|---|---|
-| 1 | Puerta de pruebas aprobada y ninguna decisión bloqueante abierta | Sí | `DEC-31`; `DEC-12`, `DEC-20`, `DEC-21`, `DEC-24`, `DEC-25`, `DEC-33` cerradas |
-| 2 | Lo que se libera coincide con lo probado | Sí, tras la regresión | `EVI-13` |
+| 1 | Puerta de pruebas aprobada y ninguna decisión bloqueante abierta | Sí | `DEC-31`; `DEC-12`, `DEC-20`, `DEC-21`, `DEC-24`, `DEC-25`, `DEC-27`, `DEC-28`, `DEC-33` cerradas; autorización de datos reales concedida |
+| 2 | Lo que se libera coincide con lo probado | Sí, tras la regresión | `EVI-14` |
 | 3 | Dueños y suplentes | Sí | Sección 3 |
 | 4 | **Rollback** por niveles con disparadores y quién decide | Sí | `DEC-34` |
 | 5 | **Rollback** ensayado | Sí | Ensayo del 2027-01-13 |

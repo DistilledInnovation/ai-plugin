@@ -37,9 +37,9 @@ Nunca afirmes que una plataforma "garantiza que no se duplique" sin documentaci�
 
 | Clase | Señales típicas | Qué se hace | Qué nunca se hace |
 |---|---|---|---|
-| Transitorio | El destino no responde, límite de solicitudes, caída breve, error temporal del modelo | Reintentar con espera creciente (por ejemplo, 1, 2 y 4 minutos) hasta el tope del contrato; luego, a la cola | Reintentar sin tope ni espera |
+| Transitorio | Se sabe que la solicitud **no se procesó**: el destino la rechazó o la limitó antes de procesarla (límite de solicitudes, servicio no disponible), o no se pudo conectar. En operaciones sin efecto externo (por ejemplo, una llamada al modelo), una falta de respuesta también es transitoria | Reintentar con espera creciente (por ejemplo, 1, 2 y 4 minutos) hasta el tope del contrato; luego, a la cola | Reintentar sin tope ni espera |
 | Permanente | Dato inválido, permiso denegado, regla de negocio incumplida, recurso inexistente | A la cola de revisión (negocio) o de errores (técnica) sin reintentar | Reintentar esperando otro resultado |
-| Incierto | Tiempo agotado después de enviar; respuesta perdida | Consultar el destino con la clave; si no es concluyente, revisión | Repetir el efecto a ciegas |
+| Incierto | En una operación con efecto externo: el destino no responde, tiempo agotado después de enviar, respuesta perdida | Consultar el destino con la clave; si no es concluyente, revisión | Repetir el efecto a ciegas |
 
 Los pasos con IA tienen además errores de forma (salida que no respeta los campos): se tratan como permanentes para ese intento y el caso pasa a revisión, salvo que el contrato permita un reintento.
 

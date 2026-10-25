@@ -65,8 +65,8 @@ Plan `EVP-FLU-01`, etapa objetivo `production`. Archivo completo: `assets/evalua
 | `CA-02` | Producción | Funcional: `AT-01`, `AT-04`, `AT-05` y las ramas del contrato | Valeria |
 | `CA-03` | Producción | Seguridad: cada control probable antes de producción pasa su prueba negativa | Valeria y administradora |
 | `CA-04` | Producción | Resiliencia: `RES-01` a `RES-11`, ningún duplicado | Valeria |
-| `CA-05` | Producción | Calidad de IA: `MET-01` a `MET-07` con la versión que se publica | Valeria y administradora |
-| `CA-06` | Producción | Operación: modo manual y alertas con dueño | Jefa de recepción |
+| `CA-05` | Producción | Calidad de IA: `MET-01` a `MET-07` con la versión que se publica (al cierre: **dispensado en parte**, por las falsas alarmas de `MET-02`; ver `DEC-31`) | Valeria y administradora |
+| `CA-06` | Producción | Operación: la IA se apaga (modo manual) sin aprobación y se vuelve a encender solo con la jefa de recepción; alertas con dueño | Jefa de recepción |
 | `CA-07` | Producción (valor) | 3 minutos y 1 de cada 100, en las primeras cuatro semanas; no bloquea la salida | Valeria |
 
 **Casos:** 30 (`TC-01` a `TC-30`): 6 funcionales, 9 de seguridad, 11 de resiliencia y 4 de calidad de IA; 9 positivos y 21 negativos.
@@ -99,10 +99,11 @@ Versiones: flujo 0.3 (0.4 tras `DEF-01`), reglas de agenda v1 (enero), plantilla
 | `EVI-08` | 2027-01-07 | `TC-22` a `TC-25` | Pasó | Proveedor de TI | — | — |
 | `EVI-09` | 2027-01-07 | `TC-20`, `TC-21` (regresión) | Pasó | Proveedor de TI | Con flujo 0.4: una sola cita; ninguna acción con efecto externo reintenta sola | — |
 | `EVI-10` | 2027-01-07 | `TC-14` | Pasó tras corregir | Proveedor de TI | El límite actuó, pero la alerta no llegaba a la jefa; corregido el destinatario | `DEF-03` |
-| `EVI-11` | 2027-01-08 | `TC-27` | Pasó con instrucciones v2 | Proveedor de TI | v1: `MET-01` 91 % (tipo de cita confundido entre limpieza y control). v2: 97 % | `DEF-02` |
-| `EVI-12` | 2027-01-08 | `TC-28`, `TC-29`, `TC-07` (regresión v2) | Pasó | Proveedor de TI; la odontóloga revisó las marcas | 12 de 12 urgencias; 9 falsas alarmas de 28 (32 % → ver nota); `MET-06` 96 % | — |
+| `EVI-11` | 2027-01-06 | `TC-27` | **Falló** con instrucciones v1 | Proveedor de TI | `MET-01` 91 %: tipo de cita confundido entre limpieza y control | `DEF-02` |
+| `EVI-12` | 2027-01-08 | `TC-27` (regresión v2) | Pasó con instrucciones v2 | Proveedor de TI | `MET-01` 97 % | — |
+| `EVI-13` | 2027-01-08 | `TC-28`, `TC-29`, `TC-07`, `TC-08`, `TC-30` (regresión v2) | Pasó | Proveedor de TI; la odontóloga revisó las marcas; la administradora revisó lo enviado al modelo | 12 de 12 urgencias; 9 falsas alarmas de 28 (32 % → ver nota); `MET-06` 96 %; ningún documento ni teléfono hacia el modelo; salidas rotas a revisión | — |
 
-Nota sobre `EVI-12`: las falsas alarmas dieron 32 %, por encima del 30 % acordado. No se movió el umbral en silencio: la odontóloga revisó los 9 casos, dijo que 3 eran dudosos de verdad y propuso dejarlos como falsas alarmas aceptables; Valeria dispensó ese punto con la razón por escrito (`DEC-31`), y la tasa se vuelve a revisar en operación.
+Nota sobre `EVI-13`: las falsas alarmas dieron 32 %, por encima del 30 % acordado. No se movió el umbral en silencio: la odontóloga revisó los 9 casos, dijo que 3 eran dudosos de verdad y propuso dejarlos como falsas alarmas aceptables; Valeria dispensó ese punto con la razón por escrito (`DEC-31`), y la tasa se vuelve a revisar en operación.
 
 ### Métricas de calidad de IA (resultado)
 
@@ -121,7 +122,7 @@ Nota sobre `EVI-12`: las falsas alarmas dieron 32 %, por encima del 30 % acordad
 | ID | Descripción | Dueño | Corrección | Aprobación | Nueva corrida | Estado |
 |---|---|---|---|---|---|---|
 | `DEF-01` | La acción que crea la cita tenía activa la política de reintentos por defecto; con el tiempo agotado repitió la creación (`RIE-09` confirmado) | Proveedor de TI | Reintentos desactivados de forma explícita en las acciones con efecto externo (flujo 0.4) | No requiere: ajusta la configuración al contrato | `EVI-09` | Cerrado |
-| `DEF-02` | Exactitud de 91 % por confusión entre tipos de cita | Proveedor de TI | Instrucciones v2 con la lista de tipos de cita de las reglas de agenda | `DEC-30`: Valeria y la administradora (matriz de `DEC-22`), con `TC-07` y `TC-28` repetidas | `EVI-11`, `EVI-12` | Cerrado |
+| `DEF-02` | Exactitud de 91 % por confusión entre tipos de cita | Proveedor de TI | Instrucciones v2 con la lista de tipos de cita de las reglas de agenda | `DEC-30`: Valeria y la administradora (matriz de `DEC-22`), con la regresión de calidad de IA, instrucciones ocultas y datos hacia el modelo (`TC-07`, `TC-08`, `TC-27` a `TC-30`) | `EVI-12`, `EVI-13` | Cerrado |
 | `DEF-03` | La alerta del límite por contacto no llegaba a la jefa | Proveedor de TI | Destinatario corregido | No requiere | `EVI-10` | Cerrado |
 
 ### Decisiones nuevas
@@ -129,8 +130,8 @@ Nota sobre `EVI-12`: las falsas alarmas dieron 32 %, por encima del 30 % acordad
 | ID | Decisión | Dueño | Fecha | Aprobación |
 |---|---|---|---|---|
 | `DEC-29` | Plan `EVP-FLU-01` y criterios `CA-01` a `CA-07` | Valeria | 2026-12-22 | Aprobada |
-| `DEC-30` | Instrucciones del modelo v2 (lista de tipos de cita) | Valeria y administradora | 2027-01-07 | Aprobada, con regresión `EVI-12` |
-| `DEC-31` | Puerta de pruebas aprobada: `CA-02` a `CA-06` cumplidos; falsas alarmas de `MET-02` en 32 % dispensadas con revisión en operación; `TC-15` pasa a operación | Valeria, con la administradora en `CA-03` y `CA-05` | 2027-01-11 | Aprobada |
+| `DEC-30` | Instrucciones del modelo v2 (lista de tipos de cita) | Valeria y administradora | 2027-01-07 | Aprobada, con regresión `EVI-12` y `EVI-13` |
+| `DEC-31` | Puerta de pruebas aprobada: `CA-02`, `CA-03`, `CA-04` y `CA-06` cumplidos; `CA-05` dispensado en parte: falsas alarmas de `MET-02` en 32 % dispensadas con revisión en operación; `TC-15` pasa a operación | Valeria, con la administradora en `CA-03` y `CA-05` | 2027-01-11 | Aprobada |
 
 Con `TC-11`, `TC-19` y `TC-20` en verde, el proveedor de TI marcó como verificadas las opciones de `REQ-08` y `REQ-13`, y Valeria las aprobó en el mapa el 2027-01-08 (junto con `DEC-19`).
 

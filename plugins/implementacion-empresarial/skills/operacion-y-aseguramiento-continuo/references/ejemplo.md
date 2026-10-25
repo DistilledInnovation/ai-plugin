@@ -103,8 +103,8 @@ Resultados del período (Hecho, producción): 318 solicitudes; 272 de la variant
 |---|---|---|---|---|---|---|---|
 | `CAM-01` | 2027-01-25 | Flujo | Se suman los mensajes (salida gradual cumplida: semana 1 sin incidentes altos) | Valeria (plan de `DEC-36`) | — (probado en `EVP-FLU-01`) | Formulario → formulario y mensajes | Publicado |
 | `CAM-02` | 2027-02-05 | Emergencia (después de `INC-02`) | Disparador del rollback nivel 3: "una cita duplicada **creada por el flujo**" | Valeria (propuso la jefa de recepción) | Ensayo de lectura del runbook | `DEC-34` v1 → v2 | Publicado |
-| `CAM-03` | 2027-02-08 | Plantillas | Propuesta con "llegue 10 minutos antes" | Valeria (propuso la jefa de recepción, matriz de `DEC-22`) | `TC-01`, `TC-06`, `TC-10` (`EVI-14`) | v2 → v3 | Publicado |
-| `CAM-04` | 2027-02-15 | Reglas | Reglas de agenda de febrero | Valeria (propuso la jefa) | `TC-01`, `TC-05` (`EVI-15`) | v1 → v2 | Publicado |
+| `CAM-03` | 2027-02-08 | Plantillas | Propuesta con "llegue 10 minutos antes" | Valeria (propuso la jefa de recepción, matriz de `DEC-22`) | `TC-01`, `TC-06`, `TC-10` (`EVI-15`) | v2 → v3 | Publicado |
+| `CAM-04` | 2027-02-15 | Reglas | Reglas de agenda de febrero | Valeria (propuso la jefa) | `TC-01`, `TC-05` (`EVI-16`) | v1 → v2 | Publicado |
 
 ### 6. Incidentes
 

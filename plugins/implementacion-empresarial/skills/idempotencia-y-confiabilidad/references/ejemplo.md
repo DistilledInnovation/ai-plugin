@@ -63,7 +63,7 @@ La confirmación (`IDM-07`) va con su propia constancia, separada del registro (
 
 | Operación | Error | Clase | Reintento | Al agotarse | Reintento por defecto de la plataforma |
 |---|---|---|---|---|---|
-| `IDM-01` | La tabla de casos no responde | Transitorio | Lo reintenta la entrada hasta 3 veces con espera creciente | Cola de errores | Revisar el disparador del canal (verificar si el canal reenvía) |
+| `IDM-01` | La tabla de casos no responde (sin efecto externo; la clave única hace seguro el reintento) | Transitorio | Lo reintenta la entrada hasta 3 veces con espera creciente | Cola de errores | Revisar el disparador del canal (verificar si el canal reenvía) |
 | `IDM-02` | El modelo no responde o rechaza por límite de solicitudes | Transitorio | Hasta 3 intentos, espera de 1, 2 y 4 minutos (`DEC-26`) | Cola de revisión | Configurar explícito en la acción (verificar el valor por defecto) |
 | `IDM-02` | Salida que no respeta los campos (`CTL-04`) | Permanente | Ninguno | Cola de revisión | — |
 | `IDM-04` | La mensajería rechaza el contacto | Permanente | Ninguno | Cola de revisión | Configurar en "sin reintento" (verificar) |

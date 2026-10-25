@@ -80,7 +80,7 @@ Sin un acuerdo escrito que cubra estas filas, no hay servicio gestionado: hay so
 | Instrucciones o modelo | Autoridad del cliente y responsable de datos | Calidad de IA completa; instrucciones ocultas; datos hacia el modelo |
 | Definición del flujo | Autoridad del cliente | Funcional completo; resiliencia de los pasos tocados |
 | Permisos o conexiones | Autoridad del cliente | Seguridad de permisos y secretos |
-| Versión de la plataforma o de un conector | Soporte técnico, informando al dueño | Resiliencia y efectos externos; volver a verificar lo marcado "(verificar)" |
+| Versión de la plataforma o de un conector | Autoridad del cliente o dueño del proceso, después de la regresión que corre el soporte técnico (quien propone no aprueba solo) | Resiliencia y efectos externos; volver a verificar lo marcado "(verificar)" |
 | Cambio de diseño | Dueño del contrato | Cadena completa desde `disenar-proceso-futuro` |
 
 ## 7. Recertificación

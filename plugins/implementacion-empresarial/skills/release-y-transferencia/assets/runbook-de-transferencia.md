@@ -40,7 +40,7 @@ Flujo: ___ (`FLU-__`)  Release: ___ (`REL-__`)  Vigente desde: ___  Dueño del r
 
 | Severidad | Ejemplo | Quién decide | Primera acción | Comunicación |
 |---|---|---|---|---|
-| Alta (efecto equivocado hacia afuera, datos de una persona a otra) | | | Rollback nivel 1 de inmediato | |
+| Alta (efecto equivocado hacia afuera, datos de una persona a otra) | | | El nivel de rollback que el plan fija para ese disparador (normalmente el 3: un efecto equivocado llegó hacia afuera), de inmediato | |
 | Media (flujo detenido o lento) | | | | |
 | Baja (error aislado sin efecto) | | | | |
 
