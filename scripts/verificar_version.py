@@ -26,13 +26,17 @@ def verificar(tag: str, raiz: Path) -> list[str]:
     for plugin in comun.encontrar_plugins(raiz):
         ruta = plugin / ".claude-plugin" / "plugin.json"
         version = _json(ruta).get("version")
-        if version != esperada:
+        if version is None:
+            errores.append(f"{ruta.relative_to(raiz).as_posix()}: falta version")
+        elif version != esperada:
             errores.append(f"{ruta.relative_to(raiz).as_posix()}: version {version!r} != tag {esperada!r}")
     ruta = raiz / ".claude-plugin" / "marketplace.json"
     if ruta.is_file():
         for entrada in _json(ruta).get("plugins", []):
             version = entrada.get("version")
-            if version != esperada:
+            if version is None:
+                errores.append(f".claude-plugin/marketplace.json: {entrada.get('name')} falta version")
+            elif version != esperada:
                 errores.append(
                     f".claude-plugin/marketplace.json: {entrada.get('name')} version {version!r} != tag {esperada!r}"
                 )

@@ -1,5 +1,9 @@
 # Instalar en Grok
 
+<!-- estado:en-construccion -->
+> **Estado: en construcción.** La primera Release (v1.0.0) aún no está publicada; las skills descritas son el catálogo objetivo. Los nombres de archivos y frases de ejemplo de esta página muestran cómo será la instalación cuando la Release exista.
+<!-- /estado:en-construccion -->
+
 Verificado: 2026-10-25
 
 ## Opción 1. Chatbot de Grok
@@ -21,5 +25,5 @@ Respaldo (nivel 3):
 Grok Build lee `SKILL.md` de forma nativa.
 
 1. Descarga y descomprime el zip de la skill.
-2. Copia la carpeta a `.grok/skills/`.
+2. Copia la carpeta a `.grok/skills/` (verificar la ruta).
 3. Inicia Grok Build y escribe tu frase de ejemplo.

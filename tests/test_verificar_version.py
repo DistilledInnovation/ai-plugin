@@ -41,6 +41,13 @@ class PruebasVersion(unittest.TestCase):
         errores = verificar_version.verificar("v0.1.0", self.raiz)
         self.assertTrue(any("marketplace.json" in e for e in errores), errores)
 
+    def test_marketplace_sin_version(self):
+        mk = self.raiz / ".claude-plugin" / "marketplace.json"
+        mk.parent.mkdir(exist_ok=True)
+        mk.write_text(json.dumps({"plugins": [{"name": "demo"}]}), encoding="utf-8")
+        errores = verificar_version.verificar("v0.1.0", self.raiz)
+        self.assertTrue(any("falta version" in e for e in errores), errores)
+
     def test_cli_codigos_de_salida(self):
         self.assertEqual(verificar_version.main(["x", "v0.1.0", str(self.raiz)]), 0)
         self.assertEqual(verificar_version.main(["x", "v9.9.9", str(self.raiz)]), 1)

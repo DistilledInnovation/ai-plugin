@@ -1,5 +1,9 @@
 # Instalar en OpenWork y opencode
 
+<!-- estado:en-construccion -->
+> **Estado: en construcción.** La primera Release (v1.0.0) aún no está publicada; las skills descritas son el catálogo objetivo. Los nombres de archivos y frases de ejemplo de esta página muestran cómo será la instalación cuando la Release exista.
+<!-- /estado:en-construccion -->
+
 Verificado: 2026-10-25
 
 OpenWork y opencode leen skills (`SKILL.md`) desde estas carpetas: `.opencode/skills/` (proyecto), `~/.config/opencode/skills/` (tu usuario), `.claude/skills` y `.agents/skills`. También leen `AGENTS.md`.
@@ -12,10 +16,7 @@ OpenWork y opencode leen skills (`SKILL.md`) desde estas carpetas: `.opencode/sk
 
 ## Opción 2. Agregar el catálogo (formato de plugins de Claude)
 
-Si tu instalación usa el formato de plugins de Claude, agrega el catálogo desde GitHub:
-
-1. Agrega el marketplace `DistilledInnovation/ai-plugin`.
-2. Instala la metodología que necesites.
+Si tu instalación usa el formato de plugins de Claude, el mecanismo de agregar el catálogo desde GitHub (`DistilledInnovation/ai-plugin`) depende de la versión (verificar). Si no encuentras la opción, usa la Opción 1: copiar las carpetas.
 
 ## Para equipos que mantienen el repo
 

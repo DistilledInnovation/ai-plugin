@@ -1,5 +1,9 @@
 # Instalar en Microsoft 365 Copilot
 
+<!-- estado:en-construccion -->
+> **Estado: en construcción.** La primera Release (v1.0.0) aún no está publicada; las skills descritas son el catálogo objetivo. Los nombres de archivos y frases de ejemplo de esta página muestran cómo será la instalación cuando la Release exista.
+<!-- /estado:en-construccion -->
+
 Verificado: 2026-10-25
 
 En Microsoft 365 Copilot las skills viven dentro de un **agente declarativo**. Hay límites que conviene conocer:
@@ -12,14 +16,14 @@ En Microsoft 365 Copilot las skills viven dentro de un **agente declarativo**. H
 
 1. Elige hasta 8 skills de una metodología según el taller (por ejemplo el facilitador y 7 skills de etapas).
 2. Descarga desde **Releases** el zip de cada skill.
-3. Abre **Agent Builder** (o Teams Toolkit si tu equipo es técnico) y crea un agente declarativo.
-4. Agrega cada skill como habilidad personalizada con su carpeta `SKILL.md`.
+3. Abre Agent Builder (o Teams Toolkit si tu equipo es técnico) y crea un agente declarativo (verificar los nombres exactos del menú).
+4. Agrega cada skill como habilidad personalizada con su carpeta `SKILL.md` (verificar el paso exacto).
 5. Prueba el agente con una frase de ejemplo: "Quiero priorizar qué procesos automatizar".
 
 ## Para el administrador
 
-1. Revisa el agente en el **Centro de administración de Microsoft 365**.
-2. Despliégalo a las personas o grupos que participarán en el taller.
+1. Revisa el agente en el centro de administración de Microsoft 365 (verificar la ruta exacta).
+2. Despliégalo a las personas o grupos que participarán en el taller (verificar).
 3. Confirma que aparece disponible en Copilot para un usuario de prueba.
 
 ## Si tu metodología tiene más de 8 skills

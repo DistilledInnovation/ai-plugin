@@ -1,10 +1,14 @@
 # Guía de taller: usar el plugin en vivo
 
+<!-- estado:en-construccion -->
+> **Estado: en construcción.** La primera Release (v1.0.0) aún no está publicada; las skills descritas son el catálogo objetivo. Los nombres de archivos y frases de ejemplo de esta página muestran cómo será la instalación cuando la Release exista.
+<!-- /estado:en-construccion -->
+
 Formato de referencia de **14 horas**: Sprint 1 (descubrir y priorizar, 6 h), Sprint 2 (prototipar, 6 h) y cierre (2 h). La guía sirve para cualquier cliente; ajusta los tiempos a tu agenda.
 
 ## Checklist previo (una semana antes)
 
-- [ ] El admin del cliente cargó el plugin en su plataforma (ver la [guía de instalación](instalacion/) que corresponda). Nivel 1: los participantes no instalan nada.
+- [ ] El admin del cliente cargó el plugin (cuando exista la Release) en su plataforma (ver la [guía de instalación](instalacion/) que corresponda). Nivel 1: los participantes no instalan nada.
 - [ ] Alguien probó el plugin con una frase de ejemplo: "Quiero priorizar qué procesos automatizar". Debe arrancar el facilitador y hacer **una sola pregunta**.
 - [ ] Todos los participantes pueden abrir el asistente con su cuenta de trabajo.
 - [ ] Hay un plan B: si la plataforma no deja cargar el plugin, usa el paquete copiar-pegar (nivel 3).
@@ -28,7 +32,7 @@ Formato de referencia de **14 horas**: Sprint 1 (descubrir y priorizar, 6 h), Sp
 | Priorizar | 90 min | "Quiero priorizar qué procesos conviene automatizar" | Mapa Valor x Factibilidad y lista por cubetas |
 | Cierre del sprint | 45 min | "Muéstrame el avance" y luego "Finalizar" | Decisión: qué flujo se prototipa |
 
-Guion del facilitador humano: arranca cada bloque en voz alta, deja que el equipo converse antes de contestarle al asistente, y pide que revisen cada entregable antes de aceptarlo.
+**Guion del facilitador, Sprint 1:** arranca cada bloque en voz alta, deja que el equipo converse antes de contestarle al asistente, y pide que revisen cada entregable antes de aceptarlo. Al cerrar el sprint, pregunta: "¿qué flujo vale la pena prototipar y por qué?".
 
 ## Sprint 2: prototipar (6 h)
 
@@ -39,6 +43,8 @@ Guion del facilitador humano: arranca cada bloque en voz alta, deja que el equip
 | Elegir patrón y autonomía | 60 min | "¿Cuánta autonomía le damos a la IA aquí?" | Patrón elegido y nivel de autoridad |
 | Canvas de automatización | 75 min | "Armemos el canvas de automatización" | Canvas de 12 bloques |
 | Supuestos y pruebas | 60 min | "Qué supuestos tenemos y cómo los probamos" | Supuestos falsables y tarjeta de prueba |
+
+**Guion del facilitador, Sprint 2:** recuerda al equipo el flujo elegido en el Sprint 1 y que ahora diseñan, no construyen. Insiste en preguntar "¿esto se puede eliminar o simplificar antes de automatizarlo?", y pide que cada supuesto quede marcado como Supuesto con una forma de probarlo. Cierra con "Muéstrame el avance".
 
 Cuando quede tiempo, pasen a "Plan piloto y especificación" para dejar el flujo descrito de forma que otro equipo pueda construirlo.
 

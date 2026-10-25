@@ -1,5 +1,9 @@
 # Instalar en Gemini
 
+<!-- estado:en-construccion -->
+> **Estado: en construcción.** La primera Release (v1.0.0) aún no está publicada; las skills descritas son el catálogo objetivo. Los nombres de archivos y frases de ejemplo de esta página muestran cómo será la instalación cuando la Release exista.
+<!-- /estado:en-construccion -->
+
 Verificado: 2026-10-25
 
 ## Opción 1. Gem con copiar y pegar (nivel 3, para novatos)

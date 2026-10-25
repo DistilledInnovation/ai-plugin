@@ -1,6 +1,10 @@
 # Metodologías Distilled Innovation para tu asistente de IA
 
-Este proyecto convierte las metodologías de **Distilled Innovation** en ayudantes que viven dentro del asistente de IA que tu equipo ya usa (Claude, ChatGPT, Copilot, Gemini y otros).
+<!-- estado:en-construccion -->
+> **Estado: en construcción.** La primera Release (v1.0.0) aún no está publicada; las skills descritas son el catálogo objetivo. Los nombres de archivos y frases de ejemplo de esta página muestran cómo será la instalación cuando la Release exista.
+<!-- /estado:en-construccion -->
+
+Este proyecto convierte (en cuanto salga la primera Release) las metodologías de **Distilled Innovation** en ayudantes que viven dentro del asistente de IA que tu equipo ya usa (Claude, ChatGPT, Copilot, Gemini y otros).
 
 Tú escribes con tus palabras lo que quieres lograr. El ayudante te hace **una pregunta a la vez**, separa lo que sabes de lo que estás suponiendo y te entrega lienzos, mapas y tableros listos para usar en tu equipo.
 
@@ -22,7 +26,7 @@ Busca tu asistente y sigue la guía. En la mayoría de los casos **no tienes que
 
 **Niveles:** 1 = sin instalar (lo carga tu admin) · 1b = un clic · 2 = subir un zip · 3 = copiar y pegar (respaldo, con menos calidad y actualización manual).
 
-Las descargas están en la sección **Releases** de este repositorio. ¿Vas a usarlo en un taller? Revisa la [guía de taller](docs/guia-taller.md).
+Las descargas estarán en la sección **Releases** de este repositorio cuando se publique la primera. ¿Vas a usarlo en un taller? Revisa la [guía de taller](docs/guia-taller.md).
 
 ## Las cuatro metodologías
 
@@ -46,7 +50,7 @@ Cada metodología tiene un **facilitador**: si no sabes por dónde empezar, píd
 
 ## Cómo empezar
 
-Una vez que el ayudante está disponible, escribe una frase como estas:
+Cuando el ayudante esté disponible, escribe una frase como estas:
 
 - "Quiero priorizar qué procesos de mi área conviene automatizar."
 - "Ayúdame a entender bien el reto que tiene mi equipo antes de buscar soluciones."
