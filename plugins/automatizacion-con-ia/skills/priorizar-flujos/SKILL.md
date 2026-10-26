@@ -117,6 +117,8 @@ Los umbrales son una guía: el equipo puede ajustarlos si lo registra. **No uses
 - `assets/mapa-valor-factibilidad.md`: mapa Mermaid, tabla equivalente y las cinco cubetas.
 - `assets/matriz-ponderada.md`: plantilla de la variante (solo si el equipo la elige).
 
+**Ayuda visual.** Para la matriz de valor por factibilidad, con los flujos ubicados en sus cubetas: cuando un diagrama o una tabla ayude a entender el proceso, pide a la herramienta de visualización de tu asistente que lo dibuje (por ejemplo con un comando /visualize o una herramienta de artefactos o de gráficos, si existe). Si no hay ninguna, entrega un diagrama Mermaid con su tabla equivalente. Lo visual se revisa con la persona antes de darlo por bueno y nunca sustituye las preguntas.
+
 Recorrido completo con empresa ficticia: `references/ejemplo.md`.
 
 ## Criterio de salida

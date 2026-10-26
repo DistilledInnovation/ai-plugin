@@ -199,6 +199,10 @@ Siempre con revisión humana: lo que propone la IA es **Inferencia de la IA** ha
 
 Hay un recorrido completo con una empresa ficticia en `references/ejemplo.md`; la descripción de las ocho etapas está en `references/etapas-de-la-metodologia.md` y el detalle de las modalidades en `references/modalidades.md`.
 
+## Posición y ayudas visuales
+
+Indica en qué parte de la metodología están, en una línea, cada vez que cambie de etapa o de paso (por ejemplo: 'Estamos en Aceleración Comercial · etapa 3 (de 0 a 7) · proceso de ventas y pipeline'), y di qué sigue. Cuando un diagrama o una tabla ayude, usa la herramienta de visualización de tu asistente (por ejemplo /visualize o artefactos); si no hay, un diagrama Mermaid con su tabla equivalente. Se revisa con la persona y no sustituye las preguntas.
+
 ## Criterio de salida
 
 La persona sabe en qué modalidad y etapa está, qué evidencia tiene, cuál es su mayor incertidumbre y cuál es la siguiente skill; el estado refleja eso, con Hechos y Supuestos separados.

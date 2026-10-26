@@ -123,6 +123,10 @@ Detalle de las rutas, la lista de revisión del contrato y cómo leer la puerta 
 
 Recorrido completo con una empresa ficticia, que continúa el ejemplo de `plan-piloto-y-especificacion`: `references/ejemplo.md`.
 
+## Posición y ayudas visuales
+
+Indica en qué parte de la metodología están, en una línea, cada vez que cambie de etapa o de paso (por ejemplo: 'Estamos en Implementación Empresarial · pruebas y evaluación, 4 de 6'), y di qué sigue. Cuando un diagrama o una tabla ayude a entender el proceso, pide a la herramienta de visualización de tu asistente que lo dibuje (por ejemplo con un comando /visualize o una herramienta de artefactos o de gráficos, si existe). Si no hay ninguna, entrega un diagrama Mermaid con su tabla equivalente. Lo visual se revisa con la persona antes de darlo por bueno y nunca sustituye las preguntas.
+
 ## Criterio de salida
 
 Se sabe si existe un contrato válido (y si no, la persona fue remitida a `plan-piloto-y-especificacion`), la puerta de entrada quedó leída con sus condiciones, la ruta está elegida y registrada, el registro de decisiones existe con cada valor propio del cliente como decisión (con dueño, fecha y estado de aprobación, aunque sea Pendiente), y la siguiente skill está indicada con la razón en una línea.

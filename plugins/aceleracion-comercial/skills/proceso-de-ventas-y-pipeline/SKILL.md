@@ -135,6 +135,8 @@ Siempre con revisión humana: la calificación y el siguiente paso que propone l
 - `assets/reglas-de-calificacion.md`: BANT simplificado, regla de decisión y preguntas MEDDICC opcionales.
 - `assets/manual-corto-de-ventas.md`: manual de una a dos páginas para una persona nueva.
 
+**Ayuda visual.** Para el embudo To-Be, con las etapas y sus reglas de entrada y salida: cuando un diagrama o una tabla ayude a entender el proceso, pide a la herramienta de visualización de tu asistente que lo dibuje (por ejemplo con un comando /visualize o una herramienta de artefactos o de gráficos, si existe). Si no hay ninguna, entrega un diagrama Mermaid con su tabla equivalente. Lo visual se revisa con la persona antes de darlo por bueno y nunca sustituye las preguntas.
+
 Recorrido completo con empresa ficticia: `references/ejemplo.md`.
 
 ## Criterio de salida

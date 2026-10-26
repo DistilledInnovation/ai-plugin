@@ -110,6 +110,8 @@ Además valen los comandos universales ("Muéstrame el avance", "¿Qué falta?",
 - `assets/vista-a3.md`: vista A3 en una tabla de 4 columnas por 3 filas, más el encabezado y el pie.
 - `assets/canvas-de-automatizacion.yaml`: la misma información en estructura simple.
 
+**Ayuda visual.** Para el canvas de 12 bloques y la vista A3, como un tablero legible de una sola vista: cuando un diagrama o una tabla ayude a entender el proceso, pide a la herramienta de visualización de tu asistente que lo dibuje (por ejemplo con un comando /visualize o una herramienta de artefactos o de gráficos, si existe). Si no hay ninguna, entrega un diagrama Mermaid con su tabla equivalente. Lo visual se revisa con la persona antes de darlo por bueno y nunca sustituye las preguntas.
+
 Recorrido completo con empresa ficticia, que reúne los entregables de las skills anteriores del flujo `FLU-01`: `references/ejemplo.md`.
 
 ## Criterio de salida

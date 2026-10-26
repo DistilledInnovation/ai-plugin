@@ -94,6 +94,8 @@ El árbol, la escalera y los guardrails en detalle: `assets/` y `references/herr
 - `assets/escalera-de-autoridad.md`: la escalera de 0 a 5, el nivel por capacidad, condiciones para subir de nivel y control humano.
 - `assets/catalogo-de-guardrails.md`: el catálogo condición de riesgo → límite requerido y los guardrails asignados al flujo.
 
+**Ayuda visual.** Para el árbol de decisión de patrón, con el recorrido elegido por capacidad: cuando un diagrama o una tabla ayude a entender el proceso, pide a la herramienta de visualización de tu asistente que lo dibuje (por ejemplo con un comando /visualize o una herramienta de artefactos o de gráficos, si existe). Si no hay ninguna, entrega un diagrama Mermaid con su tabla equivalente. Lo visual se revisa con la persona antes de darlo por bueno y nunca sustituye las preguntas.
+
 Recorrido completo con empresa ficticia, que continúa el proceso futuro de `disenar-proceso-futuro`: `references/ejemplo.md`.
 
 ## Criterio de salida

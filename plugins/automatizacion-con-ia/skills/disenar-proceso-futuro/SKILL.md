@@ -96,6 +96,8 @@ Las técnicas y el catálogo de capacidades están en `references/herramientas.m
 - `assets/opciones-por-actividad.md`: la escalera aplicada a cada paso y la comparación de alternativas.
 - `assets/comparacion-as-is-to-be.md`: tiempo, errores, experiencia, controles y dependencias, sin cifras inventadas.
 
+**Ayuda visual.** Para el proceso futuro (To-Be), con lo que cambia frente al As-Is resaltado: cuando un diagrama o una tabla ayude a entender el proceso, pide a la herramienta de visualización de tu asistente que lo dibuje (por ejemplo con un comando /visualize o una herramienta de artefactos o de gráficos, si existe). Si no hay ninguna, entrega un diagrama Mermaid con su tabla equivalente. Lo visual se revisa con la persona antes de darlo por bueno y nunca sustituye las preguntas.
+
 Recorrido completo con empresa ficticia, que continúa el mapa de `mapear-proceso-actual`: `references/ejemplo.md`.
 
 ## Criterio de salida

@@ -145,6 +145,8 @@ Siempre con revisión humana: lo que la IA calcula o propone es **Inferencia de 
 - `assets/manual-del-sistema-comercial.md`: manual de transferencia con dueños, suplentes y calendario de mantenimiento.
 - `references/kpis.md`: los 13 KPIs con fórmulas.
 
+**Ayuda visual.** Para el tablero gerencial, con los KPIs, su meta y su color: cuando un diagrama o una tabla ayude a entender el proceso, pide a la herramienta de visualización de tu asistente que lo dibuje (por ejemplo con un comando /visualize o una herramienta de artefactos o de gráficos, si existe). Si no hay ninguna, entrega un diagrama Mermaid con su tabla equivalente. Lo visual se revisa con la persona antes de darlo por bueno y nunca sustituye las preguntas.
+
 Recorrido completo con empresa ficticia: `references/ejemplo.md`.
 
 ## Criterio de salida

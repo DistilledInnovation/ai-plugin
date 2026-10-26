@@ -99,6 +99,8 @@ Técnicas en detalle en `references/herramientas.md`.
 - `assets/excepciones-y-tiempos.md`: tiempos (trabajo y espera), volúmenes por variante y catálogo de excepciones.
 - `assets/proceso-actual.yaml`: la misma información en estructura simple, para que la usen las skills siguientes.
 
+**Ayuda visual.** Para el mapa del proceso actual (As-Is), con carriles por rol y las esperas y excepciones marcadas: cuando un diagrama o una tabla ayude a entender el proceso, pide a la herramienta de visualización de tu asistente que lo dibuje (por ejemplo con un comando /visualize o una herramienta de artefactos o de gráficos, si existe). Si no hay ninguna, entrega un diagrama Mermaid con su tabla equivalente. Lo visual se revisa con la persona antes de darlo por bueno y nunca sustituye las preguntas.
+
 Recorrido completo con empresa ficticia, que continúa el piloto de `priorizar-flujos`: `references/ejemplo.md`.
 
 ## Criterio de salida

@@ -151,6 +151,10 @@ Reglas: los IDs (`HAL`, `SUP`, `DEC`, `RIE`, `SEN`, `OPO`, `RET`, `FLU`, `PRU`, 
 
 Hay un recorrido completo, con una empresa ficticia, en `references/ejemplo.md`.
 
+## Posición y ayudas visuales
+
+Indica en qué parte de la metodología están, en una línea, cada vez que cambie de etapa o de paso (por ejemplo: 'Estamos en Automatización · Etapa B · mapeo del proceso actual, 2 de 7'), y di qué sigue. Cuando un diagrama o una tabla ayude a entender el proceso, pide a la herramienta de visualización de tu asistente que lo dibuje (por ejemplo con un comando /visualize o una herramienta de artefactos o de gráficos, si existe). Si no hay ninguna, entrega un diagrama Mermaid con su tabla equivalente. Lo visual se revisa con la persona antes de darlo por bueno y nunca sustituye las preguntas.
+
 ## Criterio de salida
 
 La persona sabe en qué punto de entrada está, qué evidencia tiene, cuál es su mayor incertidumbre y cuál es la siguiente skill; el estado refleja eso, con Hechos y Supuestos separados, y quedó dicho con claridad si la mejor opción podría ser no automatizar.

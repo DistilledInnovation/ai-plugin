@@ -146,6 +146,10 @@ Reglas: los IDs (`HAL`, `SUP`, `DEC`) son estables; una afirmación sin evidenci
 
 Hay un recorrido completo, con una empresa ficticia, en `references/ejemplo.md`.
 
+## Posición y ayudas visuales
+
+Indica en qué parte de la metodología están, en una línea, cada vez que cambie de etapa o de paso (por ejemplo: 'Estamos en Innovación Destilada · Validar · etapa Empatizar, 1 de 5'), y di qué sigue. Cuando un diagrama o una tabla ayude a entender el proceso, pide a la herramienta de visualización de tu asistente que lo dibuje (por ejemplo con un comando /visualize o una herramienta de artefactos o de gráficos, si existe). Si no hay ninguna, entrega un diagrama Mermaid con su tabla equivalente. Lo visual se revisa con la persona antes de darlo por bueno y nunca sustituye las preguntas.
+
 ## Criterio de salida
 
 La persona sabe en qué etapa está, qué evidencia tiene, cuál es su mayor incertidumbre y cuál es la siguiente skill; el estado del proyecto refleja eso, con Hechos y Supuestos separados.
