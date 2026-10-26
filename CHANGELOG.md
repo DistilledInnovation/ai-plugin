@@ -2,6 +2,12 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y versionado semántico.
 
+## [1.0.1] - 2026-10-25
+
+### Cambiado
+- Ayudas visuales: los facilitadores piden un diagrama o una tabla cuando ayudan (con `/visualize` o la herramienta de visualización del asistente, o Mermaid con tabla equivalente) y las skills de mapa de proceso, diseño, canvas, priorización, patrón, pipeline y forecast tienen un paso explícito de ayuda visual.
+- Posición en la metodología: los facilitadores indican en una línea en qué etapa y paso están.
+
 ## [1.0.0] - 2026-10-25
 
 Primera Release pública: cuatro plugins (Innovación Destilada, Automatización con IA, Implementación Empresarial y Aceleración Comercial) con 41 skills en español, instalables con una línea (`/plugin` en Claude Code y Cowork, `npx skills add` en otros agentes de código) o con un solo archivo `todo-en-uno` por metodología para las aplicaciones web y de empresa.
