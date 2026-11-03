@@ -2,6 +2,11 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y versionado semántico.
 
+## [Sin publicar]
+
+### Agregado
+- Perfil Microsoft (`mapeo-de-capacidades-de-plataforma`): sección "Alternativa sin Dataverse: listas de SharePoint" con equivalencias, reglas de portabilidad, vías de aprovisionamiento, límites por verificar y preguntas de adaptación. Se agregan la regla de almacenamiento, una fila de piezas y un paso nuevo en el checklist de validación.
+
 ## [1.0.1] - 2026-10-25
 
 ### Cambiado
